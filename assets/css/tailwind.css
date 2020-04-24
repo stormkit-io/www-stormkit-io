@@ -1,0 +1,10 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.page {
+  max-width: 1140px;
+  min-height: 95vh;
+  margin: 0 auto;
+  width: 100%;
+}

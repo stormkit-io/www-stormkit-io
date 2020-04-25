@@ -3,7 +3,7 @@
     class="flex flex-col justify-center min-h-screen min-w-screen relative welcome overflow-hidden"
   >
     <div
-      class="page-header py-4 border-b border-gray-80 bg-transparent shadow-sm"
+      class="page-header border-b border-gray-80 bg-transparent shadow-sm p-3"
     >
       <sk-header />
     </div>

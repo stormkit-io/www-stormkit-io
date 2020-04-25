@@ -1,21 +1,28 @@
 <template>
-  <div class="flex flex-row flex-auto md:pb-32">
-    <div class="flex flex-auto flex-col justify-center md:max-w-2xl">
-      <h1 class="text-4xl leading-tight mb-4 font-bold mt-12">
+  <div class="flex flex-col-reverse md:flex-row flex-auto md:pb-32 p-3 md:p-0">
+    <div
+      class="flex flex-auto flex-col justify-center md:max-w-2xl text-center md:text-left"
+    >
+      <h1 class="text-2xl md:text-4xl leading-tight mb-8 md:mb-4 font-bold">
         Powerful infrastructure for modern javascript apps
       </h1>
-      <h2 class="text-xl leading-normal md:max-w-md">
+      <h2 class="text-l leading-normal">
         Stormkit integrates perfectly with your
         <br />git flow. It builds, deploys and scales <br />
         your javascript apps seamlessly.
       </h2>
-      <div class="flex items-center">
-        <sk-button css-class="mt-8 text-white border-white bg-pink-50 py-3">
+      <div class="flex items-center justify-center md:justify-start">
+        <sk-button
+          css-class="mt-8 text-white border-white bg-pink-50 py-6 md:py-3 font-bold"
+        >
           Deploy now for free
         </sk-button>
       </div>
     </div>
-    <img :src="versionControl" class="version-control flex-initial relative" />
+    <img
+      :src="versionControl"
+      class="version-control flex-initial relative my-4 md:my-0 md:max-w-lg"
+    />
   </div>
 </template>
 <script>
@@ -36,8 +43,6 @@ export default {
 <style scoped>
 .version-control {
   animation: swing 5s infinite;
-  right: -3.1rem;
-  max-width: 33rem;
 }
 
 @keyframes swing {

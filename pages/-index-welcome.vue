@@ -5,9 +5,9 @@
         Powerful infrastructure for modern javascript apps
       </h1>
       <h2 class="text-xl leading-normal md:max-w-md">
-        Stormkit integrates well with your
-        <br />git flow and builds, deploys and scales <br />your javascript
-        applications seamslessly.
+        Stormkit integrates perfectly with your
+        <br />git flow. It builds, deploys and scales <br />
+        your javascript apps seamlessly.
       </h2>
       <div class="flex items-center">
         <sk-button css-class="mt-8 text-white border-white bg-pink-50 py-3">

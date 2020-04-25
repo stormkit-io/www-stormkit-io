@@ -1,13 +1,13 @@
 <template>
-  <nav class="flex items-center justify-between flex-wrap bg-100 text-gray-40">
+  <nav class="flex items-center justify-between flex-wrap text-gray-40">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
-      <span class="flex items-center text-2xl font-bold text-black">
-        <img :src="skLogoWhite" class="mr-3" />
+      <span class="flex items-center text-xl font-bold text-black">
+        <img :src="skLogoWhite" class="mr-3 w-10" />
         Stormkit
       </span>
     </div>
     <div
-      class="w-full block flex-grow lg:flex lg:items-center lg:w-auto absolute md:relative inset-0 md:inset-auto bg-white md:bg-transparent"
+      class="w-full block flex-grow lg:flex lg:items-center lg:w-auto absolute md:relative inset-0 md:inset-auto"
     >
       <div class="text-sm lg:flex-grow text-right text-base pr-12">
         <a

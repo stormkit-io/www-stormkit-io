@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="text-4xl text-center font-bold">Feature-rich and Easy to Use</h2>
-    <h3 class="mb-24 text-center italic">
+    <h3 class="mb-24 text-center opacity-50">
       Configure your apps easily and get started right away
     </h3>
     <div class="flex-auto flex items-strech p-3 rounded-lg overflow-hidden">
@@ -54,7 +54,6 @@
           alt="Stormkit Preview"
         />
         <video v-if="currentPreview.video" autoplay :src="currentPreview.video">
-          <!-- <source :src="currentPreview.video" type="video/webm" /> -->
           Your browser does not support the video tag.
         </video>
       </div>
@@ -67,6 +66,11 @@ import webmStagedRollouts from '../assets/images/features/staged-rollouts.webm'
 import webmRemoteConfig from '../assets/images/features/remote-config.webm'
 import webmSnippets from '../assets/images/features/snippets.webm'
 import SkDeploymentPreviews from './-index-features-deployment-previews'
+
+const SPEED_8X = 1
+const SPEED_3X = 0.375
+const SPEED_2X = 0.25
+const SPEED_X = 0.125
 
 export default {
   components: {
@@ -83,34 +87,39 @@ export default {
           icon: 'perm_media',
           title: 'Deployment previews',
           desc: 'Preview your deployments right from your pull/merge requests.',
-          component: 'SkDeploymentPreviews'
+          component: 'SkDeploymentPreviews',
+          speed: SPEED_8X
         },
         {
           icon: 'settings_input_component',
           title: 'Multiple environments',
-          desc: 'Create as many as development environments required.',
-          video: webmMultipleEnvironments
+          desc: 'Create as many development environments as required.',
+          video: webmMultipleEnvironments,
+          speed: SPEED_2X
         },
         {
           icon: 'code',
           title: 'Staged rollouts',
           desc:
             'Release multiple deployments at the same time to a percentage of your users.',
-          video: webmStagedRollouts
+          video: webmStagedRollouts,
+          speed: SPEED_3X
         },
         {
           icon: 'settings_remote',
           title: 'Remote configuration',
           desc:
             'Inject variables to your app. Changes are effective instantly - no need to rebuild.',
-          video: webmRemoteConfig
+          video: webmRemoteConfig,
+          speed: SPEED_2X
         },
         {
           icon: 'code',
           title: 'Inject snippets',
           desc:
             'Manage 3rd party scripts right from the UI. Useful for marketing teams or PMs.',
-          video: webmSnippets
+          video: webmSnippets,
+          speed: SPEED_2X
         }
       ]
     }
@@ -132,7 +141,8 @@ export default {
       this.progressPercentage = 0
       this.progressIndex = featureIndex
       this.progressInterval = setInterval(() => {
-        this.progressPercentage = this.progressPercentage + 0.15
+        this.progressPercentage =
+          this.progressPercentage + (this.currentPreview.speed || SPEED_X)
 
         if (this.progressPercentage >= 100) {
           this.progressIndex = (this.progressIndex + 1) % this.features.length

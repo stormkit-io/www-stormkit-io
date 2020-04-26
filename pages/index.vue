@@ -7,7 +7,7 @@
     >
       <sk-header />
     </div>
-    <div class="page flex flex-col">
+    <div class="page flex flex-col relative">
       <sk-welcome />
     </div>
     <div class="page mb-12">
@@ -38,10 +38,10 @@ export default {
 
 .welcome:before {
   position: absolute;
-  left: -40rem;
-  right: -20rem;
+  left: -100%;
+  right: -60%;
   top: -15vh;
-  height: 110vh;
+  height: 102vh;
   content: '';
   z-index: -1;
   border-radius: 50%;

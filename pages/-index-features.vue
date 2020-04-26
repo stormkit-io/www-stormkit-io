@@ -1,25 +1,25 @@
 <template>
-  <div>
-    <h2 class="text-4xl text-center font-bold">Feature-rich and Easy to Use</h2>
-    <h3 class="mb-24 text-center opacity-50">
-      Configure your apps easily and get started right away
-    </h3>
+  <div class="mt-6 md:mt-0 md:relative" style="top: -10vh;">
     <div class="flex-auto flex items-strech p-3 rounded-lg overflow-hidden">
-      <ul>
+      <ul class="flex-auto">
         <li
           v-for="(feature, index) in features"
           :key="feature.title"
-          class="feature mb-12 pb-2 transition duration-500 ease-in-out flex flex-col hover:opacity-100"
-          :class="{ 'opacity-50': index !== progressIndex }"
+          class="pb-2 transition duration-500 ease-in-out flex flex-col hover:opacity-100"
+          :class="{
+            'opacity-50': index !== progressIndex,
+            'mb-12': index !== features.length - 1,
+            'mb-0': index === features.length - 1
+          }"
         >
           <div
             class="flex items-center cursor-pointer"
             role="button"
             @click="changeActiveFeature(index)"
           >
-            <i class="material-icons text-5xl text-green-50">
-              {{ feature.icon }}
-            </i>
+            <i class="material-icons text-5xl text-green-50">{{
+              feature.icon
+            }}</i>
             <div class="ml-12">
               <h2
                 class="font-bold"
@@ -38,24 +38,18 @@
               class="bg-pink-50 inset-0 absolute z-10"
             ></div>
           </div>
+          <div
+            v-if="index === progressIndex"
+            class="mt-8 border border-gray-80 rounded-lg overflow-hidden shadow-lg bg-blue-50 w-full flex items-center flex md:hidden"
+          >
+            <sk-feature-preview :current-preview="currentPreview" />
+          </div>
         </li>
       </ul>
       <div
-        class="ml-12 border border-gray-80 flex rounded-lg overflow-hidden shadow-lg bg-blue-50 w-full flex items-center"
+        class="ml-12 border border-gray-80 rounded-lg overflow-hidden shadow-lg bg-blue-50 w-full items-center hidden md:flex"
       >
-        <component
-          :is="currentPreview.component"
-          v-if="currentPreview.component"
-        />
-        <img
-          v-if="currentPreview.image"
-          :src="currentPreview.image"
-          class="rounded-lg"
-          alt="Stormkit Preview"
-        />
-        <video v-if="currentPreview.video" autoplay :src="currentPreview.video">
-          Your browser does not support the video tag.
-        </video>
+        <sk-feature-preview :current-preview="currentPreview" />
       </div>
     </div>
   </div>
@@ -65,7 +59,7 @@ import webmMultipleEnvironments from '../assets/images/features/multi-env.webm'
 import webmStagedRollouts from '../assets/images/features/staged-rollouts.webm'
 import webmRemoteConfig from '../assets/images/features/remote-config.webm'
 import webmSnippets from '../assets/images/features/snippets.webm'
-import SkDeploymentPreviews from './-index-features-deployment-previews'
+import SkFeaturePreview from './-index-features-preview'
 
 const SPEED_8X = 1
 const SPEED_3X = 0.375
@@ -74,7 +68,7 @@ const SPEED_X = 0.125
 
 export default {
   components: {
-    SkDeploymentPreviews
+    SkFeaturePreview
   },
 
   data() {
@@ -153,44 +147,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-.feature {
-  width: 350px;
-}
-
-.feature:last-child {
-  margin-bottom: 0;
-}
-
-.svg-terminal {
-  animation: show-terminal 3s forwards;
-  animation-iteration-count: 1;
-}
-
-.svg-terminal,
-.svg-deployment-preview,
-.svg-sk-logo-wrapper {
-  opacity: 0;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes show-terminal {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-</style>

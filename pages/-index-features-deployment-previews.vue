@@ -21,9 +21,13 @@
       </div>
     </div>
     <div class="m-6 flex flex-col items-center">
-      <div class="h-16 w-1 bg-pink-50 rounded shadow-lg"></div>
-      <img :src="skLogo" alt="Stormkit Logo" class="my-2 sk-logo" />
-      <div class="h-16 w-1 bg-pink-50 rounded shadow-lg"></div>
+      <div class="h-4 md:h-16 w-1 bg-pink-50 rounded shadow-lg"></div>
+      <img
+        :src="skLogo"
+        alt="Stormkit Logo"
+        class="my-2 sk-logo w-10 md:w-auto"
+      />
+      <div class="h-4 md:h-16 w-1 bg-pink-50 rounded shadow-lg"></div>
     </div>
     <div
       class="swing-group bg-white flex-auto rounded-lg shadow-lg border border-gray-70 overflow-hidden"

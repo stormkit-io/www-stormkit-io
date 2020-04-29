@@ -17,8 +17,7 @@
       <div
         class="flex items-center justify-center md:justify-start my-6 md:my-0"
       >
-        <sk-button
-          css-class="mt-8 text-white border-white bg-pink-50 py-6 md:py-3 font-bold"
+        <sk-button primary class="mt-8 py-6 md:py-3 font-bold"
           >Deploy now for free</sk-button
         >
       </div>
@@ -30,7 +29,7 @@
   </div>
 </template>
 <script>
-import SkButton from '../components/Button'
+import SkButton from '../components/atoms/Button'
 import versionControl from '../assets/images/content-type.svg'
 
 export default {

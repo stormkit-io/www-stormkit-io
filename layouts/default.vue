@@ -1,9 +1,18 @@
 <template>
   <div class="text-blue-50">
     <nuxt />
+    <gdpr-banner />
   </div>
 </template>
+<script>
+import GdprBanner from '../components/molecules/GdprBanner'
 
+export default {
+  components: {
+    GdprBanner
+  }
+}
+</script>
 <style>
 html {
   font-family: 'Merriweather Sans', sans-serif;

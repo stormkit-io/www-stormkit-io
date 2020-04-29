@@ -27,7 +27,7 @@
         </div>
         <div class="text-center p-3">
           <a href="https://app.stormkit.io/auth">
-            <sk-button css-class="text-white border-white bg-pink-50 py-4">
+            <sk-button secondary>
               Login
             </sk-button>
           </a>
@@ -48,15 +48,15 @@
       </div>
       <div>
         <a href="https://app.stormkit.io/auth">
-          <sk-button css-class="bg-white text-black">Login</sk-button>
+          <sk-button secondary>Login</sk-button>
         </a>
       </div>
     </div>
   </nav>
 </template>
 <script>
-import skLogoWhite from '../assets/images/stormkit-logo.svg'
-import SkButton from '../components/Button'
+import skLogoWhite from '../../assets/images/stormkit-logo.svg'
+import SkButton from '../atoms/Button'
 
 export default {
   components: {

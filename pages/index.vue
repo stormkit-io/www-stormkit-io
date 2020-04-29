@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import SkHeader from '../components/Header'
+import SkHeader from '../components/molecules/AppHeader'
 import SkWelcome from './-index-welcome'
 import SkFeatures from './-index-features'
 

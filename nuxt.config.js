@@ -19,7 +19,7 @@ module.exports = {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Merriweather+Sans:100,400,700'
+          'https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700'
       },
       {
         rel: 'stylesheet',

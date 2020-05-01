@@ -1,12 +1,16 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .page {
   max-width: 1140px;
   min-height: 95vh;
   margin: 0 auto;
   width: 100%;
+}
+
+.page.mh-auto {
+  min-height: auto;
 }
 
 a {
@@ -18,4 +22,10 @@ a {
 
 a:hover {
   @apply text-pink-50;
+}
+
+@responsive {
+  .w-p-30 {
+    width: 30%;
+  }
 }

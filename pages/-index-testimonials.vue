@@ -73,7 +73,7 @@ export default {
         },
         {
           name: 'Julian Derungs',
-          title: 'CEO, Prime Sytems',
+          title: 'CEO, Prime Systems',
           quote:
             'Prior to Stormkit we were managing our own Docker workflow. We have saved hundreds of hours per year after migrating to Stormkit.',
           linkedin: 'https://www.linkedin.com/in/julianderungs/',

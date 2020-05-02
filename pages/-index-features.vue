@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-6 md:mt-0 md:relative" style="top: -8vh;">
+  <div class="md:relative">
     <div class="flex-auto flex items-strech p-3 rounded-lg overflow-hidden">
       <ul class="flex-auto">
         <li

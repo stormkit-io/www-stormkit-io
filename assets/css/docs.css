@@ -1,0 +1,116 @@
+.docs {
+  @apply text-sm;
+  @apply leading-relaxed;
+}
+
+.docs h1,
+.docs h2,
+.docs h3,
+.docs h4,
+.docs h5,
+.docs h6 {
+  @apply font-bold;
+  @apply mb-3;
+}
+
+.docs h1 {
+  @apply text-2xl;
+}
+
+.docs h2 {
+  @apply text-lg;
+}
+
+.docs h3 {
+  @apply text-sm;
+  @apply mt-2;
+  @apply mb-0;
+}
+
+.docs section {
+  @apply mb-8;
+  @apply p-4;
+  @apply bg-gray-90;
+  @apply rounded-lg;
+}
+
+.docs ul,
+.docs ol {
+  @apply list-inside;
+  @apply my-2;
+  @apply pl-4;
+}
+
+.docs ul {
+  @apply list-disc;
+}
+
+.docs ol {
+  @apply list-decimal;
+}
+
+.docs li {
+  @apply mb-2;
+}
+
+.docs li:last-child {
+  @apply mb-0;
+}
+
+.docs code {
+  @apply inline-block;
+  @apply px-1;
+  @apply bg-white;
+  @apply border;
+  @apply border-gray-80;
+  @apply rounded;
+  @apply text-xs;
+  @apply text-pink-50;
+}
+
+.docs table code {
+  @apply bg-gray-90;
+}
+
+.docs pre {
+  @apply my-4;
+}
+
+.docs pre code {
+  @apply block;
+  @apply bg-blue-50;
+  @apply text-white;
+  @apply p-4;
+}
+
+.docs img {
+  @apply block;
+  @apply shadow;
+  @apply rounded-lg;
+  @apply my-4;
+  @apply w-full;
+  @apply border;
+  @apply border-gray-90;
+}
+
+.docs table {
+  @apply my-4;
+  @apply border-collapse;
+  @apply bg-white;
+}
+
+.docs table th {
+  @apply font-bold;
+  @apply text-center;
+}
+
+.docs table td {
+  @apply text-left;
+}
+
+.docs table td,
+.docs table th {
+  @apply border;
+  @apply border-gray-80;
+  @apply p-4;
+}

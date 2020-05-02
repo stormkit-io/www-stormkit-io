@@ -1,7 +1,7 @@
 {
   "name": "www-stormkit-io",
   "version": "1.0.0",
-  "description": "Landing page of Stormkit.io",
+  "description": "Stormkit is an infrastructure provider for modern javascript applications which is strongly integrated with popular Git providers.",
   "author": "Savas Vedova",
   "private": true,
   "scripts": {

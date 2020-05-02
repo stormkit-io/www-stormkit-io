@@ -4,13 +4,25 @@
 
 .page {
   max-width: 1140px;
-  min-height: 95vh;
   margin: 0 auto;
   width: 100%;
 }
 
-.page.mh-auto {
-  min-height: auto;
+html {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
 }
 
 a {

@@ -19,7 +19,7 @@ module.exports = {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700'
+          'https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;700&display=swap'
       },
       {
         rel: 'stylesheet',
@@ -35,7 +35,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['@/assets/css/docs.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -73,5 +73,8 @@ module.exports = {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  router: {
+    linkActiveClass: 'active-link'
   }
 }

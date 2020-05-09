@@ -23,8 +23,8 @@
 
 .docs h3 {
   @apply text-sm;
-  @apply mt-2;
-  @apply mb-0;
+  @apply mt-4;
+  @apply mb-2;
 }
 
 .docs section {

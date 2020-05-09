@@ -22,7 +22,14 @@
       By default, each application comes with a production environment already
       set. You'll need to configure it to deploy it successfully. The production
       environment cannot be deleted or renamed. However, you can change the
-      branch it points.
+      branch it points. Any branch that does not match an environment's branch
+      (a feature branch) will be deployed with the default environment's
+      configuration. You can change this behaviour by visiting the
+      <b>Application's settings</b> page and modifying the
+      <b>Default environment</b> dropdown under the
+      <b>Auto deployments</b> section. That will tell Stormkit to build new
+      feature branch deployments with that environment's configuration.
+      <img :src="pngEnvDefault" alt="Default environment" />
     </section>
     <h2>Creating an environment</h2>
     <section>
@@ -42,17 +49,6 @@
       <img :src="pngEnvDelete" alt="Environment delete" />
       Please bear in mind that you cannot delete
       <code>Production</code> environments as they are required by design.
-    </section>
-    <h2>Default environment</h2>
-    <section>
-      By default, any branch that does not match an environment's branch (a
-      feature branch) will be deployed with the production configuration. You
-      can change this behaviour by visiting the
-      <b>Application's settings</b> page and modifying the
-      <b>Default environment</b> dropdown under the
-      <b>Auto deployments</b> section. That will tell Stormkit to build new
-      feature branch deployments with that environment's configuration.
-      <img :src="pngEnvDefault" alt="Default environment" />
     </section>
   </main>
 </template>

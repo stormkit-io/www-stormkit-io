@@ -6,7 +6,7 @@
     <div class="page md:mt-24">
       <sk-features />
     </div>
-    <div class="mb-64 mt-16 md:mt-24">
+    <div class="md:mb-64 mt-16 md:mt-24">
       <sk-testimonials />
     </div>
   </div>

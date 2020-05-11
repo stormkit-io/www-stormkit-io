@@ -4,13 +4,7 @@
       class="app-header flex items-center justify-between flex-wrap text-gray-40"
     >
       <div class="flex items-center flex-shrink-0 text-white mr-6">
-        <nuxt-link
-          to="/"
-          class="flex items-center text-xl font-bold text-black"
-        >
-          <img :src="skLogoWhite" class="mr-3 w-10" />
-          Stormkit
-        </nuxt-link>
+        <sk-logo />
       </div>
       <div class="mobile-menu md:hidden">
         <button class="material-icons text-4xl" @click="toggleMenu">
@@ -64,16 +58,16 @@
   </div>
 </template>
 <script>
-import skLogoWhite from '../../assets/images/stormkit-logo.svg'
+import SkLogo from '../atoms/Logo'
 import SkButton from '../atoms/Button'
 
 export default {
   components: {
-    SkButton
+    SkButton,
+    SkLogo
   },
 
   data: () => ({
-    skLogoWhite,
     displayMobileMenu: false,
     links: [
       { text: 'Docs', path: '/docs' },

@@ -1,13 +1,14 @@
 <template>
   <div
     class="bg max-h-screen overflow-hidden absolute inset-0"
-    :class="{ 'top-none': topNone }"
+    :class="{ 'top-none': topNone, 'bottom-none': bottomNone }"
   ></div>
 </template>
 <script>
 export default {
   props: {
-    topNone: { type: Boolean, default: false }
+    topNone: { type: Boolean, default: false },
+    bottomNone: { type: Boolean, default: false }
   }
 }
 </script>
@@ -31,5 +32,9 @@ export default {
 .top-none.bg:before {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+.bottom-none.bg:before {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 </style>

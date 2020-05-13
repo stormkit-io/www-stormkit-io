@@ -4804,6 +4804,11 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
+github-buttons@^2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/github-buttons/-/github-buttons-2.8.0.tgz#322456e8b4be2e647fd7e041b9c97c823fe7243f"
+  integrity sha512-luN2vRGV0GKT/P9FLqrWfa2DXddjNrDmv6eOLhFTU99yGv1OrMxVZEXKwSHlGmxhxvnZFYT6a3Hz42W07m3J1g==
+
 glob-all@^3.1.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/glob-all/-/glob-all-3.2.1.tgz#082ca81afd2247cbd3ed2149bb2630f4dc877d95"

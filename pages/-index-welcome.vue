@@ -18,11 +18,22 @@
             It builds, deploys and scales your javascript apps seamlessly.
           </h2>
           <div
-            class="flex items-center justify-center md:justify-start my-6 md:my-0"
+            class="flex flex-col items-center md:items-start md:justify-start my-6 md:my-0"
           >
             <sk-button primary class="mt-8 py-6 md:py-3 font-bold"
               >Deploy now for free</sk-button
             >
+            <client-only>
+              <div class="mt-4">
+                <sk-github-button
+                  href="https://github.com/stormkit-io/www-stormkit-io"
+                  data-size="large"
+                  data-show-count
+                  data-text="GitHub Stars"
+                  aria-label="Star stormkit-io/www-stormkit-io on GitHub"
+                />
+              </div>
+            </client-only>
           </div>
         </div>
         <img
@@ -40,6 +51,7 @@
   </div>
 </template>
 <script>
+import SkGithubButton from '../components/atoms/GithubButton'
 import SkHeader from '../components/molecules/AppHeader'
 import SkButton from '../components/atoms/Button'
 import SkMouseScroll from '../components/atoms/MouseScroll'
@@ -48,9 +60,9 @@ import versionControl from '../assets/images/content-type.svg'
 export default {
   components: {
     SkHeader,
-
     SkMouseScroll,
-    SkButton
+    SkButton,
+    SkGithubButton
   },
   data() {
     return {

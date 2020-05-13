@@ -21,7 +21,7 @@ export default {
         'py-2',
         'border',
         'leading-none',
-        'rounded-full',
+        'rounded-md',
         'text-sm'
       ]
 

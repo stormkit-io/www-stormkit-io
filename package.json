@@ -18,6 +18,7 @@
     "@nuxtjs/dotenv": "^1.4.0",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
+    "github-buttons": "^2.8.0",
     "nuxt-start": "^2.12.2"
   },
   "devDependencies": {

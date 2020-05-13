@@ -71,7 +71,7 @@ export default {
     displayMobileMenu: false,
     links: [
       { text: 'Docs', path: '/docs' },
-      { text: 'Blog', path: '/blog' },
+      { text: 'Examples', path: '/docs/examples' },
       { text: 'Pricing', path: '/pricing' }
     ]
   }),

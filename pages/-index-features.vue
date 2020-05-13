@@ -1,6 +1,6 @@
 <template>
   <div class="md:relative">
-    <div class="flex-auto flex items-strech p-3 rounded-lg overflow-hidden">
+    <div class="flex-auto flex items-strech rounded-lg overflow-hidden">
       <ul class="flex-auto">
         <li
           v-for="(feature, index) in features"

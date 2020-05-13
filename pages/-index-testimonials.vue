@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-grad text-white relative pb-24">
+  <div class="text-white relative md:pb-24">
     <sk-background />
-    <div class="page mh-auto mb-12 p-6">
+    <div class="page mh-auto mb-12 py-6">
       <h2 class="text-3xl my-12 text-blue-50 font-light">
         See what our customers say
       </h2>

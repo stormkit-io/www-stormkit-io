@@ -23,8 +23,8 @@
             <sk-button primary class="mt-8 py-6 md:py-3 font-bold"
               >Deploy now for free</sk-button
             >
-            <client-only>
-              <div class="mt-4">
+            <div class="mt-4" style="min-height: 34px;">
+              <client-only>
                 <sk-github-button
                   href="https://github.com/stormkit-io/www-stormkit-io"
                   data-size="large"
@@ -32,8 +32,13 @@
                   data-text="GitHub Stars"
                   aria-label="Star stormkit-io/www-stormkit-io on GitHub"
                 />
-              </div>
-            </client-only>
+                <template #placeholder>
+                  <span class="material-icons spinner">
+                    autorenew
+                  </span>
+                </template>
+              </client-only>
+            </div>
           </div>
         </div>
         <img
@@ -79,6 +84,19 @@ export default {
 <style scoped>
 .version-control {
   animation: swing 5s infinite;
+}
+
+.spinner {
+  animation: circle 1s infinite;
+}
+
+@keyframes circle {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes swing {

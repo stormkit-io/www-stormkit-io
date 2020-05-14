@@ -22,6 +22,17 @@
   </nav>
 </template>
 <script>
+export const examples = [
+  {
+    path: '/docs/examples/nuxt-js-hackernews',
+    text: 'Nuxt.js Hacker News'
+  },
+  {
+    path: '/docs/examples/custom-hybrid-app',
+    text: 'Custom Hybrid App'
+  }
+]
+
 export default {
   data() {
     return {
@@ -111,16 +122,7 @@ export default {
         },
         {
           text: 'Examples',
-          children: [
-            {
-              path: '/docs/examples/nuxt-js-hackernews',
-              text: 'Nuxt.js Hacker News'
-            },
-            {
-              path: '/docs/examples/custom-hybrid-app',
-              text: 'Custom Hybrid App'
-            }
-          ]
+          children: examples
         }
       ]
     }

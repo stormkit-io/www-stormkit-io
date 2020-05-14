@@ -41,6 +41,11 @@
   @apply pl-4;
 }
 
+.docs ul.pl-0,
+.docs ol.pl-0 {
+  @apply pl-0;
+}
+
 .docs ul {
   @apply list-disc;
 }
@@ -74,6 +79,7 @@
 
 .docs pre {
   @apply my-4;
+  @apply max-w-full;
 }
 
 .docs pre code {
@@ -81,6 +87,7 @@
   @apply bg-blue-50;
   @apply text-white;
   @apply p-4;
+  @apply whitespace-pre-wrap;
 }
 
 .docs img {

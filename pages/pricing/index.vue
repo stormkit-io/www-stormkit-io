@@ -1,7 +1,7 @@
 <template>
   <main>
     <sk-header />
-    <div class="page min-h-screen">
+    <div class="page min-h-screen px-3 md:px-0">
       <h1 class="text-4xl bold font-light mt-24 text-center">
         Pay as you grow
       </h1>

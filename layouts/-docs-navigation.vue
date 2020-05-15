@@ -132,6 +132,7 @@ export default {
 <style scoped>
 .subitem.nuxt-link-exact-active {
   @apply rounded;
+
   background: rgba(62, 96, 132, 0.5);
 }
 </style>

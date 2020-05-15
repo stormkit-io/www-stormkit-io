@@ -174,12 +174,15 @@ export default {
     max-width: 24%;
   }
 }
+
 .t-row:last-child td {
   border-bottom: none;
 }
+
 button.w-full {
   padding: 0;
 }
+
 table.w-full {
   overflow: auto;
   min-width: 980px;

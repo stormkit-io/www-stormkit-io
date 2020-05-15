@@ -16,7 +16,7 @@ export default {
 .bg {
   z-index: -1;
 }
-.bg:before {
+.bg::before {
   position: absolute;
   left: -60%;
   right: -60%;
@@ -29,11 +29,11 @@ export default {
   background-attachment: fixed;
   background-size: cover;
 }
-.top-none.bg:before {
+.top-none.bg::before {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-.bottom-none.bg:before {
+.bottom-none.bg::before {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }

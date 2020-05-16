@@ -55,10 +55,14 @@
   </div>
 </template>
 <script>
-import webmMultipleEnvironments from '../assets/images/features/multi-env.webm'
-import webmStagedRollouts from '../assets/images/features/staged-rollouts.webm'
-import webmRemoteConfig from '../assets/images/features/remote-config.webm'
-import webmSnippets from '../assets/images/features/snippets.webm'
+import mp4MultipleEnvironments from '../assets/images/features/multi-env.mp4'
+import mp4StagedRollouts from '../assets/images/features/staged-rollouts.mp4'
+import mp4RemoteConfig from '../assets/images/features/remote-config.mp4'
+import mp4Snippets from '../assets/images/features/snippets.mp4'
+import gifMultipleEnvironments from '../assets/images/features/multi-env.gif'
+import gifStagedRollouts from '../assets/images/features/staged-rollouts.gif'
+import gifRemoteConfig from '../assets/images/features/remote-config.gif'
+import gifSnippets from '../assets/images/features/snippets.gif'
 import SkFeaturePreview from './-index-features-preview'
 
 const SPEED_8X = 1
@@ -88,7 +92,8 @@ export default {
           icon: 'settings_input_component',
           title: 'Multiple environments',
           desc: 'Create as many development environments as required.',
-          video: webmMultipleEnvironments,
+          video: mp4MultipleEnvironments,
+          image: gifMultipleEnvironments,
           speed: SPEED_2X
         },
         {
@@ -96,7 +101,8 @@ export default {
           title: 'Staged rollouts',
           desc:
             'Release multiple deployments at the same time to a percentage of your users.',
-          video: webmStagedRollouts,
+          video: mp4StagedRollouts,
+          image: gifStagedRollouts,
           speed: SPEED_3X
         },
         {
@@ -104,7 +110,8 @@ export default {
           title: 'Remote configuration',
           desc:
             'Inject variables to your app. Changes are effective instantly - no need to rebuild.',
-          video: webmRemoteConfig,
+          video: mp4RemoteConfig,
+          image: gifRemoteConfig,
           speed: SPEED_2X
         },
         {
@@ -112,7 +119,8 @@ export default {
           title: 'Inject snippets',
           desc:
             'Manage 3rd party scripts right from the UI. Useful for marketing teams or PMs.',
-          video: webmSnippets,
+          video: mp4Snippets,
+          image: gifSnippets,
           speed: SPEED_2X
         }
       ]

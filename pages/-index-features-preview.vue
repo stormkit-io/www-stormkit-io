@@ -1,15 +1,16 @@
 <template>
   <div>
     <component :is="currentPreview.component" v-if="currentPreview.component" />
+    <video v-if="currentPreview.video && !isMobile" autoplay>
+      <source :src="currentPreview.video" type="video/mp4" />
+      <span>Your browser does not support the video tag.</span>
+    </video>
     <img
-      v-if="currentPreview.image"
+      v-if="currentPreview.image && isMobile"
       :src="currentPreview.image"
       class="rounded-lg"
       alt="Stormkit Preview"
     />
-    <video v-if="currentPreview.video" autoplay :src="currentPreview.video">
-      Your browser does not support the video tag.
-    </video>
   </div>
 </template>
 <script>
@@ -21,6 +22,17 @@ export default {
   },
   props: {
     currentPreview: { type: Object, required: true }
+  },
+  computed: {
+    isMobile() {
+      if (typeof navigator === 'undefined') {
+        return false
+      }
+
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    }
   }
 }
 </script>

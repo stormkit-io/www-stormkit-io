@@ -15,6 +15,16 @@
             >
               {{ subitem.text }}
             </nuxt-link>
+            <ul v-if="subitem.children">
+              <li v-for="sub2xitem in subitem.children" :key="sub2xitem.path">
+                <nuxt-link
+                  :to="sub2xitem.path"
+                  class="subitem block text-white py-2 pr-6 pl-12"
+                >
+                  {{ sub2xitem.text }}
+                </nuxt-link>
+              </li>
+            </ul>
           </li>
         </ul>
       </li>
@@ -71,15 +81,26 @@ export default {
             },
             {
               path: '/docs/deployments/configuration',
-              text: 'Configuration'
-            },
-            {
-              path: '/docs/deployments/single-page-applications',
-              text: 'Single page applications'
-            },
-            {
-              path: '/docs/deployments/hybrid-applications',
-              text: 'Hybrid applications'
+              text: 'Configuration',
+              children: [
+                {
+                  path: '/docs/deployments/configuration/angular',
+                  text: 'Angular'
+                },
+                {
+                  path: '/docs/deployments/configuration/next',
+                  text: 'Next.js'
+                },
+                {
+                  path: '/docs/deployments/configuration/nuxt',
+                  text: 'Nuxt.js'
+                },
+                {
+                  path:
+                    '/docs/deployments/configuration/single-page-applications',
+                  text: 'Single page applications'
+                }
+              ]
             },
             {
               path: '/docs/deployments/auto-deployments',

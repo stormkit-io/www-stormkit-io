@@ -27,6 +27,10 @@
   @apply mb-2;
 }
 
+.docs h3.mt-8 {
+  @apply mt-8;
+}
+
 .docs section {
   @apply mb-8;
   @apply p-4;

@@ -1,12 +1,6 @@
 <template>
-  <main>
-    <sk-info-box theme="info" class="mb-4">
-      Based on your
-      <nuxt-link to="/docs/deployments/configuration">configuration</nuxt-link>
-      Stormkit determines whether your application is served as single page or
-      hybrid application.
-    </sk-info-box>
-    <h1>Single Page Applications</h1>
+  <div>
+    <h2>{{ title }}</h2>
     <section>
       <p>
         If you omit the <code>Server file</code> setting or turn off the
@@ -19,11 +13,9 @@
       </p>
       <pre><code>{{spaConfig}}</code></pre>
     </section>
-  </main>
+  </div>
 </template>
 <script>
-import SkInfoBox from '../../../components/atoms/InfoBox'
-
 const spaConfig = `app:
 - redirects:
     - from: /*
@@ -34,19 +26,13 @@ const spaConfig = `app:
 export default {
   layout: 'docs',
 
-  components: {
-    SkInfoBox
+  props: {
+    title: { type: String, required: true }
   },
 
   data() {
     return {
       spaConfig
-    }
-  },
-
-  head() {
-    return {
-      title: 'Stormkit - Single page application'
     }
   }
 }

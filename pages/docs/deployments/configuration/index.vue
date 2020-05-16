@@ -111,9 +111,9 @@
   </main>
 </template>
 <script>
-import pngEnvFrameworkBuildConfig from '../../../assets/images/docs/deployments/env-framework-build-config.png'
-import pngEnvBuildConfig from '../../../assets/images/docs/deployments/env-build-config.png'
-import pngEnvConfig from '../../../assets/images/docs/deployments/env-config.png'
+import pngEnvFrameworkBuildConfig from '~/assets/images/docs/deployments/env-framework-build-config.png'
+import pngEnvBuildConfig from '~/assets/images/docs/deployments/env-build-config.png'
+import pngEnvConfig from '~/assets/images/docs/deployments/env-config.png'
 
 export default {
   layout: 'docs',

@@ -1,8 +1,12 @@
 <template>
   <div>
     <component :is="currentPreview.component" v-if="currentPreview.component" />
-    <video v-if="currentPreview.video && !isMobile" autoplay>
-      <source :src="currentPreview.video" type="video/mp4" />
+    <video
+      v-if="currentPreview.video && !isMobile"
+      autoplay
+      playsinline
+      :src="currentPreview.video"
+    >
       <span>Your browser does not support the video tag.</span>
     </video>
     <img

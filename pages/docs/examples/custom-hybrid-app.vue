@@ -100,10 +100,17 @@ const indexFile = `<!-- public/index.html -->
 
 export default {
   layout: 'docs',
+
   data() {
     return {
       serverFile,
       indexFile
+    }
+  },
+
+  head() {
+    return {
+      title: 'Stormkit - Custom hybrid application'
     }
   }
 }

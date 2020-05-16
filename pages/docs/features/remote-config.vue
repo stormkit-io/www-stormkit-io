@@ -192,12 +192,19 @@ export default App;`
 
 export default {
   layout: 'docs',
+
   data() {
     return {
       pngRemoteConfig,
       remoteConfig,
       remoteSsrConfig,
       identifyUser
+    }
+  },
+
+  head() {
+    return {
+      title: 'Stormkit - Remote configuration'
     }
   }
 }

@@ -22,9 +22,16 @@ import { examples } from '../../../layouts/-docs-navigation'
 
 export default {
   layout: 'docs',
+
   data() {
     return {
       examples
+    }
+  },
+
+  head() {
+    return {
+      title: 'Stormkit - Examples'
     }
   }
 }

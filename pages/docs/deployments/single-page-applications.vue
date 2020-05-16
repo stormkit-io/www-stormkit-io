@@ -33,12 +33,20 @@ const spaConfig = `app:
 
 export default {
   layout: 'docs',
+
   components: {
     SkInfoBox
   },
+
   data() {
     return {
       spaConfig
+    }
+  },
+
+  head() {
+    return {
+      title: 'Stormkit - Single page application'
     }
   }
 }

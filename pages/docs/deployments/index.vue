@@ -67,6 +67,12 @@
 </template>
 <script>
 export default {
-  layout: 'docs'
+  layout: 'docs',
+
+  head() {
+    return {
+      title: 'Stormkit - Deployments'
+    }
+  }
 }
 </script>

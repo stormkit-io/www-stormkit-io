@@ -218,6 +218,7 @@ const redirectAssets = `app:
 
 export default {
   layout: 'docs',
+
   data() {
     return {
       redirectAssets,
@@ -227,6 +228,12 @@ export default {
       spaConfig,
       nonWwwToWww,
       syntax
+    }
+  },
+
+  head() {
+    return {
+      title: 'Stormkit - Redirects and path rewrite'
     }
   }
 }

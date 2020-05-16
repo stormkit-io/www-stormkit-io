@@ -117,11 +117,18 @@ import pngEnvConfig from '../../../assets/images/docs/deployments/env-config.png
 
 export default {
   layout: 'docs',
+
   data() {
     return {
       pngEnvFrameworkBuildConfig,
       pngEnvBuildConfig,
       pngEnvConfig
+    }
+  },
+
+  head() {
+    return {
+      title: 'Stormkit - Deployment configuration'
     }
   }
 }

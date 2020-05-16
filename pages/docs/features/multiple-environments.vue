@@ -59,11 +59,18 @@ import pngEnvDefault from '../../../assets/images/docs/deployments/auto-deployme
 
 export default {
   layout: 'docs',
+
   data() {
     return {
       pngEnvScreen,
       pngEnvDelete,
       pngEnvDefault
+    }
+  },
+
+  head() {
+    return {
+      title: 'Stormkit - Environments'
     }
   }
 }

@@ -18,9 +18,16 @@ import pngApplicationRuntime from '../../../assets/images/docs/deployments/appli
 
 export default {
   layout: 'docs',
+
   data() {
     return {
       pngApplicationRuntime
+    }
+  },
+
+  head() {
+    return {
+      title: 'Stormkit - Application runtime'
     }
   }
 }

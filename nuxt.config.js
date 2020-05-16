@@ -4,7 +4,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: 'Serverless infrastructure for Javascript applications | Stormkit',
+    title: 'Stormkit - Serverless infrastructure for javascript applications',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -12,6 +12,52 @@ module.exports = {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
+      },
+      {
+        hid: 'httpEquiv',
+        name: 'x-ua-compatible',
+        content: 'ie=edge'
+      },
+      {
+        hid: 'google-site-verification',
+        name: 'google-site-verification',
+        content: 'qy_tyF_WyY51Q2fisZBBV-LlCddUEf0wF8fXM99u_l8'
+      },
+      {
+        hid: 'twitter:site',
+        name: 'twitter:site',
+        content: '@stormkitio'
+      },
+      {
+        hid: 'twitter:creator',
+        name: 'twitter:creator',
+        content: '@savasvedova'
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Serverless infrastructure for javascript applications'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          'Stormkit integrates perfectly with your git flow. It builds, deploys and scales your javascript apps seamlessly.'
+      },
+      {
+        hid: 'twitter:image',
+        property: 'twitter:image',
+        content: 'https://www.stormkit.io/stormkit-logo.png'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://www.stormkit.io/stormkit-logo.png'
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://www.stormkit.io/'
       }
     ],
     link: [

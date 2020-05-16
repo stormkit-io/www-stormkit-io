@@ -79,10 +79,17 @@ import pngSnippetsEdit from '../../../assets/images/docs/features/snippets-edit.
 
 export default {
   layout: 'docs',
+
   data() {
     return {
       pngSnippets,
       pngSnippetsEdit
+    }
+  },
+
+  head() {
+    return {
+      title: 'Stormkit - Snippets'
     }
   }
 }

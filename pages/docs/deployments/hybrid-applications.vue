@@ -222,9 +222,11 @@ const angularWebpack = `module.exports = {
 
 export default {
   layout: 'docs',
+
   components: {
     SkInfoBox
   },
+
   data() {
     return {
       customAppConfig,
@@ -236,6 +238,12 @@ export default {
       customWebpack,
       angularServerTs,
       angularWebpack
+    }
+  },
+
+  head() {
+    return {
+      title: 'Stormkit - Hybrid applications'
     }
   }
 }

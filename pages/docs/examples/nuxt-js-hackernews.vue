@@ -96,9 +96,16 @@ const yaml = `app:
 
 export default {
   layout: 'docs',
+
   data() {
     return {
       yaml
+    }
+  },
+
+  head() {
+    return {
+      title: 'Stormkit - Nuxt.js Hacker News implementation'
     }
   }
 }

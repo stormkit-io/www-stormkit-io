@@ -34,9 +34,16 @@ import pngSlackHooks from '../../../assets/images/docs/deployments/slack-hooks.p
 
 export default {
   layout: 'docs',
+
   data() {
     return {
       pngSlackHooks
+    }
+  },
+
+  head() {
+    return {
+      title: 'Stormkit - Deployment hooks'
     }
   }
 }

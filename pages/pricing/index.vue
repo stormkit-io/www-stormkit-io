@@ -165,6 +165,12 @@ export default {
         { name: 'Premium support', value: [false, false, false, true] }
       ]
     }
+  },
+
+  head() {
+    return {
+      title: 'Stormkit - Pricing'
+    }
   }
 }
 </script>

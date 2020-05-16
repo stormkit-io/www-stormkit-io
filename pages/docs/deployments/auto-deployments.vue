@@ -56,9 +56,16 @@ import pngAutoDeployments from '../../../assets/images/docs/deployments/auto-dep
 
 export default {
   layout: 'docs',
+
   data() {
     return {
       pngAutoDeployments
+    }
+  },
+
+  head() {
+    return {
+      title: 'Stormkit - Auto deployments'
     }
   }
 }

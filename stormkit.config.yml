@@ -1,0 +1,27 @@
+- app:
+    - redirects:
+        - from: stormkit.io
+          to: www.stormkit.io
+          status: 301
+          replace: true
+        - from: /docs/deploy-hooks
+          to: /docs/deployments/deploy-hooks
+          status: 301
+        - from: /docs/deployments/angular
+          to: /deployments/configuration/angular
+          status: 301
+        - from: /docs/deployments/next
+          to: /docs/deployments/configuration/next
+          status: 301
+        - from: /docs/deployments/nuxt
+          to: /docs/deployments/configuration/nuxt
+          status: 301
+        - from: /docs/staged-rollouts
+          to: /docs/features/staged-rollouts
+          status: 301
+        - from: /docs/remote-config
+          to: /docs/features/remote-config
+          status: 301
+        - from: /docs/redirects
+          to: /docs/features/redirects-and-path-rewrites
+          status: 301

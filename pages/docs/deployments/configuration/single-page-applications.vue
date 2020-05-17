@@ -6,8 +6,7 @@
       Stormkit determines whether your application is served as single page or
       hybrid application.
     </sk-info-box>
-    <h2>Single Page Applications</h2>
-    <sk-spa />
+    <sk-spa title="Single Page Applications" />
   </main>
 </template>
 <script>

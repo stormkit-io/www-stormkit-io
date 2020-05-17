@@ -6,16 +6,28 @@
       Stormkit determines whether your application is served as single page or
       hybrid application.
     </sk-info-box>
+    <sk-info-box theme="warning" class="mb-4">
+      <p>
+        You will need to provide a <code>next.config.js</code> file in order to
+        tell Stormkit that this is a Next.js framework. In the next releases
+        this won't be needed however for now you'll have to add the config file
+        even if it's empty.
+      </p>
+      <pre><code>{{nextJsTargetServerless}}</code></pre>
+    </sk-info-box>
+    <h2>Next.js</h2>
+    <section>
+      <p>
+        Stormkit automatically extends your config file and adds
+        <code>target: "serverless"</code> to it. This will tell Next.js to
+        configure your application for the serverless environments.
+      </p>
+    </section>
     <sk-spa title="Next.js single page applications" />
     <h2 id="next">Next.js hybrid applications</h2>
     <section>
       <p>
-        First thing, we need to make sure that the <code>target</code> property
-        in the <code>next.config.js</code> is set to <code>serverless</code>
-      </p>
-      <pre><code>{{nextJsTargetServerless}}</code></pre>
-      <p>
-        For next.js projects, we can either tell Next.js to point static assets
+        For hybrid projects, we can either tell Next.js to point static assets
         directly to our CDN or can provide the
         <code>stormkit.config.yml</code> file. There is no preferred way,
         however, the <code>next.config.js</code> is less locked-in way.
@@ -58,9 +70,7 @@ const nextJsStormkitConfig = `app:
     - ext: js,css,ico,png,jpg,svg
       cdn: true`
 
-const nextJsTargetServerless = `module.exports = {
-  target: "serverles"  
-}`
+const nextJsTargetServerless = `module.exports = {}`
 
 const nextJsConfig = `module.exports = {
   assetPrefix: process.env.PUBLIC_URL || "/"

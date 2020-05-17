@@ -25,3 +25,6 @@ app:
       - from: /docs/redirects
         to: /docs/features/redirects-and-path-rewrites
         status: 301
+      - from: /*
+        to: /index.html
+        assets: false

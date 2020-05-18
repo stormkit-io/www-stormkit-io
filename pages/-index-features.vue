@@ -52,18 +52,31 @@
         <sk-feature-preview :current-preview="currentPreview" />
       </div>
     </div>
+    <div class="flex justify-center w-full mt-12">
+      <sk-button
+        class="inline-flex items-center"
+        primary
+        @click="openYoutubeVideo"
+      >
+        Watch our quick intro
+        <span class="material-icons ml-2">
+          exit_to_app
+        </span>
+      </sk-button>
+    </div>
   </div>
 </template>
 <script>
-import mp4MultipleEnvironments from '../assets/images/features/multi-env.mp4'
-import mp4StagedRollouts from '../assets/images/features/staged-rollouts.mp4'
-import mp4RemoteConfig from '../assets/images/features/remote-config.mp4'
-import mp4Snippets from '../assets/images/features/snippets.mp4'
-import gifMultipleEnvironments from '../assets/images/features/multi-env.gif'
-import gifStagedRollouts from '../assets/images/features/staged-rollouts.gif'
-import gifRemoteConfig from '../assets/images/features/remote-config.gif'
-import gifSnippets from '../assets/images/features/snippets.gif'
 import SkFeaturePreview from './-index-features-preview'
+import SkButton from '~/components/atoms/Button'
+import mp4MultipleEnvironments from '~/assets/images/features/multi-env.mp4'
+import mp4StagedRollouts from '~/assets/images/features/staged-rollouts.mp4'
+import mp4RemoteConfig from '~/assets/images/features/remote-config.mp4'
+import mp4Snippets from '~/assets/images/features/snippets.mp4'
+import gifMultipleEnvironments from '~/assets/images/features/multi-env.gif'
+import gifStagedRollouts from '~/assets/images/features/staged-rollouts.gif'
+import gifRemoteConfig from '~/assets/images/features/remote-config.gif'
+import gifSnippets from '~/assets/images/features/snippets.gif'
 
 const SPEED_8X = 1
 const SPEED_3X = 0.375
@@ -72,7 +85,8 @@ const SPEED_X = 0.125
 
 export default {
   components: {
-    SkFeaturePreview
+    SkFeaturePreview,
+    SkButton
   },
 
   data() {
@@ -151,6 +165,13 @@ export default {
           this.progressPercentage = 0
         }
       }, 50)
+    },
+    openYoutubeVideo() {
+      const a = document.createElement('a')
+      a.setAttribute('href', 'https://youtu.be/RHP6AOnGTAY')
+      a.setAttribute('target', '_blank')
+      a.setAttribute('rel', 'noreferrer noopener')
+      a.click()
     }
   }
 }

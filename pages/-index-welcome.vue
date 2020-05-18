@@ -34,9 +34,7 @@
                   aria-label="Star stormkit-io/www-stormkit-io on GitHub"
                 />
                 <template #placeholder>
-                  <span class="material-icons spinner">
-                    autorenew
-                  </span>
+                  <sk-spinner class="bg-pink-50" :width="6" :height="6" />
                 </template>
               </client-only>
             </div>
@@ -57,17 +55,19 @@
   </div>
 </template>
 <script>
-import SkGithubButton from '../components/atoms/GithubButton'
-import SkHeader from '../components/molecules/AppHeader'
-import SkButton from '../components/atoms/Button'
-import SkMouseScroll from '../components/atoms/MouseScroll'
-import versionControl from '../assets/images/content-type.svg'
+import SkGithubButton from '~/components/atoms/GithubButton'
+import SkHeader from '~/components/molecules/AppHeader'
+import SkButton from '~/components/atoms/Button'
+import SkSpinner from '~/components/atoms/Spinner'
+import SkMouseScroll from '~/components/atoms/MouseScroll'
+import versionControl from '~/assets/images/content-type.svg'
 
 export default {
   components: {
     SkHeader,
     SkMouseScroll,
     SkButton,
+    SkSpinner,
     SkGithubButton
   },
   data() {

@@ -47,7 +47,7 @@
         </li>
       </ul>
       <div
-        class="ml-12 border border-gray-80 rounded-lg overflow-hidden shadow-lg bg-blue-50 w-full items-center hidden md:flex"
+        class="ml-12 border border-gray-80 rounded-lg overflow-hidden shadow-lg bg-blue-50 w-full items-center hidden md:flex relative"
       >
         <sk-feature-preview :current-preview="currentPreview" />
       </div>

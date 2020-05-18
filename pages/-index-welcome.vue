@@ -27,6 +27,7 @@
               <client-only>
                 <sk-github-button
                   href="https://github.com/stormkit-io/www-stormkit-io"
+                  title="Stormkit GitHub Stars"
                   data-size="large"
                   data-show-count
                   data-text="GitHub Stars"

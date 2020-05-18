@@ -20,7 +20,10 @@
           <div
             class="flex flex-col items-center md:items-start md:justify-start my-6 md:my-0"
           >
-            <sk-button primary class="mt-8 py-6 md:py-3 font-bold"
+            <sk-button
+              primary
+              class="mt-8 py-6 md:py-3 font-bold"
+              to="https://app.stormkit.io/auth"
               >Deploy now for free</sk-button
             >
             <div class="mt-4" style="min-height: 34px;">

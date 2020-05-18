@@ -37,13 +37,12 @@
             </li>
           </ul>
           <div class="mt-4">
-            <sk-button class="w-full" primary>
-              <a
-                href="https://app.stormkit.io/auth"
-                class="block py-4 text-white"
-              >
-                {{ p.cta || 'Get started' }}
-              </a>
+            <sk-button
+              class="w-full py-3"
+              to="https://app.stormkit.io/auth"
+              primary
+            >
+              {{ p.cta || 'Get started' }}
             </sk-button>
           </div>
         </div>
@@ -183,10 +182,6 @@ export default {
 
 .t-row:last-child td {
   border-bottom: none;
-}
-
-button.w-full {
-  padding: 0;
 }
 
 table.w-full {

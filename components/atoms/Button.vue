@@ -1,5 +1,10 @@
 <template>
-  <button :class="className" v-bind="$attrs" v-on="$listeners">
+  <button
+    :class="className"
+    v-bind="$attrs"
+    v-on="$listeners"
+    @click="handleClick"
+  >
     <slot />
   </button>
 </template>
@@ -7,7 +12,8 @@
 export default {
   props: {
     primary: { type: Boolean, default: false },
-    secondary: { type: Boolean, default: false }
+    secondary: { type: Boolean, default: false },
+    to: { type: String, default: '' }
   },
   computed: {
     className(...args) {
@@ -40,6 +46,25 @@ export default {
       }
 
       return css.join(' ')
+    }
+  },
+  methods: {
+    handleClick(e) {
+      if (this.$listeners.click) {
+        return this.$listeners.click(e)
+      }
+
+      if (this.to) {
+        const a = document.createElement('a')
+        a.setAttribute('href', this.to)
+
+        if (this.to[0] !== '/') {
+          a.setAttribute('target', '_blank')
+          a.setAttribute('rel', 'noreferrer noopener')
+        }
+
+        a.click()
+      }
     }
   }
 }

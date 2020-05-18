@@ -56,7 +56,7 @@
       <sk-button
         class="inline-flex items-center"
         primary
-        @click="openYoutubeVideo"
+        to="https://youtu.be/RHP6AOnGTAY"
       >
         Watch our quick intro
         <span class="material-icons ml-2">
@@ -165,13 +165,6 @@ export default {
           this.progressPercentage = 0
         }
       }, 50)
-    },
-    openYoutubeVideo() {
-      const a = document.createElement('a')
-      a.setAttribute('href', 'https://youtu.be/RHP6AOnGTAY')
-      a.setAttribute('target', '_blank')
-      a.setAttribute('rel', 'noreferrer noopener')
-      a.click()
     }
   }
 }

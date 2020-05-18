@@ -19,7 +19,7 @@
       <main class="font-light max-w-2xl text-center mb-8">
         We use cookies to make your experience more delicious. By continuing to
         use Stormkit, you agree to our use of cookies in accordance with our
-        <nuxt-link to="/legal/privacy">privacy policy</nuxt-link>.
+        <nuxt-link to="/policies/privacy">privacy policy</nuxt-link>.
       </main>
       <footer class="text-center">
         <sk-button secondary @click="closeBanner">Okay, got it</sk-button>

@@ -13,6 +13,7 @@ export default {
   props: {
     primary: { type: Boolean, default: false },
     secondary: { type: Boolean, default: false },
+    tertiary: { type: Boolean, default: false },
     to: { type: String, default: '' }
   },
   computed: {
@@ -42,6 +43,15 @@ export default {
           'bg-white',
           'hover:bg-blue-50',
           'hover:text-white'
+        )
+      }
+
+      if (this.tertiary) {
+        css.push(
+          'text-white',
+          'bg-blue-50',
+          'hover:bg-white',
+          'hover:text-blue-50'
         )
       }
 

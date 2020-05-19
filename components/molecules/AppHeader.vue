@@ -22,6 +22,7 @@
               :key="link.path"
               :to="link.path"
               class="block text-gray-40 mb-4 px-4"
+              @click.native="toggleMenu"
             >
               {{ link.text }}
             </nuxt-link>
@@ -38,7 +39,7 @@
       <div
         class="w-full block flex-grow lg:flex lg:items-center lg:w-auto absolute md:relative inset-0 md:inset-auto hidden md:block"
       >
-        <div class="text-sm lg:flex-grow text-right text-base pr-12">
+        <div class="text-sm lg:flex-grow text-right text-sm pr-12">
           <nuxt-link
             v-for="link in links"
             :key="link.path"
@@ -70,8 +71,10 @@ export default {
   data: () => ({
     displayMobileMenu: false,
     links: [
+      { text: 'Home', path: '/' },
+      { text: 'About us', path: '/#about-us' },
+      { text: 'Partners', path: '/partners' },
       { text: 'Docs', path: '/docs' },
-      { text: 'Examples', path: '/docs/examples' },
       { text: 'Pricing', path: '/pricing' }
     ]
   }),

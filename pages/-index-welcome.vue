@@ -11,7 +11,7 @@
           <h1
             class="text-2xl md:text-4xl mt-12 md:mt-0 leading-tight mb-8 md:mb-4 font-bold"
           >
-            Powerful infrastructure for modern javascript apps
+            JavaScript Ninja? Let's help you go from Zero to Scale 
           </h1>
           <h2 class="text-sm md:text-base leading-normal">
             Stormkit integrates perfectly with your git flow. <br />

@@ -1,8 +1,10 @@
 <template>
   <div class="text-white relative px-3 md:px-0 md:pb-24">
     <sk-background no-max-height />
-    <div class="page mh-auto mb-12 py-6">
-      <h2 class="text-3xl my-12 text-blue-50 font-light pr-12 md:pr-0">
+    <div class="page mh-auto py-12">
+      <h2
+        class="text-2xl md:text-3xl mb-12 text-blue-50 font-bold text-center px-12 md:px-0"
+      >
         See what our customers say
       </h2>
       <div class="flex flex-col md:flex-row md:justify-between">

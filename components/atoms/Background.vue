@@ -1,14 +1,19 @@
 <template>
   <div
-    class="bg max-h-screen overflow-hidden absolute inset-0"
-    :class="{ 'top-none': topNone, 'bottom-none': bottomNone }"
+    class="bg overflow-hidden absolute inset-0"
+    :class="{
+      'top-none': topNone,
+      'bottom-none': bottomNone,
+      'max-h-screen': !noMaxHeight
+    }"
   ></div>
 </template>
 <script>
 export default {
   props: {
     topNone: { type: Boolean, default: false },
-    bottomNone: { type: Boolean, default: false }
+    bottomNone: { type: Boolean, default: false },
+    noMaxHeight: { type: Boolean, default: false }
   }
 }
 </script>

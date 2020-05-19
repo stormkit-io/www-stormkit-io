@@ -1,5 +1,5 @@
 <template>
-  <div class="md:relative">
+  <div class="page md:relative px-3 md:px-0">
     <div class="flex-auto flex items-strech rounded-lg overflow-hidden">
       <ul class="flex-auto">
         <li

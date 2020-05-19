@@ -1,5 +1,5 @@
 <template>
-  <div class="page flex flex-col md:flex-row">
+  <div class="page px-3 md:px-0 flex flex-col md:flex-row">
     <section
       class="border-t border-gray-80 md:min-w-1/2 bg-white mb-12 md:mb-0 md:mr-4 shadow-lg p-8 rounded-lg"
     >

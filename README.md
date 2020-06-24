@@ -45,4 +45,4 @@ $ yarn generate
 
 ## Open Source
 
-This repo is entirely [MIT licensed](/LICENSE).
+You can check the [LICENSE](/LICENSE) for more information.

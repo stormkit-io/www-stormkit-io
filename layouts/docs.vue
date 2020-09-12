@@ -8,7 +8,7 @@
         class="flex flex-col md:flex-row bg-white rounded-lg shadow m-auto mt-12"
       >
         <sk-navigation
-          class="rounded-tl-lg rounded-bl-lg flex-auto min-w-full md:min-w-1/4 md:max-w-xs"
+          class="docs-navigation rounded-tl-lg rounded-bl-lg flex-auto min-w-full md:min-w-1/4 md:max-w-xs sticky"
         />
         <div class="docs py-6 px-6 md:px-24">
           <nuxt />

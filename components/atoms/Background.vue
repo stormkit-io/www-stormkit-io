@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg overflow-hidden absolute inset-0"
+    class="md:bg overflow-hidden absolute inset-0"
     :class="{
       'top-none': topNone,
       'bottom-none': bottomNone,

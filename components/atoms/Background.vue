@@ -30,8 +30,6 @@ export default {
   z-index: -1;
   border-radius: 50%;
   background-color: #f5f5f5;
-  background-attachment: fixed;
-  background-size: cover;
 }
 .top-none.bg::before {
   border-top-left-radius: 0;

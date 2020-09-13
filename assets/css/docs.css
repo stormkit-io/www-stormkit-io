@@ -125,8 +125,3 @@
   @apply border-gray-80;
   @apply p-4;
 }
-
-.docs-navigation {
-  align-self: flex-start;
-  top: 0;
-}

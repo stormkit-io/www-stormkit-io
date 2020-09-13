@@ -2,7 +2,7 @@
   <img src="https://github.com/stormkit-io/www-stormkit-io/blob/master/assets/images/stormkit-logo.png?raw=true" height="90"/>
 </p>
 <p align="center">
-  <i>Stormkit is an infrastructure provider for modern javascript applications. It perfectly integrates with popular Git solutions.<br/>Try out Stormkit using our hosted version at <a href="https://app.stormkit.io">app.stormkit.io</a>.</i>
+  <i>Stormkit is an infrastructure provider for javascript applications. It perfectly integrates with popular Git solutions.<br/>Try out Stormkit using our hosted version at <a href="https://app.stormkit.io">app.stormkit.io</a>.</i>
   <br/>
   <br/>
   <img src="./assets/images/stormkit-screenshot.png" alt="Stormkit" width="800" />

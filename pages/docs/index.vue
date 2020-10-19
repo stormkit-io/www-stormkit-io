@@ -103,7 +103,7 @@
     <h2 id="community-chat">Community chat</h2>
     <section>
       <p>
-        We're using Discord to engage with our comminuty. Please join us
+        We're using Discord to engage with our community. Please join us
         <a href="https://discord.gg/6yQWhyY">here</a>. You can submit feature
         requests, point out issues or just get to know us!
       </p>

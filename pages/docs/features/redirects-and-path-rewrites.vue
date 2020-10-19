@@ -65,7 +65,7 @@
           <tr>
             <td><b>Replace</b></td>
             <td>
-              Speficies whether a string replace should be used while
+              Specifies whether a string replace should be used while
               redirecting. When used with the `status` field, it will replace
               the `from` value with the `to` value.
             </td>

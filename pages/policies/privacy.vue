@@ -30,7 +30,7 @@
       protection laws may not be as protective as those in your jurisdiction.
       Currently, our servers are located in Frankfurt, Germany. Nevertheless, we
       hold the right to move or extend our servers elsewhere in the World. In
-      such cases, you will be notified by means that are easily accesible, such
+      such cases, you will be notified by means that are easily accessible, such
       as Emails, our website, Twitter or other Social Media channels.
     </p>
     <!--

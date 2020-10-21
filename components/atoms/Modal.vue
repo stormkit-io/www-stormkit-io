@@ -1,6 +1,7 @@
 <template>
   <div
     v-if="isOpen || isClosing"
+    aria-label="Close the modal"
     class="modal-overlay fixed inset-0 flex justify-center z-50 md:p-6 bg-transparent-30"
     role="button"
     :class="overlayClasses"

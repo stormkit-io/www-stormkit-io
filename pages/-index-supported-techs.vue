@@ -16,7 +16,7 @@
         :style="`animation-delay: ${i * 0.5}s`"
         class="bounce inline-flex items-center justify-center bg-white rounded-full w-20 h-20 shadow border-t border-gray-80 mr-4"
       >
-        <img :src="image" class="w-10" />
+        <img :src="image.src" :alt="image.alt" class="w-10" />
       </span>
     </div>
     <div class="text-center mt-12">
@@ -48,15 +48,15 @@ export default {
   data() {
     return {
       images: [
-        pngAngular,
-        pngHtml5,
-        pngJs,
-        pngNodeJs,
-        pngNextJs,
-        pngNuxtJs,
-        pngReact,
-        pngVue,
-        pngSvelte
+        { src: pngAngular, alt: 'Angular' },
+        { src: pngHtml5, alt: 'HTML 5' },
+        { src: pngJs, alt: 'JavaScript' },
+        { src: pngNodeJs, alt: 'Node.js' },
+        { src: pngNextJs, alt: 'Next.js' },
+        { src: pngNuxtJs, alt: 'Nuxt.js' },
+        { src: pngReact, alt: 'React' },
+        { src: pngVue, alt: 'Vue' },
+        { src: pngSvelte, alt: 'Svelte' }
       ]
     }
   }

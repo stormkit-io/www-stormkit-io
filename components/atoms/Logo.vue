@@ -4,7 +4,13 @@
     class="flex items-center font-bold text-black"
     :class="`text-${textSize}`"
   >
-    <img :src="skLogoWhite" class="mr-3" :class="`w-${size}`" /> Stormkit
+    <img
+      :src="skLogoWhite"
+      class="mr-3"
+      :class="`w-${size}`"
+      alt="Stormkit Logo"
+    />
+    Stormkit
     <slot></slot>
   </nuxt-link>
 </template>

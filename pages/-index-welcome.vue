@@ -47,6 +47,7 @@
         <img
           :src="versionControl"
           class="version-control flex-initial relative mt-4 md:mt-0 w-3/4 md:w-full md:max-w-lg"
+          alt="Stormkit browser illustration"
         />
         <div class="absolute left-0 right-0 bottom-0 hidden mb-12 md:block">
           <sk-mouse-scroll

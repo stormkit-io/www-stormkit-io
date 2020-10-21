@@ -10,8 +10,8 @@
       <div class="flex flex-col md:flex-row md:justify-between">
         <sk-card
           v-for="testimonial in testimonials"
-          :key="testimonial.user"
-          :image="{ src: testimonial.image, alt: testimonial.user }"
+          :key="testimonial.name"
+          :image="{ src: testimonial.image, alt: testimonial.name }"
           class="testimonial relative md:w-p-30 mb-6 md:mb-0"
         >
           <div class="p-6 card-content">
@@ -41,6 +41,7 @@
                   target="_blank"
                   rel="noopener referrer"
                 >
+                  <span class="sr-only">LinkedIn</span>
                   <sk-linkedin class="opacity-75 hover:opacity-100" />
                 </a>
               </span>

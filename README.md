@@ -8,7 +8,7 @@
   <img src="./assets/images/stormkit-screenshot.png" alt="Stormkit" width="800" />
 </p>
 
-This repository contains code related to the landing page and documentation. You're more than welcome to contribute.
+This repository contains code related to the landing page and documentation. If you'd like to contribute to the application frontend, check out our frontend repository on https://github.com/stormkit-io/app-stormkit-io. You're more than welcome to contribute. 
 
 ## What is Stormkit?
 

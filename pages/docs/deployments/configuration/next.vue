@@ -41,11 +41,6 @@
         so we need to tell Stormkit those files directly from the CDN.
       </p>
       <pre><code>{{nextJsStormkitConfig}}</code></pre>
-      <p>
-        The <code>replace</code> is needed because Nuxt.js does not create a
-        physical <code>_nuxt</code> folder during build and we need to make our
-        CDN aware of this.
-      </p>
       <h3 class="mt-8">Method 2: Using next.config.js</h3>
       <p>
         The alternative method is to use the <code>PUBLIC_URL</code> environment

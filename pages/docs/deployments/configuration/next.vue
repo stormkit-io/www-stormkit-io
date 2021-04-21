@@ -18,10 +18,12 @@
     <h2>Next.js</h2>
     <section>
       <p>
-        Stormkit automatically extends your config file and adds
-        <code>target: "serverless"</code> to it. This will tell Next.js to
-        configure your application for the serverless environments.
+        If you're using the serverless version of Next.js, you'll have to extend
+        <code>next.config.js</code> and add a
+        <code>target: "serverless"</code> declaration to it. The following
+        configuration works for both local environments and Stormkit:
       </p>
+      <pre><code>{{nextJsTargetServerlessExtended}}</code></pre>
     </section>
     <sk-spa title="Next.js single page applications" />
     <h2 id="next">Next.js hybrid applications</h2>
@@ -71,6 +73,9 @@ const nextJsStormkitConfig = `app:
       cdn: true`
 
 const nextJsTargetServerless = `module.exports = {}`
+const nextJsTargetServerlessExtended = `module.exports = {
+  target: process.env.SK_APP_ID ? "serverless" : "server"
+}`
 
 const nextJsConfig = `module.exports = {
   assetPrefix: process.env.PUBLIC_URL || "/"
@@ -88,7 +93,8 @@ export default {
     return {
       nextJsConfig,
       nextJsStormkitConfig,
-      nextJsTargetServerless
+      nextJsTargetServerless,
+      nextJsTargetServerlessExtended
     }
   },
 

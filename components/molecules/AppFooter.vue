@@ -67,7 +67,18 @@
             <a
               href="https://github.com/stormkit-io/www-stormkit-io"
               class="text-blue-50"
+              target="_blank"
+              rel="noreferrer noopener"
               >Contribute</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              href="https://stormkit-io.github.io/stormkit-status/"
+              class="text-blue-50"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Status</a
             >
           </li>
         </ul>

@@ -7,21 +7,21 @@
         Join us and let's build Stormkit together
       </h2>
       <h3 class="text-sm px-3 md:px-0 text-center md:text-left mb-4 md:mb-0">
-        Oh by the way, our community is
+        Oh by the way, you can start
         <a
-          href="https://discord.gg/6yQWhyY"
+          href="https://app.stormkit.io/auth"
           target="_blank"
           rel="noopener noreferrer"
-          >chatting here</a
+          >building here</a
         >.
       </h3>
     </div>
     <sk-button
-      to="https://app.stormkit.io/auth"
+      to="https://discord.gg/6yQWhyY"
       tertiary
       class="flex items-center self-center md:self-auto"
     >
-      Get started for free
+      Join our community
     </sk-button>
   </section>
 </template>

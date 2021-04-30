@@ -30,11 +30,9 @@
             </nuxt-link>
           </div>
           <div class="text-center p-3">
-            <a href="https://app.stormkit.io/auth">
-              <sk-button secondary>
-                Login
-              </sk-button>
-            </a>
+            <sk-button secondary to="https://app.stormkit.io/auth">
+              Login
+            </sk-button>
           </div>
         </div>
       </div>
@@ -52,8 +50,10 @@
           </nuxt-link>
         </div>
         <div>
-          <a href="https://app.stormkit.io/auth">
-            <sk-button secondary>Login</sk-button>
+          <a href="">
+            <sk-button secondary to="https://app.stormkit.io/auth">
+              Login
+            </sk-button>
           </a>
         </div>
       </div>

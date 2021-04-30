@@ -19,7 +19,7 @@
     <sk-button
       to="https://app.stormkit.io/auth"
       tertiary
-      class="self-center md:self-auto"
+      class="flex items-center self-center md:self-auto"
     >
       Get started for free
     </sk-button>

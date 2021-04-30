@@ -24,8 +24,9 @@
         class="inline-flex items-center py-3"
         to="https://app.stormkit.io/auth"
         primary
-        >Get started for free</sk-button
       >
+        Get started for free
+      </sk-button>
     </div>
   </section>
 </template>

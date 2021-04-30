@@ -23,7 +23,7 @@
     <h2 id="why-stormkit">Why Stormkit?</h2>
     <section>
       <p>
-        There are several reasons why you would need like a tool like Stormkit:
+        There are several reasons why you would need a tool like Stormkit:
       </p>
       <h3>1. Improve developer experience</h3>
       <p>
@@ -33,9 +33,10 @@
       </p>
       <h3>2. Focus on your application</h3>
       <p>
-        For the reason mentioned above developers tend to spend a lot of time on
+        For the reason mentioned above, developers tend to spend a lot of time on
         improving their workflow. Stormkit allows you to focus on your
-        application rather than spending time on your infrastructure.
+        application rather than spending time on your infrastructure. Similar to
+        low-code platforms, but for frontend infrastructure.
       </p>
       <h3>3. Added value</h3>
       <p>

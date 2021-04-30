@@ -62,7 +62,7 @@
                   navigate_next
                 </span>
                 Make building &amp; delivering applications a delightful
-                experience.
+                low-code-like experience.
               </li>
               <li class="flex items-center mb-2">
                 <span class="material-icons mr-3">
@@ -107,8 +107,9 @@
               </li>
               <li class="flex mb-4">
                 <b class="mr-4">What?</b> We automate your work infrastructure
-                and provide a kit that includes state of the art best practices
-                and features.
+                 with state of the art best practice and features.
+                 This makes Stormkit something like a low-code frontend 
+                 infrastructure service for developers.
               </li>
               <li class="flex">
                 <b class="mr-4">How?&nbsp;</b> We listen to our users.

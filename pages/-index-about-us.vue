@@ -107,7 +107,7 @@
               </li>
               <li class="flex mb-4">
                 <b class="mr-4">What?</b> We automate your work infrastructure
-                 with state of the art best practice and features.
+                 with state of the art best practices and features.
                  This makes Stormkit something like a low-code frontend 
                  infrastructure service for developers.
               </li>

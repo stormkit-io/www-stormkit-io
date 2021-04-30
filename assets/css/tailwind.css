@@ -32,7 +32,7 @@ a {
   @apply ease-in-out;
 }
 
-a:hover {
+a:not(.sk-button):hover {
   @apply text-pink-50;
 }
 

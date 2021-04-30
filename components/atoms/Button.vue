@@ -1,5 +1,28 @@
 <template>
+  <a
+    v-if="isAnchor"
+    :class="className"
+    :href="to"
+    target="_blank"
+    rel="noreferrer noopener"
+    v-bind="$attrs"
+    v-on="$listeners"
+    @click="handleClick"
+  >
+    <slot />
+  </a>
+  <nuxt-link
+    v-else-if="isNuxtLink"
+    :class="className"
+    :to="to"
+    v-bind="$attrs"
+    v-on="$listeners"
+    @click.native="handleClick"
+  >
+    <slot />
+  </nuxt-link>
   <button
+    v-else
     :class="className"
     v-bind="$attrs"
     v-on="$listeners"
@@ -14,11 +37,12 @@ export default {
     primary: { type: Boolean, default: false },
     secondary: { type: Boolean, default: false },
     tertiary: { type: Boolean, default: false },
-    to: { type: String, default: '' }
+    to: { type: String, default: null }
   },
   computed: {
     className(...args) {
       const css = [
+        'sk-button',
         'inline-block',
         'transition',
         'duration-500',
@@ -56,24 +80,20 @@ export default {
       }
 
       return css.join(' ')
+    },
+
+    isAnchor() {
+      return this.to && !this.to.startsWith('/')
+    },
+
+    isNuxtLink() {
+      return this.to && this.to.startsWith('/')
     }
   },
   methods: {
     handleClick(e) {
       if (this.$listeners.click) {
         return this.$listeners.click(e)
-      }
-
-      if (this.to) {
-        const a = document.createElement('a')
-        a.setAttribute('href', this.to)
-
-        if (this.to[0] !== '/') {
-          a.setAttribute('target', '_blank')
-          a.setAttribute('rel', 'noreferrer noopener')
-        }
-
-        a.click()
       }
     }
   }

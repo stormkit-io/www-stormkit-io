@@ -9,10 +9,10 @@
     <div class="flex-grow-0">
       <div
         v-if="image.src"
-        class="h-24 card-image absolute flex justify-center w-full z-10 bottom-0"
+        class="h-24 card-image absolute flex justify-center w-full z-8 bottom-0"
       >
         <img
-          class="w-24 rounded-full overflow-hidden shadow relative z-10"
+          class="w-24 rounded-full overflow-hidden shadow relative z-8"
           :src="image.src"
           :alt="image.alt"
         />

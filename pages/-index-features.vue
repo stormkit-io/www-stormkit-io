@@ -35,7 +35,7 @@
               v-if="index === progressIndex"
               ref="progress"
               :style="{ width: `${progressPercentage}%` }"
-              class="bg-pink-50 inset-0 absolute z-10"
+              class="bg-pink-50 inset-0 absolute z-8"
             ></div>
           </div>
           <div

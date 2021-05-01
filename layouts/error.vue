@@ -1,5 +1,8 @@
 <template>
-  <div class="page px-3 md:px-0 flex flex-auto items-center justify-center">
+  <div
+    class="pt-16 page px-3 md:px-0 flex flex-auto items-center justify-center"
+  >
+    <sk-header />
     <div>
       <h1 class="mt-24 mb-6 text-center text-2xl">
         <span v-if="error.statusCode === 404">
@@ -30,8 +33,13 @@
   </div>
 </template>
 <script>
+import SkHeader from '~/components/molecules/AppHeader'
+
 export default {
   layout: 'screen',
+  components: {
+    SkHeader
+  },
   props: {
     error: { type: Object, required: true }
   }

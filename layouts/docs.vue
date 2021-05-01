@@ -1,5 +1,5 @@
 <template>
-  <div class="text-blue-50">
+  <div class="pt-16 text-blue-50">
     <sk-header />
     <gdpr-banner />
     <div class="page px-3 md:px-0">
@@ -19,19 +19,19 @@
   </div>
 </template>
 <script>
-import SkBackground from '../components/atoms/Background'
-import SkHeader from '../components/molecules/AppHeader'
-import SkFooter from '../components/molecules/AppFooter'
-import GdprBanner from '../components/molecules/GdprBanner'
 import SkNavigation from './-docs-navigation'
+import SkBackground from '~/components/atoms/Background'
+import SkHeader from '~/components/molecules/AppHeader'
+import SkFooter from '~/components/molecules/AppFooter'
+import GdprBanner from '~/components/molecules/GdprBanner'
 
 export default {
   components: {
+    SkNavigation,
     GdprBanner,
     SkHeader,
     SkFooter,
-    SkBackground,
-    SkNavigation
+    SkBackground
   }
 }
 </script>

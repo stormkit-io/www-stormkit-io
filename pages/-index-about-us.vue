@@ -1,5 +1,5 @@
 <template>
-  <div id="about-us" class="relative">
+  <div id="about-us" class="relative pt-16">
     <sk-background no-max-height />
     <section class="py-12 page px-3 md:px-0 ">
       <div class="mb-12">

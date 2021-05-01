@@ -88,9 +88,19 @@ export default {
   }
 }
 </script>
-<style>
+<style lang="postcss">
 .app-header {
   max-width: 1140px;
   margin: 0 auto;
+}
+.app-header .navigation-item::before {
+  content: '';
+  transition: width 200ms ease-in;
+  z-index: -1;
+
+  @apply absolute bottom-0 left-0 h-full w-0 bg-white;
+}
+.app-header .navigation-item:hover::before {
+  @apply w-full;
 }
 </style>

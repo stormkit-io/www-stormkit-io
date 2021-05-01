@@ -1,5 +1,5 @@
 <template>
-  <div class="text-blue-50 min-h-screen flex flex-col">
+  <div class="pt-16 text-blue-50 min-h-screen flex flex-col">
     <sk-background class="mb-16" top-none />
     <sk-header />
     <nuxt />

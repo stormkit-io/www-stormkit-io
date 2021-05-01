@@ -1,6 +1,5 @@
 <template>
   <main>
-    <sk-header />
     <div class="page min-h-screen px-3 md:px-0">
       <h1 class="text-4xl bold font-light mt-24 text-center">
         Pay as you grow
@@ -83,12 +82,10 @@
   </main>
 </template>
 <script>
-import SkHeader from '../../components/molecules/AppHeader'
-import SkButton from '../../components/atoms/Button'
+import SkButton from '~/components/atoms/Button'
 
 export default {
   components: {
-    SkHeader,
     SkButton
   },
 

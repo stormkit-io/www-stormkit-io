@@ -1,5 +1,7 @@
 <template>
-  <div class="border-b border-gray-80 bg-transparent shadow-sm p-3">
+  <div
+    class="fixed z-9 top-0 w-full bg-gray-90 border-b border-gray-80 bg-transparent shadow-sm p-3"
+  >
     <nav
       class="app-header flex items-center justify-between flex-wrap text-gray-40"
     >
@@ -39,12 +41,12 @@
       <div
         class="w-full block flex-grow lg:flex lg:items-center lg:w-auto absolute md:relative inset-0 md:inset-auto hidden md:block"
       >
-        <div class="text-sm lg:flex-grow text-right text-sm pr-12">
+        <div class="text-sm lg:flex-grow flex justify-end text-right pr-12">
           <nuxt-link
             v-for="link in links"
             :key="link.path"
             :to="link.path"
-            class="inline-block transition duration-500 ease-in-out text-gray-40 hover:text-pink-50 mr-12 border-solid border-b-2 border-blue hover:border-pink-50"
+            class="relative navigation-item block transition duration-500 ease-in-out text-blue-50 hover:text-pink-50 mr-2 active-link px-6 py-2 text-sm rounded-md overflow-hidden"
           >
             {{ link.text }}
           </nuxt-link>

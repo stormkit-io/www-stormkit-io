@@ -1,5 +1,4 @@
-module.exports = {
-  mode: 'universal',
+export default {
   /*
    ** Headers of the page
    */
@@ -121,7 +120,11 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {},
+
+    babel: {
+      plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]]
+    }
   },
   router: {
     linkActiveClass: 'active-link'

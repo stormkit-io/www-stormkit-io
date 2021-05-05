@@ -62,20 +62,20 @@ export default {
 
   components: {
     SkInfoBox,
-    SkSpa
+    SkSpa,
   },
 
   data() {
     return {
       nuxtJsConfig,
-      nuxtJsStormkitConfig
+      nuxtJsStormkitConfig,
     }
   },
 
   head() {
     return {
-      title: 'Stormkit - Nuxt.js applications'
+      title: 'Stormkit - Nuxt.js applications',
     }
-  }
+  },
 }
 </script>

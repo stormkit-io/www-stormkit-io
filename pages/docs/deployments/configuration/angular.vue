@@ -71,21 +71,21 @@ export default {
 
   components: {
     SkInfoBox,
-    SkSpa
+    SkSpa,
   },
 
   data() {
     return {
       angularServerTs,
       angularWebpack,
-      customAppConfig
+      customAppConfig,
     }
   },
 
   head() {
     return {
-      title: 'Stormkit - Angular applications'
+      title: 'Stormkit - Angular applications',
     }
-  }
+  },
 }
 </script>

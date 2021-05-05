@@ -20,7 +20,7 @@ const icons = {
   info: { type: 'info', color: 'blue' },
   warning: { type: 'warning', color: 'yellow' },
   error: { type: 'error', color: 'red' },
-  success: { type: 'check_circle', color: 'green' }
+  success: { type: 'check_circle', color: 'green' },
 }
 
 export default {
@@ -29,13 +29,13 @@ export default {
       type: String,
       required: false,
       default: 'info',
-      validate: (v) => ['success', 'info', 'warning', 'error']
-    }
+      validate: (v) => ['success', 'info', 'warning', 'error'],
+    },
   },
   computed: {
     icon() {
       return icons[this.theme]
-    }
-  }
+    },
+  },
 }
 </script>

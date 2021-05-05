@@ -22,9 +22,7 @@
     </section>
     <h2 id="why-stormkit">Why Stormkit?</h2>
     <section>
-      <p>
-        There are several reasons why you would need a tool like Stormkit:
-      </p>
+      <p>There are several reasons why you would need a tool like Stormkit:</p>
       <h3>1. Improve developer experience</h3>
       <p>
         Developer experience matters. The more developers are happy from their
@@ -33,8 +31,8 @@
       </p>
       <h3>2. Focus on your application</h3>
       <p>
-        For the reason mentioned above, developers tend to spend a lot of time on
-        improving their workflow. Stormkit allows you to focus on your
+        For the reason mentioned above, developers tend to spend a lot of time
+        on improving their workflow. Stormkit allows you to focus on your
         application rather than spending time on your infrastructure. Similar to
         low-code platforms, but for frontend infrastructure.
       </p>
@@ -57,20 +55,14 @@
     </section>
     <h2 id="why-stormkit">When Stormkit?</h2>
     <section>
-      <p>
-        If you are:
-      </p>
+      <p>If you are:</p>
       <ol>
         <li>
           Spending a lot of time maintaining your frontend application's
           infrastructure
         </li>
-        <li>
-          Looking for an affordable way to scale your application
-        </li>
-        <li>
-          Looking for a way to deliver as fast as possible
-        </li>
+        <li>Looking for an affordable way to scale your application</li>
+        <li>Looking for a way to deliver as fast as possible</li>
         <li>
           In need of features like Staged Rollouts, Remote Configuration,
           Snippet Injections and so on
@@ -117,8 +109,8 @@ export default {
 
   head() {
     return {
-      title: 'Stormkit - Documentation'
+      title: 'Stormkit - Documentation',
     }
-  }
+  },
 }
 </script>

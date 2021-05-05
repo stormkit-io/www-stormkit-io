@@ -16,10 +16,10 @@ module.exports = {
           'components',
           'utilities',
           'screen',
-          'layer'
-        ]
-      }
-    ]
+          'layer',
+        ],
+      },
+    ],
   },
   processors: ['stylelint-processor-html'],
 }

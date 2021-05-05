@@ -81,7 +81,7 @@ export default {
 
   components: {
     SkInfoBox,
-    SkSpa
+    SkSpa,
   },
 
   data() {
@@ -89,14 +89,14 @@ export default {
       nextJsConfig,
       nextJsStormkitConfig,
       nextJsTargetServerless,
-      nextJsTargetServerlessExtended
+      nextJsTargetServerlessExtended,
     }
   },
 
   head() {
     return {
-      title: 'Stormkit - Next.js applications'
+      title: 'Stormkit - Next.js applications',
     }
-  }
+  },
 }
 </script>

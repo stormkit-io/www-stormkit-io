@@ -4,7 +4,11 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     aria-hidden="true"
     focusable="false"
-    style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+    style="
+      -ms-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    "
     preserveAspectRatio="xMidYMid meet"
     viewBox="0 0 24 24"
     :width="width"
@@ -20,7 +24,7 @@
 export default {
   props: {
     width: { type: String, default: '24px' },
-    height: { type: String, default: '24px' }
-  }
+    height: { type: String, default: '24px' },
+  },
 }
 </script>

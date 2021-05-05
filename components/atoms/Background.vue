@@ -4,7 +4,7 @@
     :class="{
       'top-none': topNone,
       'bottom-none': bottomNone,
-      'max-h-screen': !noMaxHeight
+      'max-h-screen': !noMaxHeight,
     }"
   ></div>
 </template>
@@ -13,8 +13,8 @@ export default {
   props: {
     topNone: { type: Boolean, default: false },
     bottomNone: { type: Boolean, default: false },
-    noMaxHeight: { type: Boolean, default: false }
-  }
+    noMaxHeight: { type: Boolean, default: false },
+  },
 }
 </script>
 <style scoped>

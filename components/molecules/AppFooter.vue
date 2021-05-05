@@ -10,9 +10,7 @@
           <span
             class="inline-flex items-center justify-center bg-blue-50 rounded-full w-8 h-8 mr-4"
           >
-            <span class="material-icons text-white text-base">
-              email
-            </span>
+            <span class="material-icons text-white text-base"> email </span>
           </span>
           <a href="mailto:hello@stormkit.io" class="text-blue-50"
             >hello@stormkit.io</a
@@ -147,7 +145,7 @@ export default {
     SkLinkedin,
     SkTwitter,
     SkGithub,
-    SkDiscord
-  }
+    SkDiscord,
+  },
 }
 </script>

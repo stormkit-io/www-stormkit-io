@@ -38,7 +38,7 @@ export default {
     SkTestimonials,
     SkAboutUs,
     SkSupportedTechs,
-    SkJoinUs
-  }
+    SkJoinUs,
+  },
 }
 </script>

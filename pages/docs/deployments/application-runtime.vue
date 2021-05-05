@@ -21,14 +21,14 @@ export default {
 
   data() {
     return {
-      pngApplicationRuntime
+      pngApplicationRuntime,
     }
   },
 
   head() {
     return {
-      title: 'Stormkit - Application runtime'
+      title: 'Stormkit - Application runtime',
     }
-  }
+  },
 }
 </script>

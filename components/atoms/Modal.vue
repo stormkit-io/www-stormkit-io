@@ -19,12 +19,12 @@ export default {
     position: {
       type: String,
       default: 'center',
-      validator: (value) => ['top', 'bottom', 'center', 'full'].includes(value)
-    }
+      validator: (value) => ['top', 'bottom', 'center', 'full'].includes(value),
+    },
   },
   data() {
     return {
-      isClosing: false
+      isClosing: false,
     }
   },
   computed: {
@@ -33,11 +33,11 @@ export default {
         closing: this.isClosing,
         'items-center': this.position === 'center',
         'items-end': this.position === 'bottom',
-        'items-start': this.position === 'top'
+        'items-start': this.position === 'top',
       }
 
       return css
-    }
+    },
   },
   watch: {
     isOpen(newValue, oldValue) {
@@ -45,13 +45,13 @@ export default {
         this.isClosing = true
         setTimeout(() => (this.isClosing = false), 250)
       }
-    }
+    },
   },
   methods: {
     handleClose() {
       this.$emit('close')
-    }
-  }
+    },
+  },
 }
 </script>
 <style scoped>

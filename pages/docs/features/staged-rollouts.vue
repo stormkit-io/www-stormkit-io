@@ -60,8 +60,8 @@ export default {
 
   head() {
     return {
-      title: 'Stormkit - Staged rollouts'
+      title: 'Stormkit - Staged rollouts',
     }
-  }
+  },
 }
 </script>

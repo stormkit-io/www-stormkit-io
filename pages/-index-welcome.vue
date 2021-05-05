@@ -27,7 +27,7 @@
               to="https://app.stormkit.io/auth"
               >Deploy now for free</sk-button
             >
-            <div class="mt-4" style="min-height: 34px;">
+            <div class="mt-4" style="min-height: 34px">
               <client-only>
                 <sk-github-button
                   href="https://github.com/stormkit-io/www-stormkit-io"
@@ -73,18 +73,18 @@ export default {
     SkMouseScroll,
     SkButton,
     SkSpinner,
-    SkGithubButton
+    SkGithubButton,
   },
   data() {
     return {
-      versionControl
+      versionControl,
     }
   },
   methods: {
     handleScrollDown() {
       window.scrollBy(0, window.innerHeight)
-    }
-  }
+    },
+  },
 }
 </script>
 <style scoped>

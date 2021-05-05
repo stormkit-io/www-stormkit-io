@@ -20,12 +20,12 @@ import skLogoWhite from '../../assets/images/stormkit-logo.svg'
 export default {
   props: {
     size: { type: Number, default: 10 },
-    textSize: { type: String, default: 'xl' }
+    textSize: { type: String, default: 'xl' },
   },
   data() {
     return {
-      skLogoWhite
+      skLogoWhite,
     }
-  }
+  },
 }
 </script>

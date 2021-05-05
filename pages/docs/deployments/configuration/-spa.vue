@@ -27,13 +27,13 @@ export default {
   layout: 'docs',
 
   props: {
-    title: { type: String, required: true }
+    title: { type: String, required: true },
   },
 
   data() {
     return {
-      spaConfig
+      spaConfig,
     }
-  }
+  },
 }
 </script>

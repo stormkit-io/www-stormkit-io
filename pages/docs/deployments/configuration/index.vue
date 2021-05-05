@@ -122,14 +122,14 @@ export default {
     return {
       pngEnvFrameworkBuildConfig,
       pngEnvBuildConfig,
-      pngEnvConfig
+      pngEnvConfig,
     }
   },
 
   head() {
     return {
-      title: 'Stormkit - Deployment configuration'
+      title: 'Stormkit - Deployment configuration',
     }
-  }
+  },
 }
 </script>

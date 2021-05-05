@@ -99,14 +99,14 @@ export default {
 
   data() {
     return {
-      yaml
+      yaml,
     }
   },
 
   head() {
     return {
-      title: 'Stormkit - Nuxt.js Hacker News implementation'
+      title: 'Stormkit - Nuxt.js Hacker News implementation',
     }
-  }
+  },
 }
 </script>

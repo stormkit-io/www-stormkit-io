@@ -24,9 +24,7 @@
               {{ testimonial.quote }}
             </p>
             <p class="text-right opacity-25">
-              <span class="material-icons">
-                format_quote
-              </span>
+              <span class="material-icons"> format_quote </span>
             </p>
           </div>
           <template #footer>
@@ -64,7 +62,7 @@ export default {
   components: {
     SkCard,
     SkLinkedin,
-    SkBackground
+    SkBackground,
   },
   data() {
     return {
@@ -75,7 +73,7 @@ export default {
           quote:
             'Loved the user experience and built-in Nuxt.js support. Great experience so far, keep up the good work!',
           linkedin: 'https://www.linkedin.com/in/atinux/',
-          image: jpgSebastienChopin
+          image: jpgSebastienChopin,
         },
         {
           name: 'Julian Derungs',
@@ -83,7 +81,7 @@ export default {
           quote:
             'Prior to Stormkit we were managing our own Docker workflow. We have saved hundreds of hours per year after the migration.',
           linkedin: 'https://www.linkedin.com/in/julianderungs/',
-          image: jpgJulianDerungs
+          image: jpgJulianDerungs,
         },
         {
           name: 'Adam Juras',
@@ -91,11 +89,11 @@ export default {
           quote:
             "I'm impressed how easy we made our custom setup work with Stormkit and improved our developer experience. Good job!",
           linkedin: 'https://www.linkedin.com/in/adamjuras/',
-          image: jpgAdamJuras
-        }
-      ]
+          image: jpgAdamJuras,
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 <style scoped>

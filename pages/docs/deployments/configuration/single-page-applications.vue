@@ -18,13 +18,13 @@ export default {
 
   components: {
     SkSpa,
-    SkInfoBox
+    SkInfoBox,
   },
 
   head() {
     return {
-      title: 'Stormkit - Single page applications'
+      title: 'Stormkit - Single page applications',
     }
-  }
+  },
 }
 </script>

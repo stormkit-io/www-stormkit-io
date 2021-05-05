@@ -31,7 +31,7 @@ export default {
     GdprBanner,
     SkHeader,
     SkFooter,
-    SkBackground
-  }
+    SkBackground,
+  },
 }
 </script>

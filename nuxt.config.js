@@ -5,7 +5,7 @@ export default {
   head: {
     title: 'Stormkit - Serverless infrastructure for javascript applications',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
@@ -13,68 +13,68 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: process.env.npm_package_description || '',
       },
       {
         hid: 'httpEquiv',
         name: 'x-ua-compatible',
-        content: 'ie=edge'
+        content: 'ie=edge',
       },
       {
         hid: 'google-site-verification',
         name: 'google-site-verification',
-        content: 'qy_tyF_WyY51Q2fisZBBV-LlCddUEf0wF8fXM99u_l8'
+        content: 'qy_tyF_WyY51Q2fisZBBV-LlCddUEf0wF8fXM99u_l8',
       },
       {
         hid: 'twitter:site',
         name: 'twitter:site',
-        content: '@stormkitio'
+        content: '@stormkitio',
       },
       {
         hid: 'twitter:creator',
         name: 'twitter:creator',
-        content: '@savasvedova'
+        content: '@savasvedova',
       },
       {
         hid: 'og:title',
         property: 'og:title',
-        content: 'Serverless infrastructure for javascript applications'
+        content: 'Serverless infrastructure for javascript applications',
       },
       {
         hid: 'og:description',
         property: 'og:description',
         content:
-          'Stormkit integrates perfectly with your git flow. It builds, deploys and scales your javascript apps seamlessly.'
+          'Stormkit integrates perfectly with your git flow. It builds, deploys and scales your javascript apps seamlessly.',
       },
       {
         hid: 'twitter:image',
         property: 'twitter:image',
-        content: 'https://www.stormkit.io/stormkit-logo.png'
+        content: 'https://www.stormkit.io/stormkit-logo.png',
       },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://www.stormkit.io/stormkit-logo.png'
+        content: 'https://www.stormkit.io/stormkit-logo.png',
       },
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://www.stormkit.io/'
-      }
+        content: 'https://www.stormkit.io/',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;700&display=swap'
+          'https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;700&display=swap',
       },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
-        defer: true
-      }
-    ]
+        defer: true,
+      },
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -97,7 +97,7 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
   ],
   /*
    ** Nuxt.js modules
@@ -106,7 +106,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
   ],
   /*
    ** Axios module configuration
@@ -123,10 +123,10 @@ export default {
     extend(config, ctx) {},
 
     babel: {
-      plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]]
-    }
+      plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]],
+    },
   },
   router: {
-    linkActiveClass: 'active-link'
-  }
+    linkActiveClass: 'active-link',
+  },
 }

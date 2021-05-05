@@ -15,7 +15,7 @@
 export default {
   props: {
     width: { type: String, default: '24px' },
-    height: { type: String, default: '24px' }
-  }
+    height: { type: String, default: '24px' },
+  },
 }
 </script>

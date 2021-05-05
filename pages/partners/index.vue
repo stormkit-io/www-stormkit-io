@@ -22,7 +22,7 @@
         >
           <div
             class="mb-6 flex items-center justify-center"
-            style="min-height: 5rem;"
+            style="min-height: 5rem"
           >
             <img
               :src="partner.logo"
@@ -41,9 +41,7 @@
               target="_blank"
               class="inline-flex"
               >Learn more
-              <span class="material-icons ml-2">
-                exit_to_app
-              </span>
+              <span class="material-icons ml-2"> exit_to_app </span>
             </a>
           </p>
         </div>
@@ -66,14 +64,14 @@ export default {
           name: 'StoryBlok',
           text:
             'If you are using Stormkit at some point you will probably need a Headless CMS. Storyblok fills this space extradordinarily well and provides an awesome user experience.',
-          link: 'https://www.storyblok.com'
+          link: 'https://www.storyblok.com',
         },
         {
           logo: svgPrimeSystems,
           name: 'Prime Systems',
           text:
             'A digital agency based in Zurich, Switzerland. Creative, wonderful people with whom we grab a few drinks from time to time.',
-          link: 'https://www.primesystems.ch/'
+          link: 'https://www.primesystems.ch/',
         },
         {
           logo: svgSwissDevJobs,
@@ -81,11 +79,11 @@ export default {
           maxWidth: '3.5rem',
           text:
             'Looking for tech jobs in Switzerland? SwissDev Jobs is probably one of the best places to have a look then. Tailored for developers, by developers.',
-          link: 'https://swissdevjobs.ch/jobs/Python/All'
-        }
-      ]
+          link: 'https://swissdevjobs.ch/jobs/Python/All',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 <style scoped>

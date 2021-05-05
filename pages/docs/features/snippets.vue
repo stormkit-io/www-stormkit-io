@@ -37,9 +37,7 @@
           </tr>
           <tr>
             <td class="font-bold">Content</td>
-            <td>
-              This is the content that will be injected in the document.
-            </td>
+            <td>This is the content that will be injected in the document.</td>
           </tr>
           <tr>
             <td class="font-bold">Location</td>
@@ -83,14 +81,14 @@ export default {
   data() {
     return {
       pngSnippets,
-      pngSnippetsEdit
+      pngSnippetsEdit,
     }
   },
 
   head() {
     return {
-      title: 'Stormkit - Snippets'
+      title: 'Stormkit - Snippets',
     }
-  }
+  },
 }
 </script>

@@ -64,14 +64,14 @@ export default {
     return {
       pngEnvScreen,
       pngEnvDelete,
-      pngEnvDefault
+      pngEnvDefault,
     }
   },
 
   head() {
     return {
-      title: 'Stormkit - Environments'
+      title: 'Stormkit - Environments',
     }
-  }
+  },
 }
 </script>

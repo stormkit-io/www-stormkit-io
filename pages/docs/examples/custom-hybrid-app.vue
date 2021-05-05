@@ -104,14 +104,14 @@ export default {
   data() {
     return {
       serverFile,
-      indexFile
+      indexFile,
     }
   },
 
   head() {
     return {
-      title: 'Stormkit - Custom hybrid application'
+      title: 'Stormkit - Custom hybrid application',
     }
-  }
+  },
 }
 </script>

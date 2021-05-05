@@ -8,7 +8,7 @@ export default {
     dataSize: { type: String, required: false, default: 'large' },
     dataShowCount: { type: Boolean, required: false, default: false },
     dataText: { type: String, required: false, default: '' },
-    dataColorScheme: { type: String, required: false, default: undefined }
+    dataColorScheme: { type: String, required: false, default: undefined },
   },
   mounted() {
     this.paint()
@@ -26,10 +26,10 @@ export default {
     paint() {
       const _ = this.$el.appendChild(document.createElement('span'))
       const _this = this
-      import(/* webpackMode: "eager" */ 'github-buttons').then(function(
+      import(/* webpackMode: "eager" */ 'github-buttons').then(function (
         module
       ) {
-        module.render(_.appendChild(_this.$refs._), function(el) {
+        module.render(_.appendChild(_this.$refs._), function (el) {
           try {
             _.parentNode.replaceChild(el, _)
           } catch (_) {
@@ -40,7 +40,7 @@ export default {
     },
     reset() {
       this.$el.replaceChild(this.$refs._, this.$el.lastChild)
-    }
+    },
   },
   render(h) {
     return h('span', [
@@ -55,13 +55,13 @@ export default {
             'data-color-scheme': this.dataColorScheme,
             'data-size': this.dataSize,
             'data-show-count': this.dataShowCount,
-            'data-text': this.dataText
+            'data-text': this.dataText,
           },
-          ref: '_'
+          ref: '_',
         },
         this.$slots.default
-      )
+      ),
     ])
-  }
+  },
 }
 </script>

@@ -37,7 +37,7 @@ export default {
     primary: { type: Boolean, default: false },
     secondary: { type: Boolean, default: false },
     tertiary: { type: Boolean, default: false },
-    to: { type: String, default: null }
+    to: { type: String, default: null },
   },
   computed: {
     className(...args) {
@@ -53,7 +53,7 @@ export default {
         'border',
         'leading-none',
         'rounded-md',
-        'text-sm'
+        'text-sm',
       ]
 
       if (this.primary) {
@@ -88,14 +88,14 @@ export default {
 
     isNuxtLink() {
       return this.to && this.to.startsWith('/')
-    }
+    },
   },
   methods: {
     handleClick(e) {
       if (this.$listeners.click) {
         return this.$listeners.click(e)
       }
-    }
-  }
+    },
+  },
 }
 </script>

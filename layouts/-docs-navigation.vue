@@ -35,12 +35,12 @@
 export const examples = [
   {
     path: '/docs/examples/nuxt-js-hackernews',
-    text: 'Nuxt.js Hacker News'
+    text: 'Nuxt.js Hacker News',
   },
   {
     path: '/docs/examples/custom-hybrid-app',
-    text: 'Custom Hybrid App'
-  }
+    text: 'Custom Hybrid App',
+  },
 ]
 
 export default {
@@ -52,32 +52,32 @@ export default {
           children: [
             {
               path: '/docs',
-              text: 'Getting Started'
+              text: 'Getting Started',
             },
             {
               path: '/docs#why-stormkit',
-              text: 'Why Stormkit'
+              text: 'Why Stormkit',
             },
             {
               path: '/docs#when-stormkit',
-              text: 'When Stormkit'
+              text: 'When Stormkit',
             },
             {
               path: '/docs#contributing',
-              text: 'Contributing'
+              text: 'Contributing',
             },
             {
               path: '/docs#community-chat',
-              text: 'Community Chat'
-            }
-          ]
+              text: 'Community Chat',
+            },
+          ],
         },
         {
           text: 'Deployments',
           children: [
             {
               path: '/docs/deployments',
-              text: 'Introduction'
+              text: 'Introduction',
             },
             {
               path: '/docs/deployments/configuration',
@@ -85,69 +85,69 @@ export default {
               children: [
                 {
                   path: '/docs/deployments/configuration/angular',
-                  text: 'Angular'
+                  text: 'Angular',
                 },
                 {
                   path: '/docs/deployments/configuration/next',
-                  text: 'Next.js'
+                  text: 'Next.js',
                 },
                 {
                   path: '/docs/deployments/configuration/nuxt',
-                  text: 'Nuxt.js'
+                  text: 'Nuxt.js',
                 },
                 {
                   path:
                     '/docs/deployments/configuration/single-page-applications',
-                  text: 'Single page applications'
-                }
-              ]
+                  text: 'Single page applications',
+                },
+              ],
             },
             {
               path: '/docs/deployments/auto-deployments',
-              text: 'Auto deployments'
+              text: 'Auto deployments',
             },
             {
               path: '/docs/deployments/application-runtime',
-              text: 'Application runtime'
+              text: 'Application runtime',
             },
             {
               path: '/docs/deployments/deploy-hooks',
-              text: 'Deploy Hooks'
-            }
-          ]
+              text: 'Deploy Hooks',
+            },
+          ],
         },
         {
           text: 'Features',
           children: [
             {
               path: '/docs/features/multiple-environments',
-              text: 'Multiple environments'
+              text: 'Multiple environments',
             },
             {
               path: '/docs/features/remote-config',
-              text: 'Remote config'
+              text: 'Remote config',
             },
             {
               path: '/docs/features/staged-rollouts',
-              text: 'Staged rollouts'
+              text: 'Staged rollouts',
             },
             {
               path: '/docs/features/snippets',
-              text: 'Snippets'
+              text: 'Snippets',
             },
             {
               path: '/docs/features/redirects-and-path-rewrites',
-              text: 'Redirects & path rewrites'
-            }
-          ]
+              text: 'Redirects & path rewrites',
+            },
+          ],
         },
         {
           text: 'Examples',
-          children: examples
-        }
-      ]
+          children: examples,
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 <style scoped>

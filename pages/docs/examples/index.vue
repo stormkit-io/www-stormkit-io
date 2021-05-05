@@ -25,14 +25,14 @@ export default {
 
   data() {
     return {
-      examples
+      examples,
     }
   },
 
   head() {
     return {
-      title: 'Stormkit - Examples'
+      title: 'Stormkit - Examples',
     }
-  }
+  },
 }
 </script>

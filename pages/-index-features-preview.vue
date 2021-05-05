@@ -31,14 +31,14 @@ import SkSpinner from '~/components/atoms/Spinner'
 export default {
   components: {
     SkDeploymentPreviews,
-    SkSpinner
+    SkSpinner,
   },
   props: {
-    currentPreview: { type: Object, required: true }
+    currentPreview: { type: Object, required: true },
   },
   data() {
     return {
-      isLoading: !this.currentPreview.component
+      isLoading: !this.currentPreview.component,
     }
   },
   computed: {
@@ -50,17 +50,17 @@ export default {
       return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent
       )
-    }
+    },
   },
   watch: {
     currentPreview() {
       this.isLoading = !this.currentPreview.component
-    }
+    },
   },
   methods: {
     setIsLoaded() {
       this.isLoading = false
-    }
-  }
+    },
+  },
 }
 </script>

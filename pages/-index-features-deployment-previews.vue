@@ -61,9 +61,9 @@ import skLogo from '../assets/images/stormkit-logo.svg'
 export default {
   data() {
     return {
-      skLogo
+      skLogo,
     }
-  }
+  },
 }
 </script>
 <style scoped>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed z-9 top-0 w-full bg-gray-90 border-b border-gray-80 bg-transparent shadow-sm p-3"
+    class="fixed z-9 top-0 w-full bg-gray-90 border-b border-gray-80 shadow-sm p-3"
   >
     <nav
       class="app-header flex items-center justify-between flex-wrap text-gray-40"

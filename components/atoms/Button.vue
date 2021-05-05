@@ -75,7 +75,8 @@ export default {
           'text-white',
           'bg-blue-50',
           'hover:bg-white',
-          'hover:text-blue-50'
+          'hover:text-blue-50',
+          'hover:border-blue-50'
         )
       }
 

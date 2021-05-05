@@ -114,6 +114,13 @@ export default {
    */
   axios: {},
   /*
+   ** Tailwindcss module configuration
+   ** See https://tailwindcss.nuxtjs.org/options
+   */
+  tailwindcss: {
+    jit: true,
+  },
+  /*
    ** Build configuration
    */
   build: {

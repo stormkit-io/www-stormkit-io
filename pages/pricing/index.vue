@@ -37,7 +37,7 @@
           </ul>
           <div class="mt-4">
             <sk-button
-              class="w-full py-3"
+              class="w-full py-3 text-center"
               to="https://app.stormkit.io/auth"
               primary
             >

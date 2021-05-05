@@ -31,17 +31,17 @@ export default {
           children: [
             {
               path: '/policies/terms',
-              text: 'Terms'
+              text: 'Terms',
             },
             {
               path: '/policies/privacy',
-              text: 'Privacy Policy'
-            }
-          ]
-        }
-      ]
+              text: 'Privacy Policy',
+            },
+          ],
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 <style scoped>

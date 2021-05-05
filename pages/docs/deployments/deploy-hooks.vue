@@ -37,14 +37,14 @@ export default {
 
   data() {
     return {
-      pngSlackHooks
+      pngSlackHooks,
     }
   },
 
   head() {
     return {
-      title: 'Stormkit - Deployment hooks'
+      title: 'Stormkit - Deployment hooks',
     }
-  }
+  },
 }
 </script>

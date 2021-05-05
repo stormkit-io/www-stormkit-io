@@ -71,8 +71,8 @@ export default {
 
   head() {
     return {
-      title: 'Stormkit - Deployments'
+      title: 'Stormkit - Deployments',
     }
-  }
+  },
 }
 </script>

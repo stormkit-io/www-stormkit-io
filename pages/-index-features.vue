@@ -9,7 +9,7 @@
           :class="{
             'opacity-50': index !== progressIndex,
             'mb-12': index !== features.length - 1,
-            'mb-0': index === features.length - 1
+            'mb-0': index === features.length - 1,
           }"
         >
           <div
@@ -59,9 +59,7 @@
         to="https://youtu.be/RHP6AOnGTAY"
       >
         Watch our quick intro
-        <span class="material-icons ml-2">
-          exit_to_app
-        </span>
+        <span class="material-icons ml-2"> exit_to_app </span>
       </sk-button>
     </div>
   </div>
@@ -86,7 +84,7 @@ const SPEED_X = 0.125
 export default {
   components: {
     SkFeaturePreview,
-    SkButton
+    SkButton,
   },
 
   data() {
@@ -100,7 +98,7 @@ export default {
           title: 'Deployment previews',
           desc: 'Preview your deployments right from your pull/merge requests.',
           component: 'SkDeploymentPreviews',
-          speed: SPEED_8X
+          speed: SPEED_8X,
         },
         {
           icon: 'settings_input_component',
@@ -108,7 +106,7 @@ export default {
           desc: 'Create as many development environments as required.',
           video: mp4MultipleEnvironments,
           image: gifMultipleEnvironments,
-          speed: SPEED_2X
+          speed: SPEED_2X,
         },
         {
           icon: 'code',
@@ -117,7 +115,7 @@ export default {
             'Release multiple deployments at the same time to a percentage of your users.',
           video: mp4StagedRollouts,
           image: gifStagedRollouts,
-          speed: SPEED_3X
+          speed: SPEED_3X,
         },
         {
           icon: 'settings_remote',
@@ -126,7 +124,7 @@ export default {
             'Inject variables to your app. Changes are effective instantly - no need to rebuild.',
           video: mp4RemoteConfig,
           image: gifRemoteConfig,
-          speed: SPEED_2X
+          speed: SPEED_2X,
         },
         {
           icon: 'code',
@@ -135,15 +133,15 @@ export default {
             'Manage 3rd party scripts right from the UI. Useful for marketing teams or PMs.',
           video: mp4Snippets,
           image: gifSnippets,
-          speed: SPEED_2X
-        }
-      ]
+          speed: SPEED_2X,
+        },
+      ],
     }
   },
   computed: {
     currentPreview() {
       return this.features[this.progressIndex]
-    }
+    },
   },
   mounted() {
     this.changeActiveFeature(0)
@@ -165,7 +163,7 @@ export default {
           this.progressPercentage = 0
         }
       }, 50)
-    }
-  }
+    },
+  },
 }
 </script>

@@ -86,7 +86,7 @@ import SkButton from '~/components/atoms/Button'
 
 export default {
   components: {
-    SkButton
+    SkButton,
   },
 
   data() {
@@ -99,11 +99,11 @@ export default {
         'Unlimited domains',
         'Unlimited deployments',
         'Unlimited environments',
-        'TLS certificates included'
+        'TLS certificates included',
       ],
       small: ['Everything in free', '3 apps', '3 team seats'],
       medium: ['Everything in starter', '10 apps', '10 team seats'],
-      large: ['Everything in medium', 'Unlimited apps', 'Unlimited team seats']
+      large: ['Everything in medium', 'Unlimited apps', 'Unlimited team seats'],
     }
 
     return {
@@ -115,29 +115,29 @@ export default {
           title: 'Free',
           features: features.free,
           color: '#e4bb17',
-          cta: 'Get started for free'
+          cta: 'Get started for free',
         },
         {
           name: 'starter',
           title: 'Starter',
           price: 9.9,
           features: features.small,
-          color: '#4388c7'
+          color: '#4388c7',
         },
         {
           name: 'medium',
           title: 'Medium',
           price: 49.9,
           features: features.medium,
-          color: '#50b950'
+          color: '#50b950',
         },
         {
           name: 'enterprise',
           title: 'Enterprise',
           price: 99.9,
           features: features.large,
-          color: '#f55c27'
-        }
+          color: '#f55c27',
+        },
       ],
       comparison: [
         { name: 'Number of apps', value: [1, 3, 10, 'Unlimited'] },
@@ -145,11 +145,11 @@ export default {
         { name: 'Concurrent builds', value: [1, 1, 2, 3] },
         {
           name: 'Each 1m requests',
-          value: ['$6', '$6', '$6', 'Volume based']
+          value: ['$6', '$6', '$6', 'Volume based'],
         },
         {
           name: 'Each 10GB Bandwidth',
-          value: ['$1', '$1', '$1', 'Volume based']
+          value: ['$1', '$1', '$1', 'Volume based'],
         },
         { name: 'Autoscaling', value: [true, true, true, true] },
         { name: 'Multiple environments', value: [true, true, true, true] },
@@ -158,16 +158,16 @@ export default {
         { name: 'Custom domains', value: [true, true, true, true] },
         { name: 'Deploy hooks', value: [false, false, true, true] },
         { name: 'Cold start prevention', value: [false, false, false, true] },
-        { name: 'Premium support', value: [false, false, false, true] }
-      ]
+        { name: 'Premium support', value: [false, false, false, true] },
+      ],
     }
   },
 
   head() {
     return {
-      title: 'Stormkit - Pricing'
+      title: 'Stormkit - Pricing',
     }
-  }
+  },
 }
 </script>
 <style scoped>

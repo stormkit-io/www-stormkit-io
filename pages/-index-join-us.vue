@@ -30,7 +30,7 @@ import SkButton from '~/components/atoms/Button'
 
 export default {
   components: {
-    SkButton
-  }
+    SkButton,
+  },
 }
 </script>

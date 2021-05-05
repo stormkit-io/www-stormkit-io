@@ -198,14 +198,14 @@ export default {
       pngRemoteConfig,
       remoteConfig,
       remoteSsrConfig,
-      identifyUser
+      identifyUser,
     }
   },
 
   head() {
     return {
-      title: 'Stormkit - Remote configuration'
+      title: 'Stormkit - Remote configuration',
     }
-  }
+  },
 }
 </script>

@@ -59,14 +59,14 @@ export default {
 
   data() {
     return {
-      pngAutoDeployments
+      pngAutoDeployments,
     }
   },
 
   head() {
     return {
-      title: 'Stormkit - Auto deployments'
+      title: 'Stormkit - Auto deployments',
     }
-  }
+  },
 }
 </script>

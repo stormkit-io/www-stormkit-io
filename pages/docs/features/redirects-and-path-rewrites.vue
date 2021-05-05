@@ -227,14 +227,14 @@ export default {
       cdnRewrite,
       spaConfig,
       nonWwwToWww,
-      syntax
+      syntax,
     }
   },
 
   head() {
     return {
-      title: 'Stormkit - Redirects and path rewrite'
+      title: 'Stormkit - Redirects and path rewrite',
     }
-  }
+  },
 }
 </script>

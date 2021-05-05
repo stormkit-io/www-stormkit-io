@@ -41,14 +41,14 @@ export default {
     theme: {
       type: String,
       default: 'primary',
-      validator: (v) => ['primary', 'secondary'].includes(v)
-    }
+      validator: (v) => ['primary', 'secondary'].includes(v),
+    },
   },
   computed: {
     shouldDisplayFooter() {
       return !!this.$slots.footer
-    }
-  }
+    },
+  },
 }
 </script>
 <style scoped>

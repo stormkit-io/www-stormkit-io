@@ -44,7 +44,7 @@ import pngSvelte from '~/assets/images/techs/svelte.png'
 
 export default {
   components: {
-    SkButton
+    SkButton,
   },
   data() {
     return {
@@ -57,10 +57,10 @@ export default {
         { src: pngNuxtJs, alt: 'Nuxt.js' },
         { src: pngReact, alt: 'React' },
         { src: pngVue, alt: 'Vue' },
-        { src: pngSvelte, alt: 'Svelte' }
-      ]
+        { src: pngSvelte, alt: 'Svelte' },
+      ],
     }
-  }
+  },
 }
 </script>
 <style scoped>

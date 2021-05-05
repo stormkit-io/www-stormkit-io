@@ -13,8 +13,8 @@
 export default {
   props: {
     width: { type: Number, required: false, default: 10 },
-    height: { type: Number, required: false, default: 10 }
-  }
+    height: { type: Number, required: false, default: 10 },
+  },
 }
 </script>
 <style scoped>

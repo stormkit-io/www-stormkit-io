@@ -18,15 +18,15 @@ module.exports = {
         8: '8',
         9: '9',
         10: '10',
-      }
+      },
     },
     minWidth: {
-      '0': '0',
+      0: '0',
       '1/4': '25%',
       '1/2': '50%',
       '3/4': '75%',
       '3/10': '30%',
-      full: '100%'
+      full: '100%',
     },
     colors: {
       transparent: 'transparent',
@@ -54,14 +54,14 @@ module.exports = {
       'pink-50': '#f6005c',
       'blue-90': '#e2f2ff',
       'blue-70': '#0c75e4',
-      'blue-50': '#0f092b'
+      'blue-50': '#0f092b',
     },
     fontWeight: {
       light: 100,
       normal: 400,
-      bold: 700
-    }
+      bold: 700,
+    },
   },
   variants: {},
-  plugins: []
+  plugins: [],
 }

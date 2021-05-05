@@ -8,13 +8,9 @@
     <div class="p-6 md:px-24">
       <header class="flex flex-col items-center mb-4">
         <div class="transform -rotate-45 mb-4">
-          <span class="material-icons text-6xl">
-            settings_input_svideo
-          </span>
+          <span class="material-icons text-6xl"> settings_input_svideo </span>
         </div>
-        <h2 class="font-bold text-2xl">
-          Surprise! We use cookies.
-        </h2>
+        <h2 class="font-bold text-2xl">Surprise! We use cookies.</h2>
       </header>
       <main class="font-light max-w-2xl text-center mb-8">
         We use cookies to make your experience more delicious. By continuing to
@@ -36,11 +32,11 @@ const LOCAL_STORAGE_KEY = 'gdpr-banner-is-closed'
 export default {
   components: {
     Modal,
-    SkButton
+    SkButton,
   },
   data() {
     return {
-      isBannerOpen: false
+      isBannerOpen: false,
     }
   },
   mounted() {
@@ -52,7 +48,7 @@ export default {
     closeBanner() {
       this.isBannerOpen = false
       localStorage.setItem(LOCAL_STORAGE_KEY, 'true')
-    }
-  }
+    },
+  },
 }
 </script>

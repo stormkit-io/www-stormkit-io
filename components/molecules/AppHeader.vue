@@ -67,7 +67,7 @@ import SkButton from '../atoms/Button'
 export default {
   components: {
     SkButton,
-    SkLogo
+    SkLogo,
   },
 
   data: () => ({
@@ -77,15 +77,15 @@ export default {
       { text: 'About us', path: '/#about-us' },
       { text: 'Partners', path: '/partners' },
       { text: 'Docs', path: '/docs' },
-      { text: 'Pricing', path: '/pricing' }
-    ]
+      { text: 'Pricing', path: '/pricing' },
+    ],
   }),
 
   methods: {
     toggleMenu() {
       this.displayMobileMenu = !this.displayMobileMenu
-    }
-  }
+    },
+  },
 }
 </script>
 <style lang="postcss">

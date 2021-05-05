@@ -1,7 +1,7 @@
 <template>
   <div id="about-us" class="relative pt-16">
     <sk-background no-max-height />
-    <section class="py-12 page px-3 md:px-0 ">
+    <section class="py-12 page px-3 md:px-0">
       <div class="mb-12">
         <div class="page px-3 md:px-0">
           <h2
@@ -51,35 +51,25 @@
             </h2>
             <ul class="text-sm mb-4">
               <li class="flex items-center mb-2">
-                <span class="material-icons mr-3">
-                  navigate_next
-                </span>
+                <span class="material-icons mr-3"> navigate_next </span>
                 Simplify and automate complex processes over the entire life
                 cycle of a Javascript application.
               </li>
               <li class="flex items-center mb-2">
-                <span class="material-icons mr-3">
-                  navigate_next
-                </span>
+                <span class="material-icons mr-3"> navigate_next </span>
                 Make building &amp; delivering applications a delightful
                 low-code-like experience.
               </li>
               <li class="flex items-center mb-2">
-                <span class="material-icons mr-3">
-                  navigate_next
-                </span>
+                <span class="material-icons mr-3"> navigate_next </span>
                 Encourage best practices.
               </li>
               <li class="flex items-center mb-2">
-                <span class="material-icons mr-3">
-                  navigate_next
-                </span>
+                <span class="material-icons mr-3"> navigate_next </span>
                 Build Stormkit together.
               </li>
               <li class="flex items-center">
-                <span class="material-icons mr-3">
-                  navigate_next
-                </span>
+                <span class="material-icons mr-3"> navigate_next </span>
                 We don't host applications that spread hatred or violence.
               </li>
             </ul>
@@ -107,9 +97,9 @@
               </li>
               <li class="flex mb-4">
                 <b class="mr-4">What?</b> We automate your work infrastructure
-                 with state of the art best practices and features.
-                 This makes Stormkit something like a low-code frontend 
-                 infrastructure service for developers.
+                with state of the art best practices and features. This makes
+                Stormkit something like a low-code frontend infrastructure
+                service for developers.
               </li>
               <li class="flex">
                 <b class="mr-4">How?&nbsp;</b> We listen to our users.
@@ -133,7 +123,7 @@ import SkBackground from '~/components/atoms/Background'
 
 export default {
   components: {
-    SkBackground
+    SkBackground,
   },
   data() {
     return {
@@ -142,28 +132,28 @@ export default {
           image: jpegSavasVedova,
           name: 'Savas Vedova',
           link: 'https://twitter.com/savasvedova',
-          handle: '@savasvedova'
+          handle: '@savasvedova',
         },
         {
           image: jpegPhilipWels,
           name: 'Philip Wels',
           link: 'https://www.linkedin.com/in/philipwels',
-          handle: '@philipwels'
+          handle: '@philipwels',
         },
         {
           image: jpegFredEsere,
           name: 'Fred Esere',
           link: 'https://www.linkedin.com/in/fredesere',
-          handle: '@fredesere'
+          handle: '@fredesere',
         },
         {
           image: jpegChristophMoesli,
           name: 'Christoph Moesli',
           link: 'https://www.linkedin.com/in/christoph-moesli/',
-          handle: '@christoph-moesli'
-        }
-      ]
+          handle: '@christoph-moesli',
+        },
+      ],
     }
-  }
+  },
 }
 </script>

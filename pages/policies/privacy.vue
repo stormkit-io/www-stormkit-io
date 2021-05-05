@@ -190,6 +190,6 @@
 </template>
 <script>
 export default {
-  layout: 'policies'
+  layout: 'policies',
 }
 </script>

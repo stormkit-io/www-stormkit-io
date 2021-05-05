@@ -8,9 +8,7 @@
         <span v-if="error.statusCode === 404">
           We're sorry! Nothing found under this url 🥺
         </span>
-        <span v-else>
-          Something weird happened here 🤔
-        </span>
+        <span v-else> Something weird happened here 🤔 </span>
       </h1>
       <h2 class="text-lg max-w-2xl text-center m-auto mb-24">
         <span v-if="error.statusCode === 404">
@@ -38,10 +36,10 @@ import SkHeader from '~/components/molecules/AppHeader'
 export default {
   layout: 'screen',
   components: {
-    SkHeader
+    SkHeader,
   },
   props: {
-    error: { type: Object, required: true }
-  }
+    error: { type: Object, required: true },
+  },
 }
 </script>

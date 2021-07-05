@@ -11,11 +11,11 @@
           <h1
             class="text-2xl md:text-4xl mt-12 md:mt-0 leading-tight mb-8 md:mb-4 font-bold"
           >
-            Powerful infrastructure <br />
-            for modern javascript apps
+            Seamlessly build, deploy and scale <br />
+            you modern javascript apps and save time
           </h1>
           <h2 class="text-sm md:text-base leading-normal">
-            Stormkit integrates perfectly with your git flow. <br />
+            Stormkit is an infrastructure provider for modern javascript applications with CI/CD features. <br />
             It builds, deploys and scales your javascript apps seamlessly.
           </h2>
           <div

@@ -15,7 +15,7 @@
             your modern javascript apps
           </h1>
           <h2 class="text-sm md:text-base leading-normal">
-            Stormkit is an infrastructure provider for modern javascript applications. <br />
+            Stormkit helps you easily manage your frontend infrastructure. <br />
             It integrates perfectly with your git flow.
           </h2>
           <div

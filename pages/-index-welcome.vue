@@ -12,7 +12,7 @@
             class="text-2xl md:text-4xl mt-12 md:mt-0 leading-tight mb-8 md:mb-4 font-bold"
           >
             Seamlessly build, deploy and scale <br />
-            your modern javascript apps to save time
+            your modern javascript apps
           </h1>
           <h2 class="text-sm md:text-base leading-normal">
             Stormkit is an infrastructure provider for modern javascript applications. <br />

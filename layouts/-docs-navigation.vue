@@ -142,6 +142,15 @@ export default {
           ],
         },
         {
+          text: 'Other',
+          children: [
+            {
+              path: '/docs/other/personal-access-token',
+              text: 'Personal Access Token',
+            },
+          ],
+        },
+        {
           text: 'Examples',
           children: examples,
         },

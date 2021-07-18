@@ -6,7 +6,7 @@
         With Stormkit you can create multiple environments per application. Each
         environment will point to a branch and when that branch is updated
         Stormkit will automatically deploy it (given you have
-        <nuxt-link to="/docs/deployment/auto-deployments"
+        <nuxt-link to="/docs/deployments/auto-deployments"
           >Auto Deployments</nuxt-link
         >
         enabled). You can also publish multiple deployments at the same time.

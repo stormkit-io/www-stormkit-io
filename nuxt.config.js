@@ -1,4 +1,7 @@
 export default {
+  generate: {
+    fallback: 'error.html',
+  },
   /*
    ** Headers of the page
    */

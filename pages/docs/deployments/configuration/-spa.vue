@@ -1,17 +1,19 @@
 <template>
   <div>
-    <h2>{{ title }}</h2>
+    <h2 id="spa">{{ title }}</h2>
     <section>
-      <p>
-        If you omit the <code>Server file</code> setting or turn off the
-        <code>Serverless</code> switch your application will be directly served
-        from our CDN, without hitting any Lambda function. Most of the time,
-        you'll need to tell Stormkit to redirect all requests to
-        <code>index.html</code>. To do so, simply add a
-        <code>stormkit.config.yml</code> file at the root level of your
-        repository and write the following configuration:
-      </p>
-      <pre><code>{{spaConfig}}</code></pre>
+      <ol>
+        <li>Go to your application.</li>
+        <li>Click on your environment and then click on <b>Edit</b>.</li>
+        <li>Turn off the serverless toggle to enable static websites.</li>
+        <li>
+          Create a
+          <code>stormkit.config.yml</code>
+          file at the root level of your repository and write the following
+          configuration:
+          <pre><code>{{spaConfig}}</code></pre>
+        </li>
+      </ol>
     </section>
   </div>
 </template>

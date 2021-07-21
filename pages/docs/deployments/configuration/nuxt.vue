@@ -8,6 +8,11 @@
 
     <h2 id="hybrid">Nuxt.js static websites</h2>
     <section>
+      <p>
+        Landing pages are great examples of static websites. Usually, they do
+        not require server side logic. To host a Nuxt.js static website on
+        Stormkit:
+      </p>
       <ol>
         <li>Go to your application.</li>
         <li>Click on your environment and then click on <b>Edit</b>.</li>
@@ -23,6 +28,11 @@
     <sk-spa title="Nuxt.js single page applications" />
     <h2 id="hybrid">Nuxt.js hybrid applications</h2>
     <section>
+      <p>
+        If you need to fetch data from the database or do serverless side
+        computation, you'll need to have a hybrid application. To enable your
+        serverless side functionality:
+      </p>
       <ol>
         <li>Go to your application.</li>
         <li>Click on your environment and then click on <b>Edit</b>.</li>
@@ -54,7 +64,13 @@
           <pre><code>{{nuxtJsConfig}}</code></pre>
         </li>
       </ol>
-      <p></p>
+      <h3 class="mt-8">Keeping the bundle size minimal</h3>
+      <p>
+        Make sure to have the <code>nuxt-start</code> package in your
+        dependencies and <code>nuxt</code> in your devDependencies. This will
+        help keeping the bundle size minimal as webpack won't be included in it:
+      </p>
+      <pre><code>{{packageJson}}</code></pre>
     </section>
   </main>
 </template>
@@ -73,6 +89,17 @@ const nuxtJsConfig = `module.exports = {
     publicPath: process.env.PUBLIC_URL,
   }
 }`
+
+const packageJson = `// package.json
+{
+  "dependencies": {
+    "nuxt-start": "x.x.x"
+  },
+  "devDependecies": {
+    "nuxt": "x.x.x"
+  }
+}`
+
 export default {
   components: {
     SkSpa,
@@ -82,6 +109,7 @@ export default {
 
   data() {
     return {
+      packageJson,
       nuxtJsConfig,
       nuxtJsStormkitConfig,
     }

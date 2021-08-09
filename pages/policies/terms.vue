@@ -1,7 +1,7 @@
 <template>
   <main>
     <h1>Terms of Service</h1>
-    <h3>Last Updated: May 12th, 2020</h3>
+    <h3>Last Updated: August 9th, 2021</h3>
     <p>
       Stormkit ("Stormkit," "we," "us," or "our") welcomes you. Thank you for
       choosing to access and use our service (the "Service") made available to
@@ -156,18 +156,33 @@
       Subscriber Data for at least 15 days following such termination. It is
       your responsibility to keep backup copies of the Subscriber Data.
     </p>
-    <p>
-      If we reasonably believe any of Your Content violates the law, infringes
-      or misappropriates the rights of any third party or otherwise violates a
-      material term of the Agreement (including the documentation or the Privacy
-      Policy) (“Prohibited Content”), we will notify you of the Prohibited
-      Content and may request that such content be removed from the Services or
-      access to it be disabled. If you do not remove or disable access to the
-      Prohibited Content within 2 business days of our notice, we may remove or
-      disable access to the Prohibited Content or suspend the Services to the
-      extent we are not able to remove or disable access to the Prohibited
-      Content.
+    <p class="mt-4">
+      <b
+        >You may not use, or facilitate or allow others to use, the Services:</b
+      >
     </p>
+    <ul>
+      <li>for any illegal or fraudulent activity;</li>
+      <li>to violate the rights of others;</li>
+      <li>
+        to threaten, incite, promote, or actively encourage violence, terrorism,
+        or other serious harm;
+      </li>
+      <li>
+        for any content or activity that promotes child sexual exploitation or
+        abuse;
+      </li>
+      <li>
+        to violate the security, integrity, or availability of any user,
+        network, computer or communications system, software application, or
+        network or computing device;
+      </li>
+      <li>
+        to distribute, publish, send, or facilitate the sending of unsolicited
+        mass email or other messages, promotions, advertising, or solicitations
+        (or “spam”).
+      </li>
+    </ul>
     <h3>DISCLAIMERS; LIMITED WARRANTY</h3>
     <p>
       THE STORMIT PROPERTY IS PROVIDED "AS IS" AND "AS AVAILABLE," AND STORMIT

@@ -18,16 +18,14 @@
               close
             </button>
           </div>
-          <div class="text-sm text-xl pr-12 border-b border-gray-80">
-            <nuxt-link
+          <div class="text-sm pr-12 border-b border-gray-80">
+            <sk-link
               v-for="link in links"
-              :key="link.path"
-              :to="link.path"
+              v-bind="link"
+              :key="link.to || link.href"
               class="block text-gray-40 mb-4 px-4"
               @click.native="toggleMenu"
-            >
-              {{ link.text }}
-            </nuxt-link>
+            />
           </div>
           <div class="text-center p-3">
             <sk-button secondary to="https://app.stormkit.io/auth">
@@ -37,17 +35,16 @@
         </div>
       </div>
       <div
-        class="w-full block flex-grow lg:flex lg:items-center lg:w-auto absolute md:relative inset-0 md:inset-auto hidden md:block"
+        class="w-full flex-grow lg:flex lg:items-center lg:w-auto absolute md:relative inset-0 md:inset-auto hidden md:block"
       >
         <div class="text-sm lg:flex-grow flex justify-end text-right pr-12">
-          <nuxt-link
+          <sk-link
             v-for="link in links"
-            :key="link.path"
-            :to="link.path"
+            v-bind="link"
+            :key="link.to || link.href"
             class="relative navigation-item block transition duration-500 ease-in-out text-blue-50 hover:text-pink-50 mr-2 active-link px-6 py-2 text-sm rounded-md overflow-hidden"
-          >
-            {{ link.text }}
-          </nuxt-link>
+            @click.native="toggleMenu"
+          />
         </div>
         <div>
           <a href="">
@@ -63,21 +60,27 @@
 <script>
 import SkLogo from '../atoms/Logo'
 import SkButton from '../atoms/Button'
+import SkLink from '../atoms/Link.vue'
 
 export default {
   components: {
     SkButton,
     SkLogo,
+    SkLink,
   },
 
   data: () => ({
     displayMobileMenu: false,
     links: [
-      { text: 'Home', path: '/' },
-      { text: 'About us', path: '/#about-us' },
-      { text: 'Partners', path: '/partners' },
-      { text: 'Docs', path: '/docs' },
-      { text: 'Pricing', path: '/pricing' },
+      { text: 'Home', to: '/' },
+      { text: 'About us', to: '/#about-us' },
+      { text: 'Partners', to: '/partners' },
+      { text: 'Docs', to: '/docs' },
+      {
+        text: 'Roadmap',
+        href: 'https://github.com/stormkit-io/app-stormkit-io/discussions',
+      },
+      { text: 'Pricing', to: '/pricing' },
     ],
   }),
 

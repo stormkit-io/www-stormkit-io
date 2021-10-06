@@ -3,40 +3,6 @@
     <sk-background no-max-height />
     <section class="py-12 page px-3 md:px-0">
       <div class="mb-12">
-        <div class="page px-3 md:px-0">
-          <h2
-            class="text-2xl md:text-3xl mb-12 text-blue-50 font-bold text-center"
-          >
-            People behind Stormkit
-          </h2>
-          <div
-            class="flex flex-col md:flex-row md:justify-between w-full pl-12 md:pl-0"
-          >
-            <div
-              v-for="person in people"
-              :key="person.name"
-              class="flex items-center mb-4 md:mb-0"
-            >
-              <img
-                class="rounded-full w-20 mr-4"
-                :src="person.image"
-                :alt="person.name"
-              />
-              <span class="inline-flex text-sm flex-col">
-                <span>{{ person.name }}</span>
-                <a
-                  class="text-xs"
-                  :href="person.link"
-                  :alt="`${person.name} Social`"
-                >
-                  {{ person.handle }}
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="mb-12">
         <div class="flex flex-col md:flex-row">
           <section
             class="border-t border-gray-80 md:min-w-1/2 bg-white mb-12 md:mb-0 md:mr-4 shadow-lg p-8 rounded-lg"
@@ -115,10 +81,6 @@
   </div>
 </template>
 <script>
-import jpegSavasVedova from '~/assets/images/team/savas-vedova.jpeg'
-import jpegPhilipWels from '~/assets/images/team/philip-wels.jpeg'
-import jpegFredEsere from '~/assets/images/team/fred-esere.jpeg'
-import jpegChristophMoesli from '~/assets/images/team/christoph-moesli.jpeg'
 import SkBackground from '~/components/atoms/Background'
 
 export default {
@@ -126,34 +88,7 @@ export default {
     SkBackground,
   },
   data() {
-    return {
-      people: [
-        {
-          image: jpegSavasVedova,
-          name: 'Savas Vedova',
-          link: 'https://twitter.com/savasvedova',
-          handle: '@savasvedova',
-        },
-        {
-          image: jpegPhilipWels,
-          name: 'Philip Wels',
-          link: 'https://www.linkedin.com/in/philipwels',
-          handle: '@philipwels',
-        },
-        {
-          image: jpegFredEsere,
-          name: 'Fred Esere',
-          link: 'https://www.linkedin.com/in/fredesere',
-          handle: '@fredesere',
-        },
-        {
-          image: jpegChristophMoesli,
-          name: 'Christoph Moesli',
-          link: 'https://www.linkedin.com/in/christoph-moesli/',
-          handle: '@christoph-moesli',
-        },
-      ],
-    }
+    return {}
   },
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex items-center rounded border border p-4"
+    class="flex items-center rounded border p-4"
     :class="`bg-${icon.color}-90 border border-${icon.color}-70`"
   >
     <span

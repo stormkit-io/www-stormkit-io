@@ -15,6 +15,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@nuxt/ufo": "^0.5.4",
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/dotenv": "^1.4.1",
     "cross-env": "7.0.3",

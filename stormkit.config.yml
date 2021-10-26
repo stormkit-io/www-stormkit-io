@@ -4,6 +4,10 @@ app:
         to: www.stormkit.io
         status: 301
         replace: true
+      - from: /_nuxt/*
+        to: /
+        replace: true
+        cdn: true
       - from: /docs/deploy-hooks
         to: /docs/deployments/deploy-hooks
         status: 301

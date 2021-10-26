@@ -1427,11 +1427,6 @@
     rc9 "^1.2.0"
     std-env "^2.2.1"
 
-"@nuxt/ufo@^0.5.4":
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/@nuxt/ufo/-/ufo-0.5.4.tgz#2e1428e2c947cc559d566c27786525bf0f40fbc8"
-  integrity sha512-JZOGDlt2BvLCBmLhrchhRJ6tP9PBfSWLdsHC+JVJ5Qp8/hT/2u61cSsLS30zUOwcPRaQ3y2oHNkEiKJ5v90iEQ==
-
 "@nuxt/utils@2.15.4":
   version "2.15.4"
   resolved "https://npm.primesystems.ch/@nuxt%2futils/-/utils-2.15.4.tgz#1c84dfa964357224a79d402797c9feab2040991c"

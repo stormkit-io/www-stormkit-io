@@ -18,8 +18,7 @@
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/dotenv": "^1.4.1",
     "cross-env": "7.0.3",
-    "github-buttons": "^2.8.0",
-    "nuxt-start": "^2.15.8"
+    "github-buttons": "^2.8.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "5.0.0",

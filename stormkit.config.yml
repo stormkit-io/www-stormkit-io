@@ -4,6 +4,9 @@ app:
         to: www.stormkit.io
         status: 301
         replace: true
+      - from: /docs/deployments/deploy-hooks
+        to: /docs/deployments/outbound-webhooks
+        status: 301
       - from: /docs/deploy-hooks
         to: /docs/deployments/deploy-hooks
         status: 301

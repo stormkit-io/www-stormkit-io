@@ -3,7 +3,7 @@
     <ul class="text-sm">
       <li v-for="item in items" :key="item.path">
         <span
-          class="item block flex w-full items-center text-white py-2 uppercase text-xs font-bold opacity-50"
+          class="item flex w-full items-center text-white py-2 uppercase text-xs font-bold opacity-50"
         >
           {{ item.text }}
         </span>
@@ -111,8 +111,8 @@ export default {
               text: 'Application runtime',
             },
             {
-              path: '/docs/deployments/deploy-hooks',
-              text: 'Deploy Hooks',
+              path: '/docs/deployments/outbound-webhooks',
+              text: 'Outbound Webhooks',
             },
           ],
         },

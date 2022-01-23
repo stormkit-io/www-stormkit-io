@@ -39,6 +39,15 @@
           <td>The application id.</td>
         </tr>
         <tr>
+          <td><code>$SK_ENVIRONMENT</code></td>
+          <td>
+            The environment name. When triggering an outbound webhook on
+            publish, this is the name of the environment that the deployment is
+            published to. Otherwise, it is the name of the environment which the
+            build configuration is taken from.
+          </td>
+        </tr>
+        <tr>
           <td><code>$SK_DEPLOYMENT_ID</code></td>
           <td>The deployment id.</td>
         </tr>
@@ -153,25 +162,25 @@ const slackPayload = `{
 const discordPayload = `{
    "embeds":[
       {
-         "title":"Deployment completed",
-         "timestamp":"$SK_NOW",
-         "url":"https://www.stormkit.io",
-         "fields":[
+         "title": "Deployment published on $SK_ENVIRONMENT",
+         "timestamp": "$SK_NOW",
+         "url": "https://www.stormkit.io",
+         "fields": [
             {
-               "name":"App ID",
-               "value":"$SK_APP_ID"
+               "name": "App ID",
+               "value": "$SK_APP_ID"
             },
             {
-               "name":"Status",
-               "value":"$SK_DEPLOYMENT_STATUS"
+               "name": "Status",
+               "value": "$SK_DEPLOYMENT_STATUS"
             },
             {
-               "name":"Endpoint",
-               "value":"$SK_DEPLOYMENT_ENDPOINT"
+               "name": "Endpoint",
+               "value": "$SK_DEPLOYMENT_ENDPOINT"
             },
             {
-               "name":"Logs",
-               "value":"$SK_DEPLOYMENT_LOGS_ENDPOINT"
+               "name": "Logs",
+               "value": "$SK_DEPLOYMENT_LOGS_ENDPOINT"
             }
          ]
       }

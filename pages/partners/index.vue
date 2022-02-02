@@ -8,7 +8,7 @@
     <h2 class="mb-48 text-lg text-center md:text-left">
       Send us an email at
       <a href="mailto:hello@stormkit.io">hello@stormkit.io</a> and let's discuss
-      about oportunities
+      about opportunities
     </h2>
     <div class="flex flex-col mb-24">
       <h2 class="text-2xl mb-12 text-center md:text-left">

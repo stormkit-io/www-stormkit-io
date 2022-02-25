@@ -103,6 +103,8 @@
             <td class="font-bold">Environment variables</td>
             <td>
               The environment variables that will be injected during build time.
+              Variable names containing <code>KEY</code> and <code>SECRET</code>
+              strings will be obfuscated.
             </td>
           </tr>
         </tbody>

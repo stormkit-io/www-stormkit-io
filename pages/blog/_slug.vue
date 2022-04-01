@@ -7,7 +7,7 @@
         <blog-menu :pages="pages" class="mt-6" />
         <div class="p-6 md:w-3/4 text-sm leading-relaxed">
           <article class="mb-8 p-4 bg-gray-90 rounded-lg">
-            <h1 class="font-bold text-2xl mb-8 text-center">
+            <h1 class="font-bold text-3xl mt-4 mb-8 text-center">
               {{ page.title }}
             </h1>
             <nuxt-content :document="page" tag="main" class="blog-post" />
@@ -46,8 +46,10 @@ export default {
   },
 
   head() {
+    const title = `Stormkit - ${this.page.title}`
+
     return {
-      title: this.page.title,
+      title,
       meta: [
         {
           hid: 'description',
@@ -55,7 +57,7 @@ export default {
           content: this.page.description,
         },
         // Open Graph
-        { hid: 'og:title', property: 'og:title', content: this.page.title },
+        { hid: 'og:title', property: 'og:title', content: title },
         {
           hid: 'og:description',
           property: 'og:description',
@@ -65,7 +67,7 @@ export default {
         {
           hid: 'twitter:title',
           name: 'twitter:title',
-          content: this.page.title,
+          content: title,
         },
         {
           hid: 'twitter:description',

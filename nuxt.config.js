@@ -54,12 +54,12 @@ export default {
       {
         hid: 'twitter:image',
         property: 'twitter:image',
-        content: 'https://www.stormkit.io/stormkit-logo.png',
+        content: 'https://www.stormkit.io/stormkit-logo-rect.png',
       },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://www.stormkit.io/stormkit-logo.png',
+        content: 'https://www.stormkit.io/stormkit-logo-rect.png',
       },
       {
         hid: 'og:url',

@@ -66,7 +66,7 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: 'https://stormkit.io/stormkit-logo.png',
+          content: 'https://stormkit.io/stormkit-logo-rect.png',
         },
         // Twitter Card
         {

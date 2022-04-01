@@ -1,0 +1,61 @@
+<template>
+  <div class="pt-16 text-blue-50">
+    <sk-header />
+    <gdpr-banner />
+    <div class="page px-3 md:px-0">
+      <sk-background top-none />
+      <div
+        class="flex flex-col md:flex-row bg-white rounded-lg shadow m-auto mt-12"
+      >
+        <blog-menu :pages="pages" class="mt-6" />
+        <div class="p-6 w-full text-sm leading-relaxed">
+          <article
+            v-for="page in pages"
+            :key="page.title"
+            class="mb-8 p-4 bg-gray-90 rounded-lg"
+          >
+            <h2 class="font-bold text-lg mb-2">
+              <nuxt-link :to="`/blog/${page.slug}`" class="text-black">
+                {{ page.title }}
+              </nuxt-link>
+            </h2>
+            <div class="mb-2">
+              {{ page.description }}
+            </div>
+            <footer>
+              <nuxt-link
+                class="inline-flex items-center"
+                :to="`/blog/${page.slug}`"
+              >
+                <span class="material-icons text-xl mr-1">arrow_forward</span>
+                Read more</nuxt-link
+              >
+            </footer>
+          </article>
+        </div>
+      </div>
+    </div>
+    <sk-footer class="mt-12" />
+  </div>
+</template>
+<script>
+import BlogMenu from '~/components/molecules/BlogMenu.vue'
+
+export default {
+  components: {
+    BlogMenu,
+  },
+
+  async asyncData({ $content, error }) {
+    const pages = await $content('/')
+      .fetch()
+      .catch(() => {
+        error({ statusCode: 404, message: 'Page not found' })
+      })
+
+    return {
+      pages,
+    }
+  },
+}
+</script>

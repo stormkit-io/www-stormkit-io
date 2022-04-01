@@ -1,4 +1,6 @@
 export default {
+  target: 'static',
+
   generate: {
     fallback: 'error.html',
   },
@@ -110,6 +112,8 @@ export default {
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    // Doc: https://content.nuxtjs.org/installation
+    '@nuxt/content',
   ],
   /*
    ** Axios module configuration

@@ -43,7 +43,7 @@ export default {
   },
 
   async asyncData({ $content, error }) {
-    const pages = await $content('/')
+    const pages = await $content('blog')
       .sortBy('updatedAt', 'desc')
       .fetch()
       .catch(() => {

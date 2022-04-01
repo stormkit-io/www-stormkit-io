@@ -1,9 +1,6 @@
 <template>
   <div class="pt-16 text-blue-50">
-    <sk-header />
-    <gdpr-banner />
     <div class="page px-3 md:px-0">
-      <sk-background top-none />
       <div
         class="flex flex-col md:flex-row bg-white rounded-lg shadow m-auto mt-12"
       >
@@ -35,7 +32,6 @@
         </div>
       </div>
     </div>
-    <sk-footer class="mt-12" />
   </div>
 </template>
 <script>
@@ -48,6 +44,7 @@ export default {
 
   async asyncData({ $content, error }) {
     const pages = await $content('/')
+      .sortBy('updatedAt', 'desc')
       .fetch()
       .catch(() => {
         error({ statusCode: 404, message: 'Page not found' })

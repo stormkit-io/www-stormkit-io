@@ -19,7 +19,6 @@
 </template>
 <script>
 import BlogMenu from '~/components/molecules/BlogMenu.vue'
-import SkLogo from '~/assets/images/stormkit-logo.svg'
 
 export default {
   components: {
@@ -67,9 +66,14 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: SkLogo,
+          content: 'https://stormkit.io/stormkit-logo.png',
         },
         // Twitter Card
+        {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary',
+        },
         {
           hid: 'twitter:title',
           name: 'twitter:title',

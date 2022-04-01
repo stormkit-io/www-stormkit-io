@@ -2,13 +2,15 @@
 title: How to deploy to BunnyCDN
 ---
 
-We're happy to announce BunnyCDN integration on Stormkit 🎉 This feature allows Stormkit users to deploy their applications to BunnyCDN Storage Zones and use them as a hosting service for static applications.
+We're happy to announce [BunnyCDN](https://bunny.net) integration on **Stormkit**. This feature allows **Stormkit** users to deploy their applications to BunnyCDN Storage Zones and use them as a hosting service for static applications.
 
 <!--more-->
 
+<sk-article-image src="bunnynet-logo.svg" alt="BunnyCDN" class="bg-blue-50 mt-8"></sk-article-image>
+
 ### Benefits
 
-Stormkit specializes in providing an optimal developer experience to build and preview application whereas BunnyCDN is a lightning fast CDN with features such as DDoS protection and image optimization. This integration allows users to benefit from both worlds and have a powerful developer experience while keeping the bandwidth costs lower compared to other services.
+**Stormkit** specializes in providing an optimal developer experience to build and preview application whereas BunnyCDN is a lightning fast CDN with features such as DDoS protection and image optimization. This integration allows users to benefit from both worlds and have a powerful developer experience while keeping the bandwidth costs lower compared to other services.
 
 ### Steps
 
@@ -19,8 +21,14 @@ Stormkit specializes in providing an optimal developer experience to build and p
 1. Click on **Custom Storage** from the dropdown
 1. Fill the form and click **Submit**
 
-<sk-article-image src="how-to-deploy-to-bunny-cdn/env-storage.png" alt="Environment menu"></sk-article-image>
-<sk-article-image src="how-to-deploy-to-bunny-cdn/custom-storage-form.png" alt="Custom storage" ></sk-article-image>
+<sk-article-image 
+    src="blog/how-to-deploy-to-bunny-cdn/env-storage.png" 
+    alt="Environment menu">
+</sk-article-image>
+<sk-article-image 
+    src="blog/how-to-deploy-to-bunny-cdn/custom-storage-form.png" 
+    alt="Custom storage">
+</sk-article-image>
 
 ### Deploy your application
 

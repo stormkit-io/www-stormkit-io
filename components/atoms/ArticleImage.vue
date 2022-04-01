@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white flex items-center justify-center p-8 mb-4">
+  <div class="flex items-center justify-center p-8 mb-4">
     <img :src="imgSrc()" :alt="alt" class="article-image" />
   </div>
 </template>
@@ -18,7 +18,7 @@ export default {
   methods: {
     imgSrc() {
       try {
-        return require(`~/assets/images/blog/${this.src}`)
+        return require(`~/assets/images/${this.src}`)
       } catch (error) {
         return null
       }

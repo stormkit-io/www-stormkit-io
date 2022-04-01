@@ -74,7 +74,7 @@ export default {
     links: [
       { text: 'Home', to: '/' },
       { text: 'About us', to: '/#about-us' },
-      { text: 'Partners', to: '/partners' },
+      { text: 'Blog', to: '/blog' },
       { text: 'Docs', to: '/docs' },
       {
         text: 'Roadmap',

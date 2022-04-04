@@ -43,4 +43,8 @@
       width: 30%;
     }
   }
+
+  .bg-plausible-safe {
+    @apply bg-plausible;
+  }
 }

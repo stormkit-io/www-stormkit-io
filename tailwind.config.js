@@ -33,6 +33,7 @@ module.exports = {
         white: '#ffffff',
         black: '#000000',
         link: '#0c75e4',
+        plausible: 'rgb(17, 24, 39)',
 
         transparent: {
           DEFAULT: 'transparent',

@@ -122,6 +122,15 @@ export default {
     }
   }
 
+  ul {
+    @apply mb-4;
+
+    li {
+      @apply list-disc;
+      @apply list-inside;
+    }
+  }
+
   img {
     @apply max-w-full;
     @apply md:max-w-xl;

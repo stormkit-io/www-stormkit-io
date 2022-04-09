@@ -5,7 +5,7 @@
         class="flex flex-col md:flex-row bg-white rounded-lg shadow m-auto mt-12"
       >
         <blog-menu :pages="pages" class="mt-6" />
-        <div class="p-6 md:w-3/4 text-sm leading-relaxed">
+        <div class="p-6 text-sm leading-relaxed">
           <article class="mb-8 p-4 bg-gray-90 rounded-lg">
             <h1 class="font-bold text-3xl mt-4 mb-8">
               {{ page.title }}
@@ -34,6 +34,7 @@ export default {
       })
 
     const pages = await $content('blog')
+      .sortBy('updatedAt', 'desc')
       .fetch()
       .catch(() => {
         error({ statusCode: 404, message: 'Page not found' })

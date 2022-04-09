@@ -1,5 +1,5 @@
 <template>
-  <div class="text-sm p-6 min-w-1/4">
+  <div class="text-sm p-6 flex-grow md:max-w-1/4 md:min-w-1/4">
     <h3 class="font-bold mb-4">All posts</h3>
     <ul>
       <li v-for="page in pages" :key="page.title" class="mb-2">

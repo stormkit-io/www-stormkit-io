@@ -6,6 +6,32 @@ Follow the latest developments on Stormkit.
 
 <!--more-->
 
+## April 9th, 2022
+
+Stormkit users now have more flexibility on what branches to deploy automatically. To use this new
+feature, visit your application's page and click on **Edit configuration** on the environment that you would like to modify and find the **Auto Deploy Branches** field to instruct Stormkit for which branches
+auto deployments are turned on. The field accepts a `regexp` pattern. Here are some examples:
+
+```
+^dependabot/.*             # Deploy only branches that start with dependabot/
+^(?!dependabot|renovate).* # Deploy all branches that do not start with dependabot or renovate
+release-*                  # Deploy all branches that start with release-
+```
+
+The logic to determine whether a branch should be automatically deployed or not is depicted
+in the following diagram:
+
+<sk-article-image 
+    src="blog/whats-new/auto-deployment-flow-transparent.svg"
+    alt="Auto deployment flow"
+    class="bg-white mt-8">
+</sk-article-image>
+
+### Other changes
+
+- `Commit prefix` configuration option located in the application's settings page is removed
+- Providing `--skip-deploy` in a commit message is no longer considered
+
 ## April 1st, 2022
 
 It is now possible to overwrite default environment configuration while

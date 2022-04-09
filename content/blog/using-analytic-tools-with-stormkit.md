@@ -2,14 +2,13 @@
 title: Tracking user data using Stormkit and Plausible
 ---
 
-Easily inject snippets into your application without the need of a deployment.
+Easily inject snippets into your application without deploying your application.
 
 <!--more-->
 
 ## Snippets
 
-With the help of our **Snippets** functionality you can inject any code into your application without the need
-for a deployment. This is very powerful as you can turn on and off integrations instantly.
+With the help of our **Snippets** functionality you can inject any code into your application without deploying it. This is very powerful as you can turn on and off integrations instantly.
 
 ## Plausible and Stormkit
 

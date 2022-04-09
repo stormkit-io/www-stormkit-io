@@ -94,16 +94,29 @@ export default {
       free: [
         '1 app',
         '1 team seat',
-        '1m requests (per app)',
-        '50 GB bandwidth (per app)',
         'Unlimited domains',
-        'Unlimited deployments',
+        '15 deployments per month',
         'Unlimited environments',
         'TLS certificates included',
       ],
-      small: ['Everything in free', '3 apps', '3 team seats'],
-      medium: ['Everything in starter', '10 apps', '10 team seats'],
-      large: ['Everything in medium', 'Unlimited apps', 'Unlimited team seats'],
+      small: [
+        'Everything in free',
+        '3 apps',
+        '3 team seats',
+        '100 deployments per month',
+      ],
+      medium: [
+        'Everything in starter',
+        '10 apps',
+        '10 team seats',
+        '500 deployments per month',
+      ],
+      large: [
+        'Everything in medium',
+        'Unlimited apps',
+        'Unlimited team seats',
+        'Unlimited deployments',
+      ],
     }
 
     return {

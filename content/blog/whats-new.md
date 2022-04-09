@@ -6,6 +6,10 @@ Follow the latest developments on Stormkit.
 
 <!--more-->
 
+## April 10th, 2022
+
+Free users can now deploy up to 15 times per month.
+
 ## April 9th, 2022
 
 Stormkit users now have more flexibility on what branches to deploy automatically. To use this new

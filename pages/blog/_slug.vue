@@ -7,7 +7,7 @@
         <blog-menu :pages="pages" class="mt-6" />
         <div class="p-6 md:w-3/4 text-sm leading-relaxed">
           <article class="mb-8 p-4 bg-gray-90 rounded-lg">
-            <h1 class="font-bold text-3xl mt-4 mb-8 text-center">
+            <h1 class="font-bold text-3xl mt-4 mb-8">
               {{ page.title }}
             </h1>
             <nuxt-content :document="page" tag="main" class="blog-post" />

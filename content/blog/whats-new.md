@@ -6,6 +6,11 @@ Follow the latest developments on Stormkit.
 
 <!--more-->
 
+## April 18th, 2022
+
+We have removed the limit on the number of applications you can host on Stormkit based on your tier. It's
+all unlimited now.
+
 ## April 17th, 2022
 
 It is now possible to view usage data by visiting **App** > **Usage**.

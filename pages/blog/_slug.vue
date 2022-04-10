@@ -1,11 +1,11 @@
 <template>
-  <div class="pt-16 text-blue-50">
+  <div class="md:pt-16 text-blue-50">
     <div class="page px-3 md:px-0">
       <div
         class="flex flex-col md:flex-row bg-white rounded-lg shadow m-auto mt-12"
       >
-        <blog-menu :pages="pages" class="mt-6" />
-        <div class="p-6 text-sm leading-relaxed max-w-75p">
+        <blog-menu :pages="pages" class="md:mt-6" />
+        <div class="md:p-6 text-sm leading-relaxed md:w-3/4">
           <article class="mb-8 p-4 bg-gray-90 rounded-lg">
             <h1 class="font-bold text-3xl mt-4 mb-8">
               {{ page.title }}
@@ -101,10 +101,6 @@ export default {
 }
 </script>
 <style lang="postcss">
-.max-w-75p {
-  max-width: 75%;
-}
-
 .blog-post {
   h2 {
     @apply my-8;

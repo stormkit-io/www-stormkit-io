@@ -92,7 +92,6 @@ export default {
   data() {
     const features = {
       free: [
-        '1 app',
         '1 team seat',
         'Unlimited domains',
         '15 deployments per month',
@@ -101,19 +100,16 @@ export default {
       ],
       small: [
         'Everything in free',
-        '3 apps',
         '3 team seats',
         '100 deployments per month',
       ],
       medium: [
         'Everything in starter',
-        '10 apps',
         '10 team seats',
         '500 deployments per month',
       ],
       large: [
         'Everything in medium',
-        'Unlimited apps',
         'Unlimited team seats',
         'Unlimited deployments',
       ],
@@ -153,7 +149,6 @@ export default {
         },
       ],
       comparison: [
-        { name: 'Number of apps', value: [1, 3, 10, 'Unlimited'] },
         { name: 'Number of seats', value: [1, 3, 10, 'Unlimited'] },
         { name: 'Concurrent builds', value: [1, 1, 2, 3] },
         {

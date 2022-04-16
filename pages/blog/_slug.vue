@@ -1,12 +1,12 @@
 <template>
-  <div class="md:pt-16 text-blue-50">
+  <div class="text-blue-50">
     <div class="page px-3 md:px-0">
       <div
         class="flex flex-col md:flex-row bg-white rounded-lg shadow m-auto mt-12"
       >
         <blog-menu :pages="pages" class="md:mt-6" />
         <div class="md:p-6 text-sm leading-relaxed md:w-3/4">
-          <article class="mb-8 p-4 bg-gray-90 rounded-lg">
+          <article class="mb-8 p-4 bg-gray-90 rounded-lg markdown">
             <h1 class="font-bold text-3xl mt-4 mb-8">
               {{ page.title }}
             </h1>
@@ -100,46 +100,3 @@ export default {
   },
 }
 </script>
-<style lang="postcss">
-.blog-post {
-  h2 {
-    @apply my-8;
-    @apply font-bold;
-    @apply text-2xl;
-  }
-
-  h3 {
-    @apply mt-8 mb-4;
-    @apply font-bold;
-    @apply text-base;
-  }
-
-  ol {
-    @apply mb-4;
-
-    li {
-      @apply list-decimal;
-      @apply list-inside;
-    }
-  }
-
-  ul {
-    @apply mb-4;
-
-    li {
-      @apply list-disc;
-      @apply list-inside;
-    }
-  }
-
-  img {
-    @apply max-w-full;
-    @apply md:max-w-xl;
-  }
-
-  pre {
-    @apply my-4;
-    @apply max-w-full;
-  }
-}
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="md:pt-16 text-blue-50">
+  <div class="text-blue-50">
     <div class="page px-3 md:px-0">
       <div
         class="flex flex-col md:flex-row bg-white rounded-lg shadow m-auto mt-12"

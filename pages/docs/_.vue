@@ -9,8 +9,9 @@ export default {
     Docs,
   },
 
-  async asyncData({ $content, error }) {
-    const page = await $content(`docs/getting-started`)
+  async asyncData({ $content, error, params }) {
+    const slug = params.pathMatch || 'getting-started'
+    const page = await $content(`docs/${slug.replace(/\//g, '--')}`)
       .fetch()
       .catch(() => {
         error({ statusCode: 404, message: 'Page not found' })

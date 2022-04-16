@@ -88,7 +88,10 @@ export default {
   /*
    ** Global CSS
    */
-  css: [{ src: '@/assets/css/docs.css', lang: 'css' }],
+  css: [
+    { src: '@/assets/css/docs.css', lang: 'css' },
+    { src: '@/assets/scss/markdown.scss', lang: 'scss' },
+  ],
   /*
    ** Plugins to load before mounting the App
    */

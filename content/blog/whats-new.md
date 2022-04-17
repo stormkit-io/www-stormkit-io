@@ -6,6 +6,10 @@ Follow the latest developments on Stormkit.
 
 <!--more-->
 
+## April 17th, 2022
+
+It is now possible to view usage data by visiting **App** > **Usage**.
+
 ## April 10th, 2022
 
 Free users can now deploy up to 15 times per month.

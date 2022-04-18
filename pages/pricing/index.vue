@@ -93,8 +93,10 @@ export default {
     const features = {
       free: [
         '1 team seat',
-        'Unlimited domains',
         '15 deployments per month',
+        '100GB bandwidth',
+        '1 million serverless requests',
+        'Unlimited domains',
         'Unlimited environments',
         'TLS certificates included',
       ],

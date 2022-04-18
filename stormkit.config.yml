@@ -28,3 +28,6 @@ app:
       - from: /docs/redirects
         to: /docs/features/redirects-and-path-rewrites
         status: 301
+      - from: /docs/deployments/configuration/*
+        to: /docs/deployments/configuration
+        status: 301

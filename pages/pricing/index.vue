@@ -111,7 +111,7 @@ export default {
       large: [
         'Everything in medium',
         'Unlimited team seats',
-        'Unlimited deployments',
+        '1000 deployments per month',
       ],
     }
 

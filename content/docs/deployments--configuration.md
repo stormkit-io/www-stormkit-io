@@ -27,7 +27,7 @@ Each [environment](/docs/features/multiple-environments) in Stormkit has a confi
 
 <section>
 
-The second section is the build configuration, which will be used to build and deploy your application. Stormkit has a built-in support for the following frameworks: <code>Nuxt.js</code>, <code>Next.js</code>, <code>Angular</code> and <code>Nest.js</code>. This allows you to toggle Serverless or Static mode with a switch under your Environment configuration. We'll understand your <code>publish</code> folder directly from the framework configuration file.
+The second section is the build configuration, which will be used to build and deploy your application. Stormkit has a built-in support for the following frameworks: <code>Nuxt.js</code>, <code>Next.js</code>, <code>Angular</code> and <code>Nest.js</code>. We'll understand your <code>publish</code> folder directly from the framework configuration file.
 
 <sk-article-image 
     src="docs/deployments/env-framework-build-config.png" 

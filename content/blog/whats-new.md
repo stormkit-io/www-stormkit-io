@@ -8,6 +8,11 @@ Follow the latest developments on Stormkit.
 
 ## April 18th, 2022
 
+The Serverless toggle has been deprecated. Stormkit now understands whether your application is serverless
+or not from the artifacts.
+
+## April 18th, 2022
+
 We have removed the limit on the number of applications you can host on Stormkit based on your tier. It's
 all unlimited now.
 

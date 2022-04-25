@@ -40,17 +40,20 @@ The second section is the build configuration, which will be used to build and d
 
 If any other framework is used or no framework is used at all, the build configuration will display two additional fields:
 
-<sk-article-image
-    src="docs/deployments/env-build-config.png"
-    alt="Environment build config"
-    class="bg-blue-50 mt-8"></sk-article-image>
-
-</p>
-
 | Setting                   | Description |
 | ------------------------- | ----------- |
 | **Publish folder**        | The publish folder will be uploaded to our CDN. This folder is expected to have an <code>index.html</code> at the top level. |
 | **Build command**         | The build command to execute. You can chain multiple commands with the logical and (<code>&amp;&amp;</code>) operator. You can use bash commands as well. |
 | **Environment variables** | The environment variables that will be injected during build time. Variable names matching following regex will be obfuscated <code>/secret\|\_key\|password/i</code>. |
+
+## Special Environment Variables
+
+Following environment variables could be used to configure Stormkit builder
+
+| Setting                   | Description |
+| ------------------------- | ----------- |
+| **SK_CWD**      |  This variable used to indicate which working directory Stormkit should point out in order to build. This is used for monorepo configurations. |
+| **SK_ENV_FILE**   | If this is set to **true** Stormkit will inject contents of .env file during building process. |
+
 
 </section>

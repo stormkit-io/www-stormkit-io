@@ -106,7 +106,7 @@ export default {
         '100 deployments per month',
       ],
       medium: [
-        'Everything in starter starter plan',
+        'Everything in starter plan',
         '10 team seats',
         '500 deployments per month',
       ],

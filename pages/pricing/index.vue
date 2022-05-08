@@ -101,17 +101,17 @@ export default {
         'TLS certificates included',
       ],
       small: [
-        'Everything in free',
+        'Everything in free plan',
         '3 team seats',
         '100 deployments per month',
       ],
       medium: [
-        'Everything in starter',
+        'Everything in starter plan',
         '10 team seats',
         '500 deployments per month',
       ],
       large: [
-        'Everything in medium',
+        'Everything in medium plan',
         'Unlimited team seats',
         '1000 deployments per month',
       ],

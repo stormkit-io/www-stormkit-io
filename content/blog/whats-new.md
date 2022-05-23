@@ -6,14 +6,19 @@ Follow the latest developments on Stormkit.
 
 <!--more-->
 
+## May 18th, 2022
+
+Better support for next.js serverless projects. The bundle size is decreased and a bug has been fixed.
+
+**Important** When deploying next.js serverless applications, do not forget to specify `target: "serverless"`
+in `next.config.js` file. 
+
 ## April 18th, 2022
 
-The Serverless toggle has been deprecated. Stormkit now understands whether your application is serverless
+- The Serverless toggle has been deprecated. Stormkit now understands whether your application is serverless
 or not from the artifacts.
 
-## April 18th, 2022
-
-We have removed the limit on the number of applications you can host on Stormkit based on your tier. It's
+- We have removed the limit on the number of applications you can host on Stormkit based on your tier. It's
 all unlimited now.
 
 ## April 17th, 2022

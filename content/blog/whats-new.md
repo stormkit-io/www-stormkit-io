@@ -6,6 +6,11 @@ Follow the latest developments on Stormkit.
 
 <!--more-->
 
+## June 9th, 2022
+
+It's now possible to use Node.js 16 runtime. To change your Node version, go to your Application Settings
+and change the selected Runtime.
+
 ## May 18th, 2022
 
 Better support for next.js serverless projects. The bundle size is decreased and a bug has been fixed.

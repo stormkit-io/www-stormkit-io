@@ -15,7 +15,8 @@
             your web apps seamlessly
           </h1>
           <h2 class="text-sm md:text-base leading-normal">
-            With Stormkit you can easily manage your frontend infrastructure. <br />
+            With Stormkit you can easily manage your frontend infrastructure.
+            <br />
             It integrates perfectly with your git flow.
           </h2>
           <div

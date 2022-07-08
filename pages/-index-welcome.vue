@@ -1,6 +1,5 @@
 <template>
   <div class="min-h-screen flex flex-col">
-    <sk-header />
     <div class="page flex flex-auto flex-col relative">
       <div
         class="bg flex flex-col-reverse md:flex-row flex-auto items-center md:pb-32 p-3 md:p-0"
@@ -62,7 +61,6 @@
 </template>
 <script>
 import SkGithubButton from '~/components/atoms/GithubButton'
-import SkHeader from '~/components/molecules/AppHeader'
 import SkButton from '~/components/atoms/Button'
 import SkSpinner from '~/components/atoms/Spinner'
 import SkMouseScroll from '~/components/atoms/MouseScroll'
@@ -70,7 +68,6 @@ import versionControl from '~/assets/images/content-type.svg'
 
 export default {
   components: {
-    SkHeader,
     SkMouseScroll,
     SkButton,
     SkSpinner,

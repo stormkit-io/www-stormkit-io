@@ -57,11 +57,16 @@
         </div>
       </nav>
     </div>
-    <a href="https://vuejsforge.com/" target="_blank" rel="noreferrer noopener">
+    <a
+      href="https://vuejsforge.com/"
+      target="_blank"
+      class="block"
+      rel="noreferrer noopener"
+    >
       <img
         :src="VueForgeBannerDesktop"
         alt="Vue Forge Event"
-        class="hidden md:block"
+        class="hidden md:block m-auto"
       />
       <img
         :src="VueForgeBannerTablet"

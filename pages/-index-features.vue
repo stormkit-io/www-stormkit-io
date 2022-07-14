@@ -15,6 +15,8 @@
           <div
             class="flex items-center cursor-pointer"
             role="button"
+            @mouseenter="pauseInterval"
+            @mouseleave="resumeInterval"
             @click="changeActiveFeature(index)"
           >
             <i class="material-icons text-5xl text-green-50">{{
@@ -69,11 +71,9 @@ import SkFeaturePreview from './-index-features-preview'
 import SkButton from '~/components/atoms/Button'
 import mp4MultipleEnvironments from '~/assets/images/features/multi-env.mp4'
 import mp4StagedRollouts from '~/assets/images/features/staged-rollouts.mp4'
-import mp4RemoteConfig from '~/assets/images/features/remote-config.mp4'
 import mp4Snippets from '~/assets/images/features/snippets.mp4'
 import gifMultipleEnvironments from '~/assets/images/features/multi-env.gif'
 import gifStagedRollouts from '~/assets/images/features/staged-rollouts.gif'
-import gifRemoteConfig from '~/assets/images/features/remote-config.gif'
 import gifSnippets from '~/assets/images/features/snippets.gif'
 
 const SPEED_8X = 1
@@ -118,15 +118,6 @@ export default {
           speed: SPEED_3X,
         },
         {
-          icon: 'settings_remote',
-          title: 'Remote configuration',
-          desc:
-            'Inject variables to your app. Changes are effective instantly - no need to rebuild.',
-          video: mp4RemoteConfig,
-          image: gifRemoteConfig,
-          speed: SPEED_2X,
-        },
-        {
           icon: 'code',
           title: 'Inject snippets',
           desc:
@@ -150,6 +141,12 @@ export default {
     clearInterval(this.progressInterval)
   },
   methods: {
+    pauseInterval() {
+      clearInterval(this.progressInterval)
+    },
+    resumeInterval() {
+      this.changeActiveFeature(this.progressIndex)
+    },
     changeActiveFeature(featureIndex) {
       clearInterval(this.progressInterval)
       this.progressPercentage = 0

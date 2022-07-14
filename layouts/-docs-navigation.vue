@@ -124,10 +124,6 @@ export default {
               text: 'Multiple environments',
             },
             {
-              path: '/docs/features/remote-config',
-              text: 'Remote config',
-            },
-            {
               path: '/docs/features/staged-rollouts',
               text: 'Staged rollouts',
             },

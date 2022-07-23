@@ -1,28 +1,16 @@
 export const featuresV1 = {
   free: [
-    '1 team seat',
     '15 deployments per month',
     '100GB bandwidth',
     '1 million serverless requests',
+    'Unlimited team seats',
     'Unlimited domains',
     'Unlimited environments',
     'TLS certificates included',
   ],
-  small: [
-    'Everything in free plan',
-    '3 team seats',
-    '100 deployments per month',
-  ],
-  medium: [
-    'Everything in starter plan',
-    '10 team seats',
-    '500 deployments per month',
-  ],
-  large: [
-    'Everything in medium plan',
-    'Unlimited team seats',
-    '1000 deployments per month',
-  ],
+  small: ['Everything in free plan', '100 deployments per month'],
+  medium: ['Everything in starter plan', '500 deployments per month'],
+  large: ['Everything in medium plan', '1000 deployments per month'],
 }
 
 export const featuresV2 = {
@@ -101,7 +89,6 @@ export const packagesV2 = [
 ]
 
 export const comparisonV1 = [
-  { name: 'Number of seats', value: [1, 3, 10, 'Unlimited'] },
   { name: 'Concurrent builds', value: [1, 1, 2, 3] },
   {
     name: 'Each 1m requests',

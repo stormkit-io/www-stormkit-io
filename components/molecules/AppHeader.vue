@@ -57,31 +57,12 @@
         </div>
       </nav>
     </div>
-    <a
-      href="https://vuejsforge.com/"
-      target="_blank"
-      class="block"
-      rel="noreferrer noopener"
-    >
-      <img
-        :src="VueForgeBannerDesktop"
-        alt="Vue Forge Event"
-        class="hidden md:block m-auto"
-      />
-      <img
-        :src="VueForgeBannerTablet"
-        alt="Vue Forge Event"
-        class="block lg:hidden w-full"
-      />
-    </a>
   </div>
 </template>
 <script>
 import SkLogo from '../atoms/Logo'
 import SkButton from '../atoms/Button'
 import SkLink from '../atoms/Link.vue'
-import VueForgeBannerDesktop from '~/assets/images/vue-forge-top-banner.png'
-import VueForgeBannerTablet from '~/assets/images/vue-forge-top-banner-tablet.png'
 
 export default {
   components: {
@@ -92,8 +73,6 @@ export default {
 
   data: () => ({
     displayMobileMenu: false,
-    VueForgeBannerDesktop,
-    VueForgeBannerTablet,
     links: [
       { text: 'Home', to: '/' },
       { text: 'About us', to: '/#about-us' },

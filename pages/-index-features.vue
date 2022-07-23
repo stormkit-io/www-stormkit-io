@@ -42,7 +42,7 @@
           </div>
           <div
             v-if="index === progressIndex"
-            class="mt-8 border border-gray-80 rounded-lg overflow-hidden shadow-lg bg-blue-50 w-full flex items-center flex md:hidden"
+            class="mt-8 border border-gray-80 rounded-lg overflow-hidden shadow-lg bg-blue-50 w-full items-center flex md:hidden"
           >
             <sk-feature-preview :current-preview="currentPreview" />
           </div>

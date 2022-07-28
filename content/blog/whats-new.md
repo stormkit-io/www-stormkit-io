@@ -6,6 +6,20 @@ Follow the latest developments on Stormkit.
 
 <!--more-->
 
+## July 28th, 2022
+
+Stormkit now allows you to access git commit sha as environment variable. With that you can track version of your application with 3rd party tools. For example you can now track which Sentry errors occurs after which version of your application. 
+
+<sk-article-image 
+    src="blog/whats-new/git-commit.png"
+    alt="Auto deployment flow"
+    class="bg-white mt-8">
+</sk-article-image>
+
+## June 30th, 2022
+
+https://github.com/stormkit-io/serverless is now open source. With serverless you can make  your nodejs app run on aws lambda with minimal efford
+
 ## June 9th, 2022
 
 It's now possible to use Node.js 16 runtime. To change your Node version, go to your Application Settings

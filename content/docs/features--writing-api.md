@@ -5,7 +5,14 @@ title: API
 # <span class="inline-flex items-center">Writing APIs <span class="text-sm ml-2">(Beta)</span></span>
 
 <section>
+
 You can create node.js/typescript APIs using Stormkit.
+
+<sk-article-image 
+    src="docs/features/api-hello-world.gif" 
+    alt="API Hello World" 
+    class="bg-blue-50 mt-8"></sk-article-image>
+
 </section>
 
 ## How it works

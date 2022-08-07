@@ -114,7 +114,7 @@ export default {
             },
             {
               path: '/docs/features/writing-api',
-              text: 'Writing APIs',
+              text: 'Writing APIs (beta)',
             },
           ],
         },

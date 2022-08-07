@@ -25,7 +25,7 @@
     @apply bg-gray-90;
     @apply rounded-lg;
 
-    :last-child {
+    & > :last-child {
       @apply mb-0;
     }
   }

@@ -6,9 +6,15 @@ Follow the latest developments on Stormkit.
 
 <!--more-->
 
+## August 6th, 2022
+
+Stormkit now supports building APIs using Node.js / Typescript 🎉. [Learn more](/docs/features/api).
+
 ## July 28th, 2022
 
-Stormkit now allows you to access git commit sha as environment variable. With that you can track version of your application with 3rd party tools. For example you can now track which Sentry errors occurs after which version of your application. 
+Stormkit now injects the git commit sha as an environment variable during build time. This is useful to track
+changes with third party tools. For instance by providing the commit sha to Sentry, you can track after which
+specific commit the errors started to occur. 
 
 <sk-article-image 
     src="blog/whats-new/git-commit.png"

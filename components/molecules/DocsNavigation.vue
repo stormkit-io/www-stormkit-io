@@ -112,6 +112,10 @@ export default {
               path: '/docs/features/redirects-and-path-rewrites',
               text: 'Redirects & path rewrites',
             },
+            {
+              path: '/docs/features/writing-api',
+              text: 'Writing APIs',
+            },
           ],
         },
         {

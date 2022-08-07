@@ -69,6 +69,12 @@ Now go ahead and [deploy](/docs/deployments) your application. When Stormkit det
 it checks whether it is already built or not. If the `/api` folder is not yet built, Stormkit tries to build
 your api using Webpack and then deploys the output to the lambda function. This process is automatic. 
 
+</section>
+
+## Custom builds
+
+<section>
+
 If your source code contains more complex use cases and Stormkit fails to build, you can build the source code
 yourself. Here's the `webpack` config Stormkit uses to build the api. You can copy this and extend it based on
 your needs.
@@ -133,5 +139,35 @@ const config: Configuration = {
 
 export default config;
 ```
+
+</section>
+
+## Testing locally
+
+<section>
+
+In order to test the API locally go ahead and install the [`@stormkit/serverless`](https://www.github.com/stormkit-io/serverless) package.
+
+```bash
+npm i -D @stormkit/serverless
+```
+
+Update `package.json`:
+
+```json
+{
+  "scripts": {
+    "dev:api": "SERVERLESS_PORT=9090 node ./node_modules/@stormkit/serverless/dist/dev-server"
+  }
+}
+```
+
+And run the script:
+
+```bash
+npm run dev:api
+```
+
+You can access the api from http://localhost:9090/api.
 
 </section>

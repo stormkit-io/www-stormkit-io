@@ -9,6 +9,8 @@ export default {
     Docs,
   },
 
+  layout: 'docs',
+
   async asyncData({ $content, error }) {
     const page = await $content(`docs/getting-started`)
       .fetch()

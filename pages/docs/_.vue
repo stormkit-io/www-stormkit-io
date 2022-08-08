@@ -9,6 +9,8 @@ export default {
     Docs,
   },
 
+  layout: 'docs',
+
   async asyncData({ $content, error, params }) {
     const slug = params.pathMatch || 'getting-started'
     const page = await $content(`docs/${slug.replace(/\//g, '--')}`)

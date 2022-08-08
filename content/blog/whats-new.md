@@ -6,6 +6,18 @@ Follow the latest developments on Stormkit.
 
 <!--more-->
 
+## August 8th, 2022
+
+We now display the commit sha of the deployment. Clicking on the takes you to the diff page to view 
+the changes.
+
+<sk-article-image 
+    src="blog/whats-new/feat-commit-sha.png"
+    alt="Commit SHA"
+    class="bg-white mt-8">
+</sk-article-image>
+
+
 ## August 6th, 2022
 
 Stormkit now supports building APIs using Node.js / Typescript 🎉. [Learn more](/docs/features/api).
@@ -18,7 +30,7 @@ specific commit the errors started to occur.
 
 <sk-article-image 
     src="blog/whats-new/git-commit.png"
-    alt="Auto deployment flow"
+    alt="Injected Commit SHA"
     class="bg-white mt-8">
 </sk-article-image>
 

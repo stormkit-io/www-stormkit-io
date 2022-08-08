@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-blue-50 p-6 min-h-full md:w-1/4 md:min-w-1/4">
+  <nav class="bg-blue-50 p-6 min-h-full md:max-w-xs flex-grow">
     <ul class="text-sm">
       <li v-for="item in items" :key="item.path">
         <span

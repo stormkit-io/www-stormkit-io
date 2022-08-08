@@ -1,15 +1,13 @@
 <template>
-  <div class="text-blue-50">
-    <div class="page px-3 md:px-0">
+  <div class="px-3 md:px-0 w-full">
+    <div class="flex flex-col md:flex-row bg-white">
+      <docs-navigation />
       <div
-        class="flex flex-col md:flex-row bg-white rounded-lg shadow m-auto mt-12"
+        class="text-sm leading-relaxed flex flex-grow items-center justify-center"
       >
-        <docs-navigation class="md:mt-6 md:ml-6 md:mb-6 rounded-sm" />
-        <div class="md:p-6 text-sm leading-relaxed md:w-3/4">
-          <article class="mb-8 p-4 rounded-lg markdown">
-            <nuxt-content :document="page" tag="main" class="blog-post" />
-          </article>
-        </div>
+        <article class="mb-8 p-4 rounded-lg markdown max-w-3xl">
+          <nuxt-content :document="page" tag="main" class="blog-post" />
+        </article>
       </div>
     </div>
   </div>

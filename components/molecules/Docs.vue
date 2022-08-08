@@ -5,7 +5,7 @@
       <div
         class="text-sm leading-relaxed flex flex-grow items-center justify-center"
       >
-        <article class="mb-8 p-4 rounded-lg markdown max-w-3xl">
+        <article class="mb-8 p-4 rounded-lg markdown max-w-full md:max-w-3xl">
           <nuxt-content :document="page" tag="main" class="blog-post" />
         </article>
       </div>

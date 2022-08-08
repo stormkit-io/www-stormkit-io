@@ -7,12 +7,12 @@
         class="flex items-center justify-between flex-wrap text-gray-40 max-w-screen-2xl m-auto"
       >
         <div class="flex items-center flex-grow mr-6">
-          <sk-logo icon-only :size="8" class="mr-4" />
+          <sk-logo icon-only :size="8" class="mr-6" />
           <sk-link
             v-for="link in links"
             v-bind="link"
             :key="link.to"
-            class="text-blue-50 hover:text-pink-50 mr-2 active-link font-bold"
+            class="text-blue-50 hover:text-pink-50 mr-6 text-sm doc-header-link"
           />
         </div>
         <div class="mobile-menu md:hidden">
@@ -83,3 +83,8 @@ export default {
   },
 }
 </script>
+<style scoped>
+.doc-header-link.active-link {
+  font-weight: bold;
+}
+</style>

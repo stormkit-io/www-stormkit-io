@@ -74,8 +74,6 @@ export default {
   data: () => ({
     displayMobileMenu: false,
     links: [
-      { text: 'Home', to: '/' },
-      { text: 'About us', to: '/#about-us' },
       { text: 'Blog', to: '/blog' },
       { text: 'Docs', to: '/docs' },
       {

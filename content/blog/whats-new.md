@@ -6,6 +6,10 @@ Follow the latest developments on Stormkit.
 
 <!--more-->
 
+## August 10th, 2022
+
+Stormkit now automatically detects `pnpm` projects and build them using `pnpm`.
+
 ## August 8th, 2022
 
 We now display the commit sha of the deployment. Clicking on the takes you to the diff page to view 

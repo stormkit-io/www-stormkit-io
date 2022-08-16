@@ -6,6 +6,10 @@ Follow the latest developments on Stormkit.
 
 <!--more-->
 
+## August 16th, 2022
+
+Stormkit enables users to set [feature flags](https://martinfowler.com/articles/feature-toggles.html) on their app. Feature flags values will be available in window.sk.features.
+
 ## August 10th, 2022
 
 Stormkit now automatically detects `pnpm` projects and build them using `pnpm`.
@@ -24,7 +28,7 @@ the changes.
 
 ## August 6th, 2022
 
-Stormkit now supports building APIs using Node.js / Typescript 🎉. [Learn more](/docs/features/api).
+Stormkit now supports building APIs using Node.js / Typescript 🎉. [Learn more](/docs/features/writing-api).
 
 ## July 28th, 2022
 

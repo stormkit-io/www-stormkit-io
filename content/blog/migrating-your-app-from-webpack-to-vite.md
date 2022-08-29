@@ -4,9 +4,11 @@ title: Migrating your app from Webpack to Vite
 
 Hey all 👋
 
-I recently migrated [Stormkit](https://stormkit.io) from Webpack to Vite and I wanted to share the changes because I had to follow a trial and error methodology to migrate it due to lack of documentation. 
+We recently migrated our application from Webpack to Vite. 
+Since I had to follow a trial and error methodology due to lack of documentation, I wanted to create 
+a quick guide on our migration.
 
-For those who'd like to see directly the code, [here are the changes](https://github.com/stormkit-io/app-stormkit-io/pull/406/files#diff-6a3b01ba97829c9566ef2d8dc466ffcffb4bdac08706d3d6319e42e0aa6890dd). 
+For those who'd like to see directly the code [here are the changes](https://github.com/stormkit-io/app-stormkit-io/pull/406/files#diff-6a3b01ba97829c9566ef2d8dc466ffcffb4bdac08706d3d6319e42e0aa6890dd). 
 
 First thing you should know is that Vite uses `esbuild` for development and `rollup` for production. So while your development environment is working, your production build may fail. That was indeed the case for me and I'll explain in a moment why it happened. 
 

@@ -2,7 +2,8 @@
   <div class="text-blue-50">
     <div class="page px-3 md:px-0">
       <div
-        class="flex flex-col md:flex-row bg-white rounded-lg shadow m-auto mt-12"
+        class="flex flex-col md:flex-row bg-white rounded-lg shadow m-auto"
+        :class="{ 'mt-12': !uiOptions.noHeader }"
       >
         <blog-menu v-if="!uiOptions.noMenu" :pages="pages" class="md:mt-6" />
         <div class="md:p-6 text-sm leading-relaxed md:w-3/4">
@@ -53,6 +54,7 @@ export default {
       return {
         noMenu: opts.includes('no-menu'),
         noPosts: opts.includes('no-posts'),
+        noHeader: opts.includes('no-header'),
       }
     },
   },

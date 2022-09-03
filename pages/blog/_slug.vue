@@ -4,7 +4,7 @@
       <div
         class="flex flex-col md:flex-row bg-white rounded-lg shadow m-auto mt-12"
       >
-        <blog-menu :pages="pages" class="md:mt-6" />
+        <blog-menu v-if="!uiOptions.noMenu" :pages="pages" class="md:mt-6" />
         <div class="md:p-6 text-sm leading-relaxed md:w-3/4">
           <article class="mb-8 p-4 bg-gray-90 rounded-lg markdown">
             <h1 class="font-bold text-3xl mt-4 mb-8">
@@ -44,6 +44,17 @@ export default {
       page,
       pages,
     }
+  },
+
+  computed: {
+    uiOptions() {
+      const opts = this.$route.query?.ui?.split(',') || []
+
+      return {
+        noMenu: opts.includes('no-menu'),
+        noPosts: opts.includes('no-posts'),
+      }
+    },
   },
 
   head() {

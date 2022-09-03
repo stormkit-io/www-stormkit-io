@@ -1,10 +1,12 @@
 <template>
-  <div class="pt-16 text-blue-50">
+  <div class="text-blue-50" :class="{ 'pt-16': !uiOptions.noHeader }">
     <sk-background class="mb-16" top-none />
-    <sk-header />
+    <sk-header v-if="!uiOptions.noHeader" />
     <nuxt />
-    <sk-footer />
-    <gdpr-banner />
+    <template v-if="!uiOptions.noFooter">
+      <sk-footer />
+      <gdpr-banner />
+    </template>
   </div>
 </template>
 <script>
@@ -25,6 +27,17 @@ export default {
     SkBackground,
     SkHeader,
     SkFooter,
+  },
+
+  computed: {
+    uiOptions() {
+      const opts = this.$route.query?.ui?.split(',') || []
+
+      return {
+        noFooter: opts.includes('no-footer'),
+        noHeader: opts.includes('no-header'),
+      }
+    },
   },
 }
 </script>

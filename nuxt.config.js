@@ -8,7 +8,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Stormkit - Serverless infrastructure for javascript applications',
+    title: 'Stormkit - Serverless infrastructure for fullstack javascript applications',
     htmlAttrs: {
       lang: 'en',
     },

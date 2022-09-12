@@ -6,6 +6,13 @@ Follow the latest developments on Stormkit.
 
 <!--more-->
 
+## September 13th, 2022
+
+The new menu layout is released. From now on, the menu will always be on the left side on Desktop versions.
+In order to change your environment, you can select the environment
+dropdown next to the application name on top of the page. To navigate within your environment, hover
+on the environments icon on the left menu.
+
 ## August 16th, 2022
 
 Stormkit now enables users to set [feature flags](https://martinfowler.com/articles/feature-toggles.html) for their applications. They will be available client side through the `window.sk.features` object.

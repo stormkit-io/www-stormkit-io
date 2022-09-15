@@ -6,6 +6,16 @@ Follow the latest developments on Stormkit.
 
 <!--more-->
 
+## September 15th, 2022
+
+During the build process, Stormkit generates metadata about your application  to serve files in more optimal ways. Metadata includes other kinds like your app configuration. Now users can see what kind of metadata information is generated during the process. 
+
+<sk-article-image 
+    src="blog/whats-new/manifest.png"
+    alt="build manifest"
+    class="bg-white mt-8">
+</sk-article-image>
+
 ## September 13th, 2022
 
 The new menu layout is released. From now on, the menu will always be on the left side on Desktop versions.

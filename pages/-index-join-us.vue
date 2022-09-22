@@ -19,7 +19,7 @@
     <sk-button
       to="https://discord.gg/6yQWhyY"
       tertiary
-      class="flex items-center self-center md:self-auto"
+      class="flex items-center self-center py-4"
     >
       Join our community
     </sk-button>

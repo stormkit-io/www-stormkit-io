@@ -56,7 +56,7 @@
   </div>
 </template>
 <script>
-import skLogo from '../assets/images/stormkit-logo.svg'
+import skLogo from '../assets/logos/stormkit-logo-circle.svg'
 
 export default {
   data() {

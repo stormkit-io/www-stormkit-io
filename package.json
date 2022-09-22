@@ -1,7 +1,7 @@
 {
   "name": "www-stormkit-io",
   "version": "1.0.0",
-  "description": "Stormkit is an infrastructure provider for modern javascript applications which is strongly integrated with popular Git providers.",
+  "description": "Stormkit is a serverless platform for users to deploy fullstack javascript applications using git providers. It comes with application previews, code injections, feature flags, custom storage and  many more features.",
   "author": "Savas Vedova",
   "private": true,
   "scripts": {
@@ -41,8 +41,11 @@
     "nuxt": "^2.15.4",
     "postcss": "^8.2.13",
     "prettier": "^2.2.1",
+    "sass": "^1.50.0",
+    "sass-loader": "^10",
     "stylelint": "^13.9.0",
     "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recommended": "^7.0.0",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-processor-html": "^1.0.0",
     "vue-jest": "^3.0.4",

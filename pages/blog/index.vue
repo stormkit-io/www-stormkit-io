@@ -1,11 +1,11 @@
 <template>
-  <div class="pt-16 text-blue-50">
+  <div class="text-blue-50">
     <div class="page px-3 md:px-0">
       <div
         class="flex flex-col md:flex-row bg-white rounded-lg shadow m-auto mt-12"
       >
-        <blog-menu :pages="pages" class="mt-6" />
-        <div class="p-6 w-full text-sm leading-relaxed">
+        <blog-menu :pages="pages" class="md:mt-6" />
+        <div class="md:p-6 w-full text-sm leading-relaxed">
           <article
             v-for="page in pages"
             :key="page.title"

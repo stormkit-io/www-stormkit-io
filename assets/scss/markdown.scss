@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+.markdown {
+  font-family: 'Roboto', sans-serif;
+  @apply text-base;
+
+  .video-container {
+    @apply flex;
+    @apply items-center;
+    @apply justify-center;
+    @apply my-4;
+
+    iframe {
+      @apply rounded-sm;
+    }
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  section {
+    @apply mb-8;
+    @apply p-4;
+    @apply bg-gray-90;
+    @apply rounded-lg;
+
+    & > :last-child {
+      @apply mb-0;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply mt-8 mb-4;
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply mt-4;
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
+    @apply text-base;
+  }
+
+  ol {
+    @apply mb-4;
+
+    li {
+      @apply list-decimal;
+      @apply list-inside;
+    }
+  }
+
+  ul {
+    @apply mb-4;
+
+    li {
+      @apply list-disc;
+      @apply list-inside;
+    }
+  }
+
+  img {
+    @apply max-w-full;
+    @apply md:max-w-xl;
+  }
+
+  pre {
+    @apply my-4;
+    @apply max-w-full;
+    @apply text-sm;
+  }
+
+  code {
+    @apply text-sm;
+  }
+
+  table {
+    @apply my-4;
+    @apply border-collapse;
+    @apply bg-white;
+  }
+
+  table th {
+    @apply font-bold;
+    @apply text-center;
+  }
+
+  table td {
+    @apply text-left;
+  }
+
+  table td,
+  table th {
+    @apply border;
+    @apply border-gray-80;
+    @apply p-4;
+
+    &:first-child {
+      @apply w-48;
+    }
+  }
+}

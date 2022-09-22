@@ -110,6 +110,14 @@ export default {
   head() {
     return {
       title: 'Stormkit - Documentation',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Learn how to deploy full stack javascript/nodejs application with serverless use any framework such as nuxtjs, nextjs, react, vue, stelve, solidjs and many more',
+        },
+      ],
     }
   },
 }

@@ -162,10 +162,17 @@ export default {
       ],
     }
   },
-
   head() {
     return {
       title: 'Stormkit - Pricing',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Full stack javascript deployment cost for nuxt and nextjs never been this straightforward before',
+        },
+      ],
     }
   },
 }

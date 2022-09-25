@@ -164,7 +164,7 @@ Update `package.json`:
 ```json
 {
   "scripts": {
-    "dev:api": "SERVERLESS_PORT=9090 node ./node_modules/@stormkit/serverless/dist/dev-server"
+    "dev:api": "SERVERLESS_PORT=9090 node ./node_modules/@stormkit/serverless/dist/dev-server.js"
   }
 }
 ```

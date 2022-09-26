@@ -57,11 +57,6 @@
             <nuxt-link to="/docs" class="text-blue-50">Docs</nuxt-link>
           </li>
           <li class="mb-2">
-            <nuxt-link to="/docs/examples" class="text-blue-50"
-              >Examples</nuxt-link
-            >
-          </li>
-          <li class="mb-2">
             <a
               href="https://github.com/stormkit-io/www-stormkit-io"
               class="text-blue-50"

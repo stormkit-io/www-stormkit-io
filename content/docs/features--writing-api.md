@@ -78,6 +78,25 @@ your api using Webpack and then deploys the output to the lambda function. This 
 
 </section>
 
+## Matching endpoints by request method
+
+<section>
+
+By default, files are matched through all requests. If you want to restrict certain endpoints with a request method, you can specify the method in the file name, right before the extension.
+
+```ts
++ /api
+  - index.ts            // ALL /api
+  + /users
+    - index.get.ts      // GET /api/users
+    - index.post.ts     // POST /api/users
+    - subscribe.ts      // ALL /api/users/subscribe
+    + /[id]
+      - index.delete.ts // DELETE /api/users/:id
+```
+
+</section>
+
 ## Custom builds
 
 <section>

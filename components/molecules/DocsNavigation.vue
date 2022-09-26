@@ -125,6 +125,10 @@ export default {
               path: '/docs/other/personal-access-token',
               text: 'Personal Access Token',
             },
+            {
+              path: '/docs/troubleshooting',
+              text: 'Troubleshooting',
+            },
           ],
         },
       ],

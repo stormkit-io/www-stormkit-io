@@ -50,6 +50,10 @@
     @apply text-base;
   }
 
+  section > h3 {
+    @apply mt-0;
+  }
+
   ol {
     @apply mb-4;
 

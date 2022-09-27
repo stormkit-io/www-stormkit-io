@@ -112,4 +112,16 @@
       @apply w-48;
     }
   }
+
+  .section-sub-header {
+    @apply border-gray-40 border-b border-solid;
+    @apply text-black;
+    @apply py-1;
+    @apply mb-4;
+
+    h3,
+    p {
+      margin: 0;
+    }
+  }
 }

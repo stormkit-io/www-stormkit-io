@@ -32,9 +32,6 @@
         <ul class="flex-auto mb-6 md:mb-0">
           <li class="font-bold mb-4">Company &amp; Legal</li>
           <li class="mb-2">
-            <nuxt-link to="/#about-us" class="text-blue-50">About us</nuxt-link>
-          </li>
-          <li class="mb-2">
             <nuxt-link to="/partners" class="text-blue-50">Partners</nuxt-link>
           </li>
           <li class="mb-2">

@@ -15,9 +15,6 @@
       <sk-supported-techs />
     </div>
     <div class="mb-12 md:mb-24 md:p-0">
-      <sk-about-us />
-    </div>
-    <div class="mb-12 md:mb-24 md:p-0">
       <sk-join-us />
     </div>
   </div>
@@ -27,7 +24,6 @@
 import SkWelcome from './-index-welcome'
 import SkFeatures from './-index-features'
 import SkTestimonials from './-index-testimonials'
-import SkAboutUs from './-index-about-us'
 import SkSupportedTechs from './-index-supported-techs'
 import SkJoinUs from './-index-join-us'
 
@@ -36,7 +32,6 @@ export default {
     SkWelcome,
     SkFeatures,
     SkTestimonials,
-    SkAboutUs,
     SkSupportedTechs,
     SkJoinUs,
   },

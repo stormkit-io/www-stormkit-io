@@ -6,9 +6,21 @@ Follow the latest developments on Stormkit.
 
 <!--more-->
 
+## October 19th, 2022
+
+You can now preview runtime logs from your server side rendered apps and APIs for each deployment. Expand the
+**Deployment Menu** and click on **Runtime logs** to access the page.
+
+<sk-article-image
+    src="blog/whats-new/runtime-logs.gif"
+    alt="Runtime logs"
+    class="bg-white mt-8">
+</sk-article-image>
+
 ## September 15th, 2022
 
-During the build process, Stormkit generates metadata about your application  to serve files in more optimal ways. Metadata includes other kinds like your app configuration. Now users can see what kind of metadata information is generated during the process. 
+During the build process, Stormkit generates a manifest about your application to serve files in a more optimal ways. The manifest includes information about your CDN files, API routes, redirects and whether server side
+rendering is enabled or not.
 
 <sk-article-image 
     src="blog/whats-new/manifest.png"

@@ -64,7 +64,7 @@
           </li>
           <li class="mb-2">
             <a
-              href="https://stormkit-io.github.io/stormkit-status/"
+              href="https://status.stormkit.io"
               class="text-blue-50"
               target="_blank"
               rel="noreferrer noopener"

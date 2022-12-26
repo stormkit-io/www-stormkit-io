@@ -18,7 +18,7 @@ To set up a Trigger Function:
 
 1. Go to **Your Application**
 2. Click on **Trigger Functions** from the left navigation bar.
-3. 1.Click on **New function trigger** button
+3. Click on **New function trigger** button
 4. Fill the inputs in the modal
 5. Click on **Create** button
 

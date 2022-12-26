@@ -116,6 +116,10 @@ export default {
               path: '/docs/features/writing-api',
               text: 'Writing APIs (beta)',
             },
+            {
+              path: '/docs/features/feature-flags',
+              text: 'Feature flags',
+            },
           ],
         },
         {

@@ -6,6 +6,14 @@ Follow the latest developments on Stormkit.
 
 <!--more-->
 
+## December 27th, 2022
+
+Recently we announced support for API endpoints for client-side applications. Now, you can call these endpoints periodically periodically with [Trigger Functions](/docs/features/trigger-functions).
+
+## December 15th, 2022
+
+Announcing [feature flags](/docs/features/feature-flags): inject them into your client-side application and control them through the UI. Instant updates, no need for deployments. 
+
 ## October 19th, 2022
 
 You can now preview runtime logs from your server side rendered apps and APIs for each deployment. Expand the

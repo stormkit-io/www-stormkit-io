@@ -113,12 +113,16 @@ export default {
               text: 'Redirects & path rewrites',
             },
             {
+              path: '/docs/features/feature-flags',
+              text: 'Feature flags',
+            },
+            {
               path: '/docs/features/writing-api',
               text: 'Writing APIs (beta)',
             },
             {
-              path: '/docs/features/feature-flags',
-              text: 'Feature flags',
+              path: '/docs/features/trigger-functions',
+              text: 'Trigger functions (beta)',
             },
           ],
         },

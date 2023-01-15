@@ -172,10 +172,10 @@ export default config;
 
 <section>
 
-In order to test the API locally go ahead and install the [`@stormkit/serverless`](https://www.github.com/stormkit-io/serverless) package.
+In order to test the API locally go ahead and install the [`@stormkit/cli`](https://www.github.com/stormkit-io/stormkit-cli) package.
 
 ```bash
-npm i -D @stormkit/serverless
+npm i -D @stormkit/cli @stormkit/serverless
 ```
 
 Update `package.json`:
@@ -183,7 +183,7 @@ Update `package.json`:
 ```json
 {
   "scripts": {
-    "dev:api": "SERVERLESS_PORT=9090 node ./node_modules/@stormkit/serverless/dev-server.js"
+    "dev:api": "stormkit api"
   }
 }
 ```

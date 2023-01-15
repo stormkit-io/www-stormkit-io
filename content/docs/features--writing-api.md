@@ -97,6 +97,12 @@ By default, files are matched through all requests. If you want to restrict cert
 
 </section>
 
+## Ignore certain files
+
+If a file name starts with an underscore (`_`) the file won't be matched. If the directory starts
+with an underscore (`_`), the whole subdirectory tree will be ignored. This is useful to organize 
+helper methods in different files.
+
 ## Custom builds
 
 <section>

@@ -16,10 +16,8 @@
         We use cookies to make your experience more delicious.
       </main>
       <footer class="text-center">
-        <sk-button secondary class="mr-4" @click="removeCookies"
-          >Opt-out</sk-button
-        >
-        <sk-button secondary @click="closeBanner">Accept</sk-button>
+        <sk-button secondary class="mr-4">Opt-out</sk-button>
+        <sk-button secondary @click="acceptCookies">Accept</sk-button>
       </footer>
     </div>
   </modal>
@@ -42,27 +40,23 @@ export default {
     }
   },
   mounted() {
-    const isOptOut = localStorage.getItem(LOCAL_STORAGE_OPT_OUT) === 'true'
-    const isClosed = localStorage.getItem(LOCAL_STORAGE_KEY) === 'true'
+    const isPreviouslyClosed =
+      localStorage.getItem(LOCAL_STORAGE_KEY) === 'true'
 
-    if (!isClosed && !isOptOut) {
+    if (!isPreviouslyClosed) {
       setTimeout(() => (this.isBannerOpen = true), 1000)
-    }
-
-    if (isOptOut) {
-      this.removeCookies()
     }
   },
   methods: {
-    removeCookies() {
-      localStorage.setItem(LOCAL_STORAGE_OPT_OUT, 'true')
-
-      document.cookie.split(';').forEach(function (c) {
-        document.cookie = c
-          .replace(/^ +/, '')
-          .replace(/=.*/, '=;expires=' + new Date().toUTCString() + ';path=/')
+    acceptCookies() {
+      gtag('consent', 'update', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
       })
+
+      this.closeBanner()
     },
+
     closeBanner() {
       this.isBannerOpen = false
       localStorage.setItem(LOCAL_STORAGE_KEY, 'true')

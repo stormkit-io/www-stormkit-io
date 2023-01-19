@@ -13,12 +13,13 @@
         <h2 class="font-bold text-2xl">We use cookies.</h2>
       </header>
       <main class="font-light max-w-2xl text-center mb-8">
-        We use cookies to make your experience more delicious. By continuing to
-        use Stormkit, you agree to our use of cookies in accordance with our
-        <nuxt-link to="/policies/privacy">privacy policy</nuxt-link>.
+        We use cookies to make your experience more delicious.
       </main>
       <footer class="text-center">
-        <sk-button secondary @click="closeBanner">Okay, got it</sk-button>
+        <sk-button secondary class="mr-4" @click="removeCookies"
+          >Opt-out</sk-button
+        >
+        <sk-button secondary @click="closeBanner">Accept</sk-button>
       </footer>
     </div>
   </modal>
@@ -28,6 +29,7 @@ import Modal from '../atoms/Modal'
 import SkButton from '../atoms/Button'
 
 const LOCAL_STORAGE_KEY = 'gdpr-banner-is-closed'
+const LOCAL_STORAGE_OPT_OUT = 'gdpr-opt-out'
 
 export default {
   components: {
@@ -40,11 +42,27 @@ export default {
     }
   },
   mounted() {
-    if (localStorage.getItem(LOCAL_STORAGE_KEY) !== 'true') {
+    const isOptOut = localStorage.getItem(LOCAL_STORAGE_OPT_OUT) === 'true'
+    const isClosed = localStorage.getItem(LOCAL_STORAGE_KEY) === 'true'
+
+    if (!isClosed && !isOptOut) {
       setTimeout(() => (this.isBannerOpen = true), 1000)
+    }
+
+    if (isOptOut) {
+      this.removeCookies()
     }
   },
   methods: {
+    removeCookies() {
+      localStorage.setItem(LOCAL_STORAGE_OPT_OUT, 'true')
+
+      document.cookie.split(';').forEach(function (c) {
+        document.cookie = c
+          .replace(/^ +/, '')
+          .replace(/=.*/, '=;expires=' + new Date().toUTCString() + ';path=/')
+      })
+    },
     closeBanner() {
       this.isBannerOpen = false
       localStorage.setItem(LOCAL_STORAGE_KEY, 'true')

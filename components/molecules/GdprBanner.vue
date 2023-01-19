@@ -27,7 +27,6 @@ import Modal from '../atoms/Modal'
 import SkButton from '../atoms/Button'
 
 const LOCAL_STORAGE_KEY = 'gdpr-banner-is-closed'
-const LOCAL_STORAGE_OPT_OUT = 'gdpr-opt-out'
 
 export default {
   components: {

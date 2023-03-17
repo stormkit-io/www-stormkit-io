@@ -6,6 +6,10 @@ Follow the latest developments on Stormkit.
 
 <!--more-->
 
+## March 16th, 2023
+
+We have added support for NodeJS 18 runtime. You can configure that from your Application Settings page.
+
 ## December 27th, 2022
 
 Recently we announced support for API endpoints for client-side applications. Now, you can call these endpoints periodically periodically with [Trigger Functions](/docs/features/trigger-functions).

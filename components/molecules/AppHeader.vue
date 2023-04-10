@@ -76,10 +76,6 @@ export default {
     links: [
       { text: 'Blog', to: '/blog' },
       { text: 'Docs', to: '/docs' },
-      {
-        text: 'Roadmap',
-        href: 'https://github.com/stormkit-io/app-stormkit-io/discussions',
-      },
       { text: 'Pricing', to: '/pricing' },
     ],
   }),

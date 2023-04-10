@@ -14,9 +14,9 @@
             your web apps seamlessly
           </h1>
           <h2 class="text-sm md:text-base leading-normal">
-            With Stormkit you can easily manage your frontend infrastructure.
+            With Stormkit you can easily manage your frontend and backend infrastructure using JavaScript.
             <br />
-            It integrates perfectly with your git flow.
+            Our platform seamlessly integrates with your git flow, making it simple to deploy and manage your full stack application.
           </h2>
           <div
             class="flex flex-col items-center md:items-start md:justify-start my-6 md:my-0"

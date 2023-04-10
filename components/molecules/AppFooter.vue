@@ -5,7 +5,6 @@
       class="page flex flex-col md:flex-row items-between pt-16 md:pt-24 pb-12 px-6 md:px-0"
     >
       <div class="flex-grow-0 mb-12 md:mb-0">
-        <div><sk-logo :size="8" icon-only /></div>
         <div class="flex items-center mt-4">
           <span
             class="inline-flex items-center justify-center bg-blue-50 rounded-full w-8 h-8 mr-4"

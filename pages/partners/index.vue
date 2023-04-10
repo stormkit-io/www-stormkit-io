@@ -7,7 +7,7 @@
         Looking for an affiliate?
       </h1>
       <h2 class="text-lg text-center max-w-3xl">
-        We share <b>50% of our revenue</b> for every customer you bring.
+        We share <b>10% of our revenue</b> for every customer you bring.
         <br /><br />
         Reach us out through
         <a href="mailto:hello@stormkit.io">hello@stormkit.io</a> with your

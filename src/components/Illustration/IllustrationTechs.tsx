@@ -73,7 +73,7 @@ export default function Techs() {
         <Divider orientation="vertical" sx={{ height: 30, mb: 2 }} />
         <Logo src={jsLogo} alt="Deploy JS apps" />
         <Divider orientation="vertical" sx={{ height: 30, mb: 2 }} />
-        <Logo src={angularLogo} alt="Deploy angular apps" padding={10} />
+        <Logo src={angularLogo} alt="Deploy angular apps" padding={10} mb={0} />
       </Box>
       <Box
         sx={{

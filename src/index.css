@@ -1,0 +1,31 @@
+html,
+body {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animated-svg-path {
+  animation: animateDash 5s linear forwards infinite;
+  stroke: rgba(0, 0, 0, 0.75);
+}
+
+@keyframes animateDash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

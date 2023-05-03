@@ -21,15 +21,20 @@ export default function Home() {
     >
       <Header />
       <Box
-        sx={{ flex: 1, m: 'auto', color: theme.palette.primary.contrastText }}
+        sx={{
+          flex: 1,
+          m: 'auto',
+          color: theme.palette.primary.contrastText,
+          px: { xs: 2, md: 0 },
+        }}
         maxWidth="xl"
       >
         <Typography
           variant="h1"
           sx={{
-            mt: { xs: 4, md: 12 },
+            mt: { xs: 8, md: 12 },
             fontWeight: 600,
-            fontSize: { xs: 36, md: 48 },
+            fontSize: { xs: 24, md: 48 },
             maxWidth: MAX_WIDTH_MD,
             textAlign: 'center',
           }}
@@ -41,7 +46,7 @@ export default function Home() {
           sx={{
             mt: 2,
             fontWeight: 200,
-            fontSize: { xs: 20 },
+            fontSize: { xs: 16 },
             maxWidth: MAX_WIDTH_MD,
             textAlign: 'center',
             opacity: 0.7,
@@ -49,7 +54,13 @@ export default function Home() {
         >
           All you need to build your Javascript products, with a simple pricing.
         </Typography>
-        <Box sx={{ maxWidth: MAX_WIDTH_MD, textAlign: 'center', mt: 4 }}>
+        <Box
+          sx={{
+            maxWidth: MAX_WIDTH_MD,
+            textAlign: 'center',
+            mt: { xs: 8, md: 4 },
+          }}
+        >
           <Button variant="contained" color="secondary" size="large">
             Start your free trial
           </Button>
@@ -61,7 +72,7 @@ export default function Home() {
         sx={{
           width: '100%',
           mx: 'auto',
-          my: { xs: 4, md: 16 },
+          my: { xs: 8, md: 16 },
         }}
       >
         <Illustration />

@@ -29,9 +29,11 @@ export default function Illustration() {
         alignItems: 'center',
         justifyContent: 'space-between',
         position: 'relative',
+        flexDirection: { xs: 'column', md: 'row' },
       }}
     >
-      <svg
+      <Box
+        component="svg"
         id="tech-sk-deploy-connector"
         xmlns="http://www.w3.org/2000/svg"
         width="100%"
@@ -39,7 +41,12 @@ export default function Illustration() {
         className="animated-svg-path"
         strokeDasharray="250"
         strokeDashoffset="1000"
-        style={{ position: 'absolute', left: 0, top: 0 }}
+        sx={{
+          position: 'absolute',
+          left: 0,
+          top: 0,
+          display: { xs: 'none', md: 'block' },
+        }}
       >
         {[path1Ref].map((ref, index) => (
           <path
@@ -50,7 +57,7 @@ export default function Illustration() {
             strokeWidth="12.6"
           />
         ))}
-      </svg>
+      </Box>
       <Box
         ref={box1Ref}
         sx={{
@@ -72,6 +79,8 @@ export default function Illustration() {
           display: 'flex',
           justifyContent: 'flex-end',
           alignItems: 'flex-end',
+          width: { xs: '100%', md: 'auto' },
+          mt: { xs: 8, md: 0 },
         }}
       >
         <IllustrationSKDeploy />

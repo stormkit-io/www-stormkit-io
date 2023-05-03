@@ -13,8 +13,9 @@ export default function StormkitDeploy() {
       sx={{
         bgcolor: 'rgba(18,14,59,0.6)',
         py: 4,
-        borderRadius: 6,
-        minWidth: 400,
+        borderRadius: { xs: 0, md: 6 },
+        minWidth: { xs: 0, md: 400 },
+        flexGrow: 1,
         boxShadow: 6,
         color: 'white',
         transition: 'all 0.5s ease-in-out',
@@ -25,15 +26,17 @@ export default function StormkitDeploy() {
         sx={{
           bgcolor: 'rgba(255,255,255,0.025)',
           p: 2,
-          width: '100%',
           fontSize: 16,
           fontFamily: 'monospace',
         }}
       >
         $ git push
       </Box>
-      <Box sx={{ width: '100%', height: 150 }}>
-        <Divider orientation="vertical" sx={{ height: '100%' }}>
+      <Box sx={{ maxWidth: '100%', height: 150 }}>
+        <Divider
+          orientation="vertical"
+          sx={{ maxWidth: '100%', overflow: 'hidden' }}
+        >
           <Box
             component="img"
             sx={{
@@ -51,12 +54,11 @@ export default function StormkitDeploy() {
           display: 'flex',
           alignItems: 'center',
           p: 2,
-          width: '100%',
           fontSize: 16,
           fontFamily: 'monospace',
         }}
       >
-        <CheckIcon sx={{ color: 'green', mr: 2 }} />
+        <CheckIcon sx={{ color: 'green', mr: { xs: 1, md: 2 } }} />
         <Box component="span" sx={{ mr: 1 }}>
           Deployed as{' '}
         </Box>

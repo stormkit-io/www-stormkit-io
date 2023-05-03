@@ -8,7 +8,13 @@ export default function Header() {
   const theme = useTheme()
 
   return (
-    <Box sx={{ bgcolor: 'rgba(0,0,0,0.25)', boxShadow: 2 }}>
+    <Box
+      sx={{
+        bgcolor: 'rgba(0,0,0,0.25)',
+        boxShadow: 2,
+        px: { xs: 2, md: 0 },
+      }}
+    >
       <Box
         maxWidth="xl"
         sx={{

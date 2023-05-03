@@ -11,7 +11,7 @@
   "private": true,
   "scripts": {
     "dev": "NODE_NO_WARNINGS=1 nodemon --watch './src/vite-server.ts' --exec 'node --loader ts-node/esm' src/vite-server.ts",
-    "build": "npm run build:spa && npm run build:ssr && npm run build:ssg",
+    "build": "npm run build:spa && npm run build:ssr && npm run build:ssg && rm -rf .stormkit/server",
     "build:spa": "tsc && vite build",
     "build:ssg": "tsc && SSG=true node --loader ts-node/esm ./src/vite-server.ts",
     "build:ssr": "tsc && vite build -c vite.config.ssr.ts",

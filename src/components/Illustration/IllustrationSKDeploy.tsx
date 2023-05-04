@@ -17,6 +17,7 @@ export default function StormkitDeploy() {
         color: 'white',
         transition: 'all 0.5s ease-in-out',
         position: 'relative',
+        flexGrow: 1,
       }}
     >
       <Box

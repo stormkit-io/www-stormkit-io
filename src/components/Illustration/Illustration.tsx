@@ -21,6 +21,7 @@ export default function Illustration() {
           justifyContent: 'center',
           p: 6,
           flexGrow: 1,
+          width: { xs: '100%', md: 'auto' },
           borderRadius: 6,
           bgcolor: 'rgba(0,0,0,0.2)',
         }}
@@ -37,7 +38,7 @@ export default function Illustration() {
           alignItems: 'flex-end',
           width: { xs: '100%', md: 'auto' },
           flex: 1,
-          mt: { xs: 8, md: 0 },
+          mt: { xs: 0, md: 0 },
         }}
       >
         <IllustrationSKDeploy />

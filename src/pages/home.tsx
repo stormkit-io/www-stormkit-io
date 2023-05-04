@@ -4,6 +4,7 @@ import Button from '@mui/material/Button'
 import { useTheme } from '@mui/material/styles'
 import Header from '~/components/Header'
 import Illustration from '~/components/Illustration'
+import FeaturePreview from '~/components/FeaturePreview'
 
 const MAX_WIDTH_MD = 600
 
@@ -17,6 +18,7 @@ export default function Home() {
         display: 'flex',
         flexDirection: 'column',
         bgcolor: theme.palette.background.default,
+        color: theme.palette.primary.contrastText,
       }}
     >
       <Header />
@@ -24,7 +26,6 @@ export default function Home() {
         sx={{
           flex: 1,
           m: 'auto',
-          color: theme.palette.primary.contrastText,
           px: { xs: 2, md: 0 },
         }}
         maxWidth="xl"
@@ -46,7 +47,7 @@ export default function Home() {
           sx={{
             mt: 2,
             fontWeight: 200,
-            fontSize: { xs: 16 },
+            fontSize: { xs: 16, md: 20 },
             maxWidth: MAX_WIDTH_MD,
             textAlign: 'center',
             opacity: 0.7,
@@ -72,10 +73,21 @@ export default function Home() {
         sx={{
           width: '100%',
           mx: 'auto',
-          my: { xs: 8, md: 16 },
+          mt: { xs: 8, md: 16 },
         }}
       >
         <Illustration />
+      </Box>
+
+      <Box
+        maxWidth="xl"
+        sx={{
+          width: '100%',
+          mx: 'auto',
+          my: { xs: 8, md: 16 },
+        }}
+      >
+        <FeaturePreview />
       </Box>
     </Box>
   )

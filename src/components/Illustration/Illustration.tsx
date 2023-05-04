@@ -19,10 +19,9 @@ export default function Illustration() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          height: 360,
-          width: 360,
-          flexGrow: 0,
-          borderRadius: '50%',
+          p: 6,
+          flexGrow: 1,
+          borderRadius: 6,
           bgcolor: 'rgba(0,0,0,0.2)',
         }}
       >
@@ -37,6 +36,7 @@ export default function Illustration() {
           justifyContent: 'flex-end',
           alignItems: 'flex-end',
           width: { xs: '100%', md: 'auto' },
+          flex: 1,
           mt: { xs: 8, md: 0 },
         }}
       >

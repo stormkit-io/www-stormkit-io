@@ -11,11 +11,9 @@ export default function StormkitDeploy() {
     <Box
       sx={{
         bgcolor: 'rgba(18,14,59,0.6)',
-        py: 4,
+        py: 6,
         borderRadius: { xs: 0, md: 6 },
         minWidth: { xs: 0, md: 400 },
-        flexGrow: 1,
-        boxShadow: 6,
         color: 'white',
         transition: 'all 0.5s ease-in-out',
         position: 'relative',

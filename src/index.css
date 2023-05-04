@@ -30,11 +30,6 @@ body {
   }
 }
 
-.slide-up {
-  position: relative;
-  animation: slideUp 3.5s ease-in-out infinite;
-}
-
 @keyframes slideUp {
   0% {
     top: 100%;

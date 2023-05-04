@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 
 let i = 0
@@ -25,11 +26,23 @@ export default function FeaturePreview() {
           fontWeight: 600,
           fontSize: { xs: 24, md: 48 },
           textAlign: 'center',
-          height: 55,
           overflow: 'hidden',
+          position: 'relative',
+          pr: { xs: 27, md: 45 },
         }}
       >
-        Are you <span className="slide-up">{text}</span>
+        Are you{' '}
+        <Box
+          component="span"
+          className="slide-up"
+          sx={{
+            ml: { xs: 1, md: 2 },
+            position: 'absolute',
+            animation: 'slideUp 3.5s ease-in-out infinite',
+          }}
+        >
+          {text}
+        </Box>
       </Typography>
       <Typography
         variant="h3"

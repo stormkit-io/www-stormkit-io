@@ -31,7 +31,7 @@ export default function AnimationDeploymentPreview() {
       <Box
         sx={{
           animation: 'fadeIn 1s linear forwards',
-          animationDelay: '2s',
+          animationDelay: '1.5s',
           opacity: 0,
         }}
       >

@@ -177,7 +177,7 @@ export default function FeaturePreview() {
               justifyContent: 'center',
             }}
           >
-            {(activeFeature === 0 || true) && <AnimationDeploymentPreview />}
+            {activeFeature === 0 && <AnimationDeploymentPreview />}
           </Box>
           <LinearProgress sx={{ my: 4 }} />
           <Box sx={{ textAlign: 'center' }}>

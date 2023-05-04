@@ -40,3 +40,9 @@ body {
     top: 0;
   }
 }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

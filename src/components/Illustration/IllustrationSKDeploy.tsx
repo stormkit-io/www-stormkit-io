@@ -1,9 +1,8 @@
 import { TypeAnimation } from 'react-type-animation'
 import { useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
-import Divider from '@mui/material/Divider'
 import CheckIcon from '@mui/icons-material/Check'
-import stormkitLogo from '~/assets/logos/stormkit-logo-circle.svg'
+import StormkitConnection from '~/components/StormkitConnection'
 
 export default function StormkitDeploy() {
   const theme = useTheme()
@@ -32,22 +31,7 @@ export default function StormkitDeploy() {
       >
         $ git push
       </Box>
-      <Box sx={{ maxWidth: '100%', height: 150 }}>
-        <Divider
-          orientation="vertical"
-          sx={{ maxWidth: '100%', overflow: 'hidden' }}
-        >
-          <Box
-            component="img"
-            sx={{
-              width: 60,
-              animation: 'rotate 2.5s ease-in-out infinite',
-            }}
-            alt="Stormkit Deploy"
-            src={stormkitLogo}
-          />
-        </Divider>
-      </Box>
+      <StormkitConnection />
       <Box
         sx={{
           bgcolor: 'rgba(255,255,255,0.025)',

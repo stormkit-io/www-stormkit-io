@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import Box from '@mui/material/Box'
 import LinearProgress from '@mui/material/LinearProgress'
 import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
+import Link from '@mui/material/Link'
+import { ChevronRight } from '@mui/icons-material'
 import AnimationDeploymentPreview from './AnimationDeploymentPreview'
 import AnimationStagedRollout from './AnimationStagedRollout'
 
@@ -123,6 +124,10 @@ export default function FeaturePreview() {
                     transition: 'opacity 0.5s ease-in-out',
                     p: 4,
                   }}
+                  onMouseEnter={() => {
+                    clearTimeout(timeout)
+                    setTimeoutPaused(true)
+                  }}
                   onMouseLeave={() => {
                     if (timeoutPaused) {
                       setTimeoutPaused(false)
@@ -153,6 +158,7 @@ export default function FeaturePreview() {
                   </Typography>
                   <LinearProgress
                     color="secondary"
+                    variant={timeoutPaused ? 'determinate' : 'indeterminate'}
                     sx={{
                       opacity: 0.2,
                       position: 'absolute',
@@ -190,12 +196,28 @@ export default function FeaturePreview() {
             {activeFeature === 0 && <AnimationDeploymentPreview />}
             {activeFeature === 1 && <AnimationStagedRollout />}
           </Box>
+          <Box
+            sx={{
+              borderTop: '1px solid rgba(255,255,255,0.1)',
+              pt: 2,
+              mt: 4,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'flex-end',
+            }}
+          >
+            <Link
+              href="/docs"
+              sx={{
+                color: 'white',
+                '&:hover': { textDecoration: 'underline' },
+              }}
+            >
+              See all of our features
+            </Link>
+            <ChevronRight />
+          </Box>
         </Box>
-      </Box>
-      <Box sx={{ textAlign: 'center', mt: 8, pl: { xs: 0, md: '300px' } }}>
-        <Button variant="contained" color="secondary">
-          See all of our Features
-        </Button>
       </Box>
     </>
   )

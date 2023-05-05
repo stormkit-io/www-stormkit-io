@@ -89,7 +89,7 @@ export default function AnimationStagedRollout() {
 
       <Box
         sx={{
-          mt: 12,
+          mt: 8,
           display: 'flex',
           justifyContent: 'space-between',
           position: 'relative',

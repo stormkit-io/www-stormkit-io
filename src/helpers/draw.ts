@@ -7,11 +7,7 @@ interface Options {
   distortY?: number
 }
 
-function calculatePos(
-  divA: HTMLElement,
-  divB: HTMLElement,
-  position: Position
-) {
+function calculatePos(divA: HTMLElement, position: Position) {
   switch (position) {
     case 'bottom-middle': {
       return {
@@ -30,7 +26,7 @@ function calculatePos(
     case 'left-middle': {
       return {
         x: divA.offsetLeft,
-        y: divA.offsetTop + divB.offsetHeight / 2,
+        y: divA.offsetTop + divA.offsetHeight / 2,
       }
     }
 
@@ -60,8 +56,8 @@ export function drawConnector(
     return
   }
 
-  const posnA = calculatePos(divA, divB, options.from || 'right-middle')
-  const posnB = calculatePos(divB, divA, options.to || 'left-middle')
+  const posnA = calculatePos(divA, options.from || 'right-middle')
+  const posnB = calculatePos(divB, options.to || 'left-middle')
   const { distortX = 0, distortY = 0 } = options
 
   const dStr =

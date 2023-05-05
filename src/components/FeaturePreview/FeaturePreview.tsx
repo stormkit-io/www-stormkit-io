@@ -4,6 +4,7 @@ import LinearProgress from '@mui/material/LinearProgress'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import AnimationDeploymentPreview from './AnimationDeploymentPreview'
+import AnimationStagedRollout from './AnimationStagedRollout'
 
 let i = 0
 const texts = ['an Indiehacker?', 'a Small Startup?']
@@ -35,7 +36,7 @@ const features = [
 ]
 
 let timeout: NodeJS.Timeout
-const TIMEOUT_SWITCH_FEATURE = 5000
+const TIMEOUT_SWITCH_FEATURE = 7500
 
 export default function FeaturePreview() {
   const [text, setText] = useState(texts[0])
@@ -109,12 +110,10 @@ export default function FeaturePreview() {
             const isActiveFeature = features[activeFeature] === feature
 
             return (
-              <Box
-                key={feature.title}
-                sx={{ mb: 0, display: 'flex', '&:last-child': { mb: 0 } }}
-              >
+              <Box key={feature.title} sx={{ display: 'flex' }}>
                 <Box
                   sx={{
+                    position: 'relative',
                     width: 360,
                     borderTopLeftRadius: 12,
                     borderBottomLeftRadius: 12,
@@ -152,6 +151,17 @@ export default function FeaturePreview() {
                   >
                     {feature.subtitle}
                   </Typography>
+                  <LinearProgress
+                    color="secondary"
+                    sx={{
+                      opacity: 0.2,
+                      position: 'absolute',
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      visibility: isActiveFeature ? 'visible' : 'hidden',
+                    }}
+                  />
                 </Box>
               </Box>
             )
@@ -173,19 +183,19 @@ export default function FeaturePreview() {
             sx={{
               flexGrow: 1,
               display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
+              alignItems: 'flex-start',
+              justifyContent: 'space-between',
             }}
           >
             {activeFeature === 0 && <AnimationDeploymentPreview />}
-          </Box>
-          <LinearProgress sx={{ my: 4 }} />
-          <Box sx={{ textAlign: 'center' }}>
-            <Button variant="contained" color="secondary">
-              See all of our Features
-            </Button>
+            {activeFeature === 1 && <AnimationStagedRollout />}
           </Box>
         </Box>
+      </Box>
+      <Box sx={{ textAlign: 'center', mt: 8, pl: { xs: 0, md: '300px' } }}>
+        <Button variant="contained" color="secondary">
+          See all of our Features
+        </Button>
       </Box>
     </>
   )

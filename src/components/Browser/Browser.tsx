@@ -1,15 +1,22 @@
 import Box from '@mui/material/Box'
-import { GitHub as BrowserIcon, Code as CodeIcon } from '@mui/icons-material'
+import {
+  GitHub as BrowserIcon,
+  Code as CodeIcon,
+  Lock as LockIcon,
+} from '@mui/icons-material'
+import { Typography } from '@mui/material'
 
 interface Props {
   children: React.ReactNode
   icon?: 'code' | 'browser'
+  url?: string
   minHeight?: number
 }
 
 export default function Browser({
   children,
-  icon = 'code',
+  icon,
+  url,
   minHeight = 160,
 }: Props) {
   return (
@@ -51,6 +58,14 @@ export default function Browser({
         >
           {icon === 'code' && <CodeIcon sx={{ width: 16 }} />}
           {icon === 'browser' && <BrowserIcon sx={{ width: 16 }} />}
+          {url && (
+            <>
+              <LockIcon sx={{ mr: 1, color: 'green', width: 16 }} />
+              <Typography component="span" sx={{ fontSize: 12 }}>
+                {url}
+              </Typography>
+            </>
+          )}
         </Box>
       </Box>
       <Box

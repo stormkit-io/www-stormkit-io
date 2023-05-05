@@ -18,6 +18,7 @@ export default function StormkitDeploy() {
         transition: 'all 0.5s ease-in-out',
         position: 'relative',
         flexGrow: 1,
+        minHeight: 370,
       }}
     >
       <Box

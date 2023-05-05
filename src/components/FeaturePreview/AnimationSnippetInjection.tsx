@@ -54,30 +54,31 @@ export default function AnimationSnippetInjection() {
         </Box>
       </Browser>
       <StormkitConnection height={100} />
-      <Box>
-        <Browser url="my-app.com">
+      <Box sx={{ position: 'relative' }}>
+        <Browser url="my-app.com" minHeight={0}>
           <Stack>
             <Skeleton width={'20%'} />
             <Skeleton width={'50%'} />
             <Skeleton width={'40%'} />
             <Skeleton width={'75%'} />
           </Stack>
-          <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 4 }}>
-            <Box
-              sx={{
-                opacity: 0.6,
-                bgcolor: 'green',
-                height: 40,
-                width: 40,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                borderRadius: '50%',
-                visibility: enabled ? 'visible' : 'hidden',
-              }}
-            >
-              <ChatBubble sx={{ fontSize: 16 }} />
-            </Box>
+          <Box
+            sx={{
+              position: 'absolute',
+              right: 15,
+              bottom: 15,
+              opacity: 0.6,
+              bgcolor: 'green',
+              height: 40,
+              width: 40,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: '50%',
+              visibility: enabled ? 'visible' : 'hidden',
+            }}
+          >
+            <ChatBubble sx={{ fontSize: 16 }} />
           </Box>
         </Browser>
       </Box>

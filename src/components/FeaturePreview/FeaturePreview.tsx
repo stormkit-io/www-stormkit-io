@@ -7,6 +7,7 @@ import { ChevronRight } from '@mui/icons-material'
 import AnimationDeploymentPreview from './AnimationDeploymentPreview'
 import AnimationStagedRollout from './AnimationStagedRollout'
 import AnimationSnippetInjection from './AnimationSnippetInjection'
+import AnimationFeatureFlag from './AnimationFeatureFlag'
 
 let i = 0
 const texts = ['an Indiehacker?', 'a Small Startup?']
@@ -197,6 +198,7 @@ export default function FeaturePreview() {
             {activeFeature === 0 && <AnimationDeploymentPreview />}
             {activeFeature === 1 && <AnimationStagedRollout />}
             {activeFeature === 2 && <AnimationSnippetInjection />}
+            {activeFeature === 3 && <AnimationFeatureFlag />}
           </Box>
           <Box
             sx={{

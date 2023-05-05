@@ -55,7 +55,11 @@ export default function AnimationStagedRollout() {
           borderRadius: 1,
         }}
       >
-        <Typography id="slider-1" gutterBottom>
+        <Typography
+          id="slider-1"
+          gutterBottom
+          sx={{ fontSize: 14, opacity: 0.7, mb: 2 }}
+        >
           Deployment 1
         </Typography>
         <Slider
@@ -67,7 +71,11 @@ export default function AnimationStagedRollout() {
           sx={{ mb: 2 }}
         />
 
-        <Typography id="slider-2" gutterBottom>
+        <Typography
+          id="slider-2"
+          gutterBottom
+          sx={{ fontSize: 14, opacity: 0.7, mb: 2 }}
+        >
           Deployment 2
         </Typography>
         <Slider

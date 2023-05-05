@@ -8,7 +8,7 @@ import Browser from '~/components/Browser'
 export default function AnimationDeploymentPreview() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Browser>
+      <Browser icon="code">
         <TypeAnimation
           sequence={[
             [

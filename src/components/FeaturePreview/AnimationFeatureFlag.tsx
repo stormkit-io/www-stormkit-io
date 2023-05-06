@@ -4,7 +4,6 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Switch from '@mui/material/Switch'
 import Skeleton from '@mui/material/Skeleton'
-import Divider from '@mui/material/Divider'
 import StormkitConnection from '~/components/StormkitConnection'
 import Browser from '~/components/Browser'
 import { Stack } from '@mui/material'
@@ -58,9 +57,6 @@ export default function AnimationFeatureFlag() {
             </Box>
           </Browser>
         </Box>
-        <Box sx={{ flexGrow: 0.2, display: 'flex', alignItems: 'center' }}>
-          <Divider />
-        </Box>
         <Box sx={{ flexGrow: 0.4, fontFamily: 'monospace', fontSize: 14 }}>
           <Browser icon="code" minHeight={0}>
             if (window.sk.features[
@@ -83,7 +79,7 @@ export default function AnimationFeatureFlag() {
           </Stack>
           <Box
             sx={{
-              opacity: 0.6,
+              opacity: 0.3,
               bgcolor: 'green',
               mt: 2,
               height: 30,

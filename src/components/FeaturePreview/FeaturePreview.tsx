@@ -8,6 +8,7 @@ import AnimationDeploymentPreview from './AnimationDeploymentPreview'
 import AnimationStagedRollout from './AnimationStagedRollout'
 import AnimationSnippetInjection from './AnimationSnippetInjection'
 import AnimationFeatureFlag from './AnimationFeatureFlag'
+import AnimationAPIRoutes from './AnimationAPIRoutes'
 
 let i = 0
 const texts = ['an Indiehacker?', 'a Small Startup?']
@@ -32,7 +33,7 @@ const features = [
     subtitle: 'Toggle features with a simple click.',
   },
   {
-    title: 'API',
+    title: 'API Routes',
     subtitle:
       'Manage your Node.js serverless API from the same code repository.',
   },
@@ -199,6 +200,7 @@ export default function FeaturePreview() {
             {activeFeature === 1 && <AnimationStagedRollout />}
             {activeFeature === 2 && <AnimationSnippetInjection />}
             {activeFeature === 3 && <AnimationFeatureFlag />}
+            {activeFeature === 4 && <AnimationAPIRoutes />}
           </Box>
           <Box
             sx={{

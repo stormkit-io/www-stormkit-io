@@ -5,6 +5,7 @@ import { useTheme } from '@mui/material/styles'
 import Header from '~/components/Header'
 import Illustration from '~/components/Illustration'
 import FeaturePreview from '~/components/FeaturePreview'
+import Pricing from '~/components/Pricing'
 
 const MAX_WIDTH_MD = 600
 
@@ -73,7 +74,7 @@ export default function Home() {
         sx={{
           width: '100%',
           mx: 'auto',
-          mt: { xs: 8, md: 16 },
+          mt: { xs: 8, md: 24 },
         }}
       >
         <Illustration />
@@ -84,10 +85,21 @@ export default function Home() {
         sx={{
           width: '100%',
           mx: 'auto',
-          my: { xs: 8, md: 16 },
+          mt: { xs: 8, md: 24 },
         }}
       >
         <FeaturePreview />
+      </Box>
+
+      <Box
+        maxWidth="xl"
+        sx={{
+          width: '100%',
+          mx: 'auto',
+          my: { xs: 8, md: 24 },
+        }}
+      >
+        <Pricing />
       </Box>
     </Box>
   )

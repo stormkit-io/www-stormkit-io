@@ -99,6 +99,7 @@ pre[class*='language-'] {
   line-height: 1.5;
   tab-size: 4;
   hyphens: none;
+  font-size: 1rem;
 }
 
 pre[class*='language-'] {
@@ -110,6 +111,11 @@ pre[class*='language-'] {
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+code {
+  font-size: inherit;
+  color: #67cdcc;
 }
 
 :not(pre) > code[class*='language-'] {

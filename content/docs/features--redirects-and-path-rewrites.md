@@ -5,37 +5,18 @@ title: Redirects and path rewrites
 # Redirects and Path Rewrites
 
 <section>
-Stormkit is able to handle the path rewrites and redirects on the load balancer level. In order to make use of this feature, create a `stormkit.config.yml` file at root level of your repository. This file will be parsed on each deployment, hence if you change this file previous deployments won't be affected. The syntax is as follows:
+Stormkit is able to handle the path rewrites and redirects on the load balancer level. In order to make use of this feature, create a `redirects.json` file at root level of your repository. This file will be parsed on each deployment, hence if you change this file previous deployments won't be affected. The syntax is as follows:
 
-```yaml
-app:
-  - redirects:
-      - from: <string>
-        to: <string>
-        ext: <string>
-        status: <number>
-        replace: <bool>
-        assets: <bool>
-        static: <bool>
-        host: <string>
+```json
+[
+  {
+    "from": "string",   // (required): The path. Supports regexp syntax.
+    "to": "string",     // (required): The destination path.
+    "status": "number", // (optional): The HTTP Status Code for redirect. Default is empty.
+    "assets": "boolean" // (optional): Whether to apply the redirect/rewrite to any static file that is not an html file. Default is false.
+  }
+]
 ```
-
-</section>
-
-## Syntax
-
-<section>
-
-| Key     | Description                                                                                                                                                                                                                                                                                              |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| From    | The URL or path to be rewritten/redirected. It accepts a pattern string. '\*' matches any sequence of non-Separator characters                                                                                                                                                                           |
-| To      | The destination URL or path.                                                                                                                                                                                                                                                                             |
-| Ext     | A list of extensions to match. If provided, the from clause will be ignored and only cdn clause will be interpreted. This property expects a string of extensions, separated by a comma.                                                                                                                 |
-| Status  | The redirect status. When 'From' is a relative path, it defaults to an empty value and when it's empty the path will be rewritten. When 'From' is a host name, it defaults to 302.                                                                                                                       |
-| Assets  | Specifies if the assets should also be considered for this rewrite/redirect. If true, the assets won't be redirected. Any file that has not an .html extension and has not an empty mime type is considered as a static asset. This variable is used only when 'From' is a path and not an absolute URL. |
-| Cdn     | Tells Stormkit that this request should be served from the CDN and not from the lambdas.                                                                                                                                                                                                                 |
-| Replace | Specifies whether a string replace should be used while redirecting. When used with the `status` field, it will replace the `from` value with the `to` value.                                                                                                                                            |
-| Host    | Restricts the redirect rule to the specified host name.                                                                                                                                                                                                                                                  |
 
 </section>
 
@@ -43,16 +24,15 @@ app:
 
 <section>
 
-```yaml
-app:
-  - redirects:
-      - from: stormkit.io
-        to: www.stormkit.io
-        status: 301
-        replace: true
+```json
+[
+  {
+    "from": "stormkit.io",
+    "to": "www.stormkit.io", 
+    "status": 301
+  }
+]
 ```
-
-With `replace: true` we basically tell Stormkit to keep the URL. For instance when it's `true`, https://stormkit.io/docs will be redirected to https://www.stormkit.io/docs, when it's false it will be redirected to https://www.stormkit.io.
 
 </section>
 
@@ -60,22 +40,18 @@ With `replace: true` we basically tell Stormkit to keep the URL. For instance wh
 
 <section>
 
-```yaml
-app:
-  - redirects:
-      - from: /dist/*
-        to: /my-other-dist/
-        replace: true
+If you omit the `status` property, Stormkit will not redirect the request but will simply rewrite the path.
+
+```json
+[
+  {
+    "from": "/my-path/*",
+    "to": "/my-new-path/$1", 
+  }
+]
 ```
 
-You can rewrite paths by using the combination of `*` in the `from` setting and `replace` being set to `true`. This will tell Stormkit to replace anything that matches the 'from' statement with the 'to' statement, and keep the rest of the url.
-
-Examples with the above settings:
-
-| From                 | To                            |
-| -------------------- | ----------------------------- |
-| /index.html          | Uneffected                    |
-| /dist/index.html?q=1 | /my-other-dist/index.html?q=1 |
+In this case, all requests coming to `my-path` will be served as if they were coming to `my-new-path`.
 
 </section>
 
@@ -83,48 +59,42 @@ Examples with the above settings:
 
 <section>
 
-```yaml
-app:
-  - redirects:
-      - from: /*
-        to: /index.html
-        assets: false
+```json
+[
+  {
+    "from": "/*",
+    "to": "/index.html", 
+    "assets": false,
+  }
+]
 ```
 
-The above example will rewrite all requests to `index.html`. It applies only to CDN requests since `cdn` is set `true`. This is useful for single page applications.
+The above example will rewrite all requests to `index.html`. By setting `assets` false This is useful for single page applications.
 
 </section>
 
-## Serve from the CDN
+## Regexp
 
 <section>
 
-```yaml
-app:
-  - redirects:
-      - from: /favicon.ico
-        to: /favicon.ico
-        cdn: true
+```json
+[
+  {
+    "from": "/documentation/*/page/*",
+    "to": "/docs/$1/$2"
+  },
+  {
+    "from": "/documentation$",
+    "to": "/docs"
+  }
+]
 ```
 
-By default Stormkit provides an endpoint to serve files from the CDN. Sometimes however we need to serve files from the same domain.
-If you're using an isomorphic application, requests to the same domain will tell Stormkit to forward the request to the lambda function. Luckily, by setting the `cdn` config `true` we tell Stormkit to serve the files from the CDN.
+You can use `regexp` syntax for redirects. The example above creates two redirects.
 
-</section>
+1. The first one will redirect `/documentation/welcome/page/getting-started` to `/docs/welcome/getting-started`.
+2. The second will redirect `/documentation` to `/docs`. 
 
-## Host matching
-
-<section>
-
-```yaml
-app:
-  - redirects:
-      - from: /dist/*
-        to: /my-other-dist/
-        replace: true
-        host: example.org
-```
-
-When the `host` parameter is specified, Stormkit will check that the request host matches the parameter value. This is useful when you have a monorepo with multiple apps hosted and you want to make sure that the redirect applies only to given hosts.
+Note the `$amp;` sign at the end of the string. That sign simply tells to redirect only the path `/documentation` and not anything that contains `/documentation`. 
 
 </section>

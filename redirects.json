@@ -1,0 +1,7 @@
+[
+  {
+    "from": "/docs",
+    "to": "/docs/welcome/getting-started",
+    "status": 302
+  }
+]

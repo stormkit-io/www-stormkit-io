@@ -23,7 +23,7 @@ const Async = (
   return (
     <React.Suspense
       fallback={
-        <Box sx={{ bgcolor: '#0F092B' }}>
+        <Box sx={{ bgcolor: '#0F092B', minHeight: '100vh' }}>
           <Header />
           <LinearProgress />
         </Box>

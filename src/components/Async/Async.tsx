@@ -1,5 +1,4 @@
 import React from 'react'
-import { useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import LinearProgress from '@mui/material/LinearProgress'
 import Header from '~/components/Header'
@@ -10,7 +9,6 @@ const Async = (
   dynamicImport: () => Promise<{ default: React.FC }>
 ): React.ReactNode => {
   const Component = React.lazy(dynamicImport)
-  const theme = useTheme()
   const isMatch = matchPath(path, window.location.pathname)
 
   // This is required to prevent React complaining from
@@ -25,7 +23,7 @@ const Async = (
   return (
     <React.Suspense
       fallback={
-        <Box sx={{ bgcolor: theme.palette.background.default }}>
+        <Box sx={{ bgcolor: '#0F092B' }}>
           <Header />
           <LinearProgress />
         </Box>

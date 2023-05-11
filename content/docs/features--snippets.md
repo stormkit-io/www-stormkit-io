@@ -26,11 +26,11 @@ In the same page, click on <b>New snippet</b>. A modal will pop up.
     alt="Example banner"
     class="bg-blue-50 mt-8"></sk-article-image>
 
-| Setting      |                                                               Description                                                               |
-| ------------ | :-------------------------------------------------------------------------------------------------------------------------------------: |
-| **Title**    |                                   The title is used internally to describe what the snippet is about.                                   |
-| **Content**  |                                       This is the content that will be injected in the document.                                        |
+| Setting      | Description |
+| ------------ | ----------- |
+| **Title**    | The title is used internally to describe what the snippet is about. |
+| **Content**  | This is the content that will be injected in the document. |
 | **Location** | The location specifies where to inject the snippet. You can inject it in either body or head and you can either append or prepend them. |
-| **Enabled**  |                     Whether the snippet is enabled or disabled. Effects are immediate, you won't have to redeploy.                      |
+| **Enabled**  | Whether the snippet is enabled or disabled. Effects are immediate, you won't have to redeploy. |
 
 </section>

@@ -1,5 +1,6 @@
 ---
 title: Multiple Environments
+description: Create multiple development environments easily with Stormkit.
 ---
 
 # Multiple environments

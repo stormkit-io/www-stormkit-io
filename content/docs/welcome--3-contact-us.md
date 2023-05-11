@@ -1,6 +1,6 @@
 ---
 title: Contact us
-description: 
+description: Join the Stormkit community.
 ---
 
 # Contact us

@@ -1,5 +1,6 @@
 ---
 title: Personal access tokens
+description: Manage personal access tokens for shared accounts.
 ---
 
 # Personal Access Token

@@ -1,5 +1,6 @@
 ---
 title: Getting started
+description: Stormkit is a deployment platform for jamstack applications. It helps you focus on your product by providing a solution for most common technical challenges, such as deployments, logs, hosting, scaling tls certificates, and helps saving valuable time.
 ---
 
 # Welcome

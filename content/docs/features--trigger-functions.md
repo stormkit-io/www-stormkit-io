@@ -1,5 +1,6 @@
 ---
 title: Trigger functions
+description: Use Stormkit Trigger Functions to set periodic tasks. 
 ---
 
 # Trigger functions (beta)

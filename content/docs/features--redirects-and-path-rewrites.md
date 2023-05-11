@@ -1,5 +1,6 @@
 ---
 title: Redirects and path rewrites
+description: Handle redirects and path rewrites with Stormkit.
 ---
 
 # Redirects and Path Rewrites

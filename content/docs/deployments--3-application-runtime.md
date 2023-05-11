@@ -1,5 +1,6 @@
 ---
 title: Application runtime
+description: Handle application runtime of your application through a simple UI with Stormkit.
 ---
 
 # Application Runtime

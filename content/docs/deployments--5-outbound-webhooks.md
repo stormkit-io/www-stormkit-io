@@ -1,5 +1,6 @@
 ---
 title: Outbound Webhooks
+description: Notify 3rd party applications after each deployment with Stormkit.
 ---
 
 # Outbound Webhooks

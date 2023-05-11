@@ -1,5 +1,6 @@
 ---
 title: Snippet injection
+description: Inject and control 3rd party scripts through Stormkit UI.
 ---
 
 # Snippet injection

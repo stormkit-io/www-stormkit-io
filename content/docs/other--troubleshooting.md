@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting
+description: Help on common issues with Stormkit.
 ---
 
 <h1>Troubleshooting</h1>

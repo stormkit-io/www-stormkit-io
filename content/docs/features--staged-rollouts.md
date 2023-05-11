@@ -1,5 +1,6 @@
 ---
 title: Staged rollouts
+description: Gradually increase traffic by rolling out your changes to a limited number of users.
 ---
 
 # Staged Rollouts

@@ -1,5 +1,6 @@
 ---
 title: Auto Deployments
+description: Deploy your applications automatically using Stormkit.
 ---
 
 # Auto deployments

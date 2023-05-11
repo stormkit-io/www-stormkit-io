@@ -1,5 +1,6 @@
 ---
 title: Feature flags
+description: Inject and control feature flags into your applications.
 ---
 
 # Feature flags

@@ -1,8 +1,9 @@
 ---
 title: API
+description: Write node.js/typescript serverless API using Stormkit.
 ---
 
-# <span class="inline-flex items-center">Writing APIs <span class="text-sm ml-2">(Beta)</span></span>
+# Writing APIs
 
 <section>
 
@@ -181,7 +182,7 @@ export default config;
 In order to test the API locally go ahead and install the [`@stormkit/cli`](https://www.github.com/stormkit-io/stormkit-cli) package.
 
 ```bash
-npm i -D @stormkit/cli @stormkit/serverless
+npm i -D @stormkit/cli
 ```
 
 Update `package.json`:

@@ -12,15 +12,15 @@ import CheckIcon from '@mui/icons-material/Check'
 const limits: Record<SubscriptionTier, { fns: string; bandwidth: string }> = {
   '100': {
     fns: '2.5m',
-    bandwidth: '2TB',
+    bandwidth: '500GB',
   },
   '500': {
     fns: '5m',
-    bandwidth: '4TB',
+    bandwidth: '1TB',
   },
   '1000': {
     fns: '10m',
-    bandwidth: '10TB',
+    bandwidth: '2TB',
   },
   '1000+': {
     fns: '∞',

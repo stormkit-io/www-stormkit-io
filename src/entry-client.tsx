@@ -5,6 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 import createRoutes from './routes'
 import App from './App'
 import Context from './context'
+import './index.css'
 
 declare global {
   interface Window {

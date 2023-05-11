@@ -50,8 +50,8 @@ export default createTheme({
       xs: 320,
       sm: 384,
       md: 576,
-      lg: 768,
-      xl: 1024,
+      lg: 1024,
+      xl: 1368,
     },
   },
 })

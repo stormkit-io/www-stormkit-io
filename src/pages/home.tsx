@@ -22,14 +22,14 @@ export default function Home() {
         color: theme.palette.primary.contrastText,
       }}
     >
-      <Header />
+      <Header maxWidth="lg" />
       <Box
         sx={{
           flex: 1,
           m: 'auto',
           px: { xs: 2, md: 0 },
         }}
-        maxWidth="xl"
+        maxWidth="lg"
       >
         <Typography
           variant="h1"
@@ -70,7 +70,7 @@ export default function Home() {
       </Box>
 
       <Box
-        maxWidth="xl"
+        maxWidth="lg"
         sx={{
           width: '100%',
           mx: 'auto',
@@ -81,7 +81,7 @@ export default function Home() {
       </Box>
 
       <Box
-        maxWidth="xl"
+        maxWidth="lg"
         sx={{
           width: '100%',
           mx: 'auto',
@@ -92,7 +92,7 @@ export default function Home() {
       </Box>
 
       <Box
-        maxWidth="xl"
+        maxWidth="lg"
         sx={{
           width: '100%',
           mx: 'auto',

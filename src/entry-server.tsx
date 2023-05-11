@@ -14,7 +14,7 @@ interface RenderReturn {
   head: string
 }
 
-export type RenderFunction = (url: string) => Promise<RenderReturn>
+export type RenderFunction = (url: string, seo?: SEO) => Promise<RenderReturn>
 
 const defaultSEO: SEO = {
   title: 'Deploy full stack Javascript applications',
@@ -30,11 +30,12 @@ const defaultSEO: SEO = {
   },
 }
 
-export const render: RenderFunction = async (url) => {
+export const render: RenderFunction = async (url, seo) => {
   const { routes, head, context } = await createRoutes(url)
   const tags = {
     ...defaultSEO,
-    ...head,
+    ...JSON.parse(JSON.stringify(head || {})),
+    ...JSON.parse(JSON.stringify(seo || {})),
   }
 
   // Prefix the title with the domain.name property.
@@ -68,6 +69,7 @@ export const render: RenderFunction = async (url) => {
       `<meta name="twitter:title" content="${tags.title}" />`,
       `<meta name="twitter:description" content="${tags.description}" />`,
       `<link rel="icon" type="image/svg+xml" href="/stormkit-logo-circle.svg" />`,
+      `<link href="/src/index.css" rel="stylesheet" />`,
     ]
       .join('\n')
       .trim(),

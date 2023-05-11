@@ -1,10 +1,13 @@
 import Box from '@mui/material/Box'
 import { useTheme } from '@mui/material/styles'
-import Typography from '@mui/material/Typography'
 import Link from '@mui/material/Link'
 import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
 
-export default function Header() {
+interface Props {
+  maxWidth?: string
+}
+
+export default function Header({ maxWidth = 'xl' }: Props) {
   const theme = useTheme()
 
   return (
@@ -16,10 +19,11 @@ export default function Header() {
       }}
     >
       <Box
-        maxWidth="xl"
+        maxWidth={maxWidth}
         sx={{
           m: 'auto',
           py: 2,
+          px: maxWidth === 'none' ? 4 : 0,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -28,9 +32,11 @@ export default function Header() {
         <Link href="/" sx={{ display: 'block', width: 130 }}>
           <img src={StormkitLogoText} alt="Stormkit Logo" width="100%" />
         </Link>
-        <Typography color={theme.palette.primary.contrastText}>
-          Hello
-        </Typography>
+        <Box>
+          <Link color={theme.palette.primary.contrastText} href="/docs">
+            Docs
+          </Link>
+        </Box>
       </Box>
     </Box>
   )

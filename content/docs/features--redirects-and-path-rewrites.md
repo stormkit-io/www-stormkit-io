@@ -7,7 +7,7 @@ title: Redirects and path rewrites
 <section>
 Stormkit is able to handle the path rewrites and redirects on the load balancer level. In order to make use of this feature, create a `stormkit.config.yml` file at root level of your repository. This file will be parsed on each deployment, hence if you change this file previous deployments won't be affected. The syntax is as follows:
 
-```yml
+```yaml
 app:
   - redirects:
       - from: <string>
@@ -43,7 +43,7 @@ app:
 
 <section>
 
-```yml
+```yaml
 app:
   - redirects:
       - from: stormkit.io
@@ -60,7 +60,7 @@ With `replace: true` we basically tell Stormkit to keep the URL. For instance wh
 
 <section>
 
-```yml
+```yaml
 app:
   - redirects:
       - from: /dist/*
@@ -83,7 +83,7 @@ Examples with the above settings:
 
 <section>
 
-```yml
+```yaml
 app:
   - redirects:
       - from: /*
@@ -99,7 +99,7 @@ The above example will rewrite all requests to `index.html`. It applies only to 
 
 <section>
 
-```yml
+```yaml
 app:
   - redirects:
       - from: /favicon.ico
@@ -116,7 +116,7 @@ If you're using an isomorphic application, requests to the same domain will tell
 
 <section>
 
-```yml
+```yaml
 app:
   - redirects:
       - from: /dist/*

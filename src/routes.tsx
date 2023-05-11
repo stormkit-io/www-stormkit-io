@@ -11,7 +11,14 @@ type RouteExtended = RouteProps & {
   data?: { head: SEO }
 }
 
-const routes: Route[] = [{ path: '/', import: () => import('~/pages/home') }]
+const routes: Route[] = [
+  { path: '/', import: () => import('~/pages/home') },
+  { path: '/docs', import: () => import('~/pages/docs') },
+  {
+    path: '/docs/:category/:title',
+    import: () => import('~/pages/docs/[category]/[title]'),
+  },
+]
 
 const isServerSide = typeof window === 'undefined'
 

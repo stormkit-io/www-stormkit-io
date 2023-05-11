@@ -5,11 +5,7 @@ title: Staged rollouts
 # Staged Rollouts
 
 <section>
-You can publish your deployments gradually with Stormkit. This will allow testing your application with a small percentage of users and then gradually increase the traffic as you get more confident. And the best part is, it's dead simple. Here is a video to show how it's done:
-
-<div className="video-container">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gF9owMZv12Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+You can publish your deployments gradually with Stormkit. This will allow testing your application with a small percentage of users and then gradually increase the traffic as you get more confident.
 
 If this is your first deployment, you will only see a button to proceed. Otherwise, you will see previously deployed versions and decide with how much traffic you'd like your new deployment to be published.
 

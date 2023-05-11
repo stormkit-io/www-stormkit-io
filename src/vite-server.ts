@@ -91,6 +91,12 @@ async function createServer() {
   })
 }
 
+interface Prerender {
+  route: string
+  title?: string
+  description?: string
+}
+
 async function generateStaticPages() {
   // Create Vite server to load the routes files
   const vite = await createViteServer({
@@ -100,7 +106,7 @@ async function generateStaticPages() {
 
   const { default: routesToPrerender } = (await vite.ssrLoadModule(
     './src/prerender'
-  )) as { default: string[] }
+  )) as { default: Prerender[] }
 
   const { render } = await vite.ssrLoadModule('./src/entry-server')
 
@@ -118,13 +124,20 @@ async function generateStaticPages() {
   )
 
   // Push `/` to the end if any.
-  routesToPrerender.sort((a: string, b: string) => {
-    return a === '/' || b === '/' ? -1 : 0
+  routesToPrerender.sort((a, b) => {
+    return a.route === '/' || b.route === '/' ? -1 : 0
   })
 
   for (const r of routesToPrerender) {
-    const data = await render(r)
-    const fileName = r.endsWith('/') ? `${r}index.html` : `${r}.html`
+    const data = await render(r.route, {
+      title: r.title,
+      description: r.description,
+    })
+
+    const fileName = r.route.endsWith('/')
+      ? `${r.route}index.html`
+      : `${r.route}.html`
+
     const absPath = path.join(dist, fileName)
     let content = injectContent(data.head, data.content, template)
 
@@ -134,6 +147,9 @@ async function generateStaticPages() {
         content = content.replace(fileName, manifest[fileName].file)
       }
     })
+
+    // Fix css files
+    content = content.replace('src/index.css', manifest['index.css'].file)
 
     fs.mkdirSync(path.dirname(absPath), { recursive: true })
     fs.writeFileSync(absPath, content, 'utf-8')

@@ -1,3 +1,9 @@
+import type { NavigationItem } from './components/DocsNav/DocsNav'
 import { createContext } from 'react'
 
-export default createContext({})
+interface Context {
+  content?: string
+  navigation?: NavigationItem[]
+}
+
+export default createContext<Context>({})

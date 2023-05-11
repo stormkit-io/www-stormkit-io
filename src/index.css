@@ -5,6 +5,8 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 *,
@@ -83,6 +85,18 @@ body {
 #blog-content a:hover {
   color: #78193b;
   text-decoration: underline;
+}
+
+#blog-content code,
+#blog-content pre {
+  max-width: calc(100vw - 2rem);
+  overflow-x: auto;
+}
+
+#blog-content li code {
+  word-break: break-all;
+  white-space: break-spaces;
+  word-wrap: break-word;
 }
 
 /* PrismJS 1.29.0

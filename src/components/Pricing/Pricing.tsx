@@ -72,7 +72,7 @@ export default function Pricing() {
       <Box
         id="pricing"
         sx={{
-          p: 4,
+          p: { xs: 2, md: 4 },
           mt: { xs: 8, md: 12 },
           mx: 'auto',
           width: '100%',

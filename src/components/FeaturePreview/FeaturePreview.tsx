@@ -118,14 +118,15 @@ export default function FeaturePreview() {
                 <Box
                   sx={{
                     position: 'relative',
-                    width: 360,
+                    width: { xs: 'auto', md: 360 },
                     borderTopLeftRadius: 12,
                     borderBottomLeftRadius: 12,
                     boxShadow: isActiveFeature ? 12 : 0,
                     bgcolor: isActiveFeature ? 'rgba(0,0,0,0.25)' : undefined,
                     opacity: isActiveFeature ? 1 : 0.7,
                     transition: 'opacity 0.5s ease-in-out',
-                    p: 4,
+                    px: { xs: 2, md: 4 },
+                    py: 4,
                   }}
                   onMouseEnter={() => {
                     clearTimeout(timeout)
@@ -182,7 +183,8 @@ export default function FeaturePreview() {
             display: 'flex',
             flexDirection: 'column',
             bgcolor: 'rgba(0,0,0,0.25)',
-            p: 4,
+            px: { xs: 2, md: 4 },
+            py: 4,
             borderTopRightRadius: 12,
             borderBottomRightRadius: 12,
             boxShadow: 12,

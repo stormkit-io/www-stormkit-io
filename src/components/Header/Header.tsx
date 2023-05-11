@@ -15,7 +15,7 @@ export default function Header({ maxWidth = 'xl' }: Props) {
       sx={{
         bgcolor: 'rgba(0,0,0,0.25)',
         boxShadow: 2,
-        px: { xs: 2, md: 0 },
+        px: { xs: 1, md: 0 },
       }}
     >
       <Box
@@ -23,7 +23,7 @@ export default function Header({ maxWidth = 'xl' }: Props) {
         sx={{
           m: 'auto',
           py: 2,
-          px: maxWidth === 'none' ? 4 : 0,
+          px: maxWidth === 'none' ? { xs: 1, md: 4 } : 0,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',

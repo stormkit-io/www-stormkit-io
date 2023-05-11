@@ -58,7 +58,7 @@ export const render: RenderFunction = async (url, seo) => {
     head: [
       `<title>${tags.title}</title>`,
       `<meta charset="utf-8" />`,
-      `<meta name="viewport" content="width=device-width, initial-scale=1.0" />`,
+      `<meta name="viewport" content="width=device-width, initial-scale=1" />`,
       `<meta name="description" content="${tags.description}" />`,
       `<meta property="og:title" content="${tags.title}" />`,
       `<meta property="og:url" content="${tags.domain?.url}" />`,

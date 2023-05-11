@@ -38,7 +38,7 @@ export default function DocsNav({ items }: Props) {
               textTransform: 'uppercase',
               fontWeight: 600,
               fontSize: 12.5,
-              px: 4,
+              px: { xs: 2, md: 4 },
               mb: 1,
             }}
           >
@@ -48,7 +48,7 @@ export default function DocsNav({ items }: Props) {
             sx={{
               display: 'flex',
               flexDirection: 'column',
-              mb: 4,
+              mb: { xs: 0, md: 4 },
               lineHeight: 2.5,
             }}
           >
@@ -61,7 +61,7 @@ export default function DocsNav({ items }: Props) {
                   color={theme.palette.primary.contrastText}
                   sx={{
                     display: 'block',
-                    px: 4,
+                    px: { xs: 2, md: 4 },
                     py: 0.5,
                     textDecoration: 'none',
                     fontWeight: item.active ? 600 : 400,

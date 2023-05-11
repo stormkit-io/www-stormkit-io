@@ -71,6 +71,7 @@ export default function DocTitle() {
         maxWidth="none"
         sx={{
           display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
           mx: 'auto',
           flexGrow: 1,
           width: '100%',
@@ -85,14 +86,14 @@ export default function DocTitle() {
         >
           <Box
             sx={{
-              p: 4,
-              ml: 4,
+              p: { xs: 2, lg: 4 },
+              pt: { xs: 2, lg: 2 },
               mx: 'auto',
               flex: 1,
               bgcolor: 'rgba(0,0,0,0.05)',
               lineHeight: 2,
             }}
-            maxWidth="lg"
+            maxWidth="768px"
           >
             <div id="blog-content" dangerouslySetInnerHTML={mdContent} />
           </Box>

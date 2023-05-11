@@ -3,7 +3,7 @@ import Divider from '@mui/material/Divider'
 import reactLogo from '~/assets/images/react.svg'
 import angularLogo from '~/assets/images/angular.svg'
 import vueLogo from '~/assets/images/vue.svg'
-import nodePng from '~/assets/images/nodejs.png'
+import nodeLogo from '~/assets/images/nodejs.svg'
 import html5 from '~/assets/images/html5.svg'
 import svelteLogo from '~/assets/images/svelte.svg'
 import jsLogo from '~/assets/images/js.svg'
@@ -57,7 +57,7 @@ export default function Techs() {
           justifyContent: 'center',
         }}
       >
-        <Logo src={nodePng} alt="Deploy Node.js API" />
+        <Logo src={nodeLogo} alt="Deploy Node.js API" />
         <Divider orientation="vertical" sx={{ height: 30, mb: 2 }} />
         <Logo src={html5} alt="Deploy static HTML 5" padding={25} mb={0} />
       </Box>

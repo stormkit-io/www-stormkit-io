@@ -5,9 +5,9 @@ export function dateFormat(date: string) {
   d.setMonth(+month - 1)
   d.setDate(+day)
 
-  return d.toLocaleDateString(undefined, {
+  return d.toLocaleDateString('en-US', {
     day: '2-digit',
     year: 'numeric',
-    month: '2-digit',
+    month: 'short',
   })
 }

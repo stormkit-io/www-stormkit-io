@@ -5,9 +5,9 @@ description: Manage personal access tokens for shared accounts.
 
 # Personal Access Token
 
-<sk-info-box class="mb-4">
+<div>
 The personal access token is intended to work only for GitLab. If you need to use it with other providers, please <a href="https://github.com/stormkit-io/app-stormkit-io/issues/new/choose" rel="noopener noreferrer" target="_blank"> open an issue</a>.
-</sk-info-box>
+</div>
 
 <section>
 

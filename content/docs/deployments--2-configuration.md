@@ -9,10 +9,9 @@ description: Deploy your applications using Stormkit.
 
 Each [environment](/docs/features/multiple-environments) in Stormkit has a configuration which is divided into two sections. The first section is the environment configuration, where you can provide the name of the environment, the branch it points to and whether auto publish is enabled or not.
 
-<sk-article-image 
-    src="docs/deployments/env-config.png" 
-    alt="Environment config" 
-    class="bg-blue-50 mt-8"></sk-article-image>
+<div class="img-wrapper"> 
+    <img src="/assets/docs/deployments/env-config.png" alt="Environment config" />
+</div>
 
 | Setting          | Description |
 | ---------------- | ----------- |
@@ -30,10 +29,10 @@ Each [environment](/docs/features/multiple-environments) in Stormkit has a confi
 
 The second section is the build configuration, which will be used to build and deploy your application. Stormkit has a built-in support for the following frameworks: <code>Nuxt.js</code>, <code>Next.js</code>, <code>Angular</code> and <code>Nest.js</code>. We'll understand your <code>publish</code> folder directly from the framework configuration file.
 
-<sk-article-image 
-    src="docs/deployments/env-framework-build-config.png" 
-    alt="Environment build config" 
-    class="bg-blue-50 mt-8"></sk-article-image>
+<div class="img-wrapper">
+    <img src="/assets/docs/deployments/env-framework-build-config.png" 
+    alt="Environment build config" />
+</div>
 
 </p>
 

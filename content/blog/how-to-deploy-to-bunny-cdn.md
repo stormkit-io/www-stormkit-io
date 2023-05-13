@@ -8,7 +8,9 @@ We're happy to announce [BunnyCDN](https://bunny.net) integration on **Stormkit*
 
 <!--more-->
 
-<sk-article-image src="bunnynet-logo.svg" alt="BunnyCDN" class="bg-blue-50 mt-8"></sk-article-image>
+<div class="img-wrapper">
+    <img src="/assets/blog/bunnynet-logo.svg" alt="BunnyCDN" />
+</div>
 
 ### Benefits
 
@@ -23,14 +25,13 @@ We're happy to announce [BunnyCDN](https://bunny.net) integration on **Stormkit*
 1. Click on **Custom Storage** from the dropdown
 1. Fill the form and click **Submit**
 
-<sk-article-image 
-    src="blog/how-to-deploy-to-bunny-cdn/env-storage.png" 
-    alt="Environment menu">
-</sk-article-image>
-<sk-article-image 
-    src="blog/how-to-deploy-to-bunny-cdn/custom-storage-form.png" 
-    alt="Custom storage">
-</sk-article-image>
+<div class="img-wrapper">
+    <img src="/assets/blog/how-to-deploy-to-bunny-cdn/env-storage.png" alt="Environment menu" />
+</div>
+
+<div class="img-wrapper">
+    <img src="/assets/blog/how-to-deploy-to-bunny-cdn/custom-storage-form.png" alt="Custom storage" />
+</div>
 
 ### Deploy your application
 

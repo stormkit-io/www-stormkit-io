@@ -67,10 +67,10 @@ to connect to your **S3** Bucket. Click on the three dots menu next to the envir
 Use the **Access Key ID** and **Secret Access Key** obtained from the **IAM user** and provide the bucket name
 created above. Make sure to have the region configured correctly. Here's an example:
 
-<sk-article-image 
-    src="blog/how-to-deploy-on-aws-s3/aws-s3-integration.png" 
-    alt="AWS S3 integration" 
-    class="bg-blue-50 mt-8"></sk-article-image>
+<div class="img-wrapper">
+    <img src="/assets/blog/how-to-deploy-on-aws-s3/aws-s3-integration.png" 
+    alt="AWS S3 integration" />
+</div>
 
 Click submit.
 

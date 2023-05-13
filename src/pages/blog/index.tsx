@@ -60,7 +60,16 @@ export default function BlogContent() {
                 justifyContent: 'space-between',
               }}
             >
-              {nav.text}
+              <Link
+                href={nav.path}
+                sx={{
+                  color: 'white',
+                  textDecoration: 'none',
+                  ':hover': { textDecoration: 'underline' },
+                }}
+              >
+                {nav.text}
+              </Link>
             </Typography>
             <Typography variant="body1" sx={{ opacity: 0.7 }}>
               {nav.description}

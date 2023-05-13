@@ -25,22 +25,18 @@ Announcing [feature flags](/docs/features/feature-flags): inject them into your 
 You can now preview runtime logs from your server side rendered apps and APIs for each deployment. Expand the
 **Deployment Menu** and click on **Runtime logs** to access the page.
 
-<sk-article-image
-    src="blog/whats-new/runtime-logs.gif"
-    alt="Runtime logs"
-    class="bg-white mt-8">
-</sk-article-image>
+<div class="img-wrapper"> 
+    <img src="/assets/blog/whats-new/runtime-logs.gif" alt="Runtime logs" />
+</div>
 
 ## September 15th, 2022
 
 During the build process, Stormkit generates a manifest about your application to serve files in a more optimal ways. The manifest includes information about your CDN files, API routes, redirects and whether server side
 rendering is enabled or not.
 
-<sk-article-image 
-    src="blog/whats-new/manifest.png"
-    alt="build manifest"
-    class="bg-white mt-8">
-</sk-article-image>
+<div class="img-wrapper"> 
+    <img src="/assets/blog/whats-new/manifest.png" alt="build manifest">
+</div>
 
 ## September 13th, 2022
 
@@ -62,11 +58,9 @@ Stormkit now automatically detects `pnpm` projects and build them using `pnpm`.
 We now display the commit sha of the deployment. Clicking on the takes you to the diff page to view 
 the changes.
 
-<sk-article-image 
-    src="blog/whats-new/feat-commit-sha.png"
-    alt="Commit SHA"
-    class="bg-white mt-8">
-</sk-article-image>
+<div class="img-wrapper"> 
+    <img src="/assets/blog/whats-new/feat-commit-sha.png" alt="Commit SHA" />
+</div>
 
 
 ## August 6th, 2022
@@ -79,11 +73,9 @@ Stormkit now injects the git commit sha as an environment variable during build 
 changes with third party tools. For instance by providing the commit sha to Sentry, you can track after which
 specific commit the errors started to occur. 
 
-<sk-article-image 
-    src="blog/whats-new/git-commit.png"
-    alt="Injected Commit SHA"
-    class="bg-white mt-8">
-</sk-article-image>
+<div class="img-wrapper"> 
+    <img src="/assets/blog/whats-new/git-commit.png" alt="Injected Commit SHA" />
+</div>
 
 ## June 30th, 2022
 
@@ -132,11 +124,9 @@ release-*                  # Deploy all branches that start with release-
 The logic to determine whether a branch should be automatically deployed or not is depicted
 in the following diagram:
 
-<sk-article-image 
-    src="blog/whats-new/auto-deployment-flow-transparent.svg"
-    alt="Auto deployment flow"
-    class="bg-white mt-8">
-</sk-article-image>
+<div class="img-wrapper">
+    <img src="/assets/blog/whats-new/auto-deployment-flow-transparent.svg" alt="Auto deployment flow" />
+</div>
 
 ### Other changes
 

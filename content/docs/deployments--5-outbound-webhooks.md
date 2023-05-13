@@ -9,17 +9,15 @@ description: Notify 3rd party applications after each deployment with Stormkit.
 
 You can specify hooks to trigger certain actions upon when an even occurs. To do so, head to your `Application's Settings` page and find the `Outbound webhooks` section.
 
-<sk-article-image 
-    src="docs/deployments/outbound-webhooks.png" 
-    alt="Outbound webhook" 
-    class="bg-blue-50 mt-8"></sk-article-image>
+<div class="img-wrapper">
+    <img src="/assets/docs/deployments/outbound-webhooks.png"  alt="Outbound webhook" />
+</div>
 
 Click `Add new webhook` to open the modal form.
 
-<sk-article-image 
-    src="docs/deployments/create-outbound-webhook.png" 
-    alt="Create Outbound webhook" 
-    class="bg-blue-50 mt-8"></sk-article-image>
+<div class="img-wrapper">
+    <img src="/assets/docs/deployments/create-outbound-webhook.png" alt="Create Outbound webhook" />
+</div>
 
 Fill out the form and click on `Create outbound` webhook button.
 

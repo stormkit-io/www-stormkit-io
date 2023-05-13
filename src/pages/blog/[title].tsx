@@ -1,7 +1,9 @@
+import { useEffect, useState } from 'react'
 import { useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Header from '~/components/Header'
+import ImageOverlay from '~/components/ImageOverlay'
 import { withContent } from '~/helpers/markdown'
 import { fetchData } from './_ssr'
 import { dateFormat } from '~/helpers/date'
@@ -26,6 +28,7 @@ export default function BlogContent() {
       }}
     >
       <Header maxWidth="lg" />
+      <ImageOverlay content={content} navigation={navigation} />
       <Box
         maxWidth="none"
         sx={{

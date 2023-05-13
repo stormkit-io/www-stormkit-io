@@ -53,6 +53,19 @@ body {
   margin-top: 0;
 }
 
+#blog-content img {
+  display: block;
+  max-width: calc(100% - 4rem);
+  margin: auto;
+}
+
+#blog-content .img-wrapper {
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
 #blog-content table {
   border-collapse: collapse;
   width: 100%;

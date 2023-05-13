@@ -9,9 +9,9 @@ description: Use Stormkit Trigger Functions to set periodic tasks.
 
 Use Stormkit Trigger Functions to set periodic tasks. 
 
-<sk-info-box class="mb-4">
+<div>
 This feature is behind a feature flag. To activate it, go to <strong>Your application</strong> > <strong>Feature Flags</strong> and create a feature flag called <strong><code>SK_TRIGGER_FUNCTION</code></strong>. Enable it and refresh the page.
-</sk-info-box>
+</div>
 
 Trigger Functions can only be called on your [API endpoints](/docs/features/writing-api). 
 

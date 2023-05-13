@@ -9,10 +9,9 @@ description: Write node.js/typescript serverless API using Stormkit.
 
 You can create node.js/typescript APIs using Stormkit.
 
-<sk-article-image 
-    src="docs/features/api-hello-world.gif" 
-    alt="API Hello World" 
-    class="bg-blue-50 mt-8"></sk-article-image>
+<div class="img-wrapper">
+  <img src="/assets/docs/features/api-hello-world.gif" alt="API Hello World" />
+</div>
 
 </section>
 
@@ -68,9 +67,9 @@ The table below shows how the API routing works.
 ```
 
 <p class="mt-4">
-<sk-info-box>
+<div>
 For more details on how the filesystem routing works, check the <a href="https://github.com/stormkit-io/serverless/blob/main/src/utils/filesys.ts#L32" target="_blank" rel="noopener noreferrer">source code</a> of the matchPath function.
-</sk-info-box>
+</div>
 </p>
 
 Now go ahead and [deploy](/docs/deployments) your application. When Stormkit detects an `/api` source folder,

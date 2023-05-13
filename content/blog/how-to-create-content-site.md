@@ -15,32 +15,28 @@ Login to Stormkit -> click `Create New Application` and import the repository th
 Go to your app's environment configuration on Stormkit
 
 
-<sk-article-image
-    src="blog/content-site/env_config.png"
-    alt="Stormkit environment configuration"
-    class="bg-blue-50 mt-8"></sk-article-image>
+<div class="img-wrapper">
+    <img src="/assets/blog/content-site/env_config.png" alt="Stormkit environment configuration" />
+</div>
 
 At this stage Stormkit knows that you are working with nuxt.js so some of the configuration is configured for you. Content-wind uses `npm run build` for building (checkout readme) so put `npm run build` as build configuration.
 
-<sk-article-image
-    src="blog/content-site/deploy_config.png"
-    alt="Stormkit environment configuration"
-    class="bg-blue-50 mt-8"></sk-article-image>
+<div class="img-wrapper">
+    <img src="/assets/blog/content-site/deploy_config.png" alt="Stormkit environment configuration" />
+</div>
 
 Click on Deploy Now and enable publish deployment option, by enabling publish we are making the result of deployment accessible to the internet. If your page is not ready to be released you can disable this option.
 
-<sk-article-image
-    src="blog/content-site/deploy_now.png"
-    alt="Stormkit environment configuration"
-    class="bg-blue-50 mt-8"></sk-article-image>
+<div class="img-wrapper">
+    <img src="/assets/blog/content-site/deploy_now.png" alt="Stormkit environment configuration" />
+</div>
 
 
 Once the deployment is done you should be able to see the link and there is the first version of your content page deployed and online already
 
-<sk-article-image
-    src="blog/content-site/after_deploy.png"
-    alt="Stormkit after deployment configuration"
-    class="bg-blue-50 mt-8"></sk-article-image>
+<div class="img-wrapper">
+    <img src="/assets/blog/content-site/after_deploy.png" alt="Stormkit after deployment configuration" />
+</div>
 
 
 Now that the deployment pipeline is configured, let's add a new page to our content site.
@@ -59,9 +55,8 @@ Now that the development server is working we will make our changes, we could st
 gco -B add/api-page && git add . && git commit -m “Adding api docs”
 ```
 
-<sk-article-image
-    src="blog/content-site/link_preview.png"
-    alt="Stormkit preview link"
-    class="bg-blue-50 mt-8"></sk-article-image>
+<div class="img-wrapper">
+    <img src="/assets/blog/content-site/link_preview.png" alt="Stormkit preview link" />
+</div>
 
 Once pull request is merged your changes will be visible in the main url if you enabled auto publish.

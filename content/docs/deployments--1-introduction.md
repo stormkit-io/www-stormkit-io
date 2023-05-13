@@ -60,8 +60,8 @@ curl -XPOST https://api.stormkit.io/hooks/app/:app-id/deploy/:token/:environment
    -d '{"publish": true|false, "branch": ":branch-name"}'
 ```
 
-<sk-info-box class="mt-4">
+<div>
 Make sure not to share this URL publicly.
-</sk-info-box>
+</div>
 
 </section>

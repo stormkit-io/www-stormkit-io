@@ -8,10 +8,9 @@ Most of [Stormkit](https://www.stormkit.io)’s backend is written in [Go](https
 
 The following diagram illustrates how our pattern looks like: 
 
-<sk-article-image
-    src="blog/factory-pattern-for-go-tests/pattern-chart.png"
-    alt="Factory pattern chart"
-    class="bg-blue-50 mt-8 w-full"></sk-article-image>
+<div class="img-wrapper">
+    <img src="/assets/blog/factory-pattern-for-go-tests/pattern-chart.png" alt="Factory pattern chart" />
+</div>
 
 At first, it may seem confusing but the logic is actually pretty simple. However, before we dive into explaining this diagram, a little bit of context would be helpful to understand better our setup. 
 

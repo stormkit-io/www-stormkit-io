@@ -17,11 +17,11 @@ With the help of our **Snippets** functionality you can inject any code into you
 For the purpose of this blog post, we will be using [Plausible](https://plausible.io) as an example but this
 functionality can be used with any third party tool. Plausible is an open source analytic platform, you can either host it yourself or use their cloud offering. Let's get started by adding our endpoint to Plausible:
 
-<sk-article-image 
-    src="blog/analytics/plausible-setup.png" 
-    alt="Plausible" 
-    class="bg-plausible-safe mt-8">
-</sk-article-image>
+<div class="img-wrapper">
+  <img
+    src="/assets/blog/analytics/plausible-setup.png" 
+    alt="Plausible" />
+</div>
 
 We're going to use https://paintersheer-foihe8.stormkit.dev/ as an example.
 After providing the endpoint to Plasuible, it will generate a script similar to the one below:
@@ -36,11 +36,15 @@ After providing the endpoint to Plasuible, it will generate a script similar to 
 
 Now head to your **App** on Stormkit, select the **Environment** which the snippet will be injected and click on **Snippets** from the environment menu on the right side of the page.
 
-<sk-article-image src="blog/analytics/snippet-overall.png" alt="Snippets" class="bg-blue-50 mt-8"></sk-article-image>
+<div class="img-wrapper"> 
+  <img src="/assets/blog/analytics/snippet-overall.png" alt="Snippets" />
+</div>
 
 Select add snippet and paste the code provided by Plausible.
 
-<sk-article-image src="blog/analytics/add-snippet.png" alt="Add snippet" class="bg-blue-50 mt-8"></sk-article-image>
+<div class="img-wrapper"> 
+  <img src="/assets/blog/analytics/add-snippet.png" alt="Add snippet" />
+</div>
 
 Once you visit your web site you will notice in [Plausible](https://plausible.io) dashboard that visitor data is displayed.
 

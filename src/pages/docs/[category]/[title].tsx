@@ -1,11 +1,8 @@
-import type { NavigationItem } from '~/components/DocsNav/DocsNav'
-import { useContext, useEffect, useMemo, useState } from 'react'
-import { useParams } from 'react-router'
 import { useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
-import Context from '~/context'
 import Header from '~/components/Header'
 import DocsNav from '~/components/DocsNav'
+import ImageOverlay from '~/components/ImageOverlay'
 import { withContent } from '~/helpers/markdown'
 import { fetchData } from './_ssr'
 
@@ -30,6 +27,7 @@ export default function DocTitle() {
       }}
     >
       <Header maxWidth="none" />
+      <ImageOverlay content={content} navigation={navigation} />
       <Box
         maxWidth="none"
         sx={{

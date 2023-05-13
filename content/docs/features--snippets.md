@@ -8,10 +8,9 @@ description: Inject and control 3rd party scripts through Stormkit UI.
 <section>
 You can inject snippets with Stormkit. This is extremely helpful to manage third party scripts. These snippets are handled at an environment level which makes it possible to inject different snippets based on the environment. To inject a snippet click on an environment and look for the Snippets menu item. This page will display all snippets that are defined for this environment. You can turn them on and off easily with a switch. The effects are immediate, you won't have to redeploy.
 
-<sk-article-image 
-    src="docs/features/snippets.png" 
-    alt="Snippets" 
-    class="bg-blue-50 mt-8"></sk-article-image>
+<div class="img-wrapper"> 
+    <img src="/assets/docs/features/snippets.png" alt="Snippets" />
+</div>
 
 </section>
 
@@ -21,10 +20,9 @@ You can inject snippets with Stormkit. This is extremely helpful to manage third
 
 In the same page, click on <b>New snippet</b>. A modal will pop up.
 
-<sk-article-image 
-    src="docs/features/snippets-edit.png" 
-    alt="Example banner"
-    class="bg-blue-50 mt-8"></sk-article-image>
+<div class="img-wrapper">
+    <img src="/assets/docs/features/snippets-edit.png" alt="Example banner" />
+</div>
 
 | Setting      | Description |
 | ------------ | ----------- |

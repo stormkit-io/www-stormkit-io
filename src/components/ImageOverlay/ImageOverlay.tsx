@@ -71,7 +71,7 @@ export default function ImageOverlay({ content, navigation }: Props) {
             component="img"
             src={hovered}
             alt="Full screen image"
-            sx={{ maxHeight: '100%' }}
+            sx={{ maxHeight: '100%', maxWidth: '100%' }}
           />
         )}
       </Box>

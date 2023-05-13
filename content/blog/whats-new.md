@@ -115,7 +115,7 @@ Stormkit users now have more flexibility on what branches to deploy automaticall
 feature, visit your application's page and click on **Edit configuration** on the environment that you would like to modify and find the **Auto Deploy Branches** field to instruct Stormkit for which branches
 auto deployments are turned on. The field accepts a `regexp` pattern. Here are some examples:
 
-```
+```regex
 ^dependabot/.*             # Deploy only branches that start with dependabot/
 ^(?!dependabot|renovate).* # Deploy all branches that do not start with dependabot or renovate
 release-*                  # Deploy all branches that start with release-
@@ -140,11 +140,11 @@ using Hooks API to trigger a deployment.
 
 The Hooks API supports both `GET` and `POST` methods.
 
-```
+```bash
 curl -XGET https://api.stormkit.io/hooks/app/:app-id/deploy/:token/:environment-id?publish=true|false&branch=:branch-name
 ```
 
-```
+```bash
 curl -XPOST https://api.stormkit.io/hooks/app/:app-id/deploy/:token/:environment-id \
     -H 'Content-Type: application/json'
     -d '{"publish": true|false, "branch": ":branch-name"}'

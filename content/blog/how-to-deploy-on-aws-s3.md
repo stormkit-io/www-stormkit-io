@@ -1,5 +1,7 @@
 ---
 title: Deploy your app on AWS S3
+description: Learn how to deploy your static applications on your own AWS account using Stormkit.
+date: 2022-04-10
 ---
 
 Stormkit users can now deploy their static applications directly to their **AWS** account.

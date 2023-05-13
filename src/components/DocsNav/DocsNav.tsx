@@ -7,7 +7,9 @@ import Typography from '@mui/material/Typography'
 export interface NavigationItem {
   path: string
   text: string
-  category: string
+  category?: string
+  description?: string
+  date?: string
   active: boolean
 }
 

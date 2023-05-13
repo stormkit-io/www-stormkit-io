@@ -1,23 +1,19 @@
-import type { NavigationItem } from '~/components/DocsNav/DocsNav'
-import { useContext, useEffect, useMemo, useState } from 'react'
-import { useParams } from 'react-router'
 import { useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
-import Context from '~/context'
+import Typography from '@mui/material/Typography'
 import Header from '~/components/Header'
-import DocsNav from '~/components/DocsNav'
 import { withContent } from '~/helpers/markdown'
 import { fetchData } from './_ssr'
+import { dateFormat } from '~/helpers/date'
 
 // Required for SSR
 export { fetchData } from './_ssr'
 
-export default function DocTitle() {
+export default function BlogContent() {
   const theme = useTheme()
-  const { content, navigation } = withContent(fetchData, {
-    defaultCategory: 'welcome',
-    defaultTitle: 'getting-started',
-  })
+  const { content, navigation } = withContent(fetchData)
+
+  const { text, date } = navigation.find((n) => n.active) || {}
 
   return (
     <Box
@@ -29,7 +25,7 @@ export default function DocTitle() {
         color: theme.palette.primary.contrastText,
       }}
     >
-      <Header maxWidth="none" />
+      <Header maxWidth="lg" />
       <Box
         maxWidth="none"
         sx={{
@@ -40,7 +36,6 @@ export default function DocTitle() {
           width: '100%',
         }}
       >
-        <DocsNav items={navigation} />
         <Box
           sx={{
             display: 'flex',
@@ -58,6 +53,17 @@ export default function DocTitle() {
             }}
             maxWidth="768px"
           >
+            <Typography
+              variant="h1"
+              sx={{ fontSize: 24, fontWeight: 600, mt: 4 }}
+            >
+              {text}
+            </Typography>
+            {date && (
+              <Typography sx={{ opacity: 0.7, fontSize: 13, mb: 4 }}>
+                {dateFormat(date)}
+              </Typography>
+            )}
             <div id="blog-content" dangerouslySetInnerHTML={content} />
           </Box>
         </Box>

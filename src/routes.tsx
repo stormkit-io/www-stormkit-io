@@ -18,6 +18,11 @@ const routes: Route[] = [
     path: '/docs/:category/:title',
     import: () => import('~/pages/docs/[category]/[title]'),
   },
+  { path: '/blog', import: () => import('~/pages/blog') },
+  {
+    path: '/blog/:title',
+    import: () => import('~/pages/blog/[title]'),
+  },
 ]
 
 const isServerSide = typeof window === 'undefined'

@@ -1,10 +1,10 @@
 ---
 title: Factory pattern for Go tests
+description: This article will show you how we improved our Go unit tests worklow using a factory pattern.
+date: 2022-11-01
 ---
 
 Most of [Stormkit](https://www.stormkit.io)’s backend is written in [Go](https://go.dev/). It’s a powerful language that has many benefits such as performance, scalability and it is considered one of the simplest languages to learn. It also has many built-in packages to solve common problems which ease development. Indeed, we decided not to use any ORM for our application layer but rely on the native `database/sql` package to communicate with the database. This is a simple solution but it may lead to some boilerplate code, especially while writing tests. To overcome this problem we came up with a pattern that we’re going to mention in this article. 
-
-<!--more-->
 
 The following diagram illustrates how our pattern looks like: 
 

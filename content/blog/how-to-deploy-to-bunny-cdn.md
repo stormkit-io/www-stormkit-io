@@ -1,5 +1,7 @@
 ---
 title: How to deploy to BunnyCDN
+description: Learn how to deploy your static applications on your own Bunny CDN account using Stormkit.
+date: 2022-04-01
 ---
 
 We're happy to announce [BunnyCDN](https://bunny.net) integration on **Stormkit**. This feature allows **Stormkit** users to deploy their applications to BunnyCDN Storage Zones and use them as a hosting service for static applications.

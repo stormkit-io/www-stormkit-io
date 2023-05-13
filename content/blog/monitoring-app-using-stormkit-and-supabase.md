@@ -1,5 +1,7 @@
 ---
 title: Monitoring system using Stormkit and Supabase
+description: Learn how to monitor your website's URL status using Stormkit and Supabase. Easy to set up and cost-efficient, this powerful tool can send notifications to Discord, track historical data, and more. Check out the source code now!
+date: 2023-01-24
 ---
 
 As IT professionals, we know how important it is to have web services that we can rely on for our applications. One way to make sure that these services are always available and working properly is by keeping an eye on the status of our URLs.

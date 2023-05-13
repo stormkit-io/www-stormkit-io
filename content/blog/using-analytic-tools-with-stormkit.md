@@ -1,5 +1,7 @@
 ---
 title: Tracking user data using Stormkit and Plausible
+description: Learn how to track user data using Stormkit and Plausible without deploying your application. Inject snippets instantly with this powerful functionality.
+date: 2022-04-09
 ---
 
 Easily inject snippets into your application without deploying your application.

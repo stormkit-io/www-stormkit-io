@@ -1,5 +1,7 @@
 ---
 title: Migrating your app from Webpack to Vite
+description: Learn how to migrate your app from Webpack to Vite with this quick guide. Discover the configuration options used in Vite and the rationale behind the migration.
+date: 2022-08-29
 ---
 
 Hey all 👋

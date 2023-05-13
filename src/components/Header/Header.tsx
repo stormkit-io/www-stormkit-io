@@ -7,8 +7,16 @@ interface Props {
   maxWidth?: string
 }
 
-export default function Header({ maxWidth = 'xl' }: Props) {
+let lastWidth: string = 'lg'
+
+const links = [
+  { path: '/docs', text: 'docs' },
+  { path: '/blog', text: 'blog' },
+]
+
+export default function Header({ maxWidth = lastWidth }: Props) {
   const theme = useTheme()
+  lastWidth = maxWidth
 
   return (
     <Box
@@ -32,10 +40,25 @@ export default function Header({ maxWidth = 'xl' }: Props) {
         <Link href="/" sx={{ display: 'block', width: 130 }}>
           <img src={StormkitLogoText} alt="Stormkit Logo" width="100%" />
         </Link>
-        <Box>
-          <Link color={theme.palette.primary.contrastText} href="/docs">
-            Docs
-          </Link>
+        <Box
+          sx={{ textTransform: 'uppercase', fontSize: 12.5, fontWeight: 600 }}
+        >
+          {links.map((link) => (
+            <Link
+              key={link.path}
+              color={theme.palette.primary.contrastText}
+              sx={{
+                ml: 2,
+                textDecoration: 'none',
+                opacity: 0.7,
+                transition: 'opacity 0.25s ease-in-out',
+                ':hover': { opacity: 1 },
+              }}
+              href={link.path}
+            >
+              {link.text}
+            </Link>
+          ))}
         </Box>
       </Box>
     </Box>

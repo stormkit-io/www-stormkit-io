@@ -1,5 +1,7 @@
 ---
 title: What's New?
+description: Discover the latest changes and improvements to Stormkit. Stay up-to-date and get the most out of our platform.
+date: 2023-03-16
 ---
 
 Follow the latest developments on Stormkit.

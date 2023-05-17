@@ -9,6 +9,11 @@ const blog = import.meta.glob('/content/blog/*.md', { as: 'raw' })
 
 const routes: Prerender[] = [
   { route: '/' },
+  {
+    route: '/policies/terms',
+    title: 'Terms of Service',
+    description: 'Read terms of service before using Stormkit',
+  },
 
   // Prerender docs
   { route: '/docs' },

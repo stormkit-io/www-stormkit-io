@@ -82,7 +82,8 @@ export default function Terms() {
           </Typography>
           <Typography>
             2.3 We reserve the right to take down any reported website that we
-            believe to be malicious or violating the law.
+            believe to be malicious, violating the law or containing
+            explicit/adult content.
           </Typography>
         </Typography>
         <Subtitle>Account Deactivation</Subtitle>

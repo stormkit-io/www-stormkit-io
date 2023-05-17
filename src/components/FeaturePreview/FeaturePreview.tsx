@@ -163,6 +163,7 @@ export default function FeaturePreview() {
                   <LinearProgress
                     color="secondary"
                     variant={timeoutPaused ? 'determinate' : 'indeterminate'}
+                    value={timeoutPaused ? 100 : 0}
                     sx={{
                       opacity: 0.2,
                       position: 'absolute',

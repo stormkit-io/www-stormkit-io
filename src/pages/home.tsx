@@ -7,11 +7,14 @@ import Footer from '~/components/Footer'
 import Illustration from '~/components/Illustration'
 import FeaturePreview from '~/components/FeaturePreview'
 import Pricing from '~/components/Pricing'
+import { useScrollToHash } from '~/helpers/scroll'
 
 const MAX_WIDTH_MD = 600
 
 export default function Home() {
   const theme = useTheme()
+
+  useScrollToHash()
 
   return (
     <Box
@@ -94,6 +97,7 @@ export default function Home() {
 
       <Box
         maxWidth="lg"
+        id="pricing"
         sx={{
           width: '100%',
           mx: 'auto',

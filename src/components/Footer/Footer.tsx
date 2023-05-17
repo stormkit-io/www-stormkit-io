@@ -105,6 +105,7 @@ export default function Footer({ maxWidth = lastWidth }: Props) {
           >
             {links.map((group) => (
               <Box
+                key={group.name}
                 sx={{
                   minWidth: `${100 / links.length}%`,
                   display: 'flex',

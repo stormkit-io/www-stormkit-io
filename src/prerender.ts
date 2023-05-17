@@ -14,6 +14,12 @@ const routes: Prerender[] = [
     title: 'Terms of Service',
     description: 'Read terms of service before using Stormkit',
   },
+  {
+    route: '/partners',
+    title: 'Partners',
+    description:
+      'Looking for an affiliate? Suggest your audience Stormkit and earn money.',
+  },
 
   // Prerender docs
   { route: '/docs' },

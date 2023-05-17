@@ -32,6 +32,7 @@ export default createTheme({
     },
     secondary: {
       main: '#78193B',
+      dark: '#c5245e',
     },
     text: {
       primary: '#a4a4a4',

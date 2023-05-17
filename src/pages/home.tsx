@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import { useTheme } from '@mui/material/styles'
 import Header from '~/components/Header'
+import Footer from '~/components/Footer'
 import Illustration from '~/components/Illustration'
 import FeaturePreview from '~/components/FeaturePreview'
 import Pricing from '~/components/Pricing'
@@ -96,11 +97,12 @@ export default function Home() {
         sx={{
           width: '100%',
           mx: 'auto',
-          my: { xs: 8, md: 24 },
+          my: { xs: 8, md: 12 },
         }}
       >
         <Pricing />
       </Box>
+      <Footer maxWidth="lg" />
     </Box>
   )
 }

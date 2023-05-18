@@ -40,7 +40,6 @@ const includedFeatures = [
 export default function Pricing() {
   const theme = useTheme()
   const [tier, setTier] = useState<SubscriptionTier>('100')
-  const handleGetStartedClick = () => {}
 
   return (
     <>
@@ -117,7 +116,7 @@ export default function Pricing() {
           color="secondary"
           size="large"
           sx={{ mt: 5 }}
-          onClick={handleGetStartedClick}
+          href="https://app.stormkit.io"
         >
           Start your free trial
         </Button>

@@ -68,7 +68,12 @@ export default function Home() {
             mt: { xs: 8, md: 4 },
           }}
         >
-          <Button variant="contained" color="secondary" size="large">
+          <Button
+            variant="contained"
+            color="secondary"
+            size="large"
+            href="https://app.stormkit.io"
+          >
             Start your free trial
           </Button>
         </Box>

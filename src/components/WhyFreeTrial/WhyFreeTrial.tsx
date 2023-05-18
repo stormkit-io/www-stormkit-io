@@ -15,7 +15,7 @@ export default function WhyFreeTrial() {
           mb: 4,
         }}
       >
-        Why Free Trial?
+        Why free trial?
       </Typography>
       <Box
         maxWidth="768px"

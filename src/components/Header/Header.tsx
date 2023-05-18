@@ -2,6 +2,7 @@ import Box from '@mui/material/Box'
 import { useTheme } from '@mui/material/styles'
 import Link from '@mui/material/Link'
 import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
+import { ArrowRightAlt } from '@mui/icons-material'
 
 interface Props {
   maxWidth?: string
@@ -10,8 +11,15 @@ interface Props {
 let lastWidth: string = 'lg'
 
 const links = [
+  { path: '/#pricing', text: 'pricing' },
   { path: '/docs', text: 'docs' },
   { path: '/blog', text: 'blog' },
+  {
+    path: 'https://app.stormkit.io',
+    text: 'login',
+    separator: true,
+    icon: <ArrowRightAlt sx={{ fontSize: 20, ml: 0.5 }} />,
+  },
 ]
 
 export default function Header({ maxWidth = lastWidth }: Props) {
@@ -41,7 +49,13 @@ export default function Header({ maxWidth = lastWidth }: Props) {
           <img src={StormkitLogoText} alt="Stormkit Logo" width="100%" />
         </Link>
         <Box
-          sx={{ textTransform: 'uppercase', fontSize: 12.5, fontWeight: 600 }}
+          sx={{
+            textTransform: 'uppercase',
+            fontSize: 12.5,
+            fontWeight: 600,
+            display: 'flex',
+            alignItems: 'center',
+          }}
         >
           {links.map((link) => (
             <Link
@@ -49,14 +63,23 @@ export default function Header({ maxWidth = lastWidth }: Props) {
               color={theme.palette.primary.contrastText}
               sx={{
                 ml: 2,
+                display: 'inline-flex',
+                alignItems: 'center',
                 textDecoration: 'none',
                 opacity: 0.7,
                 transition: 'opacity 0.25s ease-in-out',
                 ':hover': { opacity: 1 },
+                ...(link.separator
+                  ? {
+                      borderLeft: '1px solid rgba(255,255,255,0.3)',
+                      pl: 2,
+                    }
+                  : {}),
               }}
               href={link.path}
             >
               {link.text}
+              {link.icon}
             </Link>
           ))}
         </Box>

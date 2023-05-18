@@ -11,5 +11,5 @@ export const useScrollToHash = () => {
       const el = document.querySelector(hash)
       el?.scrollIntoView({ behavior: 'smooth' })
     }
-  }, [])
+  }, [location.hash])
 }

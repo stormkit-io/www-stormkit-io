@@ -75,7 +75,7 @@ function referrer(ref?: string): string {
     return 'SEO'
   }
 
-  if (ref.match(/twitter|reddit/)) {
+  if (ref.match(/twitter|reddit|t\.co/)) {
     return 'Social Media'
   }
 

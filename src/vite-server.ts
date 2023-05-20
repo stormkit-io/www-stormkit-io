@@ -147,7 +147,7 @@ async function generateStaticPages() {
     // Fix the path to the static assets.
     Object.keys(manifest).forEach((fileName) => {
       if (fileName.startsWith('src/assets')) {
-        content = content.replace(fileName, manifest[fileName].file)
+        content = content.replaceAll(fileName, manifest[fileName].file)
       }
     })
 

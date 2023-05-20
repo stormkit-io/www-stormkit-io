@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="https://github.com/stormkit-io/www-stormkit-io/blob/master/assets/images/stormkit-logo.png?raw=true" height="90"/>
+  <img src="https://www.stormkit.io/stormkit-logo.png" height="90"/>
 </p>
 <p align="center">
   <i>Stormkit is an infrastructure provider for modern javascript applications. It perfectly integrates with popular Git solutions.<br/>Try out Stormkit using our hosted version at <a href="https://app.stormkit.io">app.stormkit.io</a>.</i>
   <br/>
   <br/>
-  <img src="./assets/images/stormkit-screenshot.png" alt="Stormkit" width="800" />
+  <img src="./public/stormkit-demo.gif" alt="Stormkit" width="800" />
 </p>
 
 This repository contains code related to the landing page and documentation. If you'd like to contribute to the application frontend, check out our frontend repository on https://github.com/stormkit-io/app-stormkit-io. You're more than welcome to contribute. 

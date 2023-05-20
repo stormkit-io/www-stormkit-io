@@ -15,6 +15,10 @@ const routes: Route[] = [
   { path: '/', import: () => import('~/pages/home') },
   { path: '/partners', import: () => import('~/pages/partners') },
   { path: '/policies/terms', import: () => import('~/pages/policies/terms') },
+  {
+    path: '/policies/privacy',
+    import: () => import('~/pages/policies/privacy'),
+  },
   { path: '/docs', import: () => import('~/pages/docs') },
   {
     path: '/docs/:category/:title',

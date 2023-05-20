@@ -32,6 +32,7 @@ export default defineConfig({
   build: {
     ssr: true,
     minify: false,
+    manifest: true,
     rollupOptions: {
       preserveEntrySignatures: 'strict',
       input: { server: 'src/entry-server.tsx' },

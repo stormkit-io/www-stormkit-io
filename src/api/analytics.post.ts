@@ -18,7 +18,7 @@ async function logEvent(label: string) {
     .setProtectedHeader({ alg: 'HS256' })
     .sign(new TextEncoder().encode(apiSecretKey))
 
-  fetch('https://www.feez.ws/api/charts/data', {
+  return fetch('https://www.feez.ws/api/charts/data', {
     method: 'POST',
     body: JSON.stringify({
       chartId: '18848',

@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react'
 import { useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Header from '~/components/Header'
+import Footer from '~/components/Footer'
 import ImageOverlay from '~/components/ImageOverlay'
 import { withContent } from '~/helpers/markdown'
 import { fetchData } from './_ssr'
@@ -71,6 +71,7 @@ export default function BlogContent() {
           </Box>
         </Box>
       </Box>
+      <Footer maxWidth="lg" />
     </Box>
   )
 }

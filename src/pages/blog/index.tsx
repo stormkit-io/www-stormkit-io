@@ -4,6 +4,7 @@ import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 import { ChevronRight } from '@mui/icons-material'
 import Header from '~/components/Header'
+import Footer from '~/components/Footer'
 import { withContent } from '~/helpers/markdown'
 import { fetchData } from './_ssr'
 import { dateFormat } from '~/helpers/date'
@@ -93,6 +94,7 @@ export default function BlogContent() {
           </Box>
         ))}
       </Box>
+      <Footer maxWidth="lg" />
     </Box>
   )
 }

@@ -49,7 +49,7 @@ export default function AnimationDeploymentPreview() {
             Deployment complete
           </Typography>
           <Typography variant="subtitle2">
-            Your commit has been built succesfully on Stormkit. Click the link
+            Your commit has been built successfully on Stormkit. Click the link
             to preview it.
             <br />
             <Link

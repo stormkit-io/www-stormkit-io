@@ -67,6 +67,7 @@ export const render: RenderFunction = async (url, seo) => {
       `<meta name="twitter:creator" content="${tags.twitter!.creator}" />`,
       `<meta name="twitter:title" content="${tags.title}" />`,
       `<meta name="twitter:description" content="${tags.description}" />`,
+      `<link rel="apple-touch-icon" href="/stormkit-logo-circle.svg"/>`,
       `<link rel="icon" type="image/svg+xml" href="/stormkit-logo-circle.svg" />`,
       `<link href="/src/index.css" rel="stylesheet" />`,
     ]

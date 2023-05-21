@@ -7,7 +7,7 @@ async function logEvent(label: string) {
   const apiPublicKey = process.env.FEEZ_API_PUBLIC
 
   if (!apiSecretKey || !apiPublicKey) {
-    return
+    return false
   }
 
   const jwtToken = await new jwt.SignJWT({
@@ -91,10 +91,9 @@ export default async function (
   res: http.ServerResponse
 ) {
   const body = await readBody<{ referrer?: string }>(req)
-
-  await logEvent(referrer(body.referrer))
+  const retV = await logEvent(referrer(body.referrer))
 
   res.setHeader('Content-Type', 'application/json')
-  res.write(JSON.stringify({ ok: true }))
+  res.write(JSON.stringify({ ok: retV !== false }))
   res.end()
 }

@@ -39,8 +39,7 @@ export const render: RenderFunction = async (url, seo) => {
   }
 
   // Prefix the title with the domain.name property.
-  tags.title =
-    `${tags.domain?.name ? tags.domain.name + ' | ' : ''}` + tags.title
+  tags.title = `${tags.domain?.name ? 'Stormkit' + ' | ' : ''}` + tags.title
 
   return {
     status: 200,

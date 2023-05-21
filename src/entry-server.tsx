@@ -19,7 +19,7 @@ export type RenderFunction = (url: string, seo?: SEO) => Promise<RenderReturn>
 const defaultSEO: SEO = {
   title: 'Deploy full stack Javascript applications',
   description:
-    'Stormkit.io provides developers with tools for deploying and scaling their web applications.',
+    'Stormkit provides developers with tools for deploying and scaling their web applications.',
   domain: {
     name: 'Stormkit.io',
     url: 'https://stormkit.io',

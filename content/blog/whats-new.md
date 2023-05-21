@@ -6,7 +6,15 @@ date: 2023-03-16
 
 Follow the latest developments on Stormkit.
 
-<!--more-->
+## May 21st, 2023
+
+- We've upgraded our checkout system to leverage the power of Stripe. With Stripe Checkout, you can enjoy a seamless and secure payment experience, ensuring your transactions are handled with utmost reliability and convenience. Go to [Account](https://app.stormkit.io/user/account) page to handle your billing and subscriptions.
+
+- We updated our pricing. Our new pricing options are carefully crafted to provide flexibility and scalability, ensuring that you have the right plan to meet your evolving needs. Existing users will continue to enjoy their current pricing plans without any changes. Check out our new pricing [here](https://www.stormkit.io/#pricing).
+
+## May 20th, 2023
+
+We're excited to unveil our newly redesigned landing page, featuring a sleek and modern interface that makes it easier than ever to explore our offerings. Discover our products/services effortlessly with the improved navigation and user-friendly layout.
 
 ## March 16th, 2023
 

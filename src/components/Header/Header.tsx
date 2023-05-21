@@ -14,6 +14,7 @@ const links = [
   { path: '/#pricing', text: 'pricing' },
   { path: '/docs', text: 'docs' },
   { path: '/blog', text: 'blog' },
+  { path: '/blog/whats-new', text: 'whats new?' },
   {
     path: 'https://app.stormkit.io',
     text: 'login',

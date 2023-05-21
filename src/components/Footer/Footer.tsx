@@ -34,6 +34,7 @@ const links: Array<{ name: string; links: LinkProps[] }> = [
     links: [
       { path: '/docs', text: 'docs' },
       { path: '/blog', text: 'blog' },
+      { path: '/blog/whats-new', text: 'whats new?' },
       { path: '/docs/welcome/contribute', text: 'contribute' },
       { path: 'https://status.stormkit.io/', text: 'status' },
     ],

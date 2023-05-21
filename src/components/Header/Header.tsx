@@ -1,8 +1,10 @@
+import { useState } from 'react'
+import IconButton from '@mui/material/IconButton'
 import Box from '@mui/material/Box'
 import { useTheme } from '@mui/material/styles'
 import Link from '@mui/material/Link'
 import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
-import { ArrowRightAlt } from '@mui/icons-material'
+import { ArrowRightAlt, Menu, Close } from '@mui/icons-material'
 
 interface Props {
   maxWidth?: string
@@ -25,6 +27,7 @@ const links = [
 
 export default function Header({ maxWidth = lastWidth }: Props) {
   const theme = useTheme()
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   lastWidth = maxWidth
 
   return (
@@ -49,31 +52,79 @@ export default function Header({ maxWidth = lastWidth }: Props) {
         <Link href="/" sx={{ display: 'block', width: 130 }}>
           <img src={StormkitLogoText} alt="Stormkit Logo" width="100%" />
         </Link>
+        <IconButton
+          sx={{ display: { md: 'none' } }}
+          onClick={() => setIsMenuOpen(true)}
+        >
+          <Menu />
+        </IconButton>
         <Box
           sx={{
             textTransform: 'uppercase',
             fontSize: 12.5,
             fontWeight: 600,
-            display: 'flex',
-            alignItems: 'center',
+            display: { xs: isMenuOpen ? 'flex' : 'none', md: 'flex' },
+            alignItems: { xs: 'flex-start', md: 'center' },
+            flexDirection: { xs: 'column', md: 'row' },
+            position: { xs: 'fixed', md: 'static' },
+            left: { xs: 0, md: 'auto' },
+            right: { xs: 0, md: 'auto' },
+            top: { xs: 0, md: 'auto' },
+            bottom: { xs: 0, md: 'auto' },
+            bgcolor: { xs: 'black', md: 'transparent' },
+            zIndex: { xs: 10, md: 1 },
           }}
         >
+          <Box
+            sx={{
+              display: { xs: 'flex', md: 'none' },
+              justifyContent: 'space-between',
+              width: '100%',
+              opacity: 0.7,
+              py: 2,
+              px: 1,
+              borderBottom: '1px solid rgba(255,255,255,0.3)',
+            }}
+          >
+            <Link href="/" sx={{ display: 'block', width: 130 }}>
+              <img src={StormkitLogoText} alt="Stormkit Logo" width="100%" />
+            </Link>
+            <IconButton
+              onClick={() => {
+                setIsMenuOpen(false)
+              }}
+            >
+              <Close />
+            </IconButton>
+          </Box>
           {links.map((link) => (
             <Link
               key={link.path}
               color={theme.palette.primary.contrastText}
+              onClick={() => {
+                setIsMenuOpen(false)
+              }}
               sx={{
-                ml: 2,
+                ml: { xs: 0, md: 2 },
+                p: { xs: 2, md: 0 },
                 display: 'inline-flex',
                 alignItems: 'center',
                 textDecoration: 'none',
                 opacity: 0.7,
                 transition: 'opacity 0.25s ease-in-out',
+                width: { xs: '100%', md: 'auto' },
+                borderBottom: {
+                  xs: '1px solid rgba(255,255,255,0.3)',
+                  md: 'none',
+                },
                 ':hover': { opacity: 1 },
                 ...(link.separator
                   ? {
-                      borderLeft: '1px solid rgba(255,255,255,0.3)',
-                      pl: 2,
+                      borderLeft: {
+                        xs: 'none',
+                        md: '1px solid rgba(255,255,255,0.3)',
+                      },
+                      pl: { md: 2 },
                     }
                   : {}),
               }}

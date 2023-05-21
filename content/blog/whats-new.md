@@ -14,7 +14,9 @@ Follow the latest developments on Stormkit.
 
 ## May 20th, 2023
 
-We're excited to unveil our newly redesigned landing page, featuring a sleek and modern interface that makes it easier than ever to explore our offerings. Discover our products/services effortlessly with the improved navigation and user-friendly layout.
+- We're excited to unveil our newly redesigned landing page, featuring a sleek and modern interface that makes it easier than ever to explore our offerings. Discover our products/services effortlessly with the improved navigation and user-friendly layout.
+
+- Default branch for [www-stormkit-io](https://github.com/stormkit-io/www-stormkit-io) and [app-stormkit-io](https://github.com/stormkit-io/app-stormkit-io) is now `main` instead of `master`.
 
 ## March 16th, 2023
 

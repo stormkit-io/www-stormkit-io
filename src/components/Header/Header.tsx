@@ -3,7 +3,13 @@ import { useTheme } from '@mui/material/styles'
 import IconButton from '@mui/material/IconButton'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
-import { ArrowRightAlt, Menu, Close, Twitter } from '@mui/icons-material'
+import {
+  ArrowRightAlt,
+  Menu,
+  Close,
+  Twitter,
+  GitHub,
+} from '@mui/icons-material'
 import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
 import DiscordLogo from '~/assets/images/discord.svg'
 
@@ -18,6 +24,21 @@ const links = [
   { path: '/docs', text: 'docs' },
   { path: '/blog', text: 'blog' },
   { path: '/blog/whats-new', text: 'whats new?' },
+  {
+    path: 'https://github.com/stormkit-io',
+    text: (
+      <>
+        <GitHub sx={{ mr: 0 }} />
+        <Box
+          component="span"
+          sx={{ display: { xs: 'inline', md: 'none' }, ml: { xs: 1, md: 0 } }}
+        >
+          GitHub
+        </Box>
+      </>
+    ),
+    separator: true,
+  },
   {
     path: 'https://twitter.com/stormkitio',
     text: (
@@ -42,7 +63,7 @@ const links = [
           component="img"
           src={DiscordLogo}
           alt={'Discord'}
-          sx={{ mr: 1, display: 'inline-block', width: '23px' }}
+          sx={{ mr: { xs: 1, md: 0 }, display: 'inline-block', width: '23px' }}
         />
         <Box
           component="span"
@@ -140,6 +161,10 @@ export default function Header({ maxWidth = lastWidth }: Props) {
               onClick={() => {
                 setIsMenuOpen(false)
               }}
+              target={link.path.startsWith('http') ? '_blank' : undefined}
+              rel={
+                link.path.startsWith('http') ? 'noopener noreferrer' : undefined
+              }
               sx={{
                 ml: { xs: 0, md: 2 },
                 p: { xs: 2, md: 0 },

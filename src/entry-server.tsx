@@ -62,13 +62,13 @@ export const render: RenderFunction = async (url, seo) => {
       `<meta property="og:title" content="${tags.title}" />`,
       `<meta property="og:url" content="${tags.domain?.url}" />`,
       `<meta property="og:description" content="${tags.description}" />`,
-      `<meta property="og:image" content="${tags.domain?.url}/stormkit-logo-circle.svg" />`,
+      `<meta property="og:image" content="${tags.domain?.url}/stormkit-logo.png" />`,
       `<meta name="twitter:card" content="${tags.twitter!.card}" />`,
       `<meta name="twitter:creator" content="${tags.twitter!.creator}" />`,
       `<meta name="twitter:title" content="${tags.title}" />`,
       `<meta name="twitter:description" content="${tags.description}" />`,
-      `<link rel="apple-touch-icon" href="/stormkit-logo-circle.svg"/>`,
-      `<link rel="icon" type="image/svg+xml" href="/stormkit-logo-circle.svg" />`,
+      `<link rel="apple-touch-icon" href="/stormkit-logo.png"/>`,
+      `<link rel="icon" type="image/svg+xml" href="/stormkit-logo.png" />`,
       `<link href="/src/index.css" rel="stylesheet" />`,
     ]
       .join('\n')

@@ -112,3 +112,7 @@ The main reason is because we'll make a lot of changes to the frontend soon as w
 - Whereas the HMR is extremely fast. When I make a change in the UI and switch to the browser to visualize it, I used to wait a few seconds till those changes were propagated. Now, by the time I switch the Browser tab, the changes are already there. This is fantastic! 
 
 Hope this mini tutorial was helpful to understand what is needed to migrate from Webpack to Vite. Stormkit is can be considered as a large application and the migration was possible through 1 PR with almost no breaking changes. 
+
+## React monorepo template
+
+As a final note, we introduced a [React monorepo template](https://github.com/stormkit-io/monorepo-template-react) to write fullstack javascript applications. It is powered by Vite and is capable to do prerendering, server side rendering and creating single page applications. Check it out and let us know about your experience!

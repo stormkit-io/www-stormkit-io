@@ -6,6 +6,10 @@ date: 2023-03-16
 
 Follow the latest developments on Stormkit.
 
+## May 28th, 2023
+
+You can now import repositories directly with an URL. To do so, got to home page and click on `Create new app` > `Import from URL`.
+
 ## May 23rd, 2023
 
 We've redesigned the app's navigation menu for a better user experience. Streamlined layout, clear labels, and visual enhancements make navigation more intuitive. Enjoy faster access to features with our revamped menu!

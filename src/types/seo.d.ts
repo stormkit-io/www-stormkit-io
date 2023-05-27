@@ -19,5 +19,8 @@ declare interface SEO {
 
     // Used in twitter:author
     creator?: string
+
+    // The image that will be used for large summary cards.
+    imageLarge?: string
   }
 }

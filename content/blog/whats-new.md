@@ -8,7 +8,7 @@ Follow the latest developments on Stormkit.
 
 ## May 28th, 2023
 
-You can now import repositories directly with an URL. To do so, got to home page and click on `Create new app` > `Import from URL`.
+You can now import repositories directly with an URL. To do so, go to home page and click on `Create new app` > `Import from URL`.
 
 ## May 23rd, 2023
 

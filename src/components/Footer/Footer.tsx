@@ -39,6 +39,7 @@ const links: Array<{ name: string; links: LinkProps[] }> = [
       {
         path: 'https://status.stormkit.io/',
         text: 'status',
+        external: true,
       },
     ],
   },
@@ -136,9 +137,7 @@ export default function Footer({ maxWidth = lastWidth }: Props) {
                     key={link.path}
                     color={theme.palette.primary.contrastText}
                     target={link.external ? '_blank' : undefined}
-                    rel={
-                      link.external ? 'noindex noopener noreferrer' : undefined
-                    }
+                    rel={link.external ? 'noopener noreferrer' : undefined}
                     sx={{
                       mb: 0.5,
                       display: 'inline-flex',

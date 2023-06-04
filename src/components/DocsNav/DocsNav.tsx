@@ -6,11 +6,17 @@ import Typography from '@mui/material/Typography'
 
 export interface NavigationItem {
   path: string
-  text: string
+  title: string
+  subtitle?: string
   category?: string
   description?: string
   date?: string
   active: boolean
+  author?: {
+    name: string
+    img: string
+    twitter: string
+  }
 }
 
 interface Props {
@@ -75,7 +81,7 @@ export default function DocsNav({ items }: Props) {
                     },
                   }}
                 >
-                  {item.text}
+                  {item.title}
                 </Link>
               ))}
           </Box>

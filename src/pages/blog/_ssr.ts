@@ -14,20 +14,29 @@ export const fetchData: FetchDataFunc = async ({ title }: Params) => {
   const keys = Object.keys(files)
 
   for (let file of keys) {
-    const fileName = file.replace('/content/blog/', '').replace('.md', '')
+    const fileName = file
+      .replace('/content/blog/', '')
+      .replace('.md', '')
+      .replace(/--[\d]+/, '')
 
     if (fileName === titleLowercase) {
       foundFile = file
     }
 
-    const { description, date } = parseAttributes(await files[file]())
+    const { description, date, subtitle, authorImg, authorName, authorTw } =
+      parseAttributes(await files[file]())
 
     navigation.push({
       path: fileName,
-      text: toTitleCase(fileName.replace(/-/g, ' ')),
+      title: toTitleCase(fileName.split('--')[0].replace(/-/g, ' ')),
+      subtitle,
       description,
       date,
       active: foundFile === file,
+      author:
+        authorName && authorImg && authorTw
+          ? { name: authorName, img: authorImg, twitter: authorTw }
+          : undefined,
     })
   }
 

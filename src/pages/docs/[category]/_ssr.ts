@@ -31,7 +31,7 @@ export const fetchData: FetchDataFunc = async ({
 
     navigation.push({
       path: [fileCategory, fileTitle].join('/'),
-      text: toTitleCase(fileTitle.replace(/-/g, ' ')),
+      title: toTitleCase(fileTitle.replace(/-/g, ' ')),
       category: toTitleCase(fileCategory.replace(/^_/, '')),
       active: foundFile === file,
     })

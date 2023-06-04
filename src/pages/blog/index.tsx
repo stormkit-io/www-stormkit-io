@@ -53,10 +53,10 @@ export default function BlogContent() {
               </Typography>
             )}
             <Typography
-              variant="h6"
+              variant="h5"
               sx={{
                 fontWeight: 600,
-                mb: 1,
+                fontSize: 20,
                 display: 'flex',
                 justifyContent: 'space-between',
               }}
@@ -69,10 +69,18 @@ export default function BlogContent() {
                   ':hover': { textDecoration: 'underline' },
                 }}
               >
-                {nav.text}
+                {nav.title}
               </Link>
             </Typography>
-            <Typography variant="body1" sx={{ opacity: 0.7 }}>
+            {nav.subtitle && (
+              <Typography
+                variant="h6"
+                sx={{ fontSize: 14, mt: 0, opacity: 0.7 }}
+              >
+                {nav.subtitle}
+              </Typography>
+            )}
+            <Typography variant="body1" sx={{ opacity: 0.7, mt: 1 }}>
               {nav.description}
             </Typography>
             <Box sx={{ textAlign: 'right', mt: 2 }}>

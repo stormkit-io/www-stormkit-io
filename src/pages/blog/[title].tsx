@@ -1,12 +1,14 @@
 import { useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import Link from '@mui/material/Link'
+import Avatar from '@mui/material/Avatar'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
 import ImageOverlay from '~/components/ImageOverlay'
+import { dateFormat } from '~/helpers/date'
 import { withContent } from '~/helpers/markdown'
 import { fetchData } from './_ssr'
-import { dateFormat } from '~/helpers/date'
 
 // Required for SSR
 export { fetchData } from './_ssr'
@@ -15,7 +17,8 @@ export default function BlogContent() {
   const theme = useTheme()
   const { content, navigation } = withContent(fetchData)
 
-  const { text, date } = navigation.find((n) => n.active) || {}
+  const { title, subtitle, date, author } =
+    navigation.find((n) => n.active) || {}
 
   return (
     <Box
@@ -53,6 +56,7 @@ export default function BlogContent() {
               flex: 1,
               bgcolor: 'rgba(0,0,0,0.05)',
               lineHeight: 2,
+              mt: 4,
             }}
             maxWidth="768px"
           >
@@ -60,14 +64,47 @@ export default function BlogContent() {
               variant="h1"
               sx={{ fontSize: 24, fontWeight: 600, mt: 4 }}
             >
-              {text}
+              {title}
             </Typography>
+            {subtitle && (
+              <Typography
+                variant="h2"
+                sx={{ fontSize: 16, fontWeight: 600, my: 1, opacity: 0.7 }}
+              >
+                {subtitle}
+              </Typography>
+            )}
             {date && (
               <Typography sx={{ opacity: 0.7, fontSize: 13, mb: 4 }}>
                 {dateFormat(date)}
               </Typography>
             )}
             <div id="blog-content" dangerouslySetInnerHTML={content} />
+            {author && (
+              <Box
+                sx={{
+                  pt: 2,
+                  display: 'flex',
+                  alignItems: 'center',
+                  borderTop: '1px solid rgba(255,255,255,0.1)',
+                }}
+              >
+                <Link
+                  href={author.twitter}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  sx={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    color: 'white',
+                    ':hover': { textDecoration: 'underline' },
+                  }}
+                >
+                  <Avatar src={author.img} sx={{ mr: 1 }} />
+                  {author.name}
+                </Link>
+              </Box>
+            )}
           </Box>
         </Box>
       </Box>

@@ -14,10 +14,14 @@ import { useParams } from 'react-router'
 
 export interface Attributes {
   title?: string
+  subtitle?: string
   date?: string // yyyy-mm-dd
   description?: string
   category?: string
   draft?: string
+  authorName?: string
+  authorTw?: string // Twitter handle
+  authorImg?: string // URL to profile picture
 }
 
 export const parseAttributes = (
@@ -34,7 +38,14 @@ export const parseAttributes = (
       .filter((i) => i)
       .forEach((str) => {
         const [key, ...value] = str.split(':')
-        attrs[key.toLowerCase() as keyof Attributes] = value.join(':').trim()
+        attrs[
+          // author-name => authorName
+          key
+            .toLowerCase()
+            .replace(/-[a-z]/, (m) =>
+              m.toUpperCase().replace('-', '')
+            ) as keyof Attributes
+        ] = value.join(':').trim()
       })
   }
 

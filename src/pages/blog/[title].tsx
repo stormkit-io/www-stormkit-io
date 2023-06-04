@@ -90,7 +90,10 @@ export default function BlogContent() {
                 }}
               >
                 <Link
-                  href={author.twitter}
+                  href={`https://twitter.com/${author.twitter.replace(
+                    '@',
+                    ''
+                  )}`}
                   target="_blank"
                   rel="noreferrer noopener"
                   sx={{

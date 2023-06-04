@@ -40,7 +40,10 @@ const routes: Prerender[] = [
   // Prerender blog
   { route: '/blog' },
   ...Object.keys(blog).map((file) => ({
-    route: file.replace('/content', '').replace('.md', ''),
+    route: file
+      .replace('/content', '')
+      .replace('.md', '')
+      .replace(/--[\d]+/, ''),
   })),
 ]
 

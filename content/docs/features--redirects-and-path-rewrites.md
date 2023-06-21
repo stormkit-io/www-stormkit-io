@@ -99,3 +99,12 @@ You can use `regexp` syntax for redirects. The example above creates two redirec
 Note the `$amp;` sign at the end of the string. That sign simply tells to redirect only the path `/documentation` and not anything that contains `/documentation`. 
 
 </section>
+
+## Redirecting API Routes
+
+<section>
+
+Please note that if your application contains `API` routes, paths starting with `/api` will not be matched. This is to allow `/api` routes to handle the redirect
+themselves. If you do not have any `API` function, this rule does not apply.
+
+</section>

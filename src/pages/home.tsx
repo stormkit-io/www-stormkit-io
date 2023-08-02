@@ -46,7 +46,7 @@ export default function Home() {
             textAlign: 'center',
           }}
         >
-          Build, deploy and scale your web apps seamlessly
+          Build, deploy, and scale your full stack Javascript apps with ease
         </Typography>
         <Typography
           variant="h2"
@@ -59,7 +59,7 @@ export default function Home() {
             opacity: 0.7,
           }}
         >
-          All you need to build your Javascript products, with a simple pricing.
+          Development with hassle free infrastructure! Explore our comprehensive suite of features, enjoy transparent pricing, and freedom from vendor lock-in.
         </Typography>
         <Box
           sx={{

@@ -17,9 +17,9 @@ interface RenderReturn {
 export type RenderFunction = (url: string, seo?: SEO) => Promise<RenderReturn>
 
 const defaultSEO: SEO = {
-  title: 'Deploy full stack Javascript applications',
+  title: 'Effortlessly deploy serverless full stack JavaScript applications',
   description:
-    'Stormkit provides developers with tools for deploying and scaling their web applications.',
+    'Stormkit is a serverless platform to deploy full stack javascript applications. Seamlessly integrated with Git, Stormkit offers an array of powerful features including application previews, instant scaling, code injections, cronjobs, feature flags, custom storage, and so much more. Streamline your deployment process and let Stormkit handle the heavy lifting, so you can focus on crafting exceptional applications.',
   domain: {
     name: 'Stormkit.io',
     url: 'https://stormkit.io',

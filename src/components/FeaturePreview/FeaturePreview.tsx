@@ -137,17 +137,18 @@ export default function FeaturePreview() {
                       setTimeoutPaused(false)
                     }
                   }}
+                  onClick={() => {
+                    clearTimeout(timeout)
+                    setTimeoutPaused(true)
+                    setActiveFeature(index)
+                  }}
                 >
                   <Typography
                     variant="h3"
                     sx={{ fontSize: 20, cursor: 'pointer' }}
-                    onClick={() => {
-                      clearTimeout(timeout)
-                      setTimeoutPaused(true)
-                      setActiveFeature(index)
-                    }}
+
                   >
-                    {feature.title}
+                   {feature.title}
                   </Typography>
                   <Typography
                     variant="h4"

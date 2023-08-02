@@ -7,19 +7,16 @@ description: Notify 3rd party applications after each deployment with Stormkit.
 
 <section>
 
-You can specify hooks to trigger certain actions upon when an even occurs. To do so, head to your `Application's Settings` page and find the `Outbound webhooks` section.
+With outbound webhooks, you can conveniently trigger various actions when an event occurs, such as disabling cache or initiating workflows like notifications. This powerful feature enhances the flexibility and automation of your deployments.
 
-<div class="img-wrapper">
-    <img src="/assets/docs/deployments/outbound-webhooks.png"  alt="Outbound webhook" />
-</div>
+To enable users to define outbound webhooks upon deployment completion, follow these simple steps:
 
-Click `Add new webhook` to open the modal form.
+- Navigate to your Application's Settings page and locate the Outbound webhooks section.
 
-<div class="img-wrapper">
-    <img src="/assets/docs/deployments/create-outbound-webhook.png" alt="Create Outbound webhook" />
-</div>
+- Click on `Add new webhook` to open the modal form.
 
-Fill out the form and click on `Create outbound` webhook button.
+- Fill out the required information in the form and proceed by clicking the `Create outbound` webhook button.
+
 
 </section>
 

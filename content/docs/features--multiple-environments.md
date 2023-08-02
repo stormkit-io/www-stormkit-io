@@ -12,11 +12,7 @@ With Stormkit you can create multiple environments per application. Each environ
 # Default environment
 
 <section>
-By default, each application comes with a production environment already set. You'll need to configure it to deploy it successfully. The production environment cannot be deleted or renamed. However, you can change the branch it points. Any branch that does not match an environment's branch (a feature branch) will be deployed with the default environment's configuration. You can change this behaviour by visiting the Application's settings page and modifying the Default environment dropdown under the Auto deployments section. That will tell Stormkit to build new feature branch deployments with that environment's configuration.
-
-<div class="img-wrapper">
-    <img src="/assets/docs/deployments/auto-deployments.png" alt="Auto Deployments" />
-</div>
+By default, each application comes with a production environment already set. You'll need to configure it to deploy it successfully. The production environment cannot be deleted or renamed. However, you can change the branch it points. Any branch that does not match an environment's branch (a feature branch) will be deployed with the default environment's configuration.
 
 </section>
 
@@ -25,7 +21,7 @@ By default, each application comes with a production environment already set. Yo
 <section>
 In order to create a new environment, select your application. You'll be directly brought to a screen where you see a list of environments. On top right, you'll see an <code>Add Environment.</code> Click on that and a <a href="/docs/deployments/configuration">configure</a> your environment.
 
-<div class="img-wrapper"> 
+<div class="img-wrapper">
     <img src="/assets/docs/features/env-screen.png" alt="Env screen" />
 </div>
 

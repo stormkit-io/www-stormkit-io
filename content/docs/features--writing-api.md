@@ -17,6 +17,8 @@ You can create node.js/typescript APIs using Stormkit.
 
 ## How it works
 
+> **⚠ ATTENTION: Function timeouts are set at 15 seconds. If you require a different timeout, please inform us, and we can adjust it to suit your workflow.**
+
 <section>
 
 During build time, Stormkit checks if there is a `.stormkit/api` folder. When the folder is found,
@@ -26,10 +28,12 @@ it uploads the folder to a lambda function. The <a href="https://github.com/stor
 
 ## Write and deploy your API
 
+
+
 <section>
 
-Create an `/api` folder in the top level of your repository and an `/index.ts` file in it. 
-Each file is treated as a separate endpoint and it needs to export a default function 
+Create an `/api` folder in the top level of your repository and an `/index.ts` file in it.
+Each file is treated as a separate endpoint and it needs to export a default function
 with the signature shown below.
 
 ```ts
@@ -74,7 +78,7 @@ For more details on how the filesystem routing works, check the <a href="https:/
 
 Now go ahead and [deploy](/docs/deployments) your application. When Stormkit detects an `/api` source folder,
 it checks whether it is already built or not. If the `/api` folder is not yet built, Stormkit tries to build
-your api using Webpack and then deploys the output to the lambda function. This process is automatic. 
+your api using Webpack and then deploys the output to the lambda function. This process is automatic.
 
 </section>
 
@@ -100,7 +104,7 @@ By default, files are matched through all requests. If you want to restrict cert
 ## Ignore certain files
 
 If a file name starts with an underscore (`_`) the file won't be matched. If the directory starts
-with an underscore (`_`), the whole subdirectory tree will be ignored. This is useful to organize 
+with an underscore (`_`), the whole subdirectory tree will be ignored. This is useful to organize
 helper methods in different files.
 
 ## Custom builds

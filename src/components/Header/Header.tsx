@@ -25,6 +25,7 @@ const links = [
   { path: '/docs', text: 'docs' },
   { path: '/blog', text: 'blog' },
   { path: '/blog/whats-new', text: 'whats new?' },
+  { path: '/blog/faq', text: 'FAQ' },
   {
     path: 'https://github.com/stormkit-io',
     text: (

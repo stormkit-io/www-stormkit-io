@@ -1,10 +1,18 @@
 ---
 title: What's New?
 description: Discover the latest changes and improvements to Stormkit. Stay up-to-date and get the most out of our platform.
-date: 2023-05-28
+date: 2023-08-17
 ---
 
 Follow the latest developments on Stormkit.
+
+# August, 17th, 2023
+
+We're thrilled to announce a fantastic addition to our platform - a more convenient method for users to incorporate their environment variables. With our latest enhancement, you can now simply copy and paste all your essential environment variables in one go. Seamlessly streamline your setup process!
+
+<div class="img-wrapper">
+    <img src="/assets/docs/features/easyenv.png" alt="responsibilities of stormkit and supabase" />
+</div>
 
 ## May 28th, 2023
 
@@ -36,14 +44,14 @@ Recently we announced support for API endpoints for client-side applications. No
 
 ## December 15th, 2022
 
-Announcing [feature flags](/docs/features/feature-flags): inject them into your client-side application and control them through the UI. Instant updates, no need for deployments. 
+Announcing [feature flags](/docs/features/feature-flags): inject them into your client-side application and control them through the UI. Instant updates, no need for deployments.
 
 ## October 19th, 2022
 
 You can now preview runtime logs from your server side rendered apps and APIs for each deployment. Expand the
 **Deployment Menu** and click on **Runtime logs** to access the page.
 
-<div class="img-wrapper"> 
+<div class="img-wrapper">
     <img src="/assets/blog/whats-new/runtime-logs.gif" alt="Runtime logs" />
 </div>
 
@@ -52,7 +60,7 @@ You can now preview runtime logs from your server side rendered apps and APIs fo
 During the build process, Stormkit generates a manifest about your application to serve files in a more optimal ways. The manifest includes information about your CDN files, API routes, redirects and whether server side
 rendering is enabled or not.
 
-<div class="img-wrapper"> 
+<div class="img-wrapper">
     <img src="/assets/blog/whats-new/manifest.png" alt="build manifest">
 </div>
 
@@ -73,10 +81,10 @@ Stormkit now automatically detects `pnpm` projects and build them using `pnpm`.
 
 ## August 8th, 2022
 
-We now display the commit sha of the deployment. Clicking on the takes you to the diff page to view 
+We now display the commit sha of the deployment. Clicking on the takes you to the diff page to view
 the changes.
 
-<div class="img-wrapper"> 
+<div class="img-wrapper">
     <img src="/assets/blog/whats-new/feat-commit-sha.png" alt="Commit SHA" />
 </div>
 
@@ -89,9 +97,9 @@ Stormkit now supports building APIs using Node.js / Typescript 🎉. [Learn more
 
 Stormkit now injects the git commit sha as an environment variable during build time. This is useful to track
 changes with third party tools. For instance by providing the commit sha to Sentry, you can track after which
-specific commit the errors started to occur. 
+specific commit the errors started to occur.
 
-<div class="img-wrapper"> 
+<div class="img-wrapper">
     <img src="/assets/blog/whats-new/git-commit.png" alt="Injected Commit SHA" />
 </div>
 
@@ -109,7 +117,7 @@ and change the selected Runtime.
 Better support for next.js serverless projects. The bundle size is decreased and a bug has been fixed.
 
 **Important** When deploying next.js serverless applications, do not forget to specify `target: "serverless"`
-in `next.config.js` file. 
+in `next.config.js` file.
 
 ## April 18th, 2022
 

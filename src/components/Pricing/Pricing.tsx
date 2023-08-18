@@ -55,7 +55,7 @@ export default function Pricing() {
             position: 'relative',
           }}
         >
-          Simple, usage based pricing
+          Simple, predictable pricing
         </Typography>
         <Typography
           variant="h3"
@@ -66,7 +66,7 @@ export default function Pricing() {
             opacity: 0.7,
           }}
         >
-          15 days free trial. No credit card required.
+          15 days free trial. No credit card required. If you require an extended trial period, simply reach out to us via Discord or hello@stormkit.io, and we'll be more than happy to assist you.
         </Typography>
       </Box>
       <Box

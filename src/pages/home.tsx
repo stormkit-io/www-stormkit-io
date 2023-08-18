@@ -7,7 +7,7 @@ import Footer from '~/components/Footer'
 import Illustration from '~/components/Illustration'
 import FeaturePreview from '~/components/FeaturePreview'
 import Pricing from '~/components/Pricing'
-import WhyFreeTrial from '~/components/WhyFreeTrial'
+import MainMessage from '~/components/MainMessage'
 import { useScrollToHash } from '~/helpers/scroll'
 
 const MAX_WIDTH_MD = 600
@@ -119,11 +119,11 @@ export default function Home() {
         sx={{
           width: '100%',
           mx: 'auto',
-          mt: { xs: 8, md: 24 },
-          mb: { xs: 8, md: 12 },
+          mt: { xs: 6, md: 10 },
+          mb: { xs: 6, md: 10 },
         }}
       >
-        <WhyFreeTrial />
+        <MainMessage/>
       </Box>
       <Footer maxWidth="lg" />
     </Box>

@@ -9,6 +9,7 @@ import {
   Close,
   Twitter,
   GitHub,
+  Login
 } from '@mui/icons-material'
 import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
 import DiscordLogo from '~/assets/images/discord.svg'
@@ -78,7 +79,7 @@ const links = [
     path: 'https://app.stormkit.io',
     text: 'login',
     separator: true,
-    icon: <ArrowRightAlt sx={{ fontSize: 20, ml: 0.5 }} />,
+    icon: <Login sx={{ fontSize: 20, ml: 0.5 }} />,
   },
 ]
 

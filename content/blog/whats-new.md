@@ -6,7 +6,11 @@ date: 2023-08-17
 
 Follow the latest developments on Stormkit.
 
-# August, 17th, 2023
+## August 20th, 2023
+
+Our serverless deployments have no longer the 50MB zipped limit. Please note that the 250MB unzipped limit remains.
+
+## August 17th, 2023
 
 We're thrilled to announce a fantastic addition to our platform - a more convenient method for users to incorporate their environment variables. With our latest enhancement, you can now simply copy and paste all your essential environment variables in one go. Seamlessly streamline your setup process!
 

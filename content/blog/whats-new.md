@@ -9,8 +9,11 @@ Follow the latest developments on Stormkit.
 
 By integrating our "Deploy" button into the markdown of your repository, you can streamline the process of cloning your GitHub repository and deploying it on Stormkit. Visit our [doc page](/docs/deployments/deploy-button) website for swift markdown generation.
 
+## August 20th, 2023
 
-# August, 17th, 2023
+Our serverless deployments have no longer the 50MB zipped limit. Please note that the 250MB unzipped limit remains.
+
+## August 17th, 2023
 
 We're thrilled to announce a fantastic addition to our platform - a more convenient method for users to incorporate their environment variables. With our latest enhancement, you can now simply copy and paste all your essential environment variables in one go. Seamlessly streamline your setup process!
 

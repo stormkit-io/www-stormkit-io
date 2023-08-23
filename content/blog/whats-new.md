@@ -1,10 +1,13 @@
 ---
 title: What's New?
 description: Discover the latest changes and improvements to Stormkit. Stay up-to-date and get the most out of our platform.
-date: 2023-08-17
 ---
 
 Follow the latest developments on Stormkit.
+
+# August, 22th, 2023
+
+By integrating our "Deploy" button into the markdown of your repository, you can streamline the process of cloning your GitHub repository and deploying it on Stormkit. Visit our [doc page](/docs/deployments/deploy-button) website for swift markdown generation.
 
 ## August 20th, 2023
 

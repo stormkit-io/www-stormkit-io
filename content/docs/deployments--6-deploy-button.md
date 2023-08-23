@@ -7,7 +7,11 @@ description: Use deploy by Stormkit button in your repository to allow other use
 
 By incorporating our "Deploy" button into your repository's markdown, you can easily facilitate the cloning of your GitHub repository and its subsequent deployment on Stormkit. This functionality only works with **Github's template repositories** offering a user-friendly deployment process.
 
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deploy Button Generator</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
@@ -36,7 +40,7 @@ By incorporating our "Deploy" button into your repository's markdown, you can ea
         <div class="input-group mb-3">
           <input type="text" id="githubUrl" class="form-control" placeholder="Enter GitHub URL">
           <div class="input-group-append">
-            <button class="btn custom-button" onclick="checkGitHubUrl()"> Generate</button>
+            <button class="btn custom-button" onclick="checkGitHubUrl()">Generate</button>
           </div>
         </div>
         <div>
@@ -57,14 +61,14 @@ By incorporating our "Deploy" button into your repository's markdown, you can ea
       // GitHub repository URL
       const githubUrlPattern = /^(?:https?:\/\/)?github\.com\/([^/]+)\/([^/]+)$/;
 
-      if (githubUrl.match(githubUrlPattern) && !githubUrl.endsWith(".git") ) {
+      if (githubUrl.match(githubUrlPattern) && !githubUrl.endsWith(".git")) {
         const encodedUrl = encodeURIComponent(githubUrl);
         const markdown = `[![Deploy with Stormkit](https://www.stormkit.io/button.svg)](https://api.stormkit.io/deploy?template=${encodedUrl})`;
         resultElement.innerHTML = markdown;
         window.generatedMarkdown = markdown;
         copyButton.style.display = "block";
       } else {
-        resultElement.innerHTML = "Invalid GitHub URL.\nPlease provide a valid GitHub \nrepository URL in the format:\nhttps://github.com/username/repository"
+        resultElement.innerHTML = "Invalid GitHub URL.\nPlease provide a valid GitHub \nrepository URL in the format:\nhttps://github.com/username/repository";
         window.generatedMarkdown = "";
         copyButton.style.display = "none";
       }
@@ -84,3 +88,4 @@ By incorporating our "Deploy" button into your repository's markdown, you can ea
     }
   </script>
 </body>
+</html>

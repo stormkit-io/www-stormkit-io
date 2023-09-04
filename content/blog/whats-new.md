@@ -5,7 +5,15 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
-# August, 22th, 2023
+## September 4th, 2023
+
+We updated the list of injected system environment variables. Visit our [doc page](/docs/deployments/system-variables) for more information.
+
+## September 3rd, 2023
+
+We added more availability zones to our servers in Europe.
+
+## August 22th, 2023
 
 By integrating our "Deploy" button into the markdown of your repository, you can streamline the process of cloning your GitHub repository and deploying it on Stormkit. Visit our [doc page](/docs/deployments/deploy-button) website for swift markdown generation.
 

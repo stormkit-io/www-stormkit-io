@@ -5,6 +5,10 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## September 5th, 2023
+
+Environment variables are now available for serverless functions runtime.
+
 ## September 4th, 2023
 
 We updated the list of injected system environment variables. Visit our [doc page](/docs/deployments/system-variables) for more information.

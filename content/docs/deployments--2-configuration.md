@@ -39,7 +39,7 @@ If any other framework is used or no framework is used at all, the build configu
 | ------------------------- | ----------- |
 | **Publish folder**        | The publish folder will be uploaded to our CDN. This folder is expected to have an <code>index.html</code> at the top level. |
 | **Build command**         | The build command to execute. You can chain multiple commands with the logical and (<code>&amp;&amp;</code>) operator. You can use bash commands as well. |
-| **Environment variables** | The environment variables that will be injected during build time. Variable names matching following regex will be obfuscated <code>/secret\|\_key\|password/i</code>. |
+| **Environment variables** | The environment variables that will be injected during build time. Variable names matching following regex will be obfuscated <code>/secret\|\_key\|password/i</code>. These variables are also available for serverless functions runtime. |
 
 ## Special Environment Variables
 

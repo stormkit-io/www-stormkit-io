@@ -67,41 +67,31 @@ export default function FeaturePreview() {
 
   return (
     <>
-      <Typography
-        variant="h2"
-        sx={{
-          fontWeight: 600,
-          fontSize: { xs: 24, md: 48 },
-          textAlign: 'center',
-          overflow: 'hidden',
-          position: 'relative',
-          pr: { xs: 27, md: 45 },
-        }}
-      >
-        Are you{' '}
-        <Box
-          component="span"
-          className="slide-up"
+      <Box>
+        <Typography
+          variant="h2"
           sx={{
-            ml: { xs: 1, md: 2 },
-            position: 'absolute',
-            animation: 'slideUp 3.5s ease-in-out infinite',
+            fontWeight: 600,
+            fontSize: { xs: 24, md: 48 },
+            textAlign: 'center',
+            overflow: 'hidden',
+            position: 'relative',
           }}
         >
-          {text}
-        </Box>
-      </Typography>
-      <Typography
-        variant="h3"
-        sx={{
-          mt: 1,
-          fontSize: { xs: 16, md: 20 },
-          textAlign: 'center',
-          opacity: 0.7,
-        }}
-      >
-        Then you are in the right place.
-      </Typography>
+          Explore some of our features!
+        </Typography>
+        <Typography
+          variant="h3"
+          sx={{
+            mt: 1,
+            fontSize: { xs: 16, md: 20 },
+            textAlign: 'center',
+            opacity: 0.7,
+          }}
+        >
+          Couldn't find what you are looking for? Contact with us via Discord or E-mail.
+        </Typography>
+      </Box>
       <Box
         sx={{
           display: 'flex',
@@ -146,9 +136,8 @@ export default function FeaturePreview() {
                   <Typography
                     variant="h3"
                     sx={{ fontSize: 20, cursor: 'pointer' }}
-
                   >
-                   {feature.title}
+                    {feature.title}
                   </Typography>
                   <Typography
                     variant="h4"

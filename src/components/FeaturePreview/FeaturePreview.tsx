@@ -9,6 +9,7 @@ import AnimationStagedRollout from './AnimationStagedRollout'
 import AnimationSnippetInjection from './AnimationSnippetInjection'
 import AnimationFeatureFlag from './AnimationFeatureFlag'
 import AnimationAPIRoutes from './AnimationAPIRoutes'
+import AnimationCustomStorage from './AnimationCustomStorage'
 
 let i = 0
 const texts = ['an Indiehacker?', 'a Small Startup?']
@@ -36,6 +37,11 @@ const features = [
     title: 'API Routes',
     subtitle:
       'Manage your Node.js serverless API from the same code repository.',
+  },
+  {
+    title: 'Custom Storage',
+    subtitle:
+      'Deploy your front end code to different targets',
   },
 ]
 
@@ -78,7 +84,7 @@ export default function FeaturePreview() {
             position: 'relative',
           }}
         >
-          Explore some of our features!
+          Some of our features
         </Typography>
         <Typography
           variant="h3"
@@ -89,7 +95,7 @@ export default function FeaturePreview() {
             opacity: 0.7,
           }}
         >
-          Couldn't find what you are looking for? Contact with us via Discord or E-mail.
+          If you can't find what you need or require customized features, reach out to us at hello@stormkit.io or on Discord.
         </Typography>
       </Box>
       <Box
@@ -194,6 +200,7 @@ export default function FeaturePreview() {
             {activeFeature === 2 && <AnimationSnippetInjection />}
             {activeFeature === 3 && <AnimationFeatureFlag />}
             {activeFeature === 4 && <AnimationAPIRoutes />}
+            {activeFeature === 5 && <AnimationCustomStorage />}
           </Box>
           <Box
             sx={{

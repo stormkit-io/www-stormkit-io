@@ -59,7 +59,7 @@ export default function Home() {
             opacity: 0.7,
           }}
         >
-          Development with hassle free infrastructure! Explore our comprehensive suite of features, enjoy transparent pricing and freedom from vendor lock-in.
+          Effortlessly launch your full-stack JavaScript application within minutes and shift your focus to what matters most, your application itself. Leverage our powerful suite of tools to enhance your development process.
         </Typography>
         <Box
           sx={{

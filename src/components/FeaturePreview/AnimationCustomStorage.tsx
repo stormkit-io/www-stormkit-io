@@ -33,6 +33,7 @@ export default function AnimationCustomStorage() {
     >
       <Box
         component="img"
+        height={400}
         alt="Deploy your code to different targets"
         src={stormkitLogo}
       />

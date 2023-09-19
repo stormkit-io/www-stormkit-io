@@ -5,6 +5,10 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## September 18th, 2023
+
+We now have a better design for redirects. We also introduced proxies. You can define them from your [redirects.json](/docs/features/redirects-and-path-rewrites) file.
+
 ## September 5th, 2023
 
 Environment variables are now available for serverless functions runtime.

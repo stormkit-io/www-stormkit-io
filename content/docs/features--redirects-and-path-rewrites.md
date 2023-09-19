@@ -21,6 +21,47 @@ Stormkit is able to handle the path rewrites and redirects on the load balancer 
 
 </section>
 
+## Path rewrites
+
+<section>
+
+If you omit the `status` property, or provide a `status` different than `3xx`, Stormkit will not redirect the 
+request but will simply rewrite the path.
+
+```json
+[
+  {
+    "from": "/my-path/*",
+    "to": "/my-new-path/$1", 
+  }
+]
+```
+
+In this case, all requests coming to `/my-path` will be served as if they were coming to `/my-new-path`.
+
+</section>
+
+## Proxies
+
+<section>
+
+You can also use redirects as a proxy. If your redirect is an absolute URL (starting with `http`),
+the request will be proxied.
+
+```json
+[
+  {
+    "from": "/my-path/*",
+    "to": "https://example.com/my-new-path/$1",
+    "status": 200
+  }
+]
+```
+
+In this case, all requests coming to `/my-path` will be proxied to `https://example.com/my-new-path/*`.
+
+</section>
+
 ## Redirect non-www to www
 
 <section>
@@ -34,25 +75,6 @@ Stormkit is able to handle the path rewrites and redirects on the load balancer 
   }
 ]
 ```
-
-</section>
-
-## Path rewrites
-
-<section>
-
-If you omit the `status` property, Stormkit will not redirect the request but will simply rewrite the path.
-
-```json
-[
-  {
-    "from": "/my-path/*",
-    "to": "/my-new-path/$1", 
-  }
-]
-```
-
-In this case, all requests coming to `my-path` will be served as if they were coming to `my-new-path`.
 
 </section>
 

@@ -17,10 +17,8 @@ Quick start guide using React for statically generated websites
    (Alternatively, you can use pnpm or yarn)
 
 - Push the project to your preferred git provider.
--  Connect to Stormkit and import your project.
-- In the Stormkit go to your project's config -> build  and run:
-
-  `npm run build`
+- Connect to Stormkit and import your project.
+- Click to Deploy button
 
 That is it, for existing projects using webpack you can follow our [migration guide](http://localhost:5173/blog/migrating-your-app-from-webpack-to-vite)
 

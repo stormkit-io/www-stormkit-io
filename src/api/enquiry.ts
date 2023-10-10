@@ -1,0 +1,56 @@
+import http from 'node:http'
+import fetch from 'node-fetch'
+import { readBody } from './_helpers'
+
+export default async function (req: http.IncomingMessage) {
+  const body = await readBody<{ email?: string; type?: string }>(req)
+
+  if (!body.email) {
+    return {
+      status: 400,
+      body: {
+        error: "'email' is a required field.",
+      },
+    }
+  }
+
+  if (!body.type) {
+    return {
+      status: 400,
+      body: {
+        error: "'type' is a required field.",
+      },
+    }
+  }
+
+  const enquiryChannelUrl = process.env.DISCORD_ENQUIRY_CHANNEL_URL
+
+  if (!enquiryChannelUrl) {
+    return { body: { error: 'Channel URL is not provided', status: 500 } }
+  }
+
+  try {
+    await fetch(enquiryChannelUrl, {
+      method: 'POST',
+      body: JSON.stringify({
+        // TODO: Here goes the enquiry
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+
+    return {
+      status: 200,
+      body: { ok: true },
+    }
+  } catch {
+    return {
+      status: 500,
+      body: {
+        error:
+          'Something went wrong while submitting the enquiry. Please reach out us at hello@stormkit.io.',
+      },
+    }
+  }
+}

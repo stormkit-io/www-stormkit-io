@@ -22,6 +22,16 @@ export default createTheme({
         component: LinkBehavior,
       } as LinkProps,
     },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          color: 'white',
+          '&.Mui-focused': {
+            color: 'white',
+          },
+        },
+      },
+    },
   },
   palette: {
     mode: 'dark',

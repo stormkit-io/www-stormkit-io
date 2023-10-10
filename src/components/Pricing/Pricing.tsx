@@ -61,14 +61,14 @@ export default function Pricing() {
           variant="h3"
           sx={{
             mt: 1,
-            fontSize: { xs: 16, md: 20 },
+            fontSize: { xs: 15, md: 18 },
             textAlign: 'center',
             opacity: 0.7,
+            maxWidth: 600,
+            m: 'auto',
           }}
         >
-          15 days free trial. No credit card required. If you require an
-          extended trial period, simply reach out to us via Discord or
-          hello@stormkit.io, and we'll be more than happy to assist you.
+          15 days free trial. No credit card required.
         </Typography>
       </Box>
       <Box
@@ -123,33 +123,6 @@ export default function Pricing() {
         >
           Start your free trial
         </Button>
-      </Box>
-
-      <Box marginTop={10}>
-        <Typography
-          variant="h3"
-          sx={{
-            fontWeight: 600,
-            fontSize: { xs: 24, md: 48 },
-            textAlign: 'center',
-            overflow: 'hidden',
-            position: 'relative',
-          }}
-        >
-          Are you looking for On Prem or Private Could Solution?
-        </Typography>
-        <Typography
-          variant="h3"
-          sx={{
-            mt: 1,
-            fontSize: { xs: 16, md: 20 },
-            textAlign: 'center',
-            opacity: 0.7,
-          }}
-        >
-          For on premise or hosting your own Stormkit instance on AWS please
-          reach out to us we can accommodate your needs.
-        </Typography>
       </Box>
     </>
   )

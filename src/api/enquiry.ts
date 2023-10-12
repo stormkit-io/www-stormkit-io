@@ -33,7 +33,16 @@ export default async function (req: http.IncomingMessage) {
     await fetch(enquiryChannelUrl, {
       method: 'POST',
       body: JSON.stringify({
-        // TODO: Here goes the enquiry
+        embeds: [
+          {
+            title: 'New Enquiry',
+            timestamp: new Date().toISOString(),
+            fields: [
+              { name: 'Email', value: body.email },
+              { name: 'Type', value: body.type },
+            ],
+          },
+        ],
       }),
       headers: {
         'Content-Type': 'application/json',

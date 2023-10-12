@@ -4,11 +4,12 @@ import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
 import Alert from '@mui/material/Alert'
 import AlertTitle from '@mui/material/AlertTitle'
-import Button from '@mui/material/Button'
+import Button from '@mui/lab/LoadingButton'
 
 export default function SelfHosted() {
   const [email, setEmail] = useState('')
   const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
 
   return (
@@ -56,6 +57,8 @@ export default function SelfHosted() {
               return setError('Email is invalid.')
             }
 
+            setLoading(true)
+
             fetch('/api/enquiry', {
               method: 'post',
               body: JSON.stringify({
@@ -80,6 +83,9 @@ export default function SelfHosted() {
                   'Something went wrong while submitting your enquiry. Please reach out to us at hello@stormkit.io'
                 )
               })
+              .finally(() => {
+                setLoading(false)
+              })
           }}
         >
           <TextField
@@ -97,6 +103,7 @@ export default function SelfHosted() {
             type="submit"
             variant="contained"
             color="secondary"
+            loading={loading}
             sx={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0 }}
           >
             Submit

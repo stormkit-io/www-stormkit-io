@@ -40,8 +40,7 @@ const features = [
   },
   {
     title: 'Custom Storage',
-    subtitle:
-      'Deploy your front end code to different targets',
+    subtitle: 'Deploy your front end code to different targets',
   },
 ]
 
@@ -84,18 +83,38 @@ export default function FeaturePreview() {
             position: 'relative',
           }}
         >
-          Some of our features
+          Our Features
         </Typography>
         <Typography
           variant="h3"
           sx={{
             mt: 1,
-            fontSize: { xs: 16, md: 20 },
+            fontSize: { xs: 15, md: 18 },
             textAlign: 'center',
             opacity: 0.7,
+            maxWidth: 700,
+            m: 'auto',
           }}
         >
-          If you can't find what you need or require customized features, reach out to us at hello@stormkit.io or on Discord.
+          If you require customized features, reach out to us at{' '}
+          <Link
+            href="mailto:hello@stormkit.io"
+            target="_blank"
+            rel="noreferrer noopener"
+            sx={{ color: 'white' }}
+          >
+            hello@stormkit.io
+          </Link>{' '}
+          or on{' '}
+          <Link
+            href="https://discord.gg/6yQWhyY"
+            target="_blank"
+            rel="noreferrer noopener"
+            sx={{ color: 'white' }}
+          >
+            Discord
+          </Link>
+          .
         </Typography>
       </Box>
       <Box

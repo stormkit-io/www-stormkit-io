@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 import express from 'express'
 import dotenv from 'dotenv'
 import { createServer as createViteServer } from 'vite'
-import { matchPath } from '@stormkit/serverless/router'
+import apiHandler from '@stormkit/serverless/middlewares'
 
 dotenv.config()
 
@@ -33,25 +33,14 @@ async function createServer() {
   app.use(vite.middlewares)
 
   // Add support for a local environment API.
-  app.all(/\/api(\/.*|$)/, async (req, res) => {
-    const route = matchPath(
-      path.join(__dirname, 'api'),
-      req.originalUrl.split(/\?|#/)[0].replace('/api', ''),
-      req.method
-    )
-
-    if (!route) {
-      res.status(404)
-      res.send()
-      return
-    }
-
-    const handler = (await vite.ssrLoadModule(`/src/api/${route}`)) as {
-      default: express.Handler
-    }
-
-    handler.default(req, res, () => {})
-  })
+  app.all(
+    ['/api', '/api/*'],
+    apiHandler({
+      middleware: 'express',
+      apiDir: path.join(__dirname, 'api'),
+      moduleLoader: vite.ssrLoadModule,
+    })
+  )
 
   app.get('*', async (req, res, next) => {
     try {

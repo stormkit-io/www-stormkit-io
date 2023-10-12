@@ -8,6 +8,7 @@ import Illustration from '~/components/Illustration'
 import FeaturePreview from '~/components/FeaturePreview'
 import Pricing from '~/components/Pricing'
 import MainMessage from '~/components/MainMessage'
+import SelfHosted from '~/components/SelfHosted'
 import { useScrollToHash } from '~/helpers/scroll'
 
 const MAX_WIDTH_MD = 600
@@ -46,20 +47,23 @@ export default function Home() {
             textAlign: 'center',
           }}
         >
-          Build, deploy and scale your full stack Javascript apps with ease
+          Full-stack Javascript apps. Deployed to the Cloud.
         </Typography>
         <Typography
           variant="h2"
           sx={{
             mt: 2,
             fontWeight: 200,
-            fontSize: { xs: 16, md: 20 },
+            fontSize: { xs: 15, md: 18 },
             maxWidth: MAX_WIDTH_MD,
             textAlign: 'center',
             opacity: 0.7,
           }}
         >
-          Effortlessly launch your full-stack JavaScript application within minutes and shift your focus to what matters most, your application itself. Leverage our powerful suite of tools to enhance your development process.
+          Effortlessly launch your full-stack JavaScript application within
+          minutes and shift your focus to what matters most, your application
+          itself. Leverage our powerful suite of tools to enhance your
+          development process.
         </Typography>
         <Box
           sx={{
@@ -103,6 +107,18 @@ export default function Home() {
 
       <Box
         maxWidth="lg"
+        id="self-hosted"
+        sx={{
+          width: '100%',
+          mx: 'auto',
+          mt: { xs: 8, md: 24 },
+        }}
+      >
+        <SelfHosted />
+      </Box>
+
+      <Box
+        maxWidth="lg"
         id="pricing"
         sx={{
           width: '100%',
@@ -119,11 +135,11 @@ export default function Home() {
         sx={{
           width: '100%',
           mx: 'auto',
-          mt: { xs: 6, md: 10 },
-          mb: { xs: 6, md: 10 },
+          mt: { xs: 6, md: 24 },
+          mb: { xs: 6, md: 24 },
         }}
       >
-        <MainMessage/>
+        <MainMessage />
       </Box>
       <Footer maxWidth="lg" />
     </Box>

@@ -69,6 +69,31 @@ Stormkit employs robust security measures to safeguard your data. This includes 
 
 </details>
 
+
+<details>
+<summary> What redundancies does Stormkit.io have in place? </summary>
+At Stormkit.io, reliability is a top priority. We leverage the robust infrastructure provided by Amazon Web Services (AWS) to build our platform. This ensures that our services are built on a foundation known for its scalability, durability, and high availability. We understand the critical nature of your applications and websites. That's why we've implemented redundancy measures across our entire platform. This includes redundancy at both hardware and software levels, ensuring that in the unlikely event of a failure, there are backup systems in place to seamlessly take over.
+</details>
+
+<details>
+<summary> How does Stormkit.io handle regional availability? </summary>
+Stormkit.io serves content from multiple geographic zones in Europe, ensuring that your applications and websites are delivered reliably and quickly to users. Moreover, we have the capability to open new regions on demand, providing you with even greater flexibility.
+</details>
+
+
+<details>
+
+<summary> How does Stormkit.io handle unexpected traffic spikes? </summary>
+
+We're prepared for unexpected traffic spikes. Our platform is designed to scale dynamically, automatically adjusting resources to meet demand. This ensures that your applications remain responsive and available, even during periods of sudden increased traffic.
+</details>
+
+<details>
+<summary> How does Stormkit.io manage updates and maintenance? </summary>
+We understand the importance of minimizing disruptions. Our team carefully plans updates and maintenance activities to ensure they have minimal impact on your services. When updates are required, we provide advance notice and select time windows that have the least impact on your users.
+
+</details>
+
 <style>
 /* Style the summary element */
 details summary {

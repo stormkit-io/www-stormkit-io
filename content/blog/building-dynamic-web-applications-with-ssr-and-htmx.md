@@ -96,7 +96,7 @@ export const handler = serverless(async (req: any, res: any) => {
 
 We export two functions, `render` and `handler` . `render` will be used by dev server while `handler` is a wrapper provided by [Stormkit.io](http://stormkit.io/) to make the code compatible with [AWS Lambda](https://github.com/stormkit-io/serverless/).  Stormkit will use that during build to upload your function.
 
-In the **`Render`** function, we use **`path-to-regexp`** to match the URL path to functions that will render views. This library is  used in Express.js. The function also includes middleware support and handles query parameters.
+In the **`Render`** function, we use **`path-to-regexp`** to match the URL path to functions that will render views. This library is  used in [Express.js](https://expressjs.com/). The function also includes middleware support and handles query parameters.
 
 Below you can see contents of the **`Render`** function
 
@@ -295,6 +295,6 @@ When we create our last row of the table, we sprinkle some htmx.  Htmx will make
 
 This approach enables us to create a highly interactive web application with minimal code, thanks to the power of SSR, htmx, and Handlebars.js.
 
-You can find an example project [here](https://github.com/stormkit-io/vite-handlerbar-htmx/). Deployment links are in README.md
+You can find an example project [here](https://github.com/stormkit-io/vite-handlerbar-htmx/). Deployment links are in [README.md](https://github.com/stormkit-io/vite-handlerbar-htmx/#readme)
 
 Deploying this application to Stormkit from this point on is a breeze. Simply import your application and click the "Deploy Now" button.

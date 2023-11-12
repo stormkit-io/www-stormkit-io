@@ -21,6 +21,24 @@ Not directly, Stormkit is optimized for serverless deployments and provides a se
 </details>
 
 <details>
+
+
+<summary>Is it possible to establish a database connection using Stormkit?</summary>
+
+Certainly! Explore our [detailed blog post](/blog/monitoring-app-using-stormkit-and-supabase) as an example, demonstrating the integration with Supabase, a PostgreSQL database. By injecting database credentials as environment variables into backend functions, you can seamlessly establish a connection.
+</details>
+
+
+<details>
+
+<summary>How do I deploy my monorepo using Stormkit?</summary>
+
+If your repository encompasses multiple projects, Stormkit offers two approaches for deployment. Firstly, you can create distinct projects within the same repository and set up automated deployment based on branch naming conventions. For instance, if your repository hosts both frontend and backend applications, establish two projects triggering deployment when branches start with `fe-` and `be-` respectively. Configure these settings in the environment's configuration section.
+
+Alternatively, you can create two separate environments within a single app, one for frontend and the other for backend. Utilizing the  [SK_CWD](/docs/deployments/configuration)  variable, you can build each project accordingly. As before, deploy triggers can be set up based on branch naming conventions.
+</details>
+
+<details>
 <summary>Are you using AWS?</summary>
 
 Yes, we leverage specific AWS solutions such as Lambda and S3 to enhance our services. Our approach involves utilizing certain AWS services  to minimize dependence on AWS. This strategy ensures our platform's adaptability for potential portability to on-premise environments or alternate cloud providers in the future.

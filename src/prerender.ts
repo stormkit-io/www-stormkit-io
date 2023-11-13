@@ -19,12 +19,6 @@ const routes: Prerender[] = [
     title: 'Privacy policy',
     description: 'Read our privacy policy',
   },
-  {
-    route: '/partners',
-    title: 'Partners',
-    description:
-      'Looking for an affiliate? Suggest your audience Stormkit and earn money.',
-  },
 
   // Prerender docs
   { route: '/docs' },

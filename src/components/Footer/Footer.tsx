@@ -23,7 +23,6 @@ const links: Array<{ name: string; links: LinkProps[] }> = [
   {
     name: 'company',
     links: [
-      { path: '/partners', text: 'partners' },
       { path: '/#pricing', text: 'pricing' },
       { path: '/policies/privacy', text: 'privacy policy' },
       { path: '/policies/terms', text: 'terms' },

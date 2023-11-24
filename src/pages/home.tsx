@@ -80,6 +80,33 @@ export default function Home() {
           >
             Start your free trial
           </Button>
+          <Box
+            sx={{
+              maxWidth: MAX_WIDTH_MD,
+              textAlign: 'center',
+              m: 1,
+            }}
+          >
+            <Typography
+              variant="h6"
+              sx={{
+                m: 1,
+                fontWeight: 600,
+                maxWidth: MAX_WIDTH_MD,
+                textAlign: 'center',
+              }}
+            >
+              OR
+            </Typography>
+          </Box>
+          <Button
+            variant="contained"
+            color="secondary"
+            size="large"
+            href="https://cal.com/svedova"
+          >
+            Book a Demo
+          </Button>
         </Box>
       </Box>
 

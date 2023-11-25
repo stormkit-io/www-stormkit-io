@@ -14,7 +14,7 @@ clicking on the `Team Toggle` on the upper left part of the screen and click on 
   <img src="/assets/docs/features/create-team.png" alt="Create team" />
 </div>
 
-Give your team a name and click on `Submit`.
+Give your team a name and click on `Create`.
 
 ## Roles 
 

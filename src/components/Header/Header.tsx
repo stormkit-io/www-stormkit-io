@@ -9,7 +9,8 @@ import {
   Close,
   Twitter,
   GitHub,
-  Login
+  Login,
+  LinkedIn
 } from '@mui/icons-material'
 import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
 import DiscordLogo from '~/assets/images/discord.svg'
@@ -42,10 +43,10 @@ const links = [
     separator: true,
   },
   {
-    path: 'https://twitter.com/stormkitio',
+    path: 'https://www.linkedin.com/company/stormkit',
     text: (
       <>
-        <Twitter sx={{ mr: 0, fill: 'rgb(29, 155, 240)' }} />
+        <LinkedIn sx={{ mr: 0, fill: 'rgb(29, 155, 240)' }} />
         <Box
           component="span"
           sx={{ display: { xs: 'inline', md: 'none' }, ml: { xs: 1, md: 0 } }}

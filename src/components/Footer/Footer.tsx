@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box'
 import { useTheme } from '@mui/material/styles'
-import { Twitter, LinkedIn } from '@mui/icons-material'
+import { Twitter, LinkedIn, YouTube } from '@mui/icons-material'
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
 import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
@@ -57,6 +57,12 @@ const links: Array<{ name: string; links: LinkProps[] }> = [
         text: 'linkedin',
         external: true,
         icon: <LinkedIn sx={{ mr: 1, fill: 'rgb(29, 155, 240)' }} />,
+      },
+      {
+        path: 'https://www.youtube.com/@stormkit491',
+        text: 'YouTube',
+        external: true,
+        icon: <YouTube sx={{ mr: 1, fill: 'rgb(255 0 0)' }} />,
       },
       {
         path: 'https://discord.com/invite/6yQWhyY',

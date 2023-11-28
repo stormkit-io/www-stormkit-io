@@ -63,7 +63,7 @@ export default function StormkitDeploy() {
           style={{
             whiteSpace: 'pre-line',
             fontWeight: 600,
-            color: theme.palette.info.contrastText,
+            color: theme.palette.secondary.dark,
           }}
           repeat={Infinity}
         />

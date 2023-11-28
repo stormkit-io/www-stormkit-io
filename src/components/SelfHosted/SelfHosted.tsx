@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography'
 import Alert from '@mui/material/Alert'
 import AlertTitle from '@mui/material/AlertTitle'
 import Button from '@mui/lab/LoadingButton'
+import { grey } from '@mui/material/colors'
 
 export default function SelfHosted() {
   const [email, setEmail] = useState('')
@@ -15,9 +16,9 @@ export default function SelfHosted() {
   return (
     <Box
       sx={{
-        bgcolor: 'rgba(0,0,0,0.1)',
-        p: 8,
-        border: '1px solid rgba(255,255,255,0.1)',
+        bgcolor: 'rgba(0,0,0,0.3)',
+        p: 10,
+        boxShadow: 12,
       }}
     >
       <Typography

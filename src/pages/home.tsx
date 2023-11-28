@@ -10,6 +10,7 @@ import Pricing from '~/components/Pricing'
 import MainMessage from '~/components/MainMessage'
 import SelfHosted from '~/components/SelfHosted'
 import { useScrollToHash } from '~/helpers/scroll'
+import { grey } from '@mui/material/colors'
 
 const MAX_WIDTH_MD = 600
 
@@ -80,30 +81,14 @@ export default function Home() {
           >
             Start your free trial
           </Button>
-          <Box
-            sx={{
-              maxWidth: MAX_WIDTH_MD,
-              textAlign: 'center',
-              m: 1,
-            }}
-          >
-            <Typography
-              variant="h6"
-              sx={{
-                m: 1,
-                fontWeight: 600,
-                maxWidth: MAX_WIDTH_MD,
-                textAlign: 'center',
-              }}
-            >
-              OR
-            </Typography>
-          </Box>
           <Button
             variant="contained"
-            color="secondary"
+            color="info"
             size="large"
             href="https://cal.com/svedova"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{ ml: 2 }}
           >
             Book a Demo
           </Button>

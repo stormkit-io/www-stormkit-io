@@ -23,7 +23,8 @@ export default function Illustration() {
           flexGrow: 1,
           width: { xs: '100%', md: 'auto' },
           borderRadius: 6,
-          bgcolor: 'rgba(0,0,0,0.2)',
+          bgcolor: 'rgba(0,0,0,0.3)',
+          boxShadow: 12,
         }}
       >
         <IllustrationTechs />

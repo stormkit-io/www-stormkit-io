@@ -21,7 +21,8 @@ export default function MainMessage() {
         maxWidth="768px"
         boxShadow={6}
         sx={{
-          bgcolor: 'rgba(0,0,0,0.1)',
+          bgcolor: 'rgba(0,0,0,0.3)',
+          boxShadow: 12,
           p: 4,
           mx: 'auto',
           textAlign: 'justify',

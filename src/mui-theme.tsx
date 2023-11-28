@@ -5,6 +5,7 @@ import {
   LinkProps as RouterLinkProps,
 } from 'react-router-dom'
 import { LinkProps } from '@mui/material/Link'
+import { grey } from '@mui/material/colors'
 
 const LinkBehavior = React.forwardRef<
   HTMLAnchorElement,
@@ -52,8 +53,8 @@ export default createTheme({
       paper: '#262558',
     },
     info: {
-      main: '#f9f9f9',
-      contrastText: '#B7AE22',
+      main: grey[900],
+      contrastText: grey[100],
     },
   },
   breakpoints: {

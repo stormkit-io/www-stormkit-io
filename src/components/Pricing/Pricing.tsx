@@ -78,7 +78,8 @@ export default function Pricing() {
           mt: { xs: 8, md: 12 },
           mx: 'auto',
           width: '100%',
-          bgcolor: 'rgba(0,0,0,0.1)',
+          bgcolor: 'rgba(0,0,0,0.3)',
+          boxShadow: 12,
         }}
       >
         <PricingSlider onTierChange={(t) => setTier(t)} />

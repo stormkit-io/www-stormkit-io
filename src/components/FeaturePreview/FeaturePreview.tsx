@@ -83,7 +83,7 @@ export default function FeaturePreview() {
             position: 'relative',
           }}
         >
-          Our Features
+          Powerful Features
         </Typography>
         <Typography
           variant="h3"
@@ -137,7 +137,7 @@ export default function FeaturePreview() {
                     borderTopLeftRadius: 12,
                     borderBottomLeftRadius: 12,
                     boxShadow: isActiveFeature ? 12 : 0,
-                    bgcolor: isActiveFeature ? 'rgba(0,0,0,0.25)' : undefined,
+                    bgcolor: isActiveFeature ? 'rgba(0,0,0,0.3)' : undefined,
                     opacity: isActiveFeature ? 1 : 0.7,
                     transition: 'opacity 0.5s ease-in-out',
                     px: { xs: 2, md: 4 },
@@ -198,7 +198,7 @@ export default function FeaturePreview() {
             flex: 1,
             display: 'flex',
             flexDirection: 'column',
-            bgcolor: 'rgba(0,0,0,0.25)',
+            bgcolor: 'rgba(0,0,0,0.3)',
             px: { xs: 2, md: 4 },
             py: 4,
             borderTopRightRadius: 12,

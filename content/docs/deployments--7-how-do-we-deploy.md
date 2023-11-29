@@ -20,8 +20,6 @@ To modify the working directory, navigate to the **Environment Config > Build** 
 
 To specify a different subfolder other than `.stormkit`, visit the **Environment Config > Build** page and update the `Output folder` setting. If changed, the folder structure mentioned above is also validated against this folder. If it differs, the entire content of the directory will be uploaded.
 
-To configure a different subfolder other than `.stormkit`, visit the **Environment Config > Build** page and update the `Output folder` setting. If you change this value, the structure above is also checked against this folder. If it has a different structure, the whole content of the directory will be uploaded.
-
 If the deployment lacks a `.stormkit` subfolder and the output folder isn't specified, Stormkit checks for these common subfolders:
 
 - `out`

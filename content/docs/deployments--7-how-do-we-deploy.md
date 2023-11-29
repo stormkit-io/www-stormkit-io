@@ -3,45 +3,45 @@ title: How does Stormkit deploy?
 description: Information about how Deployments work on Stormkit.
 ---
 
-# How do we deploy?
+# Stormkit Deployment Overview
 
-Stormkit Cloud runs on AWS. Each deployment can contain:
+Stormkit leverages AWS infrastructure for its cloud deployment. Each deployment on Stormkit can encompass three types of files: static files, server files, and API files, all securely stored in our S3 buckets.
 
-1. `Static files`
-2. `Server files`
-3. `API files`
 
-All of these files are securely stored in our S3 buckets.
+## Folder Structure
 
-By default, Stormkit will check for a top-level `.stormkit` subfolder which has the following structure:
+By default, Stormkit looks for a top-level `.stormkit` subfolder with the following structure:
 
 - `public/`
 - `server/`
 - `api/`
 
-If, instead of the `.stormkit` subfolder, a different output folder is configured, the same structure is also checked against that folder.
+To modify the working directory, navigate to the **Environment Config > Build** page and update the `Root Directory` setting.
 
-If the deployment does not contain a `.stormkit` subfolder and the output folder is not specified, Stormkit will check for the following subfolders:
+To specify a different subfolder other than `.stormkit`, visit the **Environment Config > Build** page and update the `Output folder` setting. If changed, the folder structure mentioned above is also validated against this folder. If it differs, the entire content of the directory will be uploaded.
+
+To configure a different subfolder other than `.stormkit`, visit the **Environment Config > Build** page and update the `Output folder` setting. If you change this value, the structure above is also checked against this folder. If it has a different structure, the whole content of the directory will be uploaded.
+
+If the deployment lacks a `.stormkit` subfolder and the output folder isn't specified, Stormkit checks for these common subfolders:
 
 - `out`
 - `output`
 - `dist`
 - `build`
 
-**Note:** If you'd like to change the location `.stormkit` folder, you can do it so configuring the `Root Directory` option in the Environment Settings page.
+If none are found, Stormkit uploads everything under the `Root Directory`.
 
 ## Server files
 
-Inside the `server` subfolder, if one of the following files are located, it'll be considered as the entry point:
+In the `server` subfolder, an entry point is determined by locating one of the following files:
 
 - `index.js`
 - `server.js`
 - `main.js`
 
-These files can also have the `mjs` and `cjs` extensions. If none of them is found, the function will return 404.
+These files can also have the `mjs` and `cjs` extensions. If none are found, the function returns a 404 error.
 
-The entry file has to export a function called `handler`, wrapped by our `serverless` helper to 
-receive a standard Node.js Request and Response objects.
+The entry file must export a function named `handler`, wrapped by our `serverless` helper, to receive standard Node.js Request and Response objects.
 
 ```ts
 import serverless from "@stormkit/serverless";
@@ -56,19 +56,19 @@ export const handler = serverless(
 
 ## API files
 
-Our API files follows the file system routing. You can read more on that in our [dedicated section](/docs/features/writing-api) for API Files.
+Our API files follow the file system routing, as detailed in our [dedicated section](/docs/features/writing-api) for API Files.
 
-Please note that each API file has to be a self-standing file, with a default export similar to the Server entry file:
+Each function should be in a separate file and export a default method:
 
 ```ts
-export const handler = async (req: http.IncomingMessage, res: http.ServerResponse) => {
+export default async (req: http.IncomingMessage, res: http.ServerResponse) => {
     res.write("Hello from " + req.url);
     res.end();
 }
 ```
 
-In this case, the `serverless` wrapper is omitted because the API function has it's own entry file, which performs the routing mechanism and loads the appropriate file.
+In this case, the `serverless` wrapper is omitted because the API function has its own entry file, handling the routing mechanism and loading the appropriate file.
 
 ## Static files
 
-All files under the `.stormkit/public` (or the configured output folder) will be deployed to our S3 bucket and will be served by our Load Balancer.
+All files under the `.stormkit/public` (or the configured output folder) will be deployed to our S3 bucket and served by our Load Balancer as static files.

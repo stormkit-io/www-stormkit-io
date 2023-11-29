@@ -7,7 +7,6 @@ description: Information about how Deployments work on Stormkit.
 
 Stormkit leverages AWS infrastructure for its cloud deployment. Each deployment on Stormkit can encompass three types of files: static files, server files, and API files, all securely stored in our S3 buckets.
 
-
 ## Folder Structure
 
 By default, Stormkit looks for a top-level `.stormkit` subfolder with the following structure:
@@ -70,3 +69,7 @@ In this case, the `serverless` wrapper is omitted because the API function has i
 ## Static files
 
 All files under the `.stormkit/public` (or the configured output folder) will be deployed to our S3 bucket and served by our Load Balancer as static files.
+
+## Example
+
+Check out and build our [React Monorepo Template](https://github.com/stormkit-io/monorepo-template-react) to see an example of the `.stormkit` subfolder.

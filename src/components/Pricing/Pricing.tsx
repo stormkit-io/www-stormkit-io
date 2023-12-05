@@ -29,11 +29,17 @@ const limits: Record<SubscriptionTier, { fns: string; bandwidth: string }> = {
 }
 
 const includedFeatures = [
-  'Unlimited Seats',
+  'Unlimited Team Members',
+  'Snipped Injection',
+  'Cronjobs',
+  'Feature Flag Management',
+  'Custom Storage',
+  'Runtime Logs',
+  'Custom Domains',
   'Unlimited projects',
   (tier: SubscriptionTier) => `${limits[tier].fns} Serverless invocations`,
   (tier: SubscriptionTier) => `${limits[tier].bandwidth} Bandwidth`,
-  'All free tiers',
+  'Unlimited Teams',
   '30 days deployment retention',
   'Discord / Email support',
 ]

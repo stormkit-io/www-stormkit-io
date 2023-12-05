@@ -36,6 +36,8 @@ const includedFeatures = [
   'Custom Storage',
   'Runtime Logs',
   'Custom Domains',
+  'Staged Rollouts',
+  'Deployment Previews',
   'Unlimited projects',
   (tier: SubscriptionTier) => `${limits[tier].fns} Serverless invocations`,
   (tier: SubscriptionTier) => `${limits[tier].bandwidth} Bandwidth`,

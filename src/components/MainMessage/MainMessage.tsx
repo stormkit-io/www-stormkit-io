@@ -23,10 +23,8 @@ export default function MainMessage() {
             Competitive Pricing
           </Typography>
           <Typography sx={{ mb: 2, fontSize: 15 }}>
-            Our pricing model is designed to provide exceptional value, ensuring
-            that organizations not only enjoy a plethora of advanced features
-            but also benefit from a predictable and transparent billing
-            structure.
+            We have few pricing tiers, with clear limits and no add-ons. All features
+            are available to all tiers.
           </Typography>
         </Box>
         <Box sx={{ margin: 5, width: '25%' }}>
@@ -34,15 +32,11 @@ export default function MainMessage() {
             Various Infrastructure Options
           </Typography>
           <Typography sx={{ mb: 2, fontSize: 15 }}>
-            We offer a versatile array of options to cater to diverse business
-            requirements. For those who prefer to keep their infrastructure on
-            premises, we provide a robust on prem option that empowers
-            organizations with the control and security they desire. Our team is
-            committed to guiding clients seamlessly through the setup process,
-            ensuring a smooth transition and optimal integration with existing
-            systems. Moreover, recognizing the importance of brand identity, we
-            offer a white labeling option, enabling businesses to tailor our
-            product to align seamlessly with their unique brand aesthetics.
+            For those who prefer to keep their infrastructure on premises, we
+            provide a robust on prem option that empowers organizations with the
+            control and security they desire. Moreover, we offer a white
+            labeling option, enabling businesses to tailor our product to align
+            seamlessly with their needs.
           </Typography>
         </Box>
         <Box sx={{ margin: 5, width: '25%' }}>
@@ -50,7 +44,7 @@ export default function MainMessage() {
             Empowering Flexibility
           </Typography>
           <Typography sx={{ mb: 2, fontSize: 15 }}>
-            As a proud bootstrapped company, we possess the unique advantage of
+            As a bootstrapped company, we possess the unique advantage of
             prioritizing your needs above all else. Should you not find a
             pricing package that perfectly aligns with your requirements or if
             you're seeking specific features tailored to your product, we can
@@ -62,41 +56,28 @@ export default function MainMessage() {
             Unleash Flexibility Across Leading CDNs
           </Typography>
           <Typography sx={{ mb: 2, fontSize: 15 }}>
-            Stormkit offers unparalleled flexibility in code deployment. With
-            our platform, users can effortlessly upload their code to various
-            providers, including industry giants like Bunny CDN and AWS S3. This
-            flexibility enables you to seamlessly host your code through
-            different Content Delivery Networks (CDNs), providing a dynamic
-            approach to content delivery based on your specific needs. Whether
-            you prioritize the global reach of Bunny CDN or the scalability of
-            S3, Stormkit empowers you to choose the hosting provider that aligns
-            perfectly with your performance, geographic, and budgetary
-            requirements.
+            With Stormkit, users can effortlessly upload their code to various
+            providers, including industry giants like Bunny CDN and AWS S3.
           </Typography>
         </Box>
         <Box sx={{ margin: 5, width: '25%' }}>
           <Typography sx={{ mb: 2, fontSize: 20, fontWeight: 'bold' }}>
-            Simplicity Redefined for Fullstack JavaScript{' '}
+            No Vendor Lock In
           </Typography>
           <Typography sx={{ mb: 2, fontSize: 15 }}>
-            With our meticulously crafted templates using ViteJS, you can
-            kickstart your projects effortlessly. By embracing dependencies over
-            monolithic frameworks, our templates empower developers to curate a
-            tailored stack that precisely aligns with project requirements. This
-            flexibility not only reduces unnecessary code and optimizes
-            performance but also allows for a more scalable and maintainable
-            codebase.
+            Every feature in our offering is crafted with the explicit aim of
+            ensuring users are not bound to any particular vendor or proprietary
+            technology.
           </Typography>
         </Box>
         <Box sx={{ margin: 5, width: '25%' }}>
           <Typography sx={{ mb: 2, fontSize: 20, fontWeight: 'bold' }}>
-            Easy of Use
+            Strong Feature Set
           </Typography>
           <Typography sx={{ mb: 2, fontSize: 15 }}>
-            At Stormkit, user experience is at the forefront of our design
-            philosophy. We have meticulously crafted our system to be
-            exceptionally user friendly, ensuring that every feature is not only
-            easily accessible but also intuitively discoverable.
+            Our platform is equipped with a powerful array of tools, ensuring
+            that developers have everything they require to build, deploy, and
+            scale applications seamlessly.
           </Typography>
         </Box>
       </Box>

@@ -10,7 +10,6 @@ import Pricing from '~/components/Pricing'
 import MainMessage from '~/components/MainMessage'
 import SelfHosted from '~/components/SelfHosted'
 import { useScrollToHash } from '~/helpers/scroll'
-import { grey } from '@mui/material/colors'
 
 const MAX_WIDTH_MD = 600
 
@@ -48,7 +47,7 @@ export default function Home() {
             textAlign: 'center',
           }}
         >
-          Full-stack Javascript apps. Deployed to the Cloud.
+          Full stack Javascript apps. Deployed to the Cloud.
         </Typography>
         <Typography
           variant="h2"
@@ -61,7 +60,7 @@ export default function Home() {
             opacity: 0.7,
           }}
         >
-          Effortlessly launch your full-stack JavaScript application within
+          Effortlessly launch your full stack JavaScript applications within
           minutes and shift your focus to what matters most, your application
           itself. Leverage our powerful suite of tools to enhance your
           development process.
@@ -135,7 +134,7 @@ export default function Home() {
         sx={{
           width: '100%',
           mx: 'auto',
-          mt: { xs: 8, md: 24 },
+          mt: { xs: 8, md: 12 },
         }}
       >
         <Pricing />
@@ -143,11 +142,10 @@ export default function Home() {
 
       <Box
         maxWidth="lg"
-        id="why-free-trial"
         sx={{
           width: '100%',
           mx: 'auto',
-          mt: { xs: 6, md: 24 },
+          mt: { xs: 3, md: 8 },
           mb: { xs: 6, md: 24 },
         }}
       >

@@ -18,6 +18,9 @@
     "build:api": "rm -rf .stormkit/api && node --loader ts-node/esm vite.config.api.ts"
   },
   "dependencies": {
+    "@tarekraafat/autocomplete.js": "^10.2.7",
+    "fuse.js": "^7.0.0",
+    "minisearch": "^6.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "recharts": "^2.10.3"

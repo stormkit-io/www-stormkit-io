@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTheme } from '@mui/material/styles'
 import IconButton from '@mui/material/IconButton'
 import Box from '@mui/material/Box'
@@ -10,16 +10,34 @@ import {
   Twitter,
   GitHub,
   Login,
-  LinkedIn
+  LinkedIn,
 } from '@mui/icons-material'
 import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
 import DiscordLogo from '~/assets/images/discord.svg'
+import SearchComponent from './SearchSuggestions'
+import Minisearch from 'minisearch'
 
 interface Props {
   maxWidth?: string
 }
 
 let lastWidth: string = 'lg'
+const documents = [
+  {
+    id: 1,
+    title: 'Moby Dick',
+    text: 'Call me Ishmael. Some years ago...',
+    category: 'fiction',
+  },
+  {
+    id: 2,
+    title: 'Zen and the Art of Motorcycle Maintenance',
+    text: 'I can see by my watch...',
+    category: 'fiction',
+  },
+]
+
+
 
 const links = [
   { path: '/#pricing', text: 'pricing' },
@@ -88,7 +106,24 @@ const links = [
 export default function Header({ maxWidth = lastWidth }: Props) {
   const theme = useTheme()
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
+  const [miniSearch, setMiniSearch] = useState<Minisearch | null>(null)
+
   lastWidth = maxWidth
+
+  useEffect(() => {
+    const obj = new Minisearch({
+      fields: ['title', 'text'], // fields to index for full-text search
+      storeFields: ['title', 'category'], // fields to return with search results
+    })
+
+    if (obj === undefined) {
+      console.log("undefined obj")
+    }
+    // const newMiniSearch = new Minisearch()
+    obj.addAll(documents)
+    console.log('here')
+    setMiniSearch(obj)
+  }, [])
 
   return (
     <Box
@@ -98,6 +133,19 @@ export default function Header({ maxWidth = lastWidth }: Props) {
         px: { xs: 1, md: 0 },
       }}
     >
+      <Box
+        maxWidth={maxWidth}
+        sx={{
+          m: 'auto',
+          py: 2,
+          px: maxWidth === 'none' ? { xs: 1, md: 4 } : 0,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+      >
+        <SearchComponent miniSearch={miniSearch}></SearchComponent>
+      </Box>
       <Box
         maxWidth={maxWidth}
         sx={{

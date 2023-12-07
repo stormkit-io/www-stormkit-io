@@ -12,57 +12,75 @@ export default function MainMessage() {
           textAlign: 'center',
           overflow: 'hidden',
           position: 'relative',
-          paddingBottom: 5,
+          mb: 6,
+          mt: 12,
         }}
       >
         Why Stormkit?
       </Typography>
-      <Box display="flex" flexWrap="wrap" width="100%">
-        <Box sx={{ margin: 5, width: '25%' }}>
+      <Box
+        sx={{
+          bgcolor: 'rgba(0,0,0,0.3)',
+          p: 8,
+          borderLeft: '3px solid white',
+          mb: 6,
+        }}
+      >
+        Stormkit is for teams seeking <b>full control</b> over their
+        infrastructure, a <b>predictable pricing model</b>, freedom from vendor
+        lock-in, and the capability to build and manage modern frontend stacks.
+      </Box>
+      <Box
+        sx={{
+          width: '100%',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+          columnGap: 10,
+          rowGap: 5,
+        }}
+      >
+        <Box>
           <Typography sx={{ mb: 2, fontSize: 20, fontWeight: 'bold' }}>
             Competitive Pricing
           </Typography>
           <Typography sx={{ mb: 2, fontSize: 15 }}>
-            We have few pricing tiers, with clear limits and no add-ons. All features
-            are available to all tiers.
+            Our pricing model is transparent. We offer a few pricing tiers, with
+            clear limits and no add-ons. All features are available to every
+            tier.
           </Typography>
         </Box>
-        <Box sx={{ margin: 5, width: '25%' }}>
+        <Box>
           <Typography sx={{ mb: 2, fontSize: 20, fontWeight: 'bold' }}>
-            Various Infrastructure Options
+            Private Cloud
           </Typography>
           <Typography sx={{ mb: 2, fontSize: 15 }}>
-            For those who prefer to keep their infrastructure on premises, we
-            provide a robust on prem option that empowers organizations with the
-            control and security they desire. Moreover, we offer a white
-            labeling option, enabling businesses to tailor our product to align
-            seamlessly with their needs.
+            We offer support for integrating Stormkit into your Private Cloud.
+            Experience the benefits of a modern stack while maintaining maximum
+            control for your enterprise.
           </Typography>
         </Box>
-        <Box sx={{ margin: 5, width: '25%' }}>
+        <Box>
           <Typography sx={{ mb: 2, fontSize: 20, fontWeight: 'bold' }}>
-            Empowering Flexibility
+            Personal Service
           </Typography>
           <Typography sx={{ mb: 2, fontSize: 15 }}>
-            As a bootstrapped company, we possess the unique advantage of
-            prioritizing your needs above all else. Should you not find a
-            pricing package that perfectly aligns with your requirements or if
-            you're seeking specific features tailored to your product, we can
-            work with you to reach desired outcome.
+            As a bootstrapped company, we prioritize your needs. If our standard
+            pricing or features don't align with your requirements, we'll
+            collaborate with you to achieve the desired outcome.
           </Typography>
         </Box>
-        <Box sx={{ margin: 5, width: '25%' }}>
+        <Box>
           <Typography sx={{ mb: 2, fontSize: 20, fontWeight: 'bold' }}>
-            Unleash Flexibility Across Leading CDNs
+            Custom storage
           </Typography>
           <Typography sx={{ mb: 2, fontSize: 15 }}>
             With Stormkit, users can effortlessly upload their code to various
-            providers, including industry giants like Bunny CDN and AWS S3.
+            providers like Bunny CDN and AWS S3.
           </Typography>
         </Box>
-        <Box sx={{ margin: 5, width: '25%' }}>
+        <Box>
           <Typography sx={{ mb: 2, fontSize: 20, fontWeight: 'bold' }}>
-            No Vendor Lock In
+            No Vendor Lock-In
           </Typography>
           <Typography sx={{ mb: 2, fontSize: 15 }}>
             Every feature in our offering is crafted with the explicit aim of
@@ -70,7 +88,7 @@ export default function MainMessage() {
             technology.
           </Typography>
         </Box>
-        <Box sx={{ margin: 5, width: '25%' }}>
+        <Box>
           <Typography sx={{ mb: 2, fontSize: 20, fontWeight: 'bold' }}>
             Strong Feature Set
           </Typography>

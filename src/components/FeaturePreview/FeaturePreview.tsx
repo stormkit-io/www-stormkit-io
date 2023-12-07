@@ -9,7 +9,7 @@ import AnimationStagedRollout from './AnimationStagedRollout'
 import AnimationSnippetInjection from './AnimationSnippetInjection'
 import AnimationFeatureFlag from './AnimationFeatureFlag'
 import AnimationAPIRoutes from './AnimationAPIRoutes'
-import AnimationCustomStorage from './AnimationCustomStorage'
+import AnimationAnalytics from './AnimationAnalytics'
 
 let i = 0
 const texts = ['an Indiehacker?', 'a Small Startup?']
@@ -18,6 +18,15 @@ const features = [
   {
     title: 'Deployment previews',
     subtitle: 'Preview your deployments right from your pull/merge requests.',
+  },
+  {
+    title: 'Web Analytics',
+    subtitle:
+      'Simple, privacy-friendly, automatic setup and powerful analytics for web teams',
+  },
+  {
+    title: 'API routes',
+    subtitle: 'Manage your Node.js serverless API using file-system routing.',
   },
   {
     title: 'Staged rollouts',
@@ -32,15 +41,6 @@ const features = [
   {
     title: 'Feature flags',
     subtitle: 'Toggle features with a simple click.',
-  },
-  {
-    title: 'API Routes',
-    subtitle:
-      'Manage your Node.js serverless API from the same code repository.',
-  },
-  {
-    title: 'Custom Storage',
-    subtitle: 'Deploy your front end code to different targets',
   },
 ]
 
@@ -215,11 +215,11 @@ export default function FeaturePreview() {
             }}
           >
             {activeFeature === 0 && <AnimationDeploymentPreview />}
-            {activeFeature === 1 && <AnimationStagedRollout />}
-            {activeFeature === 2 && <AnimationSnippetInjection />}
-            {activeFeature === 3 && <AnimationFeatureFlag />}
-            {activeFeature === 4 && <AnimationAPIRoutes />}
-            {activeFeature === 5 && <AnimationCustomStorage />}
+            {activeFeature === 1 && <AnimationAnalytics />}
+            {activeFeature === 2 && <AnimationAPIRoutes />}
+            {activeFeature === 3 && <AnimationStagedRollout />}
+            {activeFeature === 4 && <AnimationSnippetInjection />}
+            {activeFeature === 5 && <AnimationFeatureFlag />}
           </Box>
           <Box
             sx={{

@@ -53,7 +53,7 @@ export default function AnimationDeploymentPreview() {
             to preview it.
             <br />
             <Link
-              href="https://monorepo.stormkit.dev"
+              href="https://monorepo-template-react.stormkit.dev/"
               target="_blank"
               rel="noopener noreferrer"
               sx={{ color: 'white' }}

@@ -9,6 +9,10 @@ Follow the latest developments on Stormkit.
 
 Introducing [Web Analytics](/docs/features/analytics). Simple, privacy-friendly, automatic setup and powerful.
 
+## November 28th, 2023
+
+Announcing advanced [Teams](/docs/features/teams-and-roles) for a seamless collaboration.
+
 ## September 18th, 2023
 
 We now have a better design for redirects. We also introduced proxies. You can define them from your [redirects.json](/docs/features/redirects-and-path-rewrites) file.

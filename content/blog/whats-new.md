@@ -5,6 +5,10 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## December 7th, 2023
+
+Introducing [Web Analytics](/docs/features/analytics). Simple, privacy-friendly, automatic setup and powerful.
+
 ## September 18th, 2023
 
 We now have a better design for redirects. We also introduced proxies. You can define them from your [redirects.json](/docs/features/redirects-and-path-rewrites) file.

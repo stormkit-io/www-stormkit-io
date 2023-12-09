@@ -10,9 +10,10 @@
   },
   "private": true,
   "scripts": {
-    "dev": "NODE_NO_WARNINGS=1 nodemon --watch './src/vite-server.ts' --exec 'node --loader ts-node/esm' src/vite-server.ts",
-    "build": "npm run build:spa && npm run build:ssr && npm run build:ssg && rm -rf .stormkit/server && npm run build:api",
+    "dev": "NODE_NO_WARNINGS=1 node generateDocs && nodemon --watch './src/vite-server.ts' --exec 'node --loader ts-node/esm' src/vite-server.ts ",
+    "build": "npm run build-docs && npm run build:spa && npm run build:ssr && npm run build:ssg && rm -rf .stormkit/server && npm run build:api",
     "build:spa": "tsc && vite build",
+    "build-docs": "node generateDocs.js",
     "build:ssg": "tsc && SSG=true node --loader ts-node/esm ./src/vite-server.ts",
     "build:ssr": "tsc && vite build -c vite.config.ssr.ts",
     "build:api": "rm -rf .stormkit/api && node --loader ts-node/esm vite.config.api.ts"
@@ -37,6 +38,7 @@
     "@types/markdown-it": "^12.2.3",
     "@types/node": "^18.18.5",
     "@types/react": "^18.2.28",
+    "@types/react-autosuggest": "^10.1.10",
     "@types/react-dom": "^18.2.13",
     "@vitejs/plugin-react": "^3.1.0",
     "dotenv": "^16.3.1",

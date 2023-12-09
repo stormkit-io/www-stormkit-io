@@ -1,6 +1,6 @@
 ---
 title: Auto Deployments
-description: Deploy your applications automatically using Stormkit.
+description: Deploy your code automatically when its merged.
 ---
 
 # Auto deployments

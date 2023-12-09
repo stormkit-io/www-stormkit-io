@@ -1,6 +1,6 @@
 ---
 title: System environment variables
-description: Information about our system environment variables that are injected during deployments.
+description: Predefined system environment variables that are injected during deployments.
 ---
 
 # System environment variables
@@ -9,7 +9,7 @@ Stormkit injects several environment variables available to your deployment.
 
 <section>
 
-| Variable         | Description  | 
+| Variable         | Description  |
 | ---------------- | ------------ |
 | `SK_APP_ID`      | The application ID which is currently being deployed. <br/> Example: `3289604702` |
 | `SK_BRANCH_NAME` | The branch name which is currently being deployed. <br /> Example: `main` |

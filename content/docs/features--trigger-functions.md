@@ -1,19 +1,19 @@
 ---
 title: Trigger functions
-description: Use Stormkit Trigger Functions to set periodic tasks. 
+description: Use Stormkit Trigger Functions to set cron tasks. You can invoke your api endpoints with given period
 ---
 
 # Trigger functions (beta)
 
 <section>
 
-Use Stormkit Trigger Functions to set periodic tasks. 
+Use Stormkit Trigger Functions to set periodic tasks.
 
 <div>
 This feature is behind a feature flag. To activate it, go to <strong>Your application</strong> > <strong>Feature Flags</strong> and create a feature flag called <strong><code>SK_TRIGGER_FUNCTION</code></strong>. Enable it and refresh the page.
 </div>
 
-Trigger Functions can only be called on your [API endpoints](/docs/features/writing-api). 
+Trigger Functions can only be called on your [API endpoints](/docs/features/writing-api).
 
 To set up a Trigger Function:
 
@@ -23,6 +23,6 @@ To set up a Trigger Function:
 4. Fill the inputs in the modal
 5. Click on **Create** button
 
-This will call the API endpoint with the specified cron periodicity. The timezone is **UTC**. 
+This will call the API endpoint with the specified cron periodicity. The timezone is **UTC**.
 
 </section>

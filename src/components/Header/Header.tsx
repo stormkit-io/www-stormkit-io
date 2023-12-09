@@ -3,6 +3,8 @@ import { useTheme } from '@mui/material/styles'
 import IconButton from '@mui/material/IconButton'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
+import data from '../../search-docs.json'
+
 import {
   ArrowRightAlt,
   Menu,
@@ -22,22 +24,6 @@ interface Props {
 }
 
 let lastWidth: string = 'lg'
-const documents = [
-  {
-    id: 1,
-    title: 'Moby Dick',
-    text: 'Call me Ishmael. Some years ago...',
-    category: 'fiction',
-  },
-  {
-    id: 2,
-    title: 'Zen and the Art of Motorcycle Maintenance',
-    text: 'I can see by my watch...',
-    category: 'fiction',
-  },
-]
-
-
 
 const links = [
   { path: '/#pricing', text: 'pricing' },
@@ -112,16 +98,10 @@ export default function Header({ maxWidth = lastWidth }: Props) {
 
   useEffect(() => {
     const obj = new Minisearch({
-      fields: ['title', 'text'], // fields to index for full-text search
-      storeFields: ['title', 'category'], // fields to return with search results
+      fields: ['title', 'description'], // fields to index for full-text search
+      storeFields: ['title', 'description', 'url'], // fields to return with search results
     })
-
-    if (obj === undefined) {
-      console.log("undefined obj")
-    }
-    // const newMiniSearch = new Minisearch()
-    obj.addAll(documents)
-    console.log('here')
+    obj.addAll(data)
     setMiniSearch(obj)
   }, [])
 

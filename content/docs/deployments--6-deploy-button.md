@@ -1,6 +1,6 @@
 ---
 title: Deploy Your Project with Stormkit
-description: Use deploy by Stormkit button in your repository to allow other users up and running quickly.
+description: How to trigger on demand deployment.
 ---
 
 # Deploy Your Project with Stormkit

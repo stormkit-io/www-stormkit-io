@@ -20,7 +20,9 @@ lib-cov
 coverage
 
 # generated file
-src/search-docs.json
+*/search-docs.json
+/src/search-docs.json
+
 # nyc test coverage
 .nyc_output
 

@@ -1,6 +1,6 @@
 ---
 title: Deployment configuration
-description: Deploy your applications using Stormkit.
+description: How to configure Stormkit to deploy your applications.
 ---
 
 # Configuration

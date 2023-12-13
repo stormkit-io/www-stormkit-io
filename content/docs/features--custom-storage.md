@@ -1,6 +1,7 @@
 ---
 title: Deploying your frontend application to different CDN providers
 description:  Learn how to use our new feature to deploy your application to various CDN providers, such as Bunny CDN and CloudFront via S3.
+keywords: custom storage
 ---
 
 # Custom Storage

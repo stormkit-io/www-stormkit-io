@@ -1,6 +1,6 @@
 ---
 title: API
-description: Write node.js/typescript serverless API using Stormkit.
+description: How to create api endpoints using Stormkit. API end points will be deployed to aws lambda.
 ---
 
 # Writing APIs

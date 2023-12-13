@@ -26,7 +26,7 @@ export default function DocTitle() {
         color: theme.palette.primary.contrastText,
       }}
     >
-      <Header maxWidth="none" />
+      <Header search={navigation} />
       <ImageOverlay content={content} navigation={navigation} />
       <Box
         maxWidth="none"

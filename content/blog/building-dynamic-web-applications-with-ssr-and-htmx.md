@@ -2,6 +2,7 @@
 title: Building Dynamic Web Applications with SSR, Htmx and Handlebars.js
 date: 2023-11-09
 description: Learn how to create interactive web applications using Server-Side Rendering (SSR), htmx for seamless AJAX interactions, and Handlebars.js for dynamic templating.
+search: true
 ---
 
 

@@ -23,14 +23,22 @@ export const fetchData: FetchDataFunc = async ({ title }: Params) => {
       foundFile = file
     }
 
-    const { description, date, subtitle, authorImg, authorName, authorTw } =
-      parseAttributes(await files[file]())
+    const {
+      description,
+      date,
+      subtitle,
+      authorImg,
+      authorName,
+      authorTw,
+      search,
+    } = parseAttributes(await files[file]())
 
     navigation.push({
       path: fileName,
       title: toTitleCase(fileName.split('--')[0].replace(/-/g, ' ')),
       subtitle,
       description,
+      search: search === 'true',
       date,
       active: foundFile === file,
       author:

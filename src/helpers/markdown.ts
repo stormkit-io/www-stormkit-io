@@ -17,11 +17,13 @@ export interface Attributes {
   subtitle?: string
   date?: string // yyyy-mm-dd
   description?: string
+  keywords?: string
   category?: string
   draft?: string
   authorName?: string
   authorTw?: string // Twitter handle
   authorImg?: string // URL to profile picture
+  search?: string // Whether to include as a resource in the search modal or not
 }
 
 export const parseAttributes = (

@@ -30,7 +30,7 @@ export default function BlogContent() {
         color: theme.palette.primary.contrastText,
       }}
     >
-      <Header maxWidth="lg" />
+      <Header />
       <ImageOverlay content={content} navigation={navigation} />
       <Box
         maxWidth="none"

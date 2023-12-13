@@ -2,6 +2,7 @@
 title: How to create and deploy documentation page using nuxt.js and Stormkit under 5 minutes
 description: Learn how to create a website in under 5 minutes with this step-by-step guide.
 date: 2022-09-23
+search: true
 ---
 
 This post will show you how to create a content page in under 5 minutes.

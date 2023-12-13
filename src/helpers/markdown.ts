@@ -86,16 +86,23 @@ export function withContent(
   const params = useParams()
   const [nav, setNav] = useState<NavigationItem[]>(context.navigation || [])
   const [content, setContent] = useState<string>(context.content || '')
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    setLoading(true)
+
     fetchData({
       title: params.title || options?.defaultTitle || '',
       category: params.category || options?.defaultCategory || '',
-    }).then((res) => {
-      setNav(res.context.navigation)
-      setContent(res.context.content)
-      setIsClientSide(true)
     })
+      .then((res) => {
+        setNav(res.context.navigation)
+        setContent(res.context.content)
+        setIsClientSide(true)
+      })
+      .finally(() => {
+        setLoading(false)
+      })
   }, [params])
 
   const markdownContent = useMemo(() => {
@@ -114,5 +121,5 @@ export function withContent(
     }
   }, [content, isClientSide])
 
-  return { content: markdownContent, navigation: nav }
+  return { content: markdownContent, navigation: nav, loading }
 }

@@ -1,6 +1,7 @@
-import React, { useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import Minisearch from 'minisearch'
 import Chip from '@mui/material/Chip'
+import LinearProgress from '@mui/material/LinearProgress'
 import ArrowForward from '@mui/icons-material/ArrowForwardIos'
 import Typography from '@mui/material/Typography'
 import Modal from '@mui/material/Modal'
@@ -111,7 +112,7 @@ function SearchRow({ title, subtitle, match, path, onClick }: SearchRowProps) {
 }
 
 export default function DocSearchModal({ onClose }: Props) {
-  const { navigation } = withContent(fetchData)
+  const { navigation, loading } = withContent(fetchData)
   const [suggestions, setSuggestions] = useState<Suggestion[]>([])
   const [text, setText] = useState('')
 
@@ -202,10 +203,11 @@ export default function DocSearchModal({ onClose }: Props) {
             >
               Resources
             </Typography>
+            {loading && <LinearProgress color="secondary" />}
             {resources.map((item) => (
               <SearchRow
                 key={item.path}
-                path={item.path}
+                path={`/blog/${item.path}`}
                 title={item.title}
                 subtitle={item.description!}
                 onClick={() => {

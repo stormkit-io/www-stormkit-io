@@ -26,7 +26,7 @@ export default function BlogContent() {
         color: theme.palette.primary.contrastText,
       }}
     >
-      <Header maxWidth="lg" />
+      <Header />
       <Box
         maxWidth="lg"
         sx={{

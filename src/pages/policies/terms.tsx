@@ -32,7 +32,7 @@ export default function Terms() {
         color: theme.palette.primary.contrastText,
       }}
     >
-      <Header maxWidth="lg" />
+      <Header />
       <Box
         sx={{
           flex: 1,

@@ -28,6 +28,11 @@ async function createServer() {
     appType: 'custom',
   })
 
+  // Generate docs
+  const { default: docs } = await vite.ssrLoadModule('./src/generate-docs')
+
+  docs()
+
   // use vite's connect instance as middleware
   // if you use your own express router (express.Router()), you should use router.use
   app.use(vite.middlewares)

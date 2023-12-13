@@ -1,4 +1,3 @@
-import { useMemo } from 'react'
 import { useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
@@ -12,6 +11,7 @@ export interface NavigationItem {
   description?: string
   date?: string
   active: boolean
+  search?: boolean
   author?: {
     name: string
     img: string
@@ -23,16 +23,15 @@ interface Props {
   items?: NavigationItem[]
 }
 
+const categories = ['Welcome', 'Deployments', 'Features']
+
 export default function DocsNav({ items }: Props) {
   const theme = useTheme()
-  const categories = useMemo(() => {
-    return ['Welcome', 'Deployments', 'Features']
-  }, [])
 
   return (
     <Box
       sx={{
-        bgcolor: 'rgba(0,0,0,0.25)',
+        bgcolor: 'rgba(0,0,0,0.3)',
         py: 4,
         minWidth: 300,
       }}

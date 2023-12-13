@@ -2,6 +2,7 @@
 title: Unlocking dynamic web interactions with htmx
 description: Unlock the potential of htmx, a lightweight JavaScript library for dynamic web interactions. Simplify AJAX requests, page updates, and DOM manipulation with ease. See how htmx integrates seamlessly with server-side rendering.
 date: 2023-11-02
+search: true
 ---
 
 

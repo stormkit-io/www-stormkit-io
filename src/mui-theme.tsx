@@ -33,6 +33,17 @@ export default createTheme({
         },
       },
     },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          color: 'white',
+          border: `1px solid transparent`,
+          '&.Mui-focused': {
+            border: `1px solid ${grey[500]}`,
+          },
+        },
+      },
+    },
   },
   palette: {
     mode: 'dark',

@@ -2,6 +2,7 @@
 title: Why we are dropping support for Next.js
 description: In our continuous pursuit of delivering the best developer experience, we've made a bold decision. We're dropping serverless support for Next.js.
 date: 2023-05-21
+search: true
 ---
 
 In our continuous pursuit of delivering the best developer experience, we've made a bold decision. We're dropping serverless support for Next.js. While this framework has its merits, we believe that simplicity and maintainability are paramount for us as a bootstrapped company. In this blog post, we'll explain the reasons behind our choice and shed light on our vision for the future.

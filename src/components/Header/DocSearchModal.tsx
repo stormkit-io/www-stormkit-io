@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import Minisearch from 'minisearch'
 import Chip from '@mui/material/Chip'
 import ArrowForward from '@mui/icons-material/ArrowForwardIos'
@@ -43,22 +43,26 @@ function Highlight({ highlight, text }: HighlightProps) {
   )
 
   if (!highlight || highlight.length < 3) {
-    return text
+    return <>text</>
   }
 
   const lcHighlight = highlight.toLowerCase()
 
-  return parts.map((part: string, index: number) => (
-    <Typography component="span" key={`${part}-${index}`}>
-      {part.toLowerCase().indexOf(lcHighlight) > -1 ? (
-        <Typography component="span" sx={{ color: purple[500] }}>
-          {part}
+  return (
+    <>
+      {parts.map((part: string, index: number) => (
+        <Typography component="span" key={`${part}-${index}`}>
+          {part.toLowerCase().indexOf(lcHighlight) > -1 ? (
+            <Typography component="span" sx={{ color: purple[500] }}>
+              {part}
+            </Typography>
+          ) : (
+            part
+          )}
         </Typography>
-      ) : (
-        part
-      )}
-    </Typography>
-  ))
+      ))}
+    </>
+  )
 }
 
 interface SearchRowProps {

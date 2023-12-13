@@ -43,7 +43,7 @@ function Highlight({ highlight, text }: HighlightProps) {
   )
 
   if (!highlight || highlight.length < 3) {
-    return <>text</>
+    return <>{text}</>
   }
 
   const lcHighlight = highlight.toLowerCase()

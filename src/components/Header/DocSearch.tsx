@@ -7,19 +7,11 @@ import CMDKey from '@mui/icons-material/KeyboardCommandKey'
 import { grey } from '@mui/material/colors'
 import DocSearchModal from './DocSearchModal'
 
-let registered = false
-
 export default function DocSearch() {
   const [focused, setFocused] = useState(false)
 
   useEffect(() => {
-    if (registered) {
-      return
-    }
-
-    registered = true
-
-    document.addEventListener('keydown', function (e) {
+    const listener = function (e: any) {
       // Check if CMD (Mac) or CTRL (Windows) key is pressed
       const isCmdOrCtrlPressed = e.metaKey || e.ctrlKey
       const isKKeyPressed = e.key === 'k'
@@ -27,8 +19,14 @@ export default function DocSearch() {
       if (isCmdOrCtrlPressed && isKKeyPressed) {
         setFocused(true)
       }
-    })
-  }, [])
+    }
+
+    document.addEventListener('keydown', listener)
+
+    return () => {
+      document.removeEventListener('keydown', listener)
+    }
+  }, [setFocused])
 
   return (
     <Box

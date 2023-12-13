@@ -88,6 +88,21 @@ async function createServer() {
   })
 }
 
+async function generateDocs() {
+  // Create Vite server to load the routes files
+  const vite = await createViteServer({
+    server: { middlewareMode: true },
+    appType: 'custom',
+  })
+
+  // Generate docs
+  const { default: docs } = await vite.ssrLoadModule('./src/generate-docs')
+
+  docs()
+
+  await vite.close()
+}
+
 interface Prerender {
   route: string
   title?: string
@@ -163,6 +178,9 @@ async function generateStaticPages() {
   if (process.env.SSG === 'true') {
     console.info('Detected SSG=true - generating static routes...')
     await generateStaticPages()
+  } else if (process.env.DOCS === 'true') {
+    console.info('Detected DOCS=true - generating docs...')
+    await generateDocs()
   } else {
     createServer()
   }

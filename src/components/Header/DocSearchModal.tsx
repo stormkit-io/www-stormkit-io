@@ -129,8 +129,8 @@ export default function DocSearchModal({ onClose }: Props) {
     >
       <Box
         sx={{
-          width: 600,
-          height: 450,
+          width: { xs: '100%', md: 600 },
+          height: { xs: '100%', md: 450 },
           m: 'auto',
           bgcolor: 'black',
           overflow: 'auto',

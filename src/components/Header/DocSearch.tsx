@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField'
 import Box from '@mui/material/Box'
 import Chip from '@mui/material/Chip'
 import CMDKey from '@mui/icons-material/KeyboardCommandKey'
+import { grey } from '@mui/material/colors'
 import DocSearchModal from './DocSearchModal'
 
 let registered = false
@@ -36,9 +37,16 @@ export default function DocSearch() {
         display: 'flex',
         justifyContent: 'flex-end',
         position: 'relative',
+        width: { xs: '100%', md: 'auto' },
       }}
     >
-      <Box>
+      <Box
+        sx={{
+          p: { xs: 2, md: 0 },
+          borderBottom: { xs: `1px solid ${grey[900]}`, md: 'none' },
+          width: { xs: '100%', md: 'auto' },
+        }}
+      >
         <TextField
           placeholder="Search docs"
           autoComplete="off"
@@ -47,7 +55,8 @@ export default function DocSearch() {
           onClick={() => setFocused(true)}
           sx={{
             userSelect: 'none',
-            width: '200',
+            minWidth: '200px',
+            width: { xs: '100%', md: 'auto' },
           }}
           InputProps={{
             startAdornment: <SearchIcon sx={{ mx: 1, fontSize: 14 }} />,

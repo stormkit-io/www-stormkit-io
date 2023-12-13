@@ -99,10 +99,12 @@ export default function Header({ search = [] }: Props) {
           justifyContent: 'space-between',
         }}
       >
-        <Box sx={{ minWidth: 300 }}>
-          <Link href="/" sx={{ display: 'block', width: 130 }}>
-            <img src={StormkitLogoText} alt="Stormkit Logo" width="100%" />
-          </Link>
+        <Box sx={{ minWidth: 300, display: 'flex', flex: { xs: 1, md: 0 } }}>
+          <Box sx={{ flex: 1 }}>
+            <Link href="/" sx={{ display: 'block', width: 130 }}>
+              <img src={StormkitLogoText} alt="Stormkit Logo" width="100%" />
+            </Link>
+          </Box>
           <IconButton
             sx={{ display: { md: 'none' } }}
             onClick={() => setIsMenuOpen(true)}
@@ -151,7 +153,15 @@ export default function Header({ search = [] }: Props) {
             </IconButton>
           </Box>
           {search.length ? <DocSearch /> : ''}
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column', md: 'row' },
+              alignItems: 'center',
+              width: { xs: '100%', md: 'auto' },
+              height: { xs: '100%', md: 'auto' },
+            }}
+          >
             {links.map((link) => (
               <Link
                 key={link.path}

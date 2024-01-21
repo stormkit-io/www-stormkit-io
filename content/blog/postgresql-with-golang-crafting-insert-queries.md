@@ -6,7 +6,7 @@ date: 2024-01-21
 
 In this blog post, we will show how we are creating insert queries for PostgreSQL using Golang's text/template package. By sidestepping the abstractions of ORM and query builders, we'll explore how this approach provides greater flexibility, control and a deeper understanding of the underlying database interactions.
 
-ORM solutions, such as Gorm abstract away the complexities of SQL queries, enabling developers to interact with databases using familiar programming constructs like structs and methods. Here is a small example
+ORM solutions, such as [Gorm](https://gorm.io/index.html) abstract away the complexities of SQL queries, enabling developers to interact with databases using familiar programming constructs like structs and methods. Here is a small example
 
 ```go
 type User struct {
@@ -28,7 +28,7 @@ func main() {
 }
 ```
 
-On the other hand, query builders exemplified by libraries like sqlx or squirrel, offer a middle ground. They provide a programmatic interface to construct SQL queries dynamically, allowing developers to build queries in a more structured way compared to raw SQL strings.
+On the other hand, query builders exemplified by libraries like [sqlx](https://github.com/jmoiron/sqlx) or [squirrel](https://github.com/Masterminds/squirrel), offer a middle ground. They provide a programmatic interface to construct SQL queries dynamically, allowing developers to build queries in a more structured way compared to raw SQL strings.
 
 ```go
 //you need to annotate your struct
@@ -75,7 +75,7 @@ They both have advantages and disadvantages, in Stormkit we use neither of ORM o
 - ORM’s are great most of the time but sometimes there are edge cases that could take a lot of time to figure out and you always need to write raw queries at some stage. Thats why they have api for running raw SQL query
 - Every library introduces a learning curve
 - Database interaction is spread out throughout a codebase, making it challenging to switch libraries once a choice is made. If we decide to shift away from a library due to dissatisfaction or changing requirements, the transition can be cumbersome and may necessitate significant code modifications.
-- Unlike some languages with mature and battle tested ORMs, the Golang ecosystem has yet to settle on a dominant standard. In contrast to languages like Ruby, where well established ActiveRecord in Rails have stood the test of time, the Go community often leans towards recommending the crafting of custom raw SQL queries. This sentiment is reflected in community discussions where many individuals advocate for building tailored solutions instead of relying on existing libraries.
+- Unlike some languages with mature and battle tested ORMs, the Golang ecosystem has yet to settle on a dominant standard. In contrast to languages like [Ruby](https://www.ruby-lang.org/en/), where well established [ActiveRecord](https://www.martinfowler.com/eaaCatalog/activeRecord.html) in [Rails](https://rubyonrails.org/) have stood the test of time, the Go community often leans towards recommending the crafting of custom raw SQL queries. This sentiment is reflected in community discussions where many individuals advocate for building tailored solutions instead of relying on existing libraries.
 
 Here is a simplified example for how we do our insert queries,
 

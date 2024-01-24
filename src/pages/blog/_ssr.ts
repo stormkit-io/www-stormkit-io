@@ -27,6 +27,7 @@ export const fetchData: FetchDataFunc = async ({ title }: Params) => {
       description,
       date,
       subtitle,
+      title,
       authorImg,
       authorName,
       authorTw,
@@ -35,7 +36,7 @@ export const fetchData: FetchDataFunc = async ({ title }: Params) => {
 
     navigation.push({
       path: fileName,
-      title: toTitleCase(fileName.split('--')[0].replace(/-/g, ' ')),
+      title: title || toTitleCase(fileName.split('--')[0].replace(/-/g, ' ')),
       subtitle,
       description,
       search: search === 'true',

@@ -5,6 +5,10 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## January 27th, 2024
+
+[Custom headers](/docs/features/custom-headers) enable you to modify or supplement the default HTTP headers provided by Stormkit when a client requests your site.
+
 ## December 7th, 2023
 
 Introducing [Web Analytics](/docs/features/analytics). Simple, privacy-friendly, automatic setup and powerful.

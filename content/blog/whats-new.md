@@ -5,6 +5,9 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## January 27th, 2024
+
+
 ## December 7th, 2023
 
 Introducing [Web Analytics](/docs/features/analytics). Simple, privacy-friendly, automatic setup and powerful.

@@ -1,4 +1,5 @@
 import { useTheme } from '@mui/material/styles'
+import { useSearchParams } from 'react-router-dom'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Link from '@mui/material/Link'
@@ -15,10 +16,13 @@ export { fetchData } from './_ssr'
 
 export default function BlogContent() {
   const theme = useTheme()
+  const [searchParams] = useSearchParams()
   const { content, navigation } = withContent(fetchData)
 
   const { title, subtitle, date, author } =
     navigation.find((n) => n.active) || {}
+
+  const isRaw = searchParams.get('raw') === 'true'
 
   return (
     <Box
@@ -30,7 +34,7 @@ export default function BlogContent() {
         color: theme.palette.primary.contrastText,
       }}
     >
-      <Header />
+      {!isRaw && <Header />}
       <ImageOverlay content={content} navigation={navigation} />
       <Box
         maxWidth="none"
@@ -56,13 +60,13 @@ export default function BlogContent() {
               flex: 1,
               bgcolor: 'rgba(0,0,0,0.05)',
               lineHeight: 2,
-              mt: 4,
+              mt: isRaw ? 0 : 4,
             }}
             maxWidth="768px"
           >
             <Typography
               variant="h1"
-              sx={{ fontSize: 24, fontWeight: 600, mt: 4 }}
+              sx={{ fontSize: 24, fontWeight: 600, mt: isRaw ? 0 : 4 }}
             >
               {title}
             </Typography>
@@ -111,7 +115,7 @@ export default function BlogContent() {
           </Box>
         </Box>
       </Box>
-      <Footer maxWidth="lg" />
+      {!isRaw && <Footer maxWidth="lg" />}
     </Box>
   )
 }

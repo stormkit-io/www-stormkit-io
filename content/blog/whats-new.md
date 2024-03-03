@@ -5,6 +5,18 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## March 3th, 2024
+
+Inject snippets depending on request path
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A8Dzpes552w?si=KOwSXX9puPQ1LtHl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## March 1th, 2024
+
+Stormkit enables you to store and retrieve data via Redis. Checkout the documentation for further details
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yaCQTkm5Fb8?si=AifViRzYngLfcbhW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## February 14th, 2024
 
 You can configure multiple domains for same project and apply snippets depending on domain name

@@ -1,18 +1,18 @@
 ---
-title: Using Redis via Http
+title: Using Redis compatible storage via Http
 description:  Redis, a high performance key value store, accelerates data access in real time applications. Explore the seamless integration of Redis with Stormkit through the HTTP API. Easily enhance your Stormkit environment with powerful Redis (key value store) functionality.
 ---
 
-> **Caution**: The Stormkit Redis HTTP API is currently in beta phase. Use it with care and be aware that there might be changes or improvements in future releases. If you encounter any issues or have feedback, please reach out to our team.
+> **Caution**: The Stormkit Key Value storage API is only available in on premise installations. If you encounter any issues or have feedback, please reach out to our team.
 
-Stormkit provides a simple and convenient way to interact with Redis through HTTP. The API allows you to send Redis commands as JSON arrays via a POST request to the endpoint https://kv.stormkit.io/exec.
+Stormkit provides a simple and convenient way to interact with Redis compatible storage through HTTP. The API allows you to send Redis commands as JSON arrays via a POST request to the endpoint https://<your-domain>/exec.
 
-API is quite trivial, create a API key for your environment and send Redis command as JSON array to https://kv.stormkit.io/exec as post request.
+API is quite trivial, create a API key for your environment and send Redis command as JSON array to https://<your_domain>/exec as post request.
 
 For example;
 
 ```curl
-curl -X POST -d '["SET", "foo", "bar"]' https://kv.stormkit.io/exec
+curl -X POST -d '["SET", "foo", "bar"]' https://<your-domain>/exec
  -H "Authorization: Bearer <your_environment_token>"
 ```
 

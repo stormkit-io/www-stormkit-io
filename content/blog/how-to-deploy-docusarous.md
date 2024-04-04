@@ -1,6 +1,7 @@
 ---
 title: How do deploy Docusaurus project to Stromkit
 description: Quick guide to show how to deploy Docusaurus project to Stormkit
+date: 2024-04-05
 ---
 
 [Docusaurus](https://docusaurus.io/) is an open source project that empowers you to swiftly build optimized websites, allowing you to focus primarily on your content. Follow these steps to deploy your docusaurus project to Stormkit

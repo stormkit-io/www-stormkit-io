@@ -176,11 +176,13 @@ async function generateStaticPages() {
 
 ;(async () => {
   if (process.env.SSG === 'true') {
-    console.info('Detected SSG=true - generating static routes...')
+    console.info('🟢 Generating static routes...')
     await generateStaticPages()
+    console.info('✅ Static routes generated')
   } else if (process.env.DOCS === 'true') {
-    console.info('Detected DOCS=true - generating docs...')
+    console.info('🟢 Generating docs...')
     await generateDocs()
+    console.info('✅ Docs generated')
   } else {
     createServer()
   }

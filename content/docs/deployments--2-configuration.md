@@ -1,6 +1,7 @@
 ---
 title: Deployment configuration
 description: How to configure Stormkit to deploy your applications.
+keywords: preview links, auto publish, auto deploy, build root, environment variables
 ---
 
 # Configuration

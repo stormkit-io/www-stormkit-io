@@ -15,9 +15,9 @@ By default, Stormkit looks for a top-level `.stormkit` subfolder with the follow
 - `server/`
 - `api/`
 
-To modify the working directory, navigate to the **Environment Config > Build** page and update the `Root Directory` setting.
+To modify the working directory, navigate to **Your App** > **Environments** > **Config** > **Build settings** and update the `Root Directory` setting.
 
-To specify a different subfolder other than `.stormkit`, visit the **Environment Config > Build** page and update the `Output folder` setting. If changed, the folder structure mentioned above is also validated against this folder. If it differs, the entire content of the directory will be uploaded.
+To specify a different subfolder other than `.stormkit`, visit **Your App** > **Environments** > **Config** > **Build settings** and update the `Output folder` setting. If changed, the folder structure mentioned above is also validated against this folder. If it differs, the entire content of the directory will be uploaded.
 
 If the deployment lacks a `.stormkit` subfolder and the output folder isn't specified, Stormkit checks for these common subfolders:
 
@@ -41,14 +41,14 @@ These files can also have the `mjs` and `cjs` extensions. If none are found, the
 The entry file must export a function named `handler`, wrapped by our `serverless` helper, to receive standard Node.js Request and Response objects.
 
 ```ts
-import serverless from "@stormkit/serverless";
+import serverless from '@stormkit/serverless'
 
 export const handler = serverless(
   async (req: http.IncomingMessage, res: http.ServerResponse) => {
-    res.write("Hello from " + req.url);
-    res.end();
+    res.write('Hello from ' + req.url)
+    res.end()
   }
-);
+)
 ```
 
 ## API files
@@ -59,8 +59,8 @@ Each function should be in a separate file and export a default method:
 
 ```ts
 export default async (req: http.IncomingMessage, res: http.ServerResponse) => {
-    res.write("Hello from " + req.url);
-    res.end();
+  res.write('Hello from ' + req.url)
+  res.end()
 }
 ```
 

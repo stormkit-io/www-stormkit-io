@@ -17,7 +17,7 @@ You can create node.js/typescript APIs using Stormkit.
 
 ## How it works
 
-> **⚠ ATTENTION: Function timeouts are set at 15 seconds. If you require a different timeout, please inform us, and we can adjust it to suit your workflow.**
+> **Note: Function timeouts are set at 15 seconds. If you require a different timeout, please inform us, and we can adjust it to suit your workflow.**
 
 <section>
 
@@ -28,8 +28,6 @@ it uploads the folder to a lambda function. The <a href="https://github.com/stor
 
 ## Write and deploy your API
 
-
-
 <section>
 
 Create an `/api` folder in the top level of your repository and an `/index.ts` file in it.
@@ -38,23 +36,22 @@ with the signature shown below.
 
 ```ts
 // api/index.ts
-import http from "http";
+import http from 'http'
 
 export default (req: http.IncomingMessage, res: http.ServerResponse) => {
-  res.write("Function endpoint: /api");
-  res.end();
-};
+  res.write('Function endpoint: /api')
+  res.end()
+}
 ```
-
 
 ```ts
 // api/user/subscribe.ts
-import http from "http";
+import http from 'http'
 
 export default (req: http.IncomingMessage, res: http.ServerResponse) => {
-  res.write("Function endpoint: /api/user/subscribe");
-  res.end();
-};
+  res.write('Function endpoint: /api/user/subscribe')
+  res.end()
+}
 ```
 
 The table below shows how the API routing works.
@@ -116,31 +113,31 @@ yourself. Here's the `webpack` config Stormkit uses to build the api. You can co
 your needs.
 
 ```ts
-import type { Configuration } from "webpack";
-import * as webpack from "webpack";
-import * as path from "path";
-import * as dotenv from "dotenv";
-import { glob } from "glob";
+import type { Configuration } from 'webpack'
+import * as webpack from 'webpack'
+import * as path from 'path'
+import * as dotenv from 'dotenv'
+import { glob } from 'glob'
 
 const config: Configuration = {
-  mode: "production",
-  target: "node",
+  mode: 'production',
+  target: 'node',
 
   // Iterate over the `api` subfolder and create an entry file
   // for each `.ts` file. This will tell webpack to create a bundle
   // for each function.
-  entry: glob.sync("./api/**/*.{js,ts,tsx}").reduce((acc, file) => {
-    acc[file.replace(/^\.\/api\//, "").split(".ts")[0]] = file;
-    return acc;
+  entry: glob.sync('./api/**/*.{js,ts,tsx}').reduce((acc, file) => {
+    acc[file.replace(/^\.\/api\//, '').split('.ts')[0]] = file
+    return acc
   }, {}),
 
   output: {
-    filename: "[name].js",
+    filename: '[name].js',
     // Build into `.stormkit/api` - Stormkit will take care of the rest.
-    path: path.resolve(__dirname, ".stormkit/api"),
+    path: path.resolve(__dirname, '.stormkit/api'),
     // We need to use commonjs so that webpack exports the functions.
     library: {
-      type: "commonjs",
+      type: 'commonjs',
     },
   },
 
@@ -148,7 +145,7 @@ const config: Configuration = {
     rules: [
       {
         test: /\.ts$/,
-        loader: "ts-loader",
+        loader: 'ts-loader',
         options: {
           compilerOptions: {
             noEmit: false,
@@ -159,21 +156,21 @@ const config: Configuration = {
   },
 
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: ['.tsx', '.ts', '.js'],
   },
 
   // Inject .env variables into the bundles.
   plugins: [
     new webpack.DefinePlugin(
       Object.keys(dotenv.config() || {}).reduce((obj, key) => {
-        obj[`process.env.${key}`] = JSON.stringify(process.env[key]);
-        return obj;
+        obj[`process.env.${key}`] = JSON.stringify(process.env[key])
+        return obj
       }, {})
     ),
   ],
-};
+}
 
-export default config;
+export default config
 ```
 
 </section>
@@ -208,7 +205,6 @@ You can access the api from http://localhost:9090/api.
 
 </section>
 
-
 ## API in action
 
-If you wish to see the API in action promptly, take a look at our  [template project](https://github.com/stormkit-io/monorepo-template-react), utilizing Vitejs as the build tool. This project encapsulates server-side rendering (SSR), API functionality, and a single-page application.
+If you wish to see the API in action promptly, take a look at our [template project](https://github.com/stormkit-io/monorepo-template-react), utilizing Vitejs as the build tool. This project encapsulates server-side rendering (SSR), API functionality, and a single-page application.

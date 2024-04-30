@@ -7,48 +7,53 @@ description: How to configure Stormkit to deploy your applications.
 
 <section>
 
-Each [environment](/docs/features/multiple-environments) in Stormkit has a configuration which is divided into two sections. The first section is the environment configuration, where you can provide the name of the environment, the branch it points to and whether auto publish is enabled or not.
+You can configure your deployments by visiting **Your App** > **Environments** > **Config** page. This page is divided
+into different sections.
 
-<div class="img-wrapper">
-    <img src="/assets/docs/deployments/env-config.png" alt="Environment config" />
-</div>
+## Settings
 
-| Setting          | Description |
-| ---------------- | ----------- |
-| **Environment name** | The name of the environment. Each application can have as many environments as needed. You cannot reuse the same environment name in a given application. |
-| **Branch**           | Every environment is assigned a branch. When auto deployments are enabled, the commit will be built using the matching environment's configuration. If there is no environment matching for that branch, the default environment's configuration will be used. |
-| **Auto Publish**     | When enabled, successfull deployments will be automatically published. When a deployment is published, the domain will point to that deployment. |
+<!-- prettier-ignore -->
+| General settings     |             |
+| -------------------- | ----------- |
+| Environment name     | The name of the environment. Except the reserved name `production`, you can use any alphanumeric characters to name your environments. This setting is used purely to distinguish your environments in the User Interface. |
+| Branch               | The default branch of this environment. Pick the best long-lived branch that represents this environment. |
+| Auto publish         | When turned on, any successful auto deployment that is triggered by a commit to the `default branch` will be published automatically. |
+| Auto deploy          | Use this setting to configure your auto deployments. You can either `disable`, enable auto deployment on `all branches` or use `custom branches` to specify which branches to auto deploy. |
+| Auto deploy branches | When `Auto deploy` is set to be `Custom branches`, you can use this field to configure which branches to deploy automatically. This field supports `regexp` matching. |
+| Preview links        | When `Auto deploy` is turned on, Stormkit will leave the link of the deployment to the pull/merge request page. You can turn off this functionality by disabling this setting. |
 
-<p>
+<!-- prettier-ignore -->
+| Build settings       |             |
+| -------------------- | ----------- |
+| Build command        | Use this setting to configure the build command. You can chain multiple commands with the logical and (<code>&amp;&amp;</code>) operator. This setting defaults to the `build` script in `package.json` (e.g. `npm run build`). |
+| Output folder        | The folder that will be deployed. Visit [How do we deploy](/docs/deployments/how-do-we-deploy) to read more about this. |
+| Build root           | The working directory relative to the Repository root. By default this is the top-level directory of the repository. The `build command` and `output folder` will be relative to this directory. |
 
-</section>
+<!-- prettier-ignore -->
+| Serverless           |             |
+| -------------------- | ----------- |
+| API Folder           | The relative path to the `api` folder where your serverless functions reside. This path is relative to the repository root and not the `build root`. |
+| API path prefix      | Path prefix for API endpoints. Default is `/api`. Requests matching this prefix will be served from API functions. |
 
-## Build Configuration
+The `Serverless` settings are used only for `API` functions. Read more about [Writing API](/docs/features/writing-api).
 
-<section>
+<!-- prettier-ignore -->
+| Headers              |             |
+| -------------------- | ----------- |
+| Headers file location | The path to the [custom headers](/docs/features/custom-headers) file. Default location is `_headers`. This path is relative to the `build root`. |
 
-The second section is the build configuration, which will be used to build and deploy your application. Stormkit has a built-in support for the following frameworks: <code>Nuxt.js</code>, <code>Next.js</code>, <code>Angular</code> and <code>Nest.js</code>. We'll understand your <code>publish</code> folder directly from the framework configuration file.
+<!-- prettier-ignore -->
+| Redirects            |             |
+| -------------------- | ----------- |
+| Redirects file location | The path to the [custom redirects](/docs/features/redirects-and-path-rewrites) file. Default location is `redirects.json`. This path is relative to the `build root`. |
 
-</p>
+**Environment Variables**
 
-<p>
+The environment variables that will be injected during build time. These variables are also available for serverless functions runtime. Visit [System Variables](/docs/deployments/system-variables) to see which variables are injected
+automatically.
 
-If any other framework is used or no framework is used at all, the build configuration will display two additional fields:
+Note: Variable names matching following regex will be obfuscated <code>/secret\|\_key\|password/i</code>.
 
-| Setting                   | Description |
-| ------------------------- | ----------- |
-| **Publish folder**        | The publish folder will be uploaded to our CDN. This folder is expected to have an <code>index.html</code> at the top level. |
-| **Build command**         | The build command to execute. You can chain multiple commands with the logical and (<code>&amp;&amp;</code>) operator. You can use bash commands as well. |
-| **Environment variables** | The environment variables that will be injected during build time. Variable names matching following regex will be obfuscated <code>/secret\|\_key\|password/i</code>. These variables are also available for serverless functions runtime. |
+**API Keys**
 
-## Special Environment Variables
-
-Following environment variables could be used to configure Stormkit builder
-
-| Setting                   | Description |
-| ------------------------- | ----------- |
-| **SK_CWD**      |  This variable used to indicate which working directory Stormkit should point out in order to build. This is used for monorepo configurations. |
-| **SK_ENV_FILE**   | If this is set to **true** Stormkit will inject contents of .env file during building process. |
-
-
-</section>
+Generate API Keys to interact with our API and modify this environment.

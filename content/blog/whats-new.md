@@ -5,6 +5,10 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## May 6th, 2024
+
+Introduced Redirects Playground feature. Visit your Environment's configuration page > Redirects section to open the playground and test redirects.
+
 ## March 3th, 2024
 
 Inject snippets depending on request path
@@ -149,7 +153,6 @@ the changes.
     <img src="/assets/blog/whats-new/feat-commit-sha.png" alt="Commit SHA" />
 </div>
 
-
 ## August 6th, 2022
 
 Stormkit now supports building APIs using Node.js / Typescript 🎉. [Learn more](/docs/features/writing-api).
@@ -166,7 +169,7 @@ specific commit the errors started to occur.
 
 ## June 30th, 2022
 
-https://github.com/stormkit-io/serverless is now open source. With serverless you can make  your nodejs app run on aws lambda with minimal efford
+https://github.com/stormkit-io/serverless is now open source. With serverless you can make your nodejs app run on aws lambda with minimal efford
 
 ## June 9th, 2022
 
@@ -183,10 +186,10 @@ in `next.config.js` file.
 ## April 18th, 2022
 
 - The Serverless toggle has been deprecated. Stormkit now understands whether your application is serverless
-or not from the artifacts.
+  or not from the artifacts.
 
 - We have removed the limit on the number of applications you can host on Stormkit based on your tier. It's
-all unlimited now.
+  all unlimited now.
 
 ## April 17th, 2022
 

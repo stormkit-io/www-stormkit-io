@@ -18,10 +18,10 @@ description: Help on common issues with Stormkit.
 
 <section>
 
-This warning occurs when Stormkit is not able to find a top-level `/index.html` file and server side rendering is not detected. This does not necessarily mean that your deployment failed. It just means that your endpoint's root path returns 404. Other uploaded files will still return correctly. 
+This warning occurs when Stormkit is not able to find a top-level `/index.html` file and server side rendering is not detected. This does not necessarily mean that your deployment failed. It just means that your endpoint's root path returns 404. Other uploaded files will still return correctly.
 
 To view your deployment package, find your deployment from <b>Deployments</b> list, expand the menu and click
-on the <b>Manifest</b> button. The <b>CDN Files</b> section contains a list of deployed files. 
+on the <b>Manifest</b> button. The <b>CDN Files</b> section contains a list of deployed files.
 
 If the deployed files are not the correct ones, you can change the output folder by modifying the environment configuration's <b>Output</b> option and re-deploy.
 
@@ -31,8 +31,8 @@ If you need a dynamic application you will need to enable Server Side Rendering.
 // .stormkit/server/server.js
 
 export const handler = ({ req, res }) => {
-    res.write("hello world");
-    res.end();
+  res.write('hello world')
+  res.end()
 }
 ```
 
@@ -41,25 +41,26 @@ You'll probably need a bundler like Vite to bundle your application to <b>.storm
 
 When server side rendering is enabled, all requests not matching a CDN file will be forwarded to serverless
 handler. When it is not enabled, Stormkit expects to find a file for the endpoint and returns 404 otherwise.
+
 </p>
 
 </section>
 
-<div id="repo-is-inaccessible">
+<div id="repository-is-inaccessible">
 
 ### Repository is inaccessible
 
 </div>
 
-<section>
+<section id="repository-is-inaccessible">
 
 This error occurs when Stormkit has no access to the repository. There may be two reasons for this:
 
 **The repository URL is changed**
 
 1. Visit your application
-2. Click on the **Gear** icon and navigate to **Settings** page
-3. Change the Repository URL accordingly by pasting the `https` URL
+2. Navigate to **Settings** page
+3. Change the Repository URL accordingly by pasting the `https` URL of the repository
 4. If the problem persists, see next step.
 
 **Credentials are either expired or invalid**
@@ -80,7 +81,7 @@ If you're using a GitHub repository, you'll need to grant access to the Stormkit
 
 <div class="section-sub-header">
 
-**GitLab** 
+**GitLab**
 
 </div>
 
@@ -89,7 +90,7 @@ If you're using a GitHub repository, you'll need to grant access to the Stormkit
 3. Revoke anything related to Stormkit
 4. Visit https://app.stormkit.io
 5. Make sure to login with GitLab - it will ask you to re-authorize
-7. Go back to your application and try to re-deploy
+6. Go back to your application and try to re-deploy
 
 </section>
 
@@ -119,4 +120,3 @@ If you see a "Stormkit has no access to the repo or the branch does not exist." 
 the branch is existing and you still receive this error, try to follow the steps described in [Repository is inaccessible](#repository-is-inaccessible).
 
 </section>
-

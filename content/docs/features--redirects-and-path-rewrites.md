@@ -11,10 +11,11 @@ Stormkit is able to handle the path rewrites and redirects on the load balancer 
 ```json
 [
   {
-    "from": "string",   // (required): The path. Supports regexp syntax.
-    "to": "string",     // (required): The destination path.
+    "from": "string", // (required): The path. Supports regexp syntax.
+    "to": "string", // (required): The destination path.
     "status": "number", // (optional): The HTTP Status Code for redirect. Default is empty.
-    "assets": "boolean" // (optional): Whether to apply the redirect/rewrite to any static file that is not an html file. Default is false.
+    "assets": "boolean", // (optional): Whether to apply the redirect/rewrite to any static file that is not an html file. Default is false.
+    "hosts": "Array<string>" // (optional): When provided, the redirect rule will apply only when the host name matches.
   }
 ]
 ```
@@ -25,14 +26,14 @@ Stormkit is able to handle the path rewrites and redirects on the load balancer 
 
 <section>
 
-If you omit the `status` property, or provide a `status` different than `3xx`, Stormkit will not redirect the 
+If you omit the `status` property, or provide a `status` different than `3xx`, Stormkit will not redirect the
 request but will simply rewrite the path.
 
 ```json
 [
   {
     "from": "/my-path/*",
-    "to": "/my-new-path/$1", 
+    "to": "/my-new-path/$1"
   }
 ]
 ```
@@ -70,7 +71,7 @@ In this case, all requests coming to `/my-path` will be proxied to `https://exam
 [
   {
     "from": "stormkit.io",
-    "to": "www.stormkit.io", 
+    "to": "www.stormkit.io",
     "status": 301
   }
 ]
@@ -86,8 +87,7 @@ In this case, all requests coming to `/my-path` will be proxied to `https://exam
 [
   {
     "from": "/*",
-    "to": "/index.html", 
-    "assets": false,
+    "to": "/index.html"
   }
 ]
 ```
@@ -116,11 +116,33 @@ The above example will rewrite all requests to `index.html`. By setting `assets`
 You can use `regexp` syntax for redirects. The example above creates two redirects.
 
 1. The first one will redirect `/documentation/welcome/page/getting-started` to `/docs/welcome/getting-started`.
-2. The second will redirect `/documentation` to `/docs`. 
+2. The second will redirect `/documentation` to `/docs`.
 
-Note the `$amp;` sign at the end of the string. That sign simply tells to redirect only the path `/documentation` and not anything that contains `/documentation`. 
+Note the `$amp;` sign at the end of the string. That sign simply tells to redirect only the path `/documentation` and not anything that contains `/documentation`.
 
 </section>
+
+## Matching host names
+
+```json
+[
+  {
+    "from": "/path",
+    "to": "/new-path",
+    "hosts": ["example-a.org"]
+  },
+  {
+    "from": "/path",
+    "to": "/different-path",
+    "hosts": ["example-b.org", "example-c.org"]
+  }
+]
+```
+
+If you have multiple domains configured for your environment, you can specify for which host name the redirect rule should
+apply to.
+
+The example above will rewrite the `/path` to `/new-path` for `example-a.org` and to `/different-path` for `example-b.org` and `example-c.org`.
 
 ## Redirecting API Routes
 
@@ -128,5 +150,7 @@ Note the `$amp;` sign at the end of the string. That sign simply tells to redire
 
 Please note that if your application contains `API` routes, paths starting with `/api` will not be matched. This is to allow `/api` routes to handle the redirect
 themselves. If you do not have any `API` function, this rule does not apply.
+
+You can configure the API routes through the [Serverless configuration section](/docs/deployments/configuration).
 
 </section>

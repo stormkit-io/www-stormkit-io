@@ -5,6 +5,10 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## May 14th, 2024
+
+New configuration option for redirect rules: `hosts`. Read more about it [here](/docs/features/redirects-and-path-rewrites).
+
 ## May 6th, 2024
 
 Introduced Redirects Playground feature. Visit your Environment's configuration page > Redirects section to open the playground and test redirects.

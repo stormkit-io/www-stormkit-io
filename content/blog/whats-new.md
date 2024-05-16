@@ -5,6 +5,10 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## May 16th, 2024
+
+You can specify environment level redirect rules now. These rules will be applied to **all** of your deployments and take effect instantly. There is no need for a deployment.
+
 ## May 14th, 2024
 
 New configuration option for redirect rules: `hosts`. Read more about it [here](/docs/features/redirects-and-path-rewrites).

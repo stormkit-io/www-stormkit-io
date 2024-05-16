@@ -154,3 +154,14 @@ themselves. If you do not have any `API` function, this rule does not apply.
 You can configure the API routes through the [Serverless configuration section](/docs/deployments/configuration).
 
 </section>
+
+## Environment level redirects
+
+You can specify the same rules at an environment level. To do so:
+
+1. Go to **Environment Config** > **Redirects**
+1. Switch **Overwrite redirects**
+1. Specify the rules from the Redirects Editor and
+1. Click save.
+
+These rules will be applied to **all** of your deployments and take effect instantly. There is no need for a deployment.

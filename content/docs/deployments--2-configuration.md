@@ -47,6 +47,7 @@ The `Serverless` settings are used only for `API` functions. Read more about [Wr
 | Redirects            |             |
 | -------------------- | ----------- |
 | Redirects file location | The path to the [custom redirects](/docs/features/redirects-and-path-rewrites) file. Default location is `redirects.json`. This path is relative to the `build root`. |
+| Overwrite redirects | When turned on, you can specify redirect rules that will apply to all of your deployments instantly. |
 
 **Environment Variables**
 

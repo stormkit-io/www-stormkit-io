@@ -1,5 +1,5 @@
 ---
-title: How do deploy Gatsby project to Stromkit
+title: How do deploy Gatsby project to Stormkit
 description: Quick guide to show how to deploy Gatsby project to Stormkit
 date: 2024-04-04
 ---

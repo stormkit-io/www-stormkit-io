@@ -1,5 +1,5 @@
 ---
-title: How do deploy VitePress project to Stromkit
+title: How do deploy VitePress project to Stormkit
 description: Quick guide to show how to deploy VitePress project to Stormkit
 date: 2024-04-04
 ---

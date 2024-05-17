@@ -23,7 +23,7 @@ interface Props {
   items?: NavigationItem[]
 }
 
-const categories = ['Welcome', 'Deployments', 'Features', 'Other']
+const categories = ['Welcome', 'Deployments', 'Features', 'Other', 'Api']
 
 export default function DocsNav({ items }: Props) {
   const theme = useTheme()

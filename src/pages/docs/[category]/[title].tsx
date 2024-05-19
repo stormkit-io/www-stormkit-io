@@ -1,16 +1,19 @@
 import { useTheme } from '@mui/material/styles'
+import { useParams } from 'react-router'
 import Box from '@mui/material/Box'
 import Header from '~/components/Header'
 import DocsNav from '~/components/DocsNav'
 import ImageOverlay from '~/components/ImageOverlay'
 import { withContent } from '~/helpers/markdown'
 import { fetchData } from './_ssr'
+import { purple, grey } from '@mui/material/colors'
 
 // Required for SSR
 export { fetchData } from './_ssr'
 
 export default function DocTitle() {
   const theme = useTheme()
+  const params = useParams()
   const { content, navigation } = withContent(fetchData, {
     defaultCategory: 'welcome',
     defaultTitle: 'getting-started',
@@ -24,7 +27,9 @@ export default function DocTitle() {
         flexDirection: 'column',
         bgcolor: theme.palette.background.default,
         color: theme.palette.primary.contrastText,
+        fontSize: 13,
       }}
+      className={params.category?.toLowerCase() || 'welcome'}
     >
       <Header search={navigation} />
       <ImageOverlay content={content} navigation={navigation} />
@@ -53,6 +58,24 @@ export default function DocTitle() {
               flex: 1,
               bgcolor: 'rgba(0,0,0,0.05)',
               lineHeight: 2,
+              '& summary': {
+                cursor: 'pointer',
+                bgcolor: 'rgba(0,0,0,0.3)',
+                mb: 2,
+                p: 2,
+                ':hover': {
+                  bgcolor: 'rgba(0,0,0,0.5)',
+                },
+                '& span:first-child': {
+                  color: purple[400],
+                  display: 'inline-block',
+                  width: '4rem',
+                  ml: 1,
+                },
+                '& span:last-child': {
+                  color: grey[200],
+                },
+              },
             }}
             maxWidth="768px"
           >

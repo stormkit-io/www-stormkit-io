@@ -104,6 +104,7 @@ body {
 #blog-content pre {
   max-width: calc(100vw - 2rem);
   overflow-x: auto;
+  font-size: 0.8rem;
 }
 
 #blog-content li code {

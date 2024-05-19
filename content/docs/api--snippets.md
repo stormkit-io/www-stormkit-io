@@ -142,17 +142,28 @@ curl -X PUT \
 
 ```typescript
 interface Snippet {
-  id: number // The id of the snippet
-  title: string // The title to describe what the snippet does. This is used only internally.
-  content: string // The content that will be injected to the page
-  enabled: boolean // Whether the snippet is enabled or not
-  location: 'head' | 'body' // Where to inject the snippet
-  prepend: boolean // If true, the snippet will be injected as the first child to the `location`. Otherwise as the last child.
+  id: string
+  title: string
+  content: string
+  enabled: boolean
+  location: 'head' | 'body'
+  prepend: boolean
   rules?: {
-    hosts?: []string // If provided, the snippet will be injected only for the provided domains.
-    path?: string // If provided, the snippet will be injected only for the provided URL path.
+    hosts?: []string
+    path?: string
   }
 }
 ```
 
-Note: To apply the Snippet to all development endpoints, you can either omit the `rules.hosts` property, or specify `*.dev`.
+| Property    | Definition                                                                                               |
+| ----------- | -------------------------------------------------------------------------------------------------------- |
+| id          | The unique id of the snippet.                                                                            |
+| title       | The title is used internally for describing what the snippet does.                                       |
+| content     | The content that is going to be injected into the page.                                                  |
+| enabled     | Whether the snippet is enabled or not.                                                                   |
+| location    | The injection location for the snippet.                                                                  |
+| prepend     | If true, the snippet will be injected as the first child to the `location`. Otherwise as the last child. |
+| rules.hosts | Inject snippet only for the provided hosts.                                                              |
+| rules.path  | If specified, snippet will be injected only when the path matches.                                       |
+
+**Note:** To inject snippets for all development endpoints, specify `*.dev` for the `rules.hosts` property. Specifying an indivual deployment endpoint will enable the snippet for all development endpoints.

@@ -5,7 +5,11 @@ description: Documentation on accessing redirects through Stormkit API.
 
 # Redirects API
 
-#### `POST /v1/redirects`
+<details>
+
+<summary>
+  <span>POST </span><span>/v1/redirects</span>
+</summary>
 
 Set Environment Level Redirects.
 
@@ -19,9 +23,9 @@ interface Response {
 }
 ```
 
-#### Example
-
 ```bash
+# Example
+
 curl -X POST \
      -H 'Authorization: <api_key>' \
      -H 'Content-Type: application/javascript' \
@@ -29,7 +33,13 @@ curl -X POST \
      -d '{ "redirects": [{ "from": "/path", "to": "/new-path" }] }'
 ```
 
-#### `GET /v1/redirects`
+</details>
+
+<details>
+
+<summary>
+  <span>GET </span><span>/v1/redirects</span>
+</summary>
 
 Get Environment Level Redirects.
 
@@ -39,9 +49,9 @@ interface Response {
 }
 ```
 
-#### Example
-
 ```bash
+# Example
+
 curl -X GET \
      -H 'Authorization: <api_key>' \
      -H 'Content-Type: application/javascript' \
@@ -53,6 +63,8 @@ curl -X GET \
   "redirects": [{ "from": "*", "to": "index.html" }]
 }
 ```
+
+</details>
 
 #### Syntax
 

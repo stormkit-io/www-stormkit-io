@@ -29,7 +29,7 @@ interface Response {
 curl -X POST \
      -H 'Authorization: <api_key>' \
      -H 'Content-Type: application/javascript' \
-     'https://api.stormkit.io/v1/snippets` \
+     'https://api.stormkit.io/v1/snippets' \
      -d '{ "snippets": [{ "title": "Snippet title", "content":  "Hello World", "enabled":  true, "prepend":  false, "location": "head", "rules": { "hosts": ["example.org", "*.dev"], "path": "/my-path" } }] }'
 ```
 
@@ -55,7 +55,7 @@ interface Response {
 curl -X GET \
      -H 'Authorization: <api_key>' \
      -H 'Content-Type: application/javascript' \
-     'https://api.stormkit.io/v1/snippets`
+     'https://api.stormkit.io/v1/snippets'
 ```
 
 ```json
@@ -103,7 +103,7 @@ interface Response {
 curl -X PUT \
      -H 'Authorization: <api_key>' \
      -H 'Content-Type: application/javascript' \
-     'https://api.stormkit.io/v1/snippets` \
+     'https://api.stormkit.io/v1/snippets' \
      -d '{ "snippet": { "id": 1501, "title": "New title", "content":  "Hello World", "enabled":  true, "prepend":  false, "location": "head", "rules": { "hosts": ["example.org", "*.dev"], "path": "/my-path" } } }'
 ```
 
@@ -119,7 +119,7 @@ Delete Snippets with the given ids.
 
 ```typescript
 interface QueryString {
-  ids: []number
+  ids: []string
 }
 
 interface Response {
@@ -133,7 +133,7 @@ interface Response {
 curl -X PUT \
      -H 'Authorization: <api_key>' \
      -H 'Content-Type: application/javascript' \
-     'https://api.stormkit.io/v1/snippets?ids=1501,5061`
+     'https://api.stormkit.io/v1/snippets?ids=1501,5061'
 ```
 
 </details>

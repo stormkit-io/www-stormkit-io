@@ -55,7 +55,7 @@ interface Response {
 curl -X GET \
      -H 'Authorization: <api_key>' \
      -H 'Content-Type: application/javascript' \
-     'https://api.stormkit.io/v1/redirects`
+     'https://api.stormkit.io/v1/redirects'
 ```
 
 ```json

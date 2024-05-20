@@ -41,11 +41,17 @@ curl -X POST \
   <span>GET </span><span>/v1/snippets</span>
 </summary>
 
-Return snippets.
+Return all snippets of an environment.
 
 ```typescript
+interface QueryString {
+  afterId?: string
+  hosts?: string
+}
+
 interface Response {
-  "snippets": []Redirect
+  snippets: []Redirect
+  pagination: Pagination
 }
 ```
 
@@ -73,9 +79,16 @@ curl -X GET \
         "path": "/my-path"
       }
     }
-  ]
+  ],
+  "pagination": {
+    "hasNextPage": false
+  }
 }
 ```
+
+To filter snippets by hosts, you can use the `hosts` querystring parameter. Multiple hosts should be separated by comma (`,`).
+
+To paginate results, you can specify the `afterId` querystring parameter. This value is returned in the first `GET` request.
 
 </details>
 
@@ -152,6 +165,11 @@ interface Snippet {
     hosts?: []string
     path?: string
   }
+}
+
+interface Pagination {
+  hasNextPage: boolean
+  afterId?: string
 }
 ```
 

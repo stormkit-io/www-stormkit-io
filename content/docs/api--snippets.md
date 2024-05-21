@@ -68,7 +68,7 @@ curl -X GET \
 {
   "snippets": [
     {
-      "id": 1501,
+      "id": "1501",
       "title": "Snippet title",
       "content": "Hello World",
       "enabled": true,

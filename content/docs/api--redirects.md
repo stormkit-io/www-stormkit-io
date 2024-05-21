@@ -1,5 +1,5 @@
 ---
-title: Redirects
+title: Redirects API
 description: Documentation on accessing redirects through Stormkit API.
 ---
 

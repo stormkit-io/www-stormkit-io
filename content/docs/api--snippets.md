@@ -1,5 +1,5 @@
 ---
-title: Snippets
+title: Snippets API
 description: Documentation on accessing snippets through Stormkit API.
 ---
 

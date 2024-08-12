@@ -5,7 +5,6 @@ import Typography from '@mui/material/Typography'
 import Link from '@mui/material/Link'
 import { ChevronRight } from '@mui/icons-material'
 import AnimationDeploymentPreview from './AnimationDeploymentPreview'
-import AnimationStagedRollout from './AnimationStagedRollout'
 import AnimationSnippetInjection from './AnimationSnippetInjection'
 import AnimationFeatureFlag from './AnimationFeatureFlag'
 import AnimationAPIRoutes from './AnimationAPIRoutes'
@@ -27,11 +26,6 @@ const features = [
   {
     title: 'API routes',
     subtitle: 'Manage your Node.js serverless API using file-system routing.',
-  },
-  {
-    title: 'Staged rollouts',
-    subtitle:
-      'Release multiple deployments at the same time to a percentage of your users.',
   },
   {
     title: 'Snippet injections',
@@ -217,9 +211,8 @@ export default function FeaturePreview() {
             {activeFeature === 0 && <AnimationDeploymentPreview />}
             {activeFeature === 1 && <AnimationAnalytics />}
             {activeFeature === 2 && <AnimationAPIRoutes />}
-            {activeFeature === 3 && <AnimationStagedRollout />}
-            {activeFeature === 4 && <AnimationSnippetInjection />}
-            {activeFeature === 5 && <AnimationFeatureFlag />}
+            {activeFeature === 3 && <AnimationSnippetInjection />}
+            {activeFeature === 4 && <AnimationFeatureFlag />}
           </Box>
           <Box
             sx={{

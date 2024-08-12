@@ -6,7 +6,7 @@ description: Create multiple development environments easily with Stormkit.
 # Multiple environments
 
 <section>
-With Stormkit you can create multiple environments per application. Each environment will point to a branch and when that branch is updated Stormkit will automatically deploy it (given you have <a href="/docs/deployments/auto-deployments">Auto Deployments</a>. You can also publish multiple deployments at the same time. Check Staged Rollouts for more information on that.
+With Stormkit you can create multiple environments per application. Each environment will point to a branch and when that branch is updated Stormkit will automatically deploy it (given you have <a href="/docs/deployments/auto-deployments">Auto Deployments</a>.
 </section>
 
 # Default environment

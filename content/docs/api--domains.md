@@ -125,6 +125,53 @@ curl -X PUT \
 
 </details>
 
+<details>
+
+<summary>
+  <span>PUT </span><span>/v1/domains/cert</span>
+</summary>
+
+Update the custom certificate of a domain.
+
+- The `certKey` is the private key in PEM format.
+- The `certValue` is the certificate value in PEM format.
+
+You can use `openssl` to generate PEM files from `crt`:
+
+```
+openssl x509 -in example_org.crt -out example_org.pem -outform PEM
+```
+
+```typescript
+interface Request {
+  domainId: string
+  certKey: string
+  certValue: string
+}
+
+interface Response {
+  ok: boolean
+}
+```
+
+```bash
+# Example
+
+curl -X POST \
+     -H 'Authorization: <api_key>' \
+     -H 'Content-Type: application/javascript' \
+     'https://api.stormkit.io/v1/domains' \
+     -d '{ "domainId": "2500", "certValue": "-----BEGIN CERTIFICATE-----", "certKey": "-----BEGIN PRIVATE KEY-----" }'
+```
+
+```json
+{
+  "ok": true
+}
+```
+
+</details>
+
 #### Syntax
 
 ```typescript
@@ -133,6 +180,10 @@ interface Domain {
   domainName: string
   verified: boolean
   token: string
+  customCert?: {
+    value: string
+    key: string
+  }
 }
 
 interface Pagination {
@@ -141,9 +192,11 @@ interface Pagination {
 }
 ```
 
-| Property   | Definition                                                                           |
-| ---------- | ------------------------------------------------------------------------------------ |
-| id         | The unique id of the domain.                                                         |
-| domainName | The domain name.                                                                     |
-| verified   | Whether the domain is verified or not. For self-hosted users, this is always `true`. |
-| token      | A token used to create TXT record to verify a domain.                                |
+| Property          | Definition                                                                           |
+| ----------------- | ------------------------------------------------------------------------------------ |
+| id                | The unique id of the domain.                                                         |
+| domainName        | The domain name.                                                                     |
+| verified          | Whether the domain is verified or not. For self-hosted users, this is always `true`. |
+| token             | A token used to create TXT record to verify a domain.                                |
+| customCert?.value | If present, the value of the custom certificate.                                     |
+| customCert?.key   | If present, the private key of the custom certificate.                               |

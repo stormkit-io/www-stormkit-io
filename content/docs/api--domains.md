@@ -157,11 +157,46 @@ interface Response {
 ```bash
 # Example
 
-curl -X POST \
+curl -X PUT \
      -H 'Authorization: <api_key>' \
      -H 'Content-Type: application/javascript' \
-     'https://api.stormkit.io/v1/domains' \
+     'https://api.stormkit.io/v1/domains/cert' \
      -d '{ "domainId": "2500", "certValue": "-----BEGIN CERTIFICATE-----", "certKey": "-----BEGIN PRIVATE KEY-----" }'
+```
+
+```json
+{
+  "ok": true
+}
+```
+
+</details>
+
+<details>
+
+<summary>
+  <span>DELETE </span><span>/v1/domains/cert</span>
+</summary>
+
+Deletes the custom certificate associated with the domain.
+
+```typescript
+interface Request {
+  domainId: string
+}
+
+interface Response {
+  ok: boolean
+}
+```
+
+```bash
+# Example
+
+curl -X DELETE \
+     -H 'Authorization: <api_key>' \
+     -H 'Content-Type: application/javascript' \
+     'https://api.stormkit.io/v1/domains/cert?id=2500'
 ```
 
 ```json

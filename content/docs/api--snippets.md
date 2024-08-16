@@ -128,7 +128,7 @@ curl -X PUT \
   <span>DELETE </span><span>/v1/snippets</span>
 </summary>
 
-Delete Snippets with the given ids.
+Delete Snippets with the given ids. You can delete maximum `100` snippets at a time.
 
 ```typescript
 interface QueryString {

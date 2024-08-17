@@ -80,17 +80,6 @@ export default function Home() {
           >
             Start your free trial
           </Button>
-          <Button
-            variant="contained"
-            color="info"
-            size="large"
-            href="https://cal.com/svedova"
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{ ml: 2 }}
-          >
-            Book a Demo
-          </Button>
         </Box>
       </Box>
 

@@ -2,7 +2,7 @@
   "name": "www-stormkit-io",
   "type": "module",
   "version": "1.0.0",
-  "description": "Stormkit is a serverless platform for users to deploy fullstack javascript applications using git providers. It comes with application previews, code injections, feature flags, custom storage and  many more features.",
+  "description": "Stormkit is a serverless platform for users to deploy fullstack javascript applications using git providers. It comes with application previews, code injections, feature flags and  many more features.",
   "author": {
     "email": "hello@stormkit.io",
     "name": "Stormkit",

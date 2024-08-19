@@ -33,7 +33,6 @@ const includedFeatures = [
   'Snipped Injection',
   'Cronjobs',
   'Feature Flag Management',
-  'Custom Storage',
   'Runtime Logs',
   'Custom Domains',
   'Deployment Previews',

@@ -45,8 +45,7 @@ export default function MainMessage() {
           </Typography>
           <Typography sx={{ mb: 2, fontSize: 15 }}>
             Our pricing model is transparent. We offer a few pricing tiers, with
-            clear limits and no add-ons. All features are available to every
-            tier.
+            clear limits and no add-ons.
           </Typography>
         </Box>
         <Box>
@@ -71,11 +70,12 @@ export default function MainMessage() {
         </Box>
         <Box>
           <Typography sx={{ mb: 2, fontSize: 20, fontWeight: 'bold' }}>
-            Custom storage
+            Security and Compliance
           </Typography>
           <Typography sx={{ mb: 2, fontSize: 15 }}>
-            With Stormkit, users can effortlessly upload their code to various
-            providers like Bunny CDN and AWS S3.
+            We prioritize your security and compliance needs, ensuring that your
+            applications are protected and meet regulatory standards across
+            various industries.
           </Typography>
         </Box>
         <Box>

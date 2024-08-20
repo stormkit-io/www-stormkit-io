@@ -28,6 +28,10 @@ const routes: Route[] = [
     path: '/blog/:title',
     import: () => import('~/pages/blog/[title]'),
   },
+  {
+    path: '*',
+    import: () => import('~/pages/404'),
+  },
 ]
 
 const isServerSide = typeof window === 'undefined'

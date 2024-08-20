@@ -3,7 +3,7 @@ import { useTheme } from '@mui/material/styles'
 import { Twitter, LinkedIn, YouTube } from '@mui/icons-material'
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
-import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
+import StormkitLogoCircle from '~/assets/logos/stormkit-logo-circle.svg'
 import DiscordLogo from '~/assets/images/discord.svg'
 
 interface Props {
@@ -87,36 +87,45 @@ export default function Footer({ maxWidth = lastWidth }: Props) {
   return (
     <Box
       sx={{
-        bgcolor: 'rgba(0,0,0,0.25)',
-        boxShadow: 2,
         px: { xs: 1, md: 0 },
+        borderTop: '1px solid rgba(0,0,0,0.3)',
+        bgcolor: { xs: 'black', md: 'transparent' },
       }}
     >
       <Box
-        maxWidth={maxWidth}
         sx={{
           m: 'auto',
-          px: maxWidth === 'none' ? { xs: 1, md: 4 } : 0,
+          px: { xs: 2, md: 4 },
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
           alignItems: 'flex-start',
           justifyContent: 'space-between',
         }}
       >
-        <Box sx={{ mt: 8, ml: { xs: 2, md: 0 } }}>
-          <Link href="/" sx={{ display: 'block', width: 130 }}>
-            <img src={StormkitLogoText} alt="Stormkit Logo" width="100%" />
+        <Box
+          sx={{
+            mt: 4,
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <Link href="/" sx={{ display: 'block', width: 32, mr: 2 }}>
+            <Box
+              component="img"
+              src={StormkitLogoCircle}
+              alt="Stormkit Logo"
+              width="100%"
+            />
           </Link>
           <Typography variant="body2">
-            © {new Date().getFullYear()} Stormkit, Inc.
+            {new Date().getFullYear()} Stormkit, Inc. ©
           </Typography>
         </Box>
-        <Box sx={{ flex: 1, ml: { xs: 0, md: 16 }, py: 8 }}>
+        <Box sx={{ flex: 1, ml: { xs: 0, md: 16 }, py: 4 }}>
           <Box
             sx={{
               display: 'flex',
               flexDirection: { xs: 'column', md: 'row' },
-              ml: { xs: 2, md: 0 },
               justifyContent: 'space-between',
             }}
           >

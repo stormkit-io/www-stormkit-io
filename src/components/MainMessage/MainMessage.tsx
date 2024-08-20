@@ -1,4 +1,5 @@
 import Box from '@mui/material/Box'
+import { grey } from '@mui/material/colors'
 import Typography from '@mui/material/Typography'
 
 export default function MainMessage() {
@@ -21,8 +22,8 @@ export default function MainMessage() {
       <Box
         sx={{
           bgcolor: 'rgba(0,0,0,0.3)',
-          p: 8,
-          borderLeft: '3px solid white',
+          p: { xs: 4, md: 8 },
+          borderLeft: { xs: 'none', md: '1px solid white' },
           mb: 6,
         }}
       >
@@ -34,16 +35,17 @@ export default function MainMessage() {
         sx={{
           width: '100%',
           display: 'grid',
-          gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+          gridTemplateColumns: { md: 'repeat(3, minmax(0, 1fr))' },
+          px: { xs: 2 },
           columnGap: 10,
-          rowGap: 5,
+          rowGap: { xs: 1, md: 5 },
         }}
       >
         <Box>
           <Typography sx={{ mb: 2, fontSize: 20, fontWeight: 'bold' }}>
             Competitive Pricing
           </Typography>
-          <Typography sx={{ mb: 2, fontSize: 15 }}>
+          <Typography sx={{ mb: 2, fontSize: 15, color: grey[500] }}>
             Our pricing model is transparent. We offer a few pricing tiers, with
             clear limits and no add-ons.
           </Typography>
@@ -52,7 +54,7 @@ export default function MainMessage() {
           <Typography sx={{ mb: 2, fontSize: 20, fontWeight: 'bold' }}>
             Private Cloud
           </Typography>
-          <Typography sx={{ mb: 2, fontSize: 15 }}>
+          <Typography sx={{ mb: 2, fontSize: 15, color: grey[500] }}>
             We offer support for integrating Stormkit into your Private Cloud.
             Experience the benefits of a modern stack while maintaining maximum
             control for your enterprise.
@@ -62,7 +64,7 @@ export default function MainMessage() {
           <Typography sx={{ mb: 2, fontSize: 20, fontWeight: 'bold' }}>
             Personal Service
           </Typography>
-          <Typography sx={{ mb: 2, fontSize: 15 }}>
+          <Typography sx={{ mb: 2, fontSize: 15, color: grey[500] }}>
             As a bootstrapped company, we prioritize your needs. If our standard
             pricing or features don't align with your requirements, we'll
             collaborate with you to achieve the desired outcome.
@@ -72,7 +74,7 @@ export default function MainMessage() {
           <Typography sx={{ mb: 2, fontSize: 20, fontWeight: 'bold' }}>
             Security and Compliance
           </Typography>
-          <Typography sx={{ mb: 2, fontSize: 15 }}>
+          <Typography sx={{ mb: 2, fontSize: 15, color: grey[500] }}>
             We prioritize your security and compliance needs, ensuring that your
             applications are protected and meet regulatory standards across
             various industries.
@@ -82,7 +84,7 @@ export default function MainMessage() {
           <Typography sx={{ mb: 2, fontSize: 20, fontWeight: 'bold' }}>
             No Vendor Lock-In
           </Typography>
-          <Typography sx={{ mb: 2, fontSize: 15 }}>
+          <Typography sx={{ mb: 2, fontSize: 15, color: grey[500] }}>
             Every feature in our offering is crafted with the explicit aim of
             ensuring users are not bound to any particular vendor or proprietary
             technology.
@@ -92,7 +94,7 @@ export default function MainMessage() {
           <Typography sx={{ mb: 2, fontSize: 20, fontWeight: 'bold' }}>
             Strong Feature Set
           </Typography>
-          <Typography sx={{ mb: 2, fontSize: 15 }}>
+          <Typography sx={{ mb: 2, fontSize: 15, color: grey[500] }}>
             Our platform is equipped with a powerful array of tools, ensuring
             that developers have everything they require to build, deploy, and
             scale applications seamlessly.

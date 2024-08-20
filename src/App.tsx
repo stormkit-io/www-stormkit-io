@@ -13,7 +13,12 @@ const App: React.FC<Props> = ({ routes }) => {
     <StyledEngineProvider>
       <ThemeProvider theme={theme}>
         <Box sx={{ bgcolor: 'background.default' }}>
-          <Box sx={{ maxWidth: '1560px', margin: '0 auto' }}>
+          <Box
+            sx={{
+              maxWidth: '1560px',
+              margin: '0 auto',
+            }}
+          >
             <Routes>
               {routes.map((route) => (
                 <Route key={route.path} {...route}></Route>

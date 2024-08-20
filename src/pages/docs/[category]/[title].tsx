@@ -2,6 +2,7 @@ import { useTheme } from '@mui/material/styles'
 import { useParams } from 'react-router'
 import Box from '@mui/material/Box'
 import Header from '~/components/Header'
+import Footer from '~/components/Footer'
 import DocsNav from '~/components/DocsNav'
 import ImageOverlay from '~/components/ImageOverlay'
 import { withContent } from '~/helpers/markdown'
@@ -25,9 +26,8 @@ export default function DocTitle() {
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        bgcolor: theme.palette.background.default,
         color: theme.palette.primary.contrastText,
-        fontSize: 13,
+        mb: 2,
       }}
       className={params.category?.toLowerCase() || 'welcome'}
     >
@@ -41,6 +41,7 @@ export default function DocTitle() {
           mx: 'auto',
           flexGrow: 1,
           width: '100%',
+          mb: 4,
         }}
       >
         <DocsNav items={navigation} />
@@ -56,7 +57,6 @@ export default function DocTitle() {
               pt: { xs: 2, lg: 2 },
               mx: 'auto',
               flex: 1,
-              bgcolor: 'rgba(0,0,0,0.05)',
               lineHeight: 2,
               '& summary': {
                 cursor: 'pointer',
@@ -83,6 +83,7 @@ export default function DocTitle() {
           </Box>
         </Box>
       </Box>
+      <Footer />
     </Box>
   )
 }

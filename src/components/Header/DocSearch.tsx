@@ -33,7 +33,7 @@ export default function DocSearch() {
       sx={{
         flex: 1,
         display: 'flex',
-        justifyContent: 'flex-end',
+        justifyContent: 'flex-start',
         position: 'relative',
         width: { xs: '100%', md: 'auto' },
       }}
@@ -53,7 +53,7 @@ export default function DocSearch() {
           onClick={() => setFocused(true)}
           sx={{
             userSelect: 'none',
-            minWidth: '200px',
+            minWidth: '400px',
             width: { xs: '100%', md: 'auto' },
           }}
           InputProps={{

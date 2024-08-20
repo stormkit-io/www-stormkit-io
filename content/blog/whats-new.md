@@ -5,6 +5,10 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## Aug 20th, 2024
+
+You can now specify a [custom error file](/docs/features/redirects-and-path-rewrites) for 404 pages.
+
 ## Aug 16th, 2024
 
 Introduced configuring [custom certificates](/docs/features/custom-certificates) for domains hosted on Stormkit.

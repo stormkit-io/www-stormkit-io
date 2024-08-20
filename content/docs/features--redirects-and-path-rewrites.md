@@ -148,12 +148,28 @@ The example above will rewrite the `/path` to `/new-path` for `example-a.org` an
 
 <section>
 
-Please note that if your application contains `API` routes, paths starting with `/api` will not be matched. This is to allow `/api` routes to handle the redirect
-themselves. If you do not have any `API` function, this rule does not apply.
+Please note that if your application contains `API` routes, paths starting with `/api` will not be matched.
+This is to allow `/api` routes to handle the redirect themselves.
+If you do not have any `API` function, this rule does not apply.
 
 You can configure the API routes through the [Serverless configuration section](/docs/deployments/configuration).
 
 </section>
+
+## Custom 404 pages
+
+By Default, when a page is not found, Stormkit will try to serve `/404.html` or `/error.html` if any of these files are found in your deployment. You can customize this behaviour as follows:
+
+1. Go to **Environment Config** > **Redirects**
+1. Find the `Custom Error File` field
+1. Type the file that should be served instead (e.g. /index.html).
+
+This setting will be applied to **all** of your deployments and take effect instantly. There is no need for a deployment.
+
+**Note** If you have `API` routes configured, the custom error file will not be applied to the paths starting
+with your `API Path` - which is `/api` by default.
+
+**Note** Similarly, if you have serverless side logic, the custom error file will not be applied.
 
 ## Environment level redirects
 

@@ -9,6 +9,7 @@ const blog = import.meta.glob('/content/blog/*.md', { as: 'raw' })
 
 const routes: Prerender[] = [
   { route: '/' },
+  { route: '/404' },
   {
     route: '/policies/terms',
     title: 'Terms of Service',

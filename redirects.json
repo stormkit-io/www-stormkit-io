@@ -3,8 +3,5 @@
     "from": "/docs$",
     "to": "/docs/welcome/getting-started",
     "status": 302
-  },
-  {
-    "404": "/404"
   }
 ]

@@ -23,22 +23,25 @@ const links: Array<{ name: string; links: LinkProps[] }> = [
   {
     name: 'company',
     links: [
-      { path: '/#pricing', text: 'pricing' },
-      { path: '/policies/privacy', text: 'privacy policy' },
-      { path: '/policies/terms', text: 'terms' },
+      { path: '/#pricing', text: 'Pricing' },
+      { path: '/policies/privacy', text: 'Privacy policy' },
+      { path: '/policies/terms', text: 'Terms' },
     ],
+  },
+  {
+    name: 'comparisons',
+    links: [{ path: '/vs-vercel', text: 'vs Vercel' }],
   },
   {
     name: 'resources',
     links: [
-      { path: '/docs', text: 'docs' },
-      { path: '/blog', text: 'blog' },
-      { path: '/blog/whats-new', text: 'whats new?' },
-      { path: '/docs/welcome/contributing', text: 'contribute' },
-      { path: '/blog/faq', text: 'FAQ' },
+      { path: '/docs', text: 'Docs' },
+      { path: '/blog', text: 'Blog' },
+      { path: '/blog/whats-new', text: "What's new?" },
+      { path: '/docs/welcome/contributing', text: 'Contribute' },
       {
         path: 'https://status.stormkit.io/',
-        text: 'status',
+        text: 'Status',
         external: true,
       },
     ],
@@ -48,13 +51,13 @@ const links: Array<{ name: string; links: LinkProps[] }> = [
     links: [
       {
         path: 'https://twitter.com/stormkitio',
-        text: 'twitter',
+        text: 'Twitter',
         external: true,
         icon: <Twitter sx={{ mr: 1, fill: 'rgb(29, 155, 240)' }} />,
       },
       {
         path: 'https://www.linkedin.com/company/stormkit',
-        text: 'linkedin',
+        text: 'LinkedIn',
         external: true,
         icon: <LinkedIn sx={{ mr: 1, fill: 'rgb(29, 155, 240)' }} />,
       },
@@ -163,7 +166,6 @@ export default function Footer({ maxWidth = lastWidth }: Props) {
                       mb: 0.5,
                       display: 'inline-flex',
                       alignItems: 'center',
-                      textTransform: 'capitalize',
                       textDecoration: 'none',
                       opacity: 0.7,
                       transition: 'opacity 0.25s ease-in-out',

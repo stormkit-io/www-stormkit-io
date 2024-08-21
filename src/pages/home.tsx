@@ -47,7 +47,7 @@ export default function Home() {
             textAlign: 'center',
           }}
         >
-          Scalable and cost-effective Vercel alternative
+          Scalable and Cost Effective Vercel alternative
         </Typography>
         <Typography
           variant="h2"

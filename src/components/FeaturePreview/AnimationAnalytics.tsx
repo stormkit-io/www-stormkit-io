@@ -92,7 +92,6 @@ export default function AnimationAnalytics() {
               <YAxis
                 tick={{
                   fill: 'white',
-                  fontFamily: 'Inter, sans-serif',
                   fontSize: 12,
                 }}
               />

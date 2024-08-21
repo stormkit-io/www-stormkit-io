@@ -17,6 +17,9 @@ const LinkBehavior = React.forwardRef<
 })
 
 export default createTheme({
+  typography: {
+    fontFamily: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'].join(', '),
+  },
   components: {
     MuiLink: {
       defaultProps: {

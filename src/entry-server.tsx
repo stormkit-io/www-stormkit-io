@@ -17,9 +17,9 @@ interface RenderReturn {
 export type RenderFunction = (url: string, seo?: SEO) => Promise<RenderReturn>
 
 const defaultSEO: SEO = {
-  title: 'Effortlessly deploy serverless full stack JavaScript applications',
+  title: 'Self-Hosted Vercel Alternative',
   description:
-    'Stormkit is a serverless platform to deploy full stack javascript applications. Seamlessly integrated with Git, Stormkit offers an array of powerful features including application previews, instant scaling, code injections, cronjobs, feature flags and so much more. Streamline your deployment process and let Stormkit handle the heavy lifting, so you can focus on crafting exceptional applications.',
+    'Stormkit is a self-hostable alternative tool to platforms like Vercel and Netlify.',
   domain: {
     name: 'Stormkit.io',
     url: 'https://stormkit.io',

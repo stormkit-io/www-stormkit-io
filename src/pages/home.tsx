@@ -47,23 +47,20 @@ export default function Home() {
             textAlign: 'center',
           }}
         >
-          Full stack Javascript apps. Deployed to the Cloud.
+          Scalable and cost-effective Vercel alternative
         </Typography>
         <Typography
           variant="h2"
           sx={{
             mt: 2,
-            fontWeight: 200,
+            fontWeight: 300,
             fontSize: { xs: 15, md: 18 },
             maxWidth: MAX_WIDTH_MD,
             textAlign: 'center',
-            opacity: 0.7,
           }}
         >
-          Effortlessly launch your full stack JavaScript applications within
-          minutes and shift your focus to what matters most, your application
-          itself. Leverage our powerful suite of tools to enhance your
-          development process.
+          Stormkit is an intuitive, powerful, and self-hostable hosting platform
+          for frontend applications. Take control over your infrastructure.
         </Typography>
         <Box
           sx={{
@@ -78,7 +75,7 @@ export default function Home() {
             size="large"
             href="https://app.stormkit.io"
           >
-            Start your free trial
+            Get started
           </Button>
         </Box>
       </Box>

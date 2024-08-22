@@ -30,8 +30,7 @@ const limits: Record<SubscriptionTier, { fns: string; bandwidth: string }> = {
 
 const includedFeatures = [
   'Unlimited Team Members',
-  'Snipped Injection',
-  'Cronjobs',
+  'Snippet Injections',
   'Feature Flag Management',
   'Runtime Logs',
   'Custom Domains',

@@ -34,5 +34,5 @@ export default defineConfig({
     },
     outDir: '.stormkit/public',
   },
-  plugins: [react()],
+  plugins: [react({ jsxImportSource: '@emotion/react' })],
 })

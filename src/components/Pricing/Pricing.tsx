@@ -98,7 +98,7 @@ export default function Pricing() {
             value={mode}
             exclusive
             onChange={(_: any, newMode) => {
-              setMode(newMode as Mode)
+              if (newMode) setMode(newMode as Mode)
             }}
             aria-label="Platform"
           >

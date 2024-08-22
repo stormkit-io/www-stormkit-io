@@ -21,11 +21,13 @@ export default function PricingSlider({ seats = 1, edition }: Props) {
       return 0
     }
 
-    if (value === 1) {
+    const isPremium = edition === 'premium'
+
+    if (value === 1 && !isPremium) {
       return -1
     }
 
-    return edition === 'premium' ? value * 100 : value * 39
+    return isPremium ? value * 100 : value * 39
   }, [value, edition])
 
   // The price label of the selected tier (e.g. up to 100 or 5 seats)

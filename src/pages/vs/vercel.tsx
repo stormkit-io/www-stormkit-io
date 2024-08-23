@@ -10,9 +10,9 @@ import { useScrollToHash } from '~/helpers/scroll'
 export const fetchData: FetchDataFunc = async () => {
   return {
     head: {
-      title: 'What makes Stormkit a great Vercel alternative',
+      title: 'What makes Stormkit a great Vercel alternative?',
       description:
-        "Here's why you should consider Stormkit as an intiutive, scalable and cost-effective alternative to Vercel.",
+        'Stormkit is as an intiutive, scalable, cost-effective and self-hostable alternative to Vercel.',
     },
     context: {},
   }

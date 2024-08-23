@@ -67,10 +67,19 @@ export default function Pricing() {
           boxShadow: 12,
         }}
       >
-        <Box sx={{ mb: 4, textAlign: 'center', position: 'relative' }}>
+        <Box
+          sx={{
+            mb: 4,
+            textAlign: 'center',
+            position: 'relative',
+            display: { xs: 'flex', md: 'block' },
+            flexDirection: { xs: isCloud ? 'row' : 'row-reverse', md: 'unset' },
+            justifyContent: { xs: 'space-between', md: 'unset' },
+          }}
+        >
           <Box
             sx={{
-              position: 'absolute',
+              position: { xs: 'static', md: 'absolute' },
               p: 0,
               m: 0,
               top: { md: 4 },

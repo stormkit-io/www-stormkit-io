@@ -81,23 +81,15 @@ export default function Terms() {
           <br /> great Vercel alternative
         </Typography>
         <Typography>
-          <Link
-            sx={{ color: 'white', fontWeight: 'bold' }}
-            href="https://vercel.com"
-            rel="nofollow noreferrer"
-            target="_blank"
-          >
-            Vercel
-          </Link>{' '}
-          is a cloud platform designed to host and deploy frontend applications,
-          primarily focused on projects built using modern JavaScript frameworks
-          like Next.js and others. Vercel provides a fully managed
-          infrastructure that simplifies the process of building, deploying, and
-          scaling web applications.
+          Stormkit is an intuitive, scalable, and cost-effective self-hostable
+          platform for frontend applications. It comes with built-in features
+          like deployment previews, analytics, snippet injections, multiple
+          environments and more.
         </Typography>
         <Typography sx={{ mt: 2 }}>
-          Stormkit is a similar service in the space, which solves different
-          problems. Here's why you should consider using it over Vercel.
+          Vercel, on the other hand, is a fully-managed cloud provider in the
+          same space. This article goes through the reasons of why may want to
+          consider Stormkit as an alternative to Vercel.
         </Typography>
         <Box
           component="img"
@@ -158,12 +150,20 @@ export default function Terms() {
             networking, and scaling.
           </Typography>
           <Typography component="li" sx={{ mt: 2 }}>
-            Vercel, on the other hand, is a fully managed service. You don't
-            need to worry about managing the underlying infrastructure; Vercel
-            takes care of everything for you. This makes Vercel an excellent
-            choice for developers who prioritize convenience and simplicity,
-            allowing them to focus solely on coding and application performance
-            without handling the complexities of server management.
+            <Link
+              sx={{ color: 'white', fontWeight: 'bold' }}
+              href="https://vercel.com"
+              rel="nofollow noreferrer"
+              target="_blank"
+            >
+              Vercel
+            </Link>
+            , on the other hand, is a fully managed service. You don't need to
+            worry about managing the underlying infrastructure; Vercel takes
+            care of everything for you. This makes Vercel an excellent choice
+            for developers who prioritize convenience and simplicity, allowing
+            them to focus solely on coding and application performance without
+            handling the complexities of server management.
           </Typography>
         </Typography>
         <Subtitle id="flexibility">2. Deployment Flexibility</Subtitle>

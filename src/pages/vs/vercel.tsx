@@ -215,7 +215,8 @@ export default function Terms() {
             pricing tiers, you know exactly what you're paying for upfront, with
             no hidden costs or add-ons. This can be particularly advantageous
             for teams who want to avoid unexpected overage charges and ensure
-            that their hosting costs remain predictable month to month.
+            that their hosting costs remain predictable month to month. You can{' '}
+            <Link href="/#pricing">check out our pricing here.</Link>
           </Typography>
           <Typography component="li" sx={{ my: 2 }}>
             Vercel also offers a variety of pricing tiers, from free to

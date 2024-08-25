@@ -15,3 +15,11 @@ Stormkit is a deployment platform for frontend applications. It helps you focus 
 <section>
 This section is still under developtment but you can check <a href="https://github.com/stormkit-io/bin" target="_blank" rel="noopener noreferrer">stormkit-io/bin</a> for more information on getting started.
 </section>
+
+## Examples
+
+<section>
+
+- [Install Stormkit on Ubuntu Server](https://github.com/stormkit-io/bin/blob/main/examples/ubuntu.md)
+
+</section>

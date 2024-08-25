@@ -1,5 +1,10 @@
 [
   {
+    "from": "stormkit.io",
+    "to": "www.stormkit.io",
+    "status": 302
+  },
+  {
     "from": "/docs$",
     "to": "/docs/welcome/getting-started",
     "status": 302

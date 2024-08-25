@@ -116,12 +116,11 @@ body {
 }
 
 #blog-content a {
-  color: #b42e5d;
+  color: #ffa726;
   text-decoration: none;
 }
 
 #blog-content a:hover {
-  color: #78193b;
   text-decoration: underline;
 }
 

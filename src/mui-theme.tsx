@@ -5,7 +5,7 @@ import {
   LinkProps as RouterLinkProps,
 } from 'react-router-dom'
 import { LinkProps } from '@mui/material/Link'
-import { grey } from '@mui/material/colors'
+import { grey, orange } from '@mui/material/colors'
 
 const LinkBehavior = React.forwardRef<
   HTMLAnchorElement,
@@ -25,6 +25,11 @@ export default createTheme({
       defaultProps: {
         component: LinkBehavior,
       } as LinkProps,
+      styleOverrides: {
+        root: {
+          color: orange[400],
+        },
+      },
     },
     MuiInputLabel: {
       styleOverrides: {

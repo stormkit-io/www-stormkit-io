@@ -86,11 +86,11 @@ export default function BlogContent() {
             <Box sx={{ textAlign: 'right', mt: 2 }}>
               <Link
                 href={nav.path}
-                color="secondary"
                 sx={{
                   textDecoration: 'none',
                   display: 'inline-flex',
                   alignItems: 'center',
+                  color: 'white',
                   ':hover': {
                     textDecoration: 'underline',
                   },

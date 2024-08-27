@@ -23,3 +23,11 @@ This section is still under developtment but you can check <a href="https://gith
 - [Install Stormkit on Ubuntu Server](https://github.com/stormkit-io/bin/blob/main/examples/ubuntu.md)
 
 </section>
+
+## Tutorials
+
+<section>
+
+- [Install Stormkit on Ubuntu Server and deploy a Next.js app](https://youtu.be/bLw0r3VKLrg)
+
+</section>

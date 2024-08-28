@@ -59,8 +59,8 @@ export default function Home() {
             textAlign: 'center',
           }}
         >
-          Stormkit is an intuitive, powerful, and self-hostable hosting platform
-          for frontend applications. Take control over your infrastructure.
+          A fully-featured, powerful, and self-hostable platform for deploying
+          frontend applications. Take control over your infrastructure.
         </Typography>
         <Box
           sx={{

@@ -5,6 +5,14 @@ date: 2023-05-21
 search: true
 ---
 
+<section class="blog-alert">
+
+**Update 28 Aug, 2024** <br />
+We recently announced our self-hosted edition which supports full features of Next.js
+out-of-the-box. Check our [self-hosted](/docs/welcome/self-hosting) guide for more information.
+
+</section>
+
 In our continuous pursuit of delivering the best developer experience, we've made a bold decision. We're dropping serverless support for Next.js. While this framework has its merits, we believe that simplicity and maintainability are paramount for us as a bootstrapped company. In this blog post, we'll explain the reasons behind our choice and shed light on our vision for the future.
 
 ## Struggling with Backwards Compatibility
@@ -25,7 +33,7 @@ By dropping serverless support for Next.js, we're streamlining our efforts to co
 
 As a first step, we're thrilled to introduce our [React Monorepo Template](https://github.com/stormkit-io/monorepo-template-react). This template is designed to empower developers by providing all the necessary functionality without the need to rely on a specific framework. With this template, you can enjoy a simple build process and unleash your creativity to build applications tailored to your exact requirements. We believe in giving developers the freedom to shape their projects and take control of their codebase. The React Monorepo Template is just one example of how we're committed to enabling developers to bring their ideas to life while maintaining a lightweight and flexible approach.
 
-It's also important to clarify that single-page applications (SPAs) and prerendered applications built with Next.js will continue to function seamlessly on Stormkit, we are only dropping support for the serverless part. 
+It's also important to clarify that single-page applications (SPAs) and prerendered applications built with Next.js will continue to function seamlessly on Stormkit, we are only dropping support for the serverless part.
 
 ## Conclusion
 

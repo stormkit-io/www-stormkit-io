@@ -1,22 +1,22 @@
 @font-face {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: url(./assets/fonts/Roboto-Regular.woff2) format("woff2");
+  src: url(./assets/fonts/Roboto-Regular.woff2) format('woff2');
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  src: url(./assets/fonts/Roboto-Medium.woff2) format("woff2");
+  src: url(./assets/fonts/Roboto-Medium.woff2) format('woff2');
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 600;
-  src: url(./assets/fonts/Roboto-Bold.woff2) format("woff2");
+  src: url(./assets/fonts/Roboto-Bold.woff2) format('woff2');
 }
 
 html,
@@ -135,6 +135,18 @@ body {
   word-break: break-all;
   white-space: break-spaces;
   word-wrap: break-word;
+}
+
+#blog-content .blog-alert {
+  background-color: rgb(255, 0, 248, 0.25);
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
+
+#blog-content .blog-alert p {
+  margin: 0;
+  margin-left: 0.5rem;
 }
 
 /* PrismJS 1.29.0

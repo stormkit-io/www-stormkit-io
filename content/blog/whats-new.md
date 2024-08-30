@@ -5,6 +5,10 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## Aug 30th, 2024
+
+Introduced dark / light mode switcher. Click **Avatar** > **Theme** to switch.
+
 ## Aug 20th, 2024
 
 You can now specify a [custom error file](/docs/features/redirects-and-path-rewrites) for 404 pages.

@@ -4,7 +4,7 @@ import { useTheme } from '@mui/material/styles'
 import IconButton from '@mui/material/IconButton'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
-import { Menu, Close, GitHub, Login, LinkedIn } from '@mui/icons-material'
+import { Menu, Close, GitHub, LinkedIn } from '@mui/icons-material'
 import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
 import DiscordLogo from '~/assets/images/discord.svg'
 import DocSearch from './DocSearch'
@@ -17,7 +17,6 @@ const links = [
   { path: '/docs', text: 'docs' },
   { path: '/blog', text: 'blog' },
   { path: '/blog/whats-new', text: 'whats new?' },
-  { path: '/blog/faq', text: 'FAQ' },
   { path: '/#pricing', text: 'pricing' },
   {
     path: 'https://github.com/stormkit-io',
@@ -47,7 +46,6 @@ const links = [
         </Box>
       </>
     ),
-    separator: true,
   },
   {
     path: 'https://discord.com/invite/6yQWhyY',
@@ -73,7 +71,6 @@ const links = [
     path: 'https://app.stormkit.io',
     text: 'login',
     separator: true,
-    icon: <Login sx={{ fontSize: 20, ml: 0.5 }} />,
   },
 ]
 

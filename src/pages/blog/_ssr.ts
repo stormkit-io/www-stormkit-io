@@ -71,7 +71,7 @@ export const fetchData: FetchDataFunc = async ({ title }: Params) => {
 
   return {
     head: {
-      title: attrs.title,
+      title: attrs.title?.replaceAll("'", ''),
       description: attrs.description,
     },
     context: {

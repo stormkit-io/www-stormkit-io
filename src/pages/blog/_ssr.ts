@@ -34,9 +34,13 @@ export const fetchData: FetchDataFunc = async ({ title }: Params) => {
       search,
     } = parseAttributes(await files[file]())
 
+    const titleNormalized = (
+      title || toTitleCase(fileName.split('--')[0].replace(/-/g, ' '))
+    ).replaceAll("'", '')
+
     navigation.push({
       path: fileName,
-      title: title || toTitleCase(fileName.split('--')[0].replace(/-/g, ' ')),
+      title: titleNormalized,
       subtitle,
       description,
       search: search === 'true',

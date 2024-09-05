@@ -15,14 +15,14 @@ Stormkit's Analytics feature empowers users to gain valuable insights into their
 
 To enable Analytics, users must set up a custom domain for their web application. This ensures accurate tracking of analytics data.
 
-To do so, visit your **Environment** > **Config** > **Custom Domain**
+To do so, visit your **Environment** > **Config** > **Other** > **Custom Domains**
 
 ## Collecting stats
 
 All stats are collected on the server-side, which makes this privacy friendly. We collect the following data:
 
 - Visitor IP
-- Timestamp 
+- Timestamp
 - Request path
 - Referrer
 - Response code

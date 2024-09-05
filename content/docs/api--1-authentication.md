@@ -17,7 +17,7 @@ This API Key will grant access to all applications owned by the team.
 
 ## Environment Level API KEy
 
-1. Visit **Your App** > **Your Environment** > **Config** > **API Keys**
+1. Visit **Your App** > **Your Environment** > **Config** > **Other** > **API Keys**
 1. Create a new API Key
 
 This API Key will grant access to the specified environment.

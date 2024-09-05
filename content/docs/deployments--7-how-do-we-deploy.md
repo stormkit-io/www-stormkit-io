@@ -15,9 +15,9 @@ By default, Stormkit looks for a top-level `.stormkit` subfolder with the follow
 - `server/`
 - `api/`
 
-To modify the working directory, navigate to **Your App** > **Environments** > **Config** > **Build settings** and update the `Root Directory` setting.
+To modify the working directory, navigate to **Your App** > **Environments** > **Config** > **Deployment settings** > **Build** and update the `Root Directory` setting.
 
-To specify a different subfolder other than `.stormkit`, visit **Your App** > **Environments** > **Config** > **Build settings** and update the `Output folder` setting. If changed, the folder structure mentioned above is also validated against this folder. If it differs, the entire content of the directory will be uploaded.
+To specify a different subfolder other than `.stormkit`, visit **Your App** > **Environments** > **Config** > **Deployment settings** > **Build** and update the `Output folder` setting. If changed, the folder structure mentioned above is also validated against this folder. If it differs, the entire content of the directory will be uploaded.
 
 If the deployment lacks a `.stormkit` subfolder and the output folder isn't specified, Stormkit checks for these common subfolders:
 

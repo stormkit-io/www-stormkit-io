@@ -27,7 +27,6 @@ export default function DocTitle() {
         display: 'flex',
         flexDirection: 'column',
         color: theme.palette.primary.contrastText,
-        mb: 2,
       }}
       className={params.category?.toLowerCase() || 'welcome'}
     >

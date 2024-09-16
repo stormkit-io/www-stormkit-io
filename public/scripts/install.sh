@@ -28,6 +28,24 @@ if [ "$machine" == "Mac" ]; then
   else
     brew install docker
   fi
+
+  # Check if Docker is running
+  if ! pgrep -x "Docker" > /dev/null; then
+    echo "Docker is not running. Starting Docker..."
+
+    # Start Docker
+    open --background -a Docker
+
+    # Wait until Docker is running
+    while ! docker info > /dev/null 2>&1; do
+        echo "Waiting for Docker to start..."
+        sleep 2
+    done
+
+    echo "Docker has started."
+  else
+    echo "Docker is already running."
+  fi
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   # We have to run as root
   if [ "$(id -u)" -ne 0 ]; then

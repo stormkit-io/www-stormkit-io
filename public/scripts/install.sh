@@ -138,10 +138,6 @@ select_provider() {
   done
 }
 
-
-# Go to home directory
-cd ~ || return
-
 mkdir -p stormkit
 
 # Download the docker-compose.yaml file

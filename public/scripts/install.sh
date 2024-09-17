@@ -1,22 +1,15 @@
-#!/bin/bash
-
-unameOut="$(uname -s)"
-
-# Determine the machine
-case "${unameOut}" in
-Linux*) machine=Linux ;;
-Darwin*) machine=Mac ;;
-CYGWIN*) machine=Cygwin ;;
-MINGW*) machine=MinGw ;;
-*) machine="UNKNOWN:${unameOut}" ;;
-esac
+#!/bin/sh
 
 # Function to check if a command exists
 command_exists() {
   command -v "$@" >/dev/null 2>&1
 }
 
-if [ "$machine" == "Mac" ]; then
+IS_MAC="0"
+
+if [ "$(uname -s | cut -c1-6)" = "Darwin" ]; then
+  IS_MAC="1"
+
   if command_exists brew; then
     echo "Brew already installed"
   else
@@ -46,7 +39,7 @@ if [ "$machine" == "Mac" ]; then
   else
     echo "Docker is already running."
   fi
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+elif [ "$(uname -s | cut -c1-5)" = "Linux" ]; then
   # We have to run as root
   if [ "$(id -u)" -ne 0 ]; then
     echo "This script must be run as root" >&2
@@ -72,18 +65,18 @@ fi
 # Define text colors for output
 BLUE="\033[0;34m"
 GREEN="\033[0;32m"
-PURPLE='\033[0;35m'
-GRAY='\033[1;30m'
+PURPLE="\033[0;35m"
+GRAY="\033[1;30m"
 NC="\033[0m"
 
 # Function to prompt for an environment variable and update the .env file
 update_env_var() {
-  local var_name=$1
-  local prompt_message=$2
+  var_name=$1
+  prompt_message=$2
 
   # Prompt for the value of the variable
-  printf "${PURPLE}$prompt_message: ${NC}"
-  read -n 5092 -p "" var_value
+  printf "${PURPLE}%s: ${NC}" "$prompt_message"
+  read -r var_value </dev/tty
 
   # Check if .env file exists, if not, create it
   if [ ! -f .env ]; then
@@ -93,7 +86,11 @@ update_env_var() {
   # Check if the variable already exists in the .env file
   if grep -q "^$var_name=" .env; then
     # Update the existing variable
-    sed -i '' "s/^$var_name=.*/$var_name=$var_value/" .env
+    if [ "$IS_MAC" = "1" ]; then
+      sed -i '' "s/^$var_name=.*/$var_name=$var_value/" .env
+    else
+      sed -i~ "/^$var_name=/s/=.*/=\"$var_value\"/" .env
+    fi
   else
     # Append the new variable to the .env file
     echo "$var_name=$var_value" >>.env
@@ -102,27 +99,38 @@ update_env_var() {
 
 SELECTED_PROVIDER=""
 
-# Function to display the single-select menu
 select_provider() {
   printf "${PURPLE}Which provider are you going to use for authentication?${NC}\n"
-  options=("GitHub" "GitLab" "Bitbucket")
+
+  # Define options as a space-separated string
+  options="GitHub GitLab Bitbucket"
 
   while true; do
     printf "${GRAY}Select an option (type the number and press Enter):${NC}\n"
 
-    for i in "${!options[@]}"; do
-      printf "%d) %s\n" "$((i+1))" "${options[$i]}"
+    # Use a counter to display the options
+    i=1
+    for option in $options; do
+      printf "%d) %s\n" "$i" "$option"
+      i=$((i + 1))
     done
 
+    # Prompt for user input
     echo
-    read -p "Enter the number of the provider: " choice
+    printf "Enter the number of the provider: "
+    read -r choice </dev/tty
 
-    # Adjust the choice to match the displayed number (1-based index)
-    choice=$((choice - 1))
-
-    # Validate the choice and break the loop if the choice is valid
-    if [[ $choice =~ ^[0-9]+$ ]] && [ $choice -ge 0 ] && [ $choice -lt ${#options[@]} ]; then
-      SELECTED_PROVIDER="${options[$choice]}"
+    # Validate the choice (ensure it's a number and in range)
+    if [ "$choice" -ge 1 ] 2>/dev/null && [ "$choice" -le $((i - 1)) ]; then
+      # Get the selected provider based on choice
+      i=1
+      for option in $options; do
+        if [ "$i" -eq "$choice" ]; then
+          SELECTED_PROVIDER="$option"
+          break
+        fi
+        i=$((i + 1))
+      done
       break
     else
       echo "Invalid choice. Please try again."
@@ -130,8 +138,9 @@ select_provider() {
   done
 }
 
+
 # Go to home directory
-cd
+cd ~ || return
 
 mkdir -p stormkit
 
@@ -148,7 +157,7 @@ echo
 
 select_provider
 
-if [ "$SELECTED_PROVIDER" == "GitHub" ]; then
+if [ "$SELECTED_PROVIDER" = "GitHub" ]; then
   echo
   echo "Check https://github.com/stormkit-io/bin for more information on these variables"
 fi
@@ -157,7 +166,7 @@ echo
 
 update_env_var "STORMKIT_DOMAIN" "Enter the top-level domain (e.g. example.org)"
 
-if [ "$SELECTED_PROVIDER" == "GitHub" ]; then
+if [ "$SELECTED_PROVIDER" = "GitHub" ]; then
   update_env_var "GITHUB_APP_ID" "Enter GitHub App ID (e.g. 97401)"
   update_env_var "GITHUB_CLIENT_ID" "Enter GitHub Client ID (e.g. Iv2...)"
   update_env_var "GITHUB_ACCOUNT" "Enter GitHub App account name (e.g. stormkit-io - this is found in the URL of your app)"
@@ -178,5 +187,5 @@ docker swarm init
 docker compose config | sed '/published:/ s/"//g' | sed "/name:/d" | docker stack deploy -c - stormkit
 
 echo ""
-printf "${GREEN}Congratulations, Stormkit is installed on your computer!${NC}n"
+printf "${GREEN}Congratulations, Stormkit is installed on your computer!${NC}"
 echo ""

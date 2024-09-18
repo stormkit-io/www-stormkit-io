@@ -22,5 +22,9 @@ declare interface SEO {
 
     // The image that will be used for large summary cards.
     imageLarge?: string
+    imageWidth?: number
+    imageHeight?: number
+    imageTitle?: string
+    imageContentType?: string
   }
 }

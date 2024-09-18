@@ -27,7 +27,11 @@ const defaultSEO: SEO = {
   twitter: {
     card: 'summary_large_image',
     creator: '@stormkitio',
+    imageContentType: 'image/png',
     imageLarge: 'https://www.stormkit.io/stormkit-og-image-1200x628.png',
+    imageTitle: 'Stormkit OG Image',
+    imageHeight: 628,
+    imageWidth: 1200,
   },
 }
 
@@ -68,7 +72,17 @@ export const render: RenderFunction = async (url, seo) => {
       `<meta name="twitter:creator" content="${tags.twitter!.creator}" />`,
       `<meta name="twitter:title" content="${tags.title}" />`,
       `<meta name="twitter:description" content="${tags.description}" />`,
+      `<meta name="twitter:image:content_type" content="${tags.twitter.imageContentType}"/>`,
+      `<meta name="twitter:image:title" content="${
+        tags.twitter!.imageTitle
+      }" />`,
       `<meta name="twitter:image" content="${tags.twitter!.imageLarge}" />`,
+      `<meta name="twitter:image:width" content="${
+        tags.twitter!.imageWidth
+      }"/>`,
+      `<meta name="twitter:image:height" content="${
+        tags.twitter!.imageWidth
+      }"/>`,
       `<link rel="apple-touch-icon" href="/stormkit-logo.png"/>`,
       `<link rel="icon" type="image/svg+xml" href="/stormkit-logo.png" />`,
       `<link href="/src/index.css" rel="stylesheet" />`,

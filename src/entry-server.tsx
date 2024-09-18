@@ -27,7 +27,7 @@ const defaultSEO: SEO = {
   twitter: {
     card: 'summary_large_image',
     creator: '@stormkitio',
-    imageLarge: `https://www.stormkit.io/stormkit-2-1.png`,
+    imageLarge: 'https://www.stormkit.io/stormkit-og-image-1200x628.png',
   },
 }
 

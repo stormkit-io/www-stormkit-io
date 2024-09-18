@@ -166,6 +166,37 @@ export default function Terms() {
             handling the complexities of server management.
           </Typography>
         </Typography>
+        <Typography sx={{ mt: 4 }}>
+          Watch the following tutorial on how to{' '}
+          <Link
+            href="https://www.youtube.com/watch?v=bLw0r3VKLrg&feature=youtu.be"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            install Stormkit on an Ubuntu Server and deploy a Next.js
+            Application
+          </Link>{' '}
+          within a few minutes.
+        </Typography>
+        <Typography
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            my: 4,
+          }}
+        >
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/bLw0r3VKLrg?si=Kyn6iDZLGizbnKoq"
+            title="Install Stormkit on Ubuntu Server and Deploy a Next.js App"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            frameBorder="0"
+            allowFullScreen
+          ></iframe>
+        </Typography>
         <Subtitle id="flexibility">2. Deployment Flexibility</Subtitle>
         <Typography component="ul" sx={{ mt: 2 }}>
           <Typography component="li">
@@ -216,7 +247,7 @@ export default function Terms() {
             no hidden costs or add-ons. This can be particularly advantageous
             for teams who want to avoid unexpected overage charges and ensure
             that their hosting costs remain predictable month to month. You can{' '}
-            <Link href="/#pricing">check out our pricing here.</Link>
+            <Link href="/#pricing">check our pricing here.</Link>
           </Typography>
           <Typography component="li" sx={{ my: 2 }}>
             Vercel also offers a variety of pricing tiers, from free to
@@ -267,6 +298,11 @@ export default function Terms() {
             environment, Stormkit is the way to go. If you prefer a fully
             managed solution with minimal setup, Vercel might be a better fit.
           </Typography>
+        </Typography>
+        <Subtitle id="whats-next">What's Next?</Subtitle>
+        <Typography sx={{ mt: 2 }}>
+          Check our <Link href="/docs/welcome/self-hosting">documentation</Link>{' '}
+          to get started with self-hosting.
         </Typography>
       </Box>
       <Footer maxWidth="lg" />

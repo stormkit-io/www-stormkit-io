@@ -138,8 +138,6 @@ select_provider() {
   done
 }
 
-mkdir -p stormkit
-
 # Download the docker-compose.yaml file
 curl -o "docker-compose.yaml" "https://raw.githubusercontent.com/stormkit-io/bin/main/docker-compose.yaml" --silent
 

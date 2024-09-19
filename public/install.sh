@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# curl -sSL https://www.stormkit.io/install.sh | sh
+
 # Function to check if a command exists
 command_exists() {
   command -v "$@" >/dev/null 2>&1

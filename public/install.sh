@@ -200,7 +200,7 @@ move_env_variables_to_profile() {
     var_value=$(echo "$line" | cut -d '=' -f 2-)
 
     # Check if the variable already exists in the .env file
-    if grep -q "^export $var_name=" .env; then
+    if grep -q "^export $var_name=" $PROFILE_FILE; then
       # Update the existing variable
       if [ "$IS_MAC" = "1" ]; then
         sed -i '' "s/^export $var_name=.*/export $var_name=$var_value/" "$PROFILE_FILE"
@@ -211,7 +211,7 @@ move_env_variables_to_profile() {
       # Append the new variable to the .env file
       echo "export $var_name=$var_value" >> "$PROFILE_FILE"
     fi
-  done < "$ENV_FILE"
+  done < ".env"
 
   source $PROFILE_FILE
 

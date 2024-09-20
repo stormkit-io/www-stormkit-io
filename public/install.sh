@@ -163,7 +163,7 @@ setup_base_env_variables() {
 
 # Setup the Hosting Service. It comes with the API bundled, therefore we need authentication
 # information as well.
-setup_hosting() {
+setup_hosting_env_variables() {
   single_select "Which provider are you going to use for authentication?" "GitHub GitLab Bitbucket"
 
   if [ "$SELECTED_PROVIDER" = "GitHub" ]; then
@@ -232,14 +232,15 @@ DOCKER_MODE=$SELECTED_PROVIDER
 # Download the docker-compose.yaml file
 curl -o "docker-compose.yaml" "https://raw.githubusercontent.com/stormkit-io/bin/main/docker-compose.yaml" --silent
 
+setup_base_env_variables
+
 if [ "$DOCKER_MODE" = "Compose" ]; then
-  setup_base_env_variables
-  setup_hosting
+  setup_hosting_env_variables
+  move_env_variables_to_profile
 
   docker compose up -d
 else
-  setup_base_env_variables
-  setup_hosting
+  setup_hosting_env_variables
   move_env_variables_to_profile
 
   # Leave Docker Swarm if initialized

@@ -83,7 +83,7 @@ update_env_var() {
   printf "${PURPLE}%s: ${NC}" "$prompt_message"
 
   if [ -n "$prompt_desc" ]; then
-    printf "${GRAY}%s" "$prompt_desc"
+    printf "${GRAY}%s${NC}" "$prompt_desc"
   fi
 
   read -r var_value </dev/tty

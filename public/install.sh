@@ -7,9 +7,6 @@ command_exists() {
   command -v "$@" >/dev/null 2>&1
 }
 
-# Path to the profile file (e.g., ~/.profile)
-PROFILE_FILE="$HOME/.profile"
-
 IS_MAC="0"
 
 if [ "$(uname -s | cut -c1-6)" = "Darwin" ]; then
@@ -187,6 +184,13 @@ setup_hosting_env_variables() {
   fi
 }
 
+# Path to the profile file (e.g., ~/.profile)
+PROFILE_FILE="$HOME/.profile"
+
+if [ ! -f "$PROFILE_FILE" ]; then
+    touch "$PROFILE_FILE"
+fi
+
 move_env_variables_to_profile() {
   # Read the .env file line by line
   while IFS= read -r line; do
@@ -213,7 +217,7 @@ move_env_variables_to_profile() {
     fi
   done < ".env"
 
-  source $PROFILE_FILE
+  . $PROFILE_FILE
 
   rm -rf .env .env~ "$PROFILE_FILE"~
 }

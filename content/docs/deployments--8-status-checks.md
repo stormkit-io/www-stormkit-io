@@ -19,7 +19,7 @@ To set up status checks:
 
 The command will execute with the same environment variables available during the build process.
 
-For an example of a status check script, visit our [sample repository](https://github.com/stormkit-io/sample-project/blob/main/scripts/e2e.ts).
+For an example of a status check script, visit our [sample repository](https://github.com/stormkit-io/sample-project/blob/main/scripts/puppeteer.ts).
 
 ## Modifying an Existing Status Check
 

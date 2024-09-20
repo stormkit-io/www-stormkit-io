@@ -7,6 +7,9 @@ command_exists() {
   command -v "$@" >/dev/null 2>&1
 }
 
+# Path to the profile file (e.g., ~/.profile)
+PROFILE_FILE="$HOME/.profile"
+
 IS_MAC="0"
 
 if [ "$(uname -s | cut -c1-6)" = "Darwin" ]; then
@@ -103,8 +106,11 @@ update_env_var() {
     fi
   else
     # Append the new variable to the .env file
-    echo "$var_name=$var_value" >>.env
+    echo "$var_name=$var_value" >> .env
   fi
+
+  # Remove the swap file (if any)
+  rm -rf .env~
 }
 
 SELECTED_PROVIDER=""
@@ -181,6 +187,37 @@ setup_hosting() {
   fi
 }
 
+move_env_variables_to_profile() {
+  # Read the .env file line by line
+  while IFS= read -r line; do
+    # Ignore lines that start with a # (comments) or are empty
+    if [ -z "$line" ] || [ "${line#\#}" != "$line" ]; then
+      continue
+    fi
+
+    # Extract variable name and value (assume format VAR_NAME=VAR_VALUE)
+    var_name=$(echo "$line" | cut -d '=' -f 1)
+    var_value=$(echo "$line" | cut -d '=' -f 2-)
+
+    # Check if the variable already exists in the .env file
+    if grep -q "^export $var_name=" .env; then
+      # Update the existing variable
+      if [ "$IS_MAC" = "1" ]; then
+        sed -i '' "s/^export $var_name=.*/export $var_name=$var_value/" "$PROFILE_FILE"
+      else
+        sed -i~ "/^export $var_name=/s/=.*/=\"$var_value\"/" "$PROFILE_FILE"
+      fi
+    else
+      # Append the new variable to the .env file
+      echo "export $var_name=$var_value" >> "$PROFILE_FILE"
+    fi
+  done < "$ENV_FILE"
+
+  source $PROFILE_FILE
+
+  rm -rf .env .env~ "$PROFILE_FILE"~
+}
+
 echo
 printf "We need to prepare the ${BLUE}environment variables${NC} before proceeding\n"
 echo "Please reply the following questions"
@@ -203,6 +240,7 @@ if [ "$DOCKER_MODE" = "Compose" ]; then
 else
   setup_base_env_variables
   setup_hosting
+  move_env_variables_to_profile
 
   # Leave Docker Swarm if initialized
   docker swarm leave --force 2>/dev/null

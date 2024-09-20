@@ -80,10 +80,10 @@ update_env_var() {
   prompt_desc=$3
 
   # Prompt for the value of the variable
-  printf "${PURPLE}%s: ${NC}" "$prompt_message"
-
   if [ -n "$prompt_desc" ]; then
-    printf "${GRAY}%s${NC}" "$prompt_desc"
+    printf "${PURPLE}%s ${NC}${GRAY}%s: ${NC}" "$prompt_message" "$prompt_desc"
+  else
+    printf "${PURPLE}%s: ${NC}" "$prompt_message"
   fi
 
   read -r var_value </dev/tty
@@ -187,6 +187,7 @@ echo "Please reply the following questions"
 echo
 
 single_select "Which docker mode are you going to use?" "Swarm Compose" "Use Swarm for managing a network, compose for a single machine"
+echo
 
 DOCKER_MODE=$SELECTED_PROVIDER
 

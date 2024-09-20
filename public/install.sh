@@ -25,7 +25,11 @@ if [ "$(uname -s | cut -c1-6)" = "Darwin" ]; then
   fi
 
   # Check if Docker is running
-  if ! pgrep -x "Docker" >/dev/null; then
+  docker_stats=$(docker stats --no-stream)
+
+  if docker info > /dev/null 2>&1; then
+    echo "Docker is already running."
+  else
     echo "Docker is not running. Starting Docker..."
 
     # Start Docker
@@ -38,8 +42,6 @@ if [ "$(uname -s | cut -c1-6)" = "Darwin" ]; then
     done
 
     echo "Docker has started."
-  else
-    echo "Docker is already running."
   fi
 elif [ "$(uname -s | cut -c1-5)" = "Linux" ]; then
   # We have to run as root
@@ -75,9 +77,15 @@ NC="\033[0m"
 update_env_var() {
   var_name=$1
   prompt_message=$2
+  prompt_desc=$3
 
   # Prompt for the value of the variable
   printf "${PURPLE}%s: ${NC}" "$prompt_message"
+
+  if [ -n "$prompt_desc" ]; then
+    printf "${GRAY}%s" "$prompt_desc"
+  fi
+
   read -r var_value </dev/tty
 
   # Check if .env file exists, if not, create it
@@ -101,15 +109,15 @@ update_env_var() {
 
 SELECTED_PROVIDER=""
 
-select_provider() {
-  printf "${PURPLE}Which provider are you going to use for authentication?${NC}\n"
+single_select() {
+  prompt_message=$1
+  options=$2 # Define options as a space-separated string
+  desc=${3:-"Select an option"}
 
-  # Define options as a space-separated string
-  options="GitHub GitLab Bitbucket"
+  printf "${PURPLE}%s${NC}\n" "$prompt_message"
+  printf "${GRAY}%s:${NC}\n" "$desc"
 
   while true; do
-    printf "${GRAY}Select an option (type the number and press Enter):${NC}\n"
-
     # Use a counter to display the options
     i=1
     for option in $options; do
@@ -119,7 +127,7 @@ select_provider() {
 
     # Prompt for user input
     echo
-    printf "Enter the number of the provider: "
+    printf "Enter the number of the provider (and press Enter): "
     read -r choice </dev/tty
 
     # Validate the choice (ensure it's a number and in range)
@@ -140,48 +148,76 @@ select_provider() {
   done
 }
 
+setup_base_env_variables() {
+  # Download the example .env file
+  curl -o ".env" "https://raw.githubusercontent.com/stormkit-io/bin/main/.env.example" --silent
+
+  # TODO: Update passwords
+}
+
+# Setup the Hosting Service. It comes with the API bundled, therefore we need authentication
+# information as well.
+setup_hosting() {
+  single_select "Which provider are you going to use for authentication?" "GitHub GitLab Bitbucket"
+
+  if [ "$SELECTED_PROVIDER" = "GitHub" ]; then
+    echo
+    echo "Check https://github.com/stormkit-io/bin for more information on these variables"
+  fi
+
+  echo
+
+  update_env_var "STORMKIT_DOMAIN" "Enter the top-level domain (e.g. example.org)"
+
+  if [ "$SELECTED_PROVIDER" = "GitHub" ]; then
+    update_env_var "GITHUB_APP_ID" "Enter GitHub App ID (e.g. 97401)"
+    update_env_var "GITHUB_CLIENT_ID" "Enter GitHub Client ID (e.g. Iv2...)"
+    update_env_var "GITHUB_ACCOUNT" "Enter GitHub App account name" "(e.g. github.com/settings/apps/my-stormkit-app => my-stormkit-app)"
+    update_env_var "GITHUB_SECRET" "Enter GitHub App secret"
+    update_env_var "GITHUB_PRIV_KEY" "Enter GitHub app private key"
+  else
+    echo "Provider not supported yet for auto installation."
+    exit 1
+  fi
+}
+
+echo
+printf "We need to prepare the ${BLUE}environment variables${NC} before proceeding\n"
+echo "Please reply the following questions"
+echo
+
+single_select "Which docker mode are you going to use?" "Swarm Compose" "Use Swarm for managing a network, compose for a single machine"
+
+DOCKER_MODE=$SELECTED_PROVIDER
+
+# For now keep this file here - we need to improve the docker swarm setup
 # Download the docker-compose.yaml file
 curl -o "docker-compose.yaml" "https://raw.githubusercontent.com/stormkit-io/bin/main/docker-compose.yaml" --silent
 
-# Download the example .env file
-curl -o ".env" "https://raw.githubusercontent.com/stormkit-io/bin/main/.env.example" --silent
+if [ "$DOCKER_MODE" = "Compose" ]; then
+  setup_base_env_variables
+  setup_hosting
 
-echo
-printf "We need to prepare the ${BLUE}environment variables${NC} before proceeding.\n"
-echo "Please reply the following questions."
-echo
-
-select_provider
-
-if [ "$SELECTED_PROVIDER" = "GitHub" ]; then
-  echo
-  echo "Check https://github.com/stormkit-io/bin for more information on these variables"
-fi
-
-echo
-
-update_env_var "STORMKIT_DOMAIN" "Enter the top-level domain (e.g. example.org)"
-
-if [ "$SELECTED_PROVIDER" = "GitHub" ]; then
-  update_env_var "GITHUB_APP_ID" "Enter GitHub App ID (e.g. 97401)"
-  update_env_var "GITHUB_CLIENT_ID" "Enter GitHub Client ID (e.g. Iv2...)"
-  update_env_var "GITHUB_ACCOUNT" "Enter GitHub App account name (e.g. stormkit-io - this is found in the URL of your app)"
-  update_env_var "GITHUB_SECRET" "Enter GitHub App secret"
-  update_env_var "GITHUB_PRIV_KEY" "Enter GitHub app private key"
+  docker compose up -d
 else
-  echo "Provider not supported yet for auto installation."
-  exit 1
+  setup_base_env_variables
+  setup_hosting
+
+  # Leave Docker Swarm if initialized
+  docker swarm leave --force 2>/dev/null
+
+  # Initialize stack (only needed for master node)
+  docker swarm init
+
+  # Deploy the stack
+  docker compose config | sed '/published:/ s/"//g' | sed "/name:/d" | docker stack deploy -c - stormkit
 fi
-
-# Leave Docker Swarm if initialized
-docker swarm leave --force 2>/dev/null
-
-# Initialize stack (only needed for master node)
-docker swarm init
-
-# Deploy the stack
-docker compose config | sed '/published:/ s/"//g' | sed "/name:/d" | docker stack deploy -c - stormkit
 
 echo ""
 printf "${GREEN}Congratulations, Stormkit is installed on your computer!${NC}"
 echo ""
+
+if [ "$DOCKER_MODE" = "Compose" ]; then
+  printf "Run ${BLUE}docker compose logs -f${NC} to check your logs"
+  echo ""
+fi;

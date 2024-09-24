@@ -254,7 +254,7 @@ else
   docker swarm init
 
   # Deploy the stack
-  docker compose config | sed '/published:/ s/"//g' | sed "/name:/d" | docker stack deploy -c - stormkit
+  docker stack deploy -c docker-compose.yaml stormkit
 fi
 
 echo ""

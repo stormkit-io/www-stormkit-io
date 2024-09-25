@@ -268,4 +268,4 @@ You can turn on the deploy triggers from your application's settings page.
 
 ## March 24th, 2022
 
-Stormkit now supports integrating with external services to reduce vendor-lock. Read our blog post on [How to Deploy to BunnyCDN](/blog/how-to-deploy-to-bunny-cdn) for more details.
+Stormkit now supports integrating with external services to reduce vendor-lock (feature deprecated).

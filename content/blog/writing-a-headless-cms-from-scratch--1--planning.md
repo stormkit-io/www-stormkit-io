@@ -5,7 +5,7 @@ description: Welcome to the exciting journey of building a headless CMS from scr
 date: 2023-06-04
 author-name: Savas Vedova
 author-tw: @savasvedova
-author-img: https://pbs.twimg.com/profile_images/824030706112364546/SY-lJnNN_400x400.jpg
+author-img: https://pbs.twimg.com/profile_images/1681635649298874370/IMQmYpcA_400x400.jpg
 ---
 
 ## Introduction
@@ -56,7 +56,7 @@ A headless CMS typically focuses on providing content management capabilities wi
 - Support for different data formats (e.g., JSON, XML) and protocols (e.g., REST, GraphQL).
 - Ability to retrieve content based on specific criteria or filters.
 - Pagination and sorting options for efficient data retrieval.
-  
+
 6. **User Management and Authentication**
 
 - User roles and permissions to control access and actions within the CMS.
@@ -70,7 +70,7 @@ A headless CMS typically focuses on providing content management capabilities wi
 - Localization features for translating content into different locales.
 - Language fallback options for displaying default content when translations are missing.
 - Internationalization of date formats, currency, and other regional settings.
-  
+
 7. **Scalability and Performance**
 
 - Ability to handle high volumes of content and user requests.
@@ -86,4 +86,4 @@ While speed is a significant focus of our iterative approach, we must not compro
 
 In this blog post, we explored the importance of iteration, effective planning, and the tools needed to embark on our development journey. Stay tuned for the upcoming posts in this series, where we'll dive into the exciting world of coding, creating a dynamic user interface, and leveraging powerful APIs. Get ready to bring your headless CMS vision to life, one iterative step at a time!
 
-Follow me on [Twitter](https://twitter.com/savasvedova) to stay tuned about the next posts on this series! 
+Follow me on [Twitter](https://twitter.com/savasvedova) to stay tuned about the next posts on this series!

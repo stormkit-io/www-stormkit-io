@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import { useTheme } from '@mui/material/styles'
+import ArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
@@ -21,42 +23,72 @@ export interface NavigationItem {
 
 interface Props {
   items?: NavigationItem[]
+  currentCategory?: string
 }
 
 const categories = ['Welcome', 'Deployments', 'Features', 'Other', 'Api']
 
-export default function DocsNav({ items }: Props) {
+const isActiveCategory = (a: string, b: string) => {
+  return a.toLowerCase() === b.toLowerCase()
+}
+
+export default function DocsNav({ items, currentCategory = 'welcome' }: Props) {
   const theme = useTheme()
+  const [activeCategory, setActiveCategory] = useState(currentCategory)
 
   return (
     <Box
       sx={{
-        bgcolor: 'rgba(0,0,0,0.3)',
+        bgcolor: 'page.container',
         py: 4,
         minWidth: 300,
+        minHeight: '90vh',
       }}
     >
       {categories.map((category) => (
         <Box key={category}>
           <Typography
             variant="subtitle1"
+            component="a"
+            href=""
+            onClick={(e) => {
+              e.preventDefault()
+              setActiveCategory(category)
+            }}
+            color="white"
             sx={{
-              color: 'white',
-              textTransform: 'uppercase',
-              fontWeight: 600,
-              fontSize: 12.5,
+              textDecoration: 'none',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              borderBottom: '1px solid',
+              borderColor: 'page.transparent',
               px: { xs: 2, md: 4 },
-              mb: 1,
+              py: 1,
+              cursor: 'pointer',
+              '&:hover': {
+                bgcolor: 'page.transparent',
+              },
             }}
           >
             {category}
+            <ArrowDownIcon
+              fontSize="small"
+              sx={{
+                transform: isActiveCategory(activeCategory, category)
+                  ? 'rotate(180deg)'
+                  : undefined,
+              }}
+            />
           </Typography>
           <Box
             sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              mb: { xs: 0, md: 4 },
+              mb: { xs: 0, md: 1 },
               lineHeight: 2.5,
+              display: isActiveCategory(activeCategory, category)
+                ? 'flex'
+                : 'none',
+              flexDirection: 'column',
             }}
           >
             {items
@@ -65,18 +97,23 @@ export default function DocsNav({ items }: Props) {
                 <Link
                   key={item.path}
                   href={`/docs/${item.path}`}
-                  color={theme.palette.primary.contrastText}
+                  color={
+                    item.active
+                      ? theme.palette.primary.contrastText
+                      : 'text.secondary'
+                  }
+                  variant="subtitle2"
                   sx={{
                     display: 'block',
                     px: { xs: 2, md: 4 },
-                    py: 0.5,
+                    py: 1,
                     textDecoration: 'none',
                     fontWeight: item.active ? 600 : 400,
-                    opacity: item.active ? 1 : 0.75,
-                    bgcolor: item.active ? 'rgba(0,0,0,0.5)' : '',
+                    bgcolor: item.active ? 'page.transparent' : '',
+                    transition: 'all 0.3s ease',
                     '&:hover': {
-                      textDecoration: 'underline',
-                      bgcolor: 'rgba(0,0,0,0.25)',
+                      bgcolor: 'page.transparent',
+                      color: 'white',
                     },
                   }}
                 >

@@ -45,10 +45,9 @@ export default function DocTitle() {
           mx: 'auto',
           flexGrow: 1,
           width: '100%',
-          mb: 4,
         }}
       >
-        <DocsNav items={navigation} />
+        <DocsNav items={navigation} currentCategory={params.category} />
         <Box
           sx={{
             display: 'flex',

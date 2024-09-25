@@ -73,7 +73,7 @@ For more details on how the filesystem routing works, check the <a href="https:/
 </div>
 </p>
 
-Now go ahead and [deploy](/docs/deployments) your application. When Stormkit detects an `/api` source folder,
+Now go ahead and [deploy](/docs/deployments/introduction) your application. When Stormkit detects an `/api` source folder,
 it checks whether it is already built or not. If the `/api` folder is not yet built, Stormkit tries to build
 your api using Webpack and then deploys the output to the lambda function. This process is automatic.
 

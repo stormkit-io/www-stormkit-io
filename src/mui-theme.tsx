@@ -1,3 +1,4 @@
+import '@mui/material/styles'
 import React from 'react'
 import { createTheme } from '@mui/material/styles'
 import {
@@ -5,7 +6,24 @@ import {
   LinkProps as RouterLinkProps,
 } from 'react-router-dom'
 import { LinkProps } from '@mui/material/Link'
-import { grey, orange } from '@mui/material/colors'
+import { green, grey, orange, red } from '@mui/material/colors'
+
+interface PageBackground {
+  container: string
+  default: string
+  paper: string
+  transparent: string
+}
+
+declare module '@mui/material/styles' {
+  interface Palette {
+    page: PageBackground
+  }
+
+  interface PaletteOptions {
+    page: PageBackground
+  }
+}
 
 const LinkBehavior = React.forwardRef<
   HTMLAnchorElement,
@@ -19,6 +37,15 @@ const LinkBehavior = React.forwardRef<
 export default createTheme({
   typography: {
     fontFamily: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'].join(', '),
+    subtitle1: {
+      fontSize: 12.5,
+      textTransform: 'uppercase',
+      fontWeight: 600,
+    },
+    subtitle2: {
+      fontSize: 14,
+      color: 'white',
+    },
   },
   components: {
     MuiLink: {
@@ -52,6 +79,17 @@ export default createTheme({
         },
       },
     },
+    MuiSvgIcon: {
+      styleOverrides: {
+        root: {
+          color: 'white',
+        },
+      },
+      variants: [
+        { props: { color: 'success' }, style: { color: green[600] } },
+        { props: { color: 'error' }, style: { color: red[600] } },
+      ],
+    },
   },
   palette: {
     mode: 'dark',
@@ -66,6 +104,7 @@ export default createTheme({
     },
     text: {
       primary: '#a4a4a4',
+      secondary: '#999999',
     },
     background: {
       default: '#0F092B',
@@ -74,6 +113,12 @@ export default createTheme({
     info: {
       main: grey[900],
       contrastText: grey[100],
+    },
+    page: {
+      container: 'rgb(11, 6, 30)',
+      default: '',
+      paper: '',
+      transparent: 'rgba(255,255,255,0.05)',
     },
   },
   breakpoints: {

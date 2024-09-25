@@ -81,7 +81,7 @@ export default function Header({ search = [] }: Props) {
   return (
     <Box
       sx={{
-        bgcolor: 'rgba(0,0,0,0.3)',
+        bgcolor: 'page.container',
         boxShadow: 2,
         px: { xs: 1, md: 0 },
       }}

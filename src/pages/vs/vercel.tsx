@@ -186,16 +186,19 @@ export default function Terms() {
             my: 4,
           }}
         >
-          <iframe
-            width="560"
-            height="315"
+          <Box
+            component="iframe"
             src="https://www.youtube.com/embed/bLw0r3VKLrg?si=Kyn6iDZLGizbnKoq"
             title="Install Stormkit on Ubuntu Server and Deploy a Next.js App"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             frameBorder="0"
             allowFullScreen
-          ></iframe>
+            sx={{
+              width: { xs: '100%', md: '560px' },
+              height: { xs: '250px', md: '315px' },
+            }}
+          />
         </Typography>
         <Subtitle id="flexibility">2. Deployment Flexibility</Subtitle>
         <Typography component="ul" sx={{ mt: 2 }}>

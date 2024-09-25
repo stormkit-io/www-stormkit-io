@@ -22,7 +22,7 @@ You can create node.js/typescript APIs using Stormkit.
 <section>
 
 During build time, Stormkit checks if there is a `.stormkit/api` folder. When the folder is found,
-it uploads the folder to a lambda function. The <a href="https://github.com/stormkit-io/serverless/blob/main/src/entries/api/server.ts" target="_blank" rel="noopener noreferrer">entry file</a> of the function then takes the `Request` and calls the relevant file based on file system routing. If nothing is found, it returns 404.
+it uploads the folder to a lambda function. The <a href="https://github.com/stormkit-io/serverless/blob/main/src/utils/callbacks/api.ts#L44" target="_blank" rel="noopener noreferrer">entry file</a> of the function then takes the `Request` and calls the relevant file based on file system routing. If nothing is found, it returns 404.
 
 </section>
 

@@ -78,6 +78,10 @@ body {
   margin-top: 0;
 }
 
+#blog-content h2 {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
 #blog-content img {
   display: block;
   max-width: calc(100% - 4rem);
@@ -116,7 +120,7 @@ body {
 }
 
 #blog-content a {
-  color: #ffa726;
+  color: #e2ae5a;
   text-decoration: none;
 }
 

@@ -89,7 +89,7 @@ We added more availability zones to our servers in Europe.
 
 ## August 22th, 2023
 
-By integrating our "Deploy" button into the markdown of your repository, you can streamline the process of cloning your GitHub repository and deploying it on Stormkit. Visit our [doc page](/docs/deployments/deploy-button) website for swift markdown generation.
+By integrating our "Deploy" button into the markdown of your repository, you can streamline the process of cloning your GitHub repository and deploying it on Stormkit.
 
 ## August 20th, 2023
 

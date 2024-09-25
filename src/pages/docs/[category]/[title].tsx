@@ -5,6 +5,7 @@ import Header from '~/components/Header'
 import Footer from '~/components/Footer'
 import DocsNav from '~/components/DocsNav'
 import ImageOverlay from '~/components/ImageOverlay'
+import Error404 from '~/components/Error404'
 import { withContent } from '~/helpers/markdown'
 import { fetchData } from './_ssr'
 import { purple, grey } from '@mui/material/colors'
@@ -19,6 +20,10 @@ export default function DocTitle() {
     defaultCategory: 'welcome',
     defaultTitle: 'getting-started',
   })
+
+  if (!content.__html) {
+    return <Error404 />
+  }
 
   return (
     <Box

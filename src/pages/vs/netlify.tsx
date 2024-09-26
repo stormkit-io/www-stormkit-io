@@ -273,8 +273,8 @@ export default function Terms() {
               instant snippet injection
             </Link>
             , <Link href="/docs/deployments/status-checks">status checks</Link>,{' '}
-            <Link href="/docs/features/writing-apis">serverless functions</Link>
-            , <Link href="/docs/features/analytics">analytics</Link> and more.
+            <Link href="/docs/features/writing-api">serverless functions</Link>,{' '}
+            <Link href="/docs/features/analytics">analytics</Link> and more.
           </Typography>
           <Typography component="li" sx={{ my: 2 }}>
             Netlify provides serverless functions (Netlify Functions), enabling

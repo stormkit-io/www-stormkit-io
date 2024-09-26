@@ -86,7 +86,7 @@ export function withContent(
   const params = useParams()
   const [nav, setNav] = useState<NavigationItem[]>(context.navigation || [])
   const [content, setContent] = useState<string>(context.content || '')
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(typeof window !== 'undefined')
 
   useEffect(() => {
     setLoading(true)

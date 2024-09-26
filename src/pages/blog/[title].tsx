@@ -107,7 +107,11 @@ export default function BlogContent() {
                     ':hover': { textDecoration: 'underline' },
                   }}
                 >
-                  <Avatar src={author.img} sx={{ mr: 1 }} />
+                  <Avatar
+                    src={author.img}
+                    sx={{ mr: 1 }}
+                    alt={`${author.name} profile`}
+                  />
                   {author.name}
                 </Link>
               </Box>

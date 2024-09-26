@@ -30,7 +30,10 @@ const links: Array<{ name: string; links: LinkProps[] }> = [
   },
   {
     name: 'comparisons',
-    links: [{ path: '/vs-vercel', text: 'vs Vercel' }],
+    links: [
+      { path: '/vs-vercel', text: 'vs Vercel' },
+      { path: '/vs-netlify', text: 'vs Netlify' },
+    ],
   },
   {
     name: 'resources',

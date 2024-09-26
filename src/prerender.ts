@@ -11,6 +11,7 @@ const routes: Prerender[] = [
   { route: '/' },
   { route: '/404' },
   { route: '/vs-vercel' },
+  { route: '/vs-netlify' },
   {
     route: '/policies/terms',
     title: 'Terms of Service',

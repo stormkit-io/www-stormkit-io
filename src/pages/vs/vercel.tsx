@@ -277,7 +277,7 @@ export default function Terms() {
             reworking your deployment pipeline and infrastructure.
           </Typography>
         </Typography>
-        <Subtitle id="conclusiong">Conclusion</Subtitle>
+        <Subtitle id="conclusion">Conclusion</Subtitle>
         <Typography component="ul" sx={{ mt: 2 }}>
           <Typography component="li">
             Both Stormkit and Vercel offer powerful solutions for frontend

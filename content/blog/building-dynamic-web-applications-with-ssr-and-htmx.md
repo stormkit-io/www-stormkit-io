@@ -11,7 +11,7 @@ One powerful combination of technologies that enables this process includes Serv
 
 This tutorial will walk you through the process of building a simple web application that features infinite scrolling using these technologies. Additionally, we'll deploy the application on [Stormkit.io](https://www.stormkit.io/).
 
-# \***\*Configuring Vite.js for Stormkit\*\***
+## Configuring Vite.js for Stormkit
 
 To get started, we'll configure Vite.js to generate output compatible with Stormkit. This involves setting up a development server for local development and generating a **`.stormkit`** folder during the build process. This folder can contain three subfolders:
 
@@ -60,7 +60,7 @@ plugins: [
 
 This configuration instructs Vite.js to output files to **`.stormkit/server`**, with the entry file specified in **`src/entry-server.ts`**. Static assets are also copied to the appropriate directories so that we can use them in our dynamically generated view.
 
-# \***\*Implementing Server-Side Rendering Logic\*\***
+## Implementing Server-Side Rendering Logic
 
 The next step is to create the **`entry-server.js`** file. This file serves as the entry point for routing different paths to their respective views:
 
@@ -214,7 +214,7 @@ This is function will be invoked when we visit `/` . It reads index.html and ren
 
 You can see the dev server configuration [here](https://github.com/stormkit-io/vite-handlerbar-htmx/blob/main/src/vite-server.ts). It's mostly copy/paste from the vitejs [guide](https://vitejs.dev/guide/ssr.html#setting-up-the-dev-server). Basically, we are passing everything to the `render` function we exported.
 
-# \***\*Implementing Infinite Scrolling with htmx\*\***
+## Implementing Infinite Scrolling with htmx
 
 Now that we have everything setup for SSR lets to a infinite scrolling using htmx. Idea is to have a table that presents data and when we view last row of the table we need to request next page. For sake of simplicity we implemented a function that generates random array of strings so our view will get page=<number> parameter and it will fill the table, htmx will fetch data and append to our table.
 

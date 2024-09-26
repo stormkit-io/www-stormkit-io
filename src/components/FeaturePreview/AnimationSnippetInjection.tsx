@@ -3,10 +3,10 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Switch from '@mui/material/Switch'
 import Skeleton from '@mui/material/Skeleton'
+import Stack from '@mui/material/Stack'
 import { ChatBubble } from '@mui/icons-material'
 import StormkitConnection from '~/components/StormkitConnection'
 import Browser from '~/components/Browser'
-import { Stack } from '@mui/material'
 
 export default function AnimationSnippetInjection() {
   const [enabled, setEnabled] = useState(false)

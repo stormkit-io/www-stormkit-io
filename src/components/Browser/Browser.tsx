@@ -1,10 +1,8 @@
 import Box from '@mui/material/Box'
-import {
-  GitHub as BrowserIcon,
-  Code as CodeIcon,
-  Lock as LockIcon,
-} from '@mui/icons-material'
-import { Typography } from '@mui/material'
+import Typography from '@mui/material/Typography'
+import BrowserIcon from '@mui/icons-material/GitHub'
+import CodeIcon from '@mui/icons-material/Code'
+import LockIcon from '@mui/icons-material/Lock'
 
 interface Props {
   children: React.ReactNode

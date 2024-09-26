@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { useTheme } from '@mui/material/styles'
 import ArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
@@ -33,7 +32,6 @@ const isActiveCategory = (a: string, b: string) => {
 }
 
 export default function DocsNav({ items, currentCategory = 'welcome' }: Props) {
-  const theme = useTheme()
   const [activeCategory, setActiveCategory] = useState(currentCategory)
 
   return (
@@ -98,9 +96,7 @@ export default function DocsNav({ items, currentCategory = 'welcome' }: Props) {
                   key={item.path}
                   href={`/docs/${item.path}`}
                   color={
-                    item.active
-                      ? theme.palette.primary.contrastText
-                      : 'text.secondary'
+                    item.active ? 'primary.contrastText' : 'text.secondary'
                   }
                   variant="subtitle2"
                   sx={{

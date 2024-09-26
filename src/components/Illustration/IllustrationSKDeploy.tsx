@@ -1,12 +1,9 @@
 import { TypeAnimation } from 'react-type-animation'
-import { useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import CheckIcon from '@mui/icons-material/Check'
 import StormkitConnection from '~/components/StormkitConnection'
 
 export default function StormkitDeploy() {
-  const theme = useTheme()
-
   return (
     <Box
       sx={{
@@ -63,7 +60,7 @@ export default function StormkitDeploy() {
           style={{
             whiteSpace: 'pre-line',
             fontWeight: 600,
-            color: theme.palette.secondary.dark,
+            color: 'secondary.dark',
           }}
           repeat={Infinity}
         />

@@ -1,5 +1,4 @@
 import { useMemo, useState } from 'react'
-import { useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Chip from '@mui/material/Chip'
 import Grid from '@mui/material/Grid'
@@ -19,7 +18,6 @@ type Mode = 'cloud' | 'self-hosted'
 type Edition = 'premium' | ''
 
 export default function Pricing() {
-  const theme = useTheme()
   const [mode, setMode] = useState<Mode>('cloud')
   const [edition, setEdition] = useState<Edition>('')
   const [tier, setTier] = useState<SubscriptionTier>('100')
@@ -150,7 +148,7 @@ export default function Pricing() {
                 >
                   <Typography
                     className="fa-solid fa-square-check"
-                    sx={{ color: theme.palette.success.main, mr: 1 }}
+                    sx={{ color: 'success.main', mr: 1 }}
                   />
                   {isCloud ? feature(tier) : feature(seats, edition)}
                 </Grid>

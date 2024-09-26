@@ -1,7 +1,10 @@
 import type { NavigationItem } from '~/components/DocsNav/DocsNav'
 import { parseAttributes, toTitleCase } from '~/helpers/markdown'
 
-const files = import.meta.glob('/content/docs/**/*.md', { as: 'raw' })
+const files = import.meta.glob('/content/docs/**/*.md', {
+  query: '?raw',
+  import: 'default',
+})
 
 interface Params {
   category?: string
@@ -41,7 +44,7 @@ export const fetchData: FetchDataFunc = async ({
     return { head: {}, context: { navigation } }
   }
 
-  const content = await files[foundFile]()
+  const content = (await files[foundFile]()) as string
   const attrs = parseAttributes(content, category)
 
   const index = content.indexOf('---', 2)

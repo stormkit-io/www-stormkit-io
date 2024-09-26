@@ -1,10 +1,12 @@
 import type { NavigationItem } from '~/components/DocsNav/DocsNav'
-import { useState } from 'react'
-import { useTheme } from '@mui/material/styles'
+import React, { useState } from 'react'
 import IconButton from '@mui/material/IconButton'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
-import { Menu, Close, GitHub, LinkedIn } from '@mui/icons-material'
+import Menu from '@mui/icons-material/Menu'
+import Close from '@mui/icons-material/Close'
+import GitHub from '@mui/icons-material/GitHub'
+import LinkedIn from '@mui/icons-material/LinkedIn'
 import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
 import DiscordLogo from '~/assets/images/discord.svg'
 import DocSearch from './DocSearch'
@@ -13,7 +15,14 @@ interface Props {
   search?: NavigationItem[]
 }
 
-const links = [
+interface LinkProps {
+  path: string
+  text: React.ReactNode
+  icon?: React.ReactNode
+  separator?: boolean
+}
+
+const links: LinkProps[] = [
   { path: '/docs', text: 'docs' },
   { path: '/blog', text: 'blog' },
   { path: '/blog/whats-new', text: 'whats new?' },
@@ -75,7 +84,6 @@ const links = [
 ]
 
 export default function Header({ search = [] }: Props) {
-  const theme = useTheme()
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 
   return (
@@ -162,7 +170,7 @@ export default function Header({ search = [] }: Props) {
             {links.map((link) => (
               <Link
                 key={link.path}
-                color={theme.palette.primary.contrastText}
+                color="primary.contrastText"
                 onClick={() => {
                   setIsMenuOpen(false)
                 }}

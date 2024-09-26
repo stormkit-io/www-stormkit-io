@@ -1,8 +1,8 @@
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import fs from 'node:fs'
-import glob from 'glob'
 import dotenv from 'dotenv'
+import { glob } from 'glob'
 import { build } from 'vite'
 
 dotenv.config()

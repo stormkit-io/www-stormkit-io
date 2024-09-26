@@ -1,4 +1,3 @@
-import { useTheme } from '@mui/material/styles'
 import { useParams } from 'react-router'
 import LinearProgress from '@mui/material/LinearProgress'
 import Box from '@mui/material/Box'
@@ -15,7 +14,6 @@ import { purple, grey } from '@mui/material/colors'
 export { fetchData } from './_ssr'
 
 export default function DocTitle() {
-  const theme = useTheme()
   const params = useParams()
   const { content, navigation, loading } = withContent(fetchData, {
     defaultCategory: 'welcome',
@@ -32,7 +30,7 @@ export default function DocTitle() {
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        color: theme.palette.primary.contrastText,
+        color: 'primary.contrastText',
       }}
       className={params.category?.toLowerCase() || 'welcome'}
     >

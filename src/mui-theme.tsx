@@ -1,11 +1,7 @@
-import '@mui/material/styles'
+import type { LinkProps } from '@mui/material/Link'
 import React from 'react'
 import { createTheme } from '@mui/material/styles'
-import {
-  Link as RouterLink,
-  LinkProps as RouterLinkProps,
-} from 'react-router-dom'
-import { LinkProps } from '@mui/material/Link'
+import { Link as RLink, LinkProps as RLinkProps } from 'react-router-dom'
 import { green, grey, orange, red } from '@mui/material/colors'
 
 interface PageBackground {
@@ -27,11 +23,11 @@ declare module '@mui/material/styles' {
 
 const LinkBehavior = React.forwardRef<
   HTMLAnchorElement,
-  Omit<RouterLinkProps, 'to'> & { href: RouterLinkProps['to'] }
+  Omit<RLinkProps, 'to'> & { href: RLinkProps['to'] }
 >((props, ref) => {
   const { href, ...other } = props
   // Map href (MUI) -> to (react-router)
-  return <RouterLink ref={ref} to={href} {...other} />
+  return <RLink ref={ref} to={href} {...other} />
 })
 
 export default createTheme({

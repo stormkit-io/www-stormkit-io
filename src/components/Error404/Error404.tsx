@@ -1,20 +1,17 @@
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import { useTheme } from '@mui/material/styles'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
 
 export default function Home() {
-  const theme = useTheme()
-
   return (
     <Box
       sx={{
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        bgcolor: theme.palette.background.default,
-        color: theme.palette.primary.contrastText,
+        bgcolor: 'background.default',
+        color: 'primary.contrastText',
       }}
     >
       <Header />

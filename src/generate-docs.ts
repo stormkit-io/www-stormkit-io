@@ -2,7 +2,10 @@ import * as fs from 'node:fs'
 import * as path from 'node:path'
 import { parseAttributes, toTitleCase } from '~/helpers/markdown'
 
-const files = import.meta.glob('/content/docs/*.md', { as: 'raw' })
+const files = import.meta.glob('/content/docs/*.md', {
+  query: '?raw',
+  import: 'default',
+})
 
 interface Doc {
   id: number
@@ -19,7 +22,7 @@ export default async function generateDocs() {
 
   await Promise.all(
     docs.map(async (file, index) => {
-      const content = await files[file]()
+      const content = (await files[file]()) as string
       const metadata = parseAttributes(content)
 
       if (!metadata) {

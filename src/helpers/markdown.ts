@@ -86,10 +86,11 @@ export function withContent(
   const params = useParams()
   const [nav, setNav] = useState<NavigationItem[]>(context.navigation || [])
   const [content, setContent] = useState<string>(context.content || '')
-  const [loading, setLoading] = useState(typeof window !== 'undefined')
+  const [loading, setLoading] = useState(isClientSide)
 
   useEffect(() => {
     setLoading(true)
+    setIsClientSide(true)
 
     fetchData({
       title: params.title || options?.defaultTitle || '',
@@ -98,7 +99,6 @@ export function withContent(
       .then((res) => {
         setNav(res.context.navigation)
         setContent(res.context.content)
-        setIsClientSide(true)
       })
       .finally(() => {
         setLoading(false)

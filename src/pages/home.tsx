@@ -1,7 +1,6 @@
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
-import { useTheme } from '@mui/material/styles'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
 import Illustration from '~/components/Illustration'
@@ -14,8 +13,6 @@ import { useScrollToHash } from '~/helpers/scroll'
 const MAX_WIDTH_MD = 600
 
 export default function Home() {
-  const theme = useTheme()
-
   useScrollToHash()
 
   return (
@@ -24,8 +21,8 @@ export default function Home() {
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        bgcolor: theme.palette.background.default,
-        color: theme.palette.primary.contrastText,
+        bgcolor: 'background.default',
+        color: 'primary.contrastText',
       }}
     >
       <Header />

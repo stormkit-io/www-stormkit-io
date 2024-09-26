@@ -1,4 +1,3 @@
-import { useTheme } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
@@ -44,8 +43,7 @@ const differences = [
   ['Security and Compliance', '#security'],
 ]
 
-export default function Terms() {
-  const theme = useTheme()
+export default function Netlify() {
   useScrollToHash()
 
   return (
@@ -54,8 +52,8 @@ export default function Terms() {
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        bgcolor: theme.palette.background.default,
-        color: theme.palette.primary.contrastText,
+        bgcolor: 'background.default',
+        color: 'primary.contrastText',
       }}
     >
       <Header />

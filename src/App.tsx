@@ -1,6 +1,5 @@
 import { Routes, Route, RouteProps } from 'react-router-dom'
-import { StyledEngineProvider } from '@mui/material/styles'
-import { ThemeProvider } from '@mui/material/styles'
+import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import theme from './mui-theme'
 
@@ -8,7 +7,7 @@ interface Props {
   routes: RouteProps[]
 }
 
-const App: React.FC<Props> = ({ routes }) => {
+export default function App({ routes }: Props) {
   return (
     <StyledEngineProvider>
       <ThemeProvider theme={theme}>
@@ -30,5 +29,3 @@ const App: React.FC<Props> = ({ routes }) => {
     </StyledEngineProvider>
   )
 }
-
-export default App

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Switch from '@mui/material/Switch'
@@ -9,7 +8,6 @@ import StormkitConnection from '~/components/StormkitConnection'
 import Browser from '~/components/Browser'
 
 export default function AnimationFeatureFlag() {
-  const theme = useTheme()
   const [enabled, setEnabled] = useState(false)
 
   useEffect(() => {
@@ -64,7 +62,7 @@ export default function AnimationFeatureFlag() {
               "Display Banner"
             </Box>
             {']) {'}
-            <Box sx={{ ml: 2, color: theme.palette.info.contrastText }}>
+            <Box sx={{ ml: 2, color: 'info.contrastText' }}>
               displayBanner();
             </Box>
             {'}'}

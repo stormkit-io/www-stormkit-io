@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 import express from 'express'
 import dotenv from 'dotenv'
 import { createServer as createViteServer } from 'vite'
-import apiHandler from '@stormkit/serverless/middlewares'
+import apiHandler from '@stormkit/serverless/middlewares/express'
 
 dotenv.config()
 
@@ -41,7 +41,6 @@ async function createServer() {
   app.all(
     ['/api', '/api/*'],
     apiHandler({
-      middleware: 'express',
       apiDir: path.join(__dirname, 'api'),
       moduleLoader: vite.ssrLoadModule,
     })
@@ -120,7 +119,9 @@ async function generateStaticPages() {
     './src/prerender'
   )) as { default: Prerender[] }
 
-  const { render } = await vite.ssrLoadModule('./src/entry-server')
+  const { render } = (await vite.ssrLoadModule('./src/entry-server')) as {
+    render: RenderFunction
+  }
 
   const dist = path.join(path.dirname(__dirname), '.stormkit/public')
 
@@ -132,8 +133,10 @@ async function generateStaticPages() {
 
   const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf-8')
   const manifest = JSON.parse(
-    fs.readFileSync(path.join(dist, 'manifest.json'), 'utf-8')
+    fs.readFileSync(path.join(dist, '.vite', 'manifest.json'), 'utf-8')
   )
+
+  console.log(manifest)
 
   // Push `/` to the end if any.
   routesToPrerender.sort((a, b) => {
@@ -161,7 +164,7 @@ async function generateStaticPages() {
     })
 
     // Fix css files
-    content = content.replace('src/index.css', manifest['index.css'].file)
+    // content = content.replace('src/index.css', manifest['index.css'].file)
 
     fs.mkdirSync(path.dirname(absPath), { recursive: true })
     fs.writeFileSync(absPath, content, 'utf-8')
@@ -169,7 +172,7 @@ async function generateStaticPages() {
     console.log(`Prerendered: ${fileName}`)
   }
 
-  fs.unlinkSync(path.join(dist, 'manifest.json'))
+  fs.unlinkSync(path.join(dist, '.vite', 'manifest.json'))
 
   await vite.close()
 }

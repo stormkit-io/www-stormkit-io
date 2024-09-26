@@ -37,6 +37,7 @@ const defaultSEO: SEO = {
 
 export const render: RenderFunction = async (url, seo) => {
   const { routes, head, context } = await createRoutes(url)
+
   const tags = {
     ...defaultSEO,
     ...JSON.parse(JSON.stringify(head || {})),

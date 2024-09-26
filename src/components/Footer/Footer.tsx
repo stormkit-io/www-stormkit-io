@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box'
-import { useTheme } from '@mui/material/styles'
-import { Twitter, LinkedIn, YouTube } from '@mui/icons-material'
+import Twitter from '@mui/icons-material/Twitter'
+import LinkedIn from '@mui/icons-material/LinkedIn'
+import YouTube from '@mui/icons-material/YouTube'
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
 import StormkitLogoCircle from '~/assets/logos/stormkit-logo-circle.svg'
@@ -87,7 +88,6 @@ const links: Array<{ name: string; links: LinkProps[] }> = [
 ]
 
 export default function Footer({ maxWidth = lastWidth }: Props) {
-  const theme = useTheme()
   lastWidth = maxWidth
 
   return (
@@ -162,7 +162,7 @@ export default function Footer({ maxWidth = lastWidth }: Props) {
                 {group.links.map((link) => (
                   <Link
                     key={link.path}
-                    color={theme.palette.primary.contrastText}
+                    color="primary.contrastText"
                     target={link.external ? '_blank' : undefined}
                     rel={link.external ? 'noopener noreferrer' : undefined}
                     sx={{

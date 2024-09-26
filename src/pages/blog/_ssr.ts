@@ -1,7 +1,10 @@
 import type { NavigationItem } from '~/components/DocsNav/DocsNav'
 import { parseAttributes, toTitleCase } from '~/helpers/markdown'
 
-const files = import.meta.glob('/content/blog/*.md', { as: 'raw' })
+const files = import.meta.glob('/content/blog/*.md', {
+  query: '?raw',
+  import: 'default',
+})
 
 interface Params {
   title?: string
@@ -32,7 +35,7 @@ export const fetchData: FetchDataFunc = async ({ title }: Params) => {
       authorName,
       authorTw,
       search,
-    } = parseAttributes(await files[file]())
+    } = parseAttributes((await files[file]()) as string)
 
     const titleNormalized = (
       title || toTitleCase(fileName.split('--')[0].replace(/-/g, ' '))
@@ -63,7 +66,7 @@ export const fetchData: FetchDataFunc = async ({ title }: Params) => {
     return { head: {}, context: { navigation } }
   }
 
-  const content = await files[foundFile]()
+  const content = (await files[foundFile]()) as string
   const attrs = parseAttributes(content)
 
   const index = content.indexOf('---', 2)

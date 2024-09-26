@@ -1,4 +1,3 @@
-import { useTheme } from '@mui/material/styles'
 import { useSearchParams } from 'react-router-dom'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
@@ -15,7 +14,6 @@ import { fetchData } from './_ssr'
 export { fetchData } from './_ssr'
 
 export default function BlogContent() {
-  const theme = useTheme()
   const [searchParams] = useSearchParams()
   const { content, navigation } = withContent(fetchData)
 
@@ -30,8 +28,8 @@ export default function BlogContent() {
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
-        bgcolor: theme.palette.background.default,
-        color: theme.palette.primary.contrastText,
+        bgcolor: 'background.default',
+        color: 'primary.contrastText',
       }}
     >
       {!isRaw && <Header />}

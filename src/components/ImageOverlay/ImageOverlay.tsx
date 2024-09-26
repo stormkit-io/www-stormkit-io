@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Dialog from '@mui/material/Dialog'
 import DialogTitle from '@mui/material/DialogTitle'
@@ -13,7 +12,6 @@ interface Props {
 }
 
 export default function ImageOverlay({ content, navigation }: Props) {
-  const theme = useTheme()
   const [hovered, setHovered] = useState<string>()
 
   useEffect(() => {
@@ -63,7 +61,7 @@ export default function ImageOverlay({ content, navigation }: Props) {
           width: '100%',
           height: '100%',
           overflowY: 'auto',
-          bgcolor: theme.palette.background.default,
+          bgcolor: 'background.default',
         }}
       >
         {hovered && (

@@ -4,8 +4,14 @@ interface Prerender {
   description?: string
 }
 
-const docs = import.meta.glob('/content/docs/**/*.md', { as: 'raw' })
-const blog = import.meta.glob('/content/blog/*.md', { as: 'raw' })
+const docs = import.meta.glob('/content/docs/**/*.md', {
+  query: '?raw',
+  import: 'default',
+})
+const blog = import.meta.glob('/content/blog/*.md', {
+  query: '?raw',
+  import: 'default',
+})
 
 const routes: Prerender[] = [
   { route: '/' },

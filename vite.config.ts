@@ -15,6 +15,7 @@ export default defineConfig({
   },
   build: {
     manifest: true,
+    assetsInlineLimit: 0,
     rollupOptions: {
       input: 'index.html',
       // Material ui's "use client" directive causes a warning.

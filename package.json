@@ -31,7 +31,7 @@
     "@mui/icons-material": "^5.16.7",
     "@mui/lab": "^5.0.0-alpha.169",
     "@mui/material": "^5.16.7",
-    "@stormkit/serverless": "^2.3.4",
+    "@stormkit/serverless": "^2.4.0",
     "@types/express": "^4.17.21",
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^18.19.53",

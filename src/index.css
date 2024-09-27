@@ -30,7 +30,7 @@ body {
   font-family: Roboto, Helvetica;
   -webkit-font-smoothing: antialiased;
   letter-spacing: normal;
-  line-height: 24px;
+  line-height: 2;
   text-size-adjust: 100%;
 }
 
@@ -75,7 +75,7 @@ body {
 }
 
 #blog-content {
-  line-height: 1.5;
+  line-height: 2;
   letter-spacing: normal;
 }
 
@@ -169,7 +169,7 @@ pre[class*='language-'] {
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1.5;
+  line-height: 2;
   tab-size: 4;
   hyphens: none;
   font-size: 1rem;

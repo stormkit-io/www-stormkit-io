@@ -35,64 +35,59 @@ export default function DocTitle() {
       className={params.category?.toLowerCase() || 'welcome'}
     >
       <Header search={navigation} />
-      {loading ? (
-        <Box sx={{ flex: 1 }}>
-          <LinearProgress />
-        </Box>
-      ) : (
-        <>
-          <ImageOverlay content={content} navigation={navigation} />
+      <Box sx={{ flex: 1, visibility: loading ? 'visible' : 'hidden' }}>
+        <LinearProgress />
+      </Box>
+      <ImageOverlay content={content} navigation={navigation} />
+      <Box
+        maxWidth="none"
+        sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
+          mx: 'auto',
+          flexGrow: 1,
+          width: '100%',
+        }}
+      >
+        <DocsNav items={navigation} currentCategory={params.category} />
+        <Box
+          sx={{
+            display: 'flex',
+            flex: 1,
+          }}
+        >
           <Box
-            maxWidth="none"
             sx={{
-              display: 'flex',
-              flexDirection: { xs: 'column', md: 'row' },
+              p: { xs: 2, lg: 4 },
+              pt: { xs: 2, lg: 2 },
               mx: 'auto',
-              flexGrow: 1,
-              width: '100%',
+              flex: 1,
+              lineHeight: 2,
+              '& summary': {
+                cursor: 'pointer',
+                bgcolor: 'rgba(0,0,0,0.3)',
+                mb: 2,
+                p: 2,
+                ':hover': {
+                  bgcolor: 'rgba(0,0,0,0.5)',
+                },
+                '& span:first-child': {
+                  color: purple[400],
+                  display: 'inline-block',
+                  width: '4rem',
+                  ml: 1,
+                },
+                '& span:last-child': {
+                  color: grey[200],
+                },
+              },
             }}
+            maxWidth="768px"
           >
-            <DocsNav items={navigation} currentCategory={params.category} />
-            <Box
-              sx={{
-                display: 'flex',
-                flex: 1,
-              }}
-            >
-              <Box
-                sx={{
-                  p: { xs: 2, lg: 4 },
-                  pt: { xs: 2, lg: 2 },
-                  mx: 'auto',
-                  flex: 1,
-                  lineHeight: 2,
-                  '& summary': {
-                    cursor: 'pointer',
-                    bgcolor: 'rgba(0,0,0,0.3)',
-                    mb: 2,
-                    p: 2,
-                    ':hover': {
-                      bgcolor: 'rgba(0,0,0,0.5)',
-                    },
-                    '& span:first-child': {
-                      color: purple[400],
-                      display: 'inline-block',
-                      width: '4rem',
-                      ml: 1,
-                    },
-                    '& span:last-child': {
-                      color: grey[200],
-                    },
-                  },
-                }}
-                maxWidth="768px"
-              >
-                <div id="blog-content" dangerouslySetInnerHTML={content} />
-              </Box>
-            </Box>
+            <div id="blog-content" dangerouslySetInnerHTML={content} />
           </Box>
-        </>
-      )}
+        </Box>
+      </Box>
       <Footer />
     </Box>
   )

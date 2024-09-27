@@ -32,6 +32,10 @@ const LinkBehavior = React.forwardRef<
 
 export default createTheme({
   typography: {
+    allVariants: {
+      letterSpacing: 'normal',
+      lineHeight: 1.25,
+    },
     fontFamily: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'].join(', '),
     subtitle1: {
       fontSize: 12.5,
@@ -51,6 +55,8 @@ export default createTheme({
       styleOverrides: {
         root: {
           color: orange[400],
+          lineHeight: 1.25,
+          letterSpacing: 'normal',
         },
       },
     },

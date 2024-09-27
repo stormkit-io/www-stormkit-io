@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-import CssBaseline from '@mui/material/CssBaseline'
 import createRoutes from './routes'
 import App from './App'
 import Context from './context'
@@ -29,7 +28,6 @@ const mount = (children: React.ReactNode) => {
 
   mount(
     <React.StrictMode>
-      <CssBaseline />
       <Context.Provider value={context}>
         <BrowserRouter>
           <App routes={routes} />

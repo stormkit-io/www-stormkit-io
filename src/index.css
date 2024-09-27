@@ -74,6 +74,11 @@ body {
   }
 }
 
+#blog-content {
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
 #blog-content h1 {
   margin-top: 0;
 }
@@ -114,7 +119,7 @@ body {
   padding: 1rem;
 }
 
-#blog-content table td:first-child {
+#blog-content table td:first-of-type {
   width: 1%;
   white-space: nowrap;
 }

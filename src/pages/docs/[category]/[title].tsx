@@ -71,7 +71,7 @@ export default function DocTitle() {
                 ':hover': {
                   bgcolor: 'rgba(0,0,0,0.5)',
                 },
-                '& span:first-child': {
+                '& span:first-of-type': {
                   color: purple[400],
                   display: 'inline-block',
                   width: '4rem',

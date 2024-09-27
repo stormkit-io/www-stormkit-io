@@ -136,8 +136,6 @@ async function generateStaticPages() {
     fs.readFileSync(path.join(dist, '.vite', 'manifest.json'), 'utf-8')
   )
 
-  console.log(manifest)
-
   // Push `/` to the end if any.
   routesToPrerender.sort((a, b) => {
     return a.route === '/' || b.route === '/' ? -1 : 0
@@ -164,7 +162,7 @@ async function generateStaticPages() {
     })
 
     // Fix css files
-    // content = content.replace('src/index.css', manifest['index.css'].file)
+    content = content.replace('src/index.css', manifest['index.html'].css[0])
 
     fs.mkdirSync(path.dirname(absPath), { recursive: true })
     fs.writeFileSync(absPath, content, 'utf-8')
@@ -172,7 +170,7 @@ async function generateStaticPages() {
     console.log(`Prerendered: ${fileName}`)
   }
 
-  fs.unlinkSync(path.join(dist, '.vite', 'manifest.json'))
+  // fs.unlinkSync(path.join(dist, '.vite', 'manifest.json'))
 
   await vite.close()
 }

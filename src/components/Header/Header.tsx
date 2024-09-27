@@ -11,8 +11,6 @@ import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
 import DiscordLogo from '~/assets/images/discord.svg'
 import DocSearch from './DocSearch'
 
-console.log(DiscordLogo, StormkitLogoText)
-
 interface Props {
   search?: NavigationItem[]
 }

@@ -8,7 +8,6 @@ As IT professionals, we know how important it is to have web services that we ca
 
 Let's design a url monitoring system to do exactly that using [Stormkit](https://www.stormkit.io/) and [Supabase](https://supabase.com/). As the first version, our application periodically checks the status of your URLs, and sends notifications if any issues arise.
 
-
 We will use Stormkit to host our dashboard and create an api endpoint which will check given url and save status code to Supabase which is an open-source firebase alternative built on top of PostgreSQL. Supabase also can broadcast changes of your tables, we will utilise this feature and connect our dashboard to changes that are made to url statues by Stormkit.
 
 <div class="img-wrapper">
@@ -27,7 +26,7 @@ The second table we'll create is used to keep settings that we can tweak for our
     <img src="/assets/blog/monitoring/settings.png" alt="settings table" />
 </div>
 
-Let's create an [api endpoint](https://www.stormkit.io/docs/features/writing-api) that will be invoked periodically by Stormkit’s [trigger function feature](https://www.stormkit.io/docs/features/trigger-functions). State diagram below shows how that endpoint works but feel free to [check out the code](https://github.com/stormkit-io/uptime-example/blob/main/api/index.ts).
+Let's create an [api endpoint](/docs/features/writing-api) that will be invoked periodically by Stormkit’s [trigger function feature](/docs/features/trigger-functions). State diagram below shows how that endpoint works but feel free to [check out the code](https://github.com/stormkit-io/uptime-example/blob/main/api/index.ts).
 
 <div class="img-wrapper">
     <img src="/assets/blog/monitoring/flow.png" alt="flow of api endpoint" />

@@ -23,7 +23,7 @@ const defaultSEO: SEO = {
     'Stormkit is a self-hostable, full-featured alternative to Vercel and Netlify, offering powerful features such as deployment previews, multiple environments, and seamless integration with Git.',
   domain: {
     name: 'Stormkit.io',
-    url: 'https://stormkit.io',
+    url: 'https://www.stormkit.io',
   },
   twitter: {
     card: 'summary_large_image',

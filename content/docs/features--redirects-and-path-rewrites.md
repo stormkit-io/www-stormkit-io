@@ -72,6 +72,7 @@ In this case, all requests coming to `/my-path` will be proxied to `https://exam
   {
     "from": "stormkit.io",
     "to": "www.stormkit.io",
+    "assets": true,
     "status": 301
   }
 ]

@@ -34,7 +34,7 @@ export default createTheme({
   typography: {
     allVariants: {
       letterSpacing: 'normal',
-      lineHeight: 1.25,
+      lineHeight: 1.5,
     },
     fontFamily: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'].join(', '),
     subtitle1: {
@@ -55,7 +55,7 @@ export default createTheme({
       styleOverrides: {
         root: {
           color: orange[400],
-          lineHeight: 1.25,
+          lineHeight: 1.5,
           letterSpacing: 'normal',
         },
       },

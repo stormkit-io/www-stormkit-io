@@ -2,6 +2,7 @@
   {
     "from": "stormkit.io",
     "to": "www.stormkit.io",
+    "assets": true,
     "status": 302
   },
   {

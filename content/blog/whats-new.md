@@ -5,6 +5,15 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## Oct 23rd, 2024
+
+With this new version:
+
+- The last selected team will be displayed in the home page.
+- Action buttons in the Team Settings page are now hidden for `Developer` roles.
+- On self-hosted environments you can set a custom page title with the `STORMKIT_PAGE_TITLE` environment variable.
+  This environment variable needs to be set in the Frontend application.
+
 ## Sep 12th, 2024
 
 Introducing [Status Checks](/docs/deployments/status-checks): Automatically verify post-deployment conditions and decide whether to publish or withhold deployments based on customizable checks.

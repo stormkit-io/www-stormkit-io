@@ -4,6 +4,8 @@ description: Custom headers enable you to modify or supplement the default HTTP 
 keywords: custom headers
 ---
 
+# Custom Headers
+
 To enable Stormkit to add custom headers to served files, follow these steps:
 
 - Introduce a file containing rules into your code base.
@@ -33,7 +35,3 @@ You can always review the deployment manifest to understand how Stormkit builds 
 <div class="img-wrapper">
     <img src="/assets/blog/manifest.gif" alt="Deployment manifest will show details" />
 </div>
-
-
-
-

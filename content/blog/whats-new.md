@@ -5,6 +5,10 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## Nov 4th, 2024
+
+Introducing [Persistent Volumes](/docs/features/volumes). Upload, manage and share files with ease.
+
 ## Oct 23rd, 2024
 
 With this new version:

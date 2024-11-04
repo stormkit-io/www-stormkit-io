@@ -95,7 +95,7 @@ body {
 
 #blog-content .img-wrapper {
   margin: 2rem auto;
-  padding: 2rem;
+  padding: 0.5rem;
   background-color: rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
@@ -156,6 +156,11 @@ body {
 #blog-content .blog-alert p {
   margin: 0;
   margin-left: 0.5rem;
+}
+
+#blog-content .tabs ul {
+  list-style-type: none;
+  display: flex;
 }
 
 /* PrismJS 1.29.0

@@ -11,11 +11,10 @@ With outbound webhooks, you can conveniently trigger various actions when an eve
 
 To enable users to define outbound webhooks upon deployment completion, follow these simple steps:
 
-- Navigate to your Application's Settings page and locate the Outbound webhooks section.
-
-- Click on `Add new webhook` to open the modal form.
-
-- Fill out the required information in the form and proceed by clicking the `Create outbound` webhook button.
+- Go to **App** > **Settings** page
+- Scroll down to **Outbound webhooks** section
+- Click on **Add new webhook** to open the modal form
+- Fill out the required information in the form and proceed by clicking the **Create outbound** webhook button
 
 </section>
 
@@ -37,3 +36,38 @@ When the `Request method` is selected as `Post`, you can specify the request pay
 | `$SK_DEPLOYMENT_STATUS`        | A string indicating the deployment status. It's either success or failed.                                                                                                                                                                |
 
 </section>
+
+## Examples
+
+### Receive an Email Notification when a deployment fails
+
+Requirements:
+
+- Create an Environment-level API key (**Environment** > **Config** > **API Keys**)
+- [Configure mailer](/docs/features/mailer) for your environment
+
+Steps:
+
+- Go to **App** > **Settings**
+- Scroll down to **Outbound webhooks**
+- Click on **Add new webhook**
+- Fill the form like below and click **Create outbound webhook**
+
+|                |                                 |                                                         |
+| -------------- | ------------------------------- | ------------------------------------------------------- |
+| Request URL    | https://api.stormkit.io/v1/mail | Replace `stormkit.io` with your instance if self-hosted |
+| Enable headers | On                              |                                                         |
+| Header 1       | `Content-Type`                  | `application/json`                                      |
+| Header 2       | `Authorization`                 | `<your-api-key>`                                        |
+| Request Method | `POST`                          |                                                         |
+| Payload        | See example below               |                                                         |
+| Trigger When   | After each failed deployment    |                                                         |
+
+```json
+{
+  "to": "joe@example.org",
+  "from": "Jane <jane@example.org>",
+  "subject": "Deployment failed",
+  "body": "Hi, <br /> Deployment failed: $SK_DEPLOYMENT_ENDPOINT"
+}
+```

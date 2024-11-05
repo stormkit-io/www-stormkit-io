@@ -56,6 +56,7 @@ Return domains attached to an environment.
 ```typescript
 interface QueryString {
   afterId?: string
+  pageSize?: string // max 250
   verified?: "true"
 }
 

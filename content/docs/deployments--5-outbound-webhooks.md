@@ -53,15 +53,15 @@ Steps:
 - Click on **Add new webhook**
 - Fill the form like below and click **Create outbound webhook**
 
-|                |                                 |                                                         |
-| -------------- | ------------------------------- | ------------------------------------------------------- |
-| Request URL    | https://api.stormkit.io/v1/mail | Replace `stormkit.io` with your instance if self-hosted |
-| Enable headers | On                              |                                                         |
-| Header 1       | `Content-Type`                  | `application/json`                                      |
-| Header 2       | `Authorization`                 | `<your-api-key>`                                        |
-| Request Method | `POST`                          |                                                         |
-| Payload        | See example below               |                                                         |
-| Trigger When   | After each failed deployment    |                                                         |
+|                |                                   |                                                         |
+| -------------- | --------------------------------- | ------------------------------------------------------- |
+| Request URL    | `https://api.stormkit.io/v1/mail` | Replace `stormkit.io` with your instance if self-hosted |
+| Enable headers | On                                |                                                         |
+| Header 1       | `Content-Type`                    | `application/json`                                      |
+| Header 2       | `Authorization`                   | `<your-api-key>`                                        |
+| Request Method | `POST`                            |                                                         |
+| Payload        | See example below                 |                                                         |
+| Trigger When   | After each failed deployment      |                                                         |
 
 ```json
 {

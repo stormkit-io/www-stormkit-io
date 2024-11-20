@@ -184,7 +184,7 @@ setup_hosting_env_variables() {
   if [ "$SELECTED_PROVIDER" = "GitHub" ]; then
     update_env_var "GITHUB_APP_ID" "Enter GitHub App ID (e.g. 97401)"
     update_env_var "GITHUB_CLIENT_ID" "Enter GitHub Client ID (e.g. Iv2...)"
-    update_env_var "GITHUB_ACCOUNT" "Enter GitHub App account name" "(e.g. github.com/settings/apps/my-stormkit-app => my-stormkit-app)"
+    update_env_var "GITHUB_APP_NAME" "Enter GitHub App name" "(e.g. github.com/settings/apps/my-stormkit-app => my-stormkit-app)"
     update_env_var "GITHUB_SECRET" "Enter GitHub App secret"
     update_env_var "GITHUB_PRIV_KEY" "Enter GitHub app private key"
   else

@@ -51,7 +51,7 @@ const links: LinkProps[] = [
           component="span"
           sx={{ display: { xs: 'inline', md: 'none' }, ml: { xs: 1, md: 0 } }}
         >
-          Twitter
+          LinkedIn
         </Box>
       </>
     ),

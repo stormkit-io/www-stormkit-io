@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box'
-import Twitter from '@mui/icons-material/Twitter'
+import X from '@mui/icons-material/X'
 import LinkedIn from '@mui/icons-material/LinkedIn'
 import YouTube from '@mui/icons-material/YouTube'
 import Link from '@mui/material/Link'
@@ -54,10 +54,10 @@ const links: Array<{ name: string; links: LinkProps[] }> = [
     name: 'connect with us',
     links: [
       {
-        path: 'https://twitter.com/stormkitio',
-        text: 'Twitter',
+        path: 'https://x.com/stormkitio',
+        text: 'X',
         external: true,
-        icon: <Twitter sx={{ mr: 1, fill: 'rgb(29, 155, 240)' }} />,
+        icon: <X sx={{ mr: 1, fill: 'rgb(29, 155, 240)' }} />,
       },
       {
         path: 'https://www.linkedin.com/company/stormkit',

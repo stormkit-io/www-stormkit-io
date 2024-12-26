@@ -9,9 +9,49 @@ description: Deploy your code automatically when its merged.
 
 Stormkit can automatically deploy your applications on each commit or on each pull request. By default, every application will come with auto deployments **not enabled**. You can enable this option from the application's settings page.
 
+1. Visit **Application** > **Environment** > **Config**
+1. Click on `Auto Deploy` dropdown and select an option
+
 </section>
 
-| Setting      | Description  |
-| ------------ | ------------ |
-| Auto Deploy | When to automatically deploy. You can either auto deploy on commit or on pull/merge request. When pull request is chosen, it will build once the pull/merge request is opened, it's updated and when it's merged. When merged, the target environment configuration will be used. When opened or updated, the Default Environment configuration will be used. |
-| Default Environment | Every environment is assigned a branch. When auto deployments are enabled, the commit will be built using the matching environment's configuration. If there is no environment matching for that branch, the default environment's configuration will be used. Stormkit creates production environment and sets to default environment when App is created for the first time. |
+<section>
+
+## Disabled
+
+In this case, Stormkit will not automatically deploy any changes on your repository.
+
+## All branches
+
+When this option is selected, Stormkit deploys every branch that receives a commit automatically.
+
+## Custom branches
+
+You can specify a regexp/glob pattern to filter which branches to automatically deploy.
+
+## Custom commits
+
+Commit patterns allow you to selectively deploy commits that match specific patterns. This feature works in conjunction with your environment's branch configuration.
+
+1. First, Stormkit checks if the commit's branch matches the environment's configured branch
+1. Then, if the branch matches, it evaluates the commit against your specified pattern
+1. Only commits that match both criteria will trigger a deployment
+
+## Pattern Types
+
+You can use either:
+
+- Regular expressions (regexp)
+- Glob patterns
+
+```bash
+# Deploy only commits that start with "release/"
+release\/*
+
+# Deploy commits that contain "hotfix"
+.*hotfix.*
+
+# Deploy commits matching semantic versioning
+v[0-9]+\.[0-9]+\.[0-9]+
+```
+
+</section>

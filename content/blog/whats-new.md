@@ -5,6 +5,10 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## Dec 26th, 2024
+
+Added `commit` patterns to [automatic deployments](/docs/deployments/auto-deployments).
+
 ## Dec 24th, 2024
 
 - Improved periodic triggers UI

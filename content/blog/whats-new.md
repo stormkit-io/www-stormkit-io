@@ -5,6 +5,11 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## Dec 24th, 2024
+
+- Improved periodic triggers UI
+- Introduced trigger logs
+
 ## Nov 4th, 2024
 
 - Introducing [Persistent Volumes](/docs/features/volumes). Upload, manage and share files with ease.

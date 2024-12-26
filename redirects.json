@@ -9,5 +9,10 @@
     "from": "/docs$",
     "to": "/docs/welcome/getting-started",
     "status": 302
+  },
+  {
+    "from": "/docs/features/trigger-functions",
+    "to": "/docs/features/periodic-triggers",
+    "status": 302
   }
 ]

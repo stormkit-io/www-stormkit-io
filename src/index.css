@@ -84,7 +84,7 @@ body {
 }
 
 #blog-content h2 {
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 #blog-content img {
@@ -95,9 +95,33 @@ body {
 
 #blog-content .img-wrapper {
   margin: 2rem auto;
-  padding: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+}
+
+#blog-content .img-wrapper img {
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+    0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+}
+
+#blog-content table th {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.025);
+}
+
+#blog-content table td {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.025);
+  padding: 1rem;
+}
+
+#blog-content table td:first-of-type {
+  width: 1%;
+  white-space: nowrap;
 }
 
 #blog-content table {

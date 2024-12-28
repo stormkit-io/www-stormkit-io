@@ -19,7 +19,7 @@ into different sections.
 | Environment name     | The name of the environment. Except the reserved name `production`, you can use any alphanumeric characters to name your environments. This setting is used purely to distinguish your environments in the User Interface. |
 | Branch               | The default branch of this environment. Pick the best long-lived branch that represents this environment. |
 | Auto publish         | When turned on, any successful auto deployment that is triggered by a commit to the `default branch` will be published automatically. |
-| Auto deploy          | Use this setting to configure your auto deployments. See [/docs/deployments/auto-deployments] for more information. |
+| Auto deploy          | Use this setting to configure your auto deployments. See [Auto Deployments](/docs/deployments/auto-deployments) for more information. |
 | Auto deploy branches | When `Auto deploy` is set to be `Custom branches`, you can use this field to configure which branches to deploy automatically. This field supports `regexp` matching. |
 | Preview links        | When `Auto deploy` is turned on, Stormkit will leave the link of the deployment to the pull/merge request page. You can turn off this functionality by disabling this setting. |
 

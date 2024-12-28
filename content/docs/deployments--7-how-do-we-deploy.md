@@ -25,6 +25,7 @@ If the deployment lacks a `.stormkit` subfolder and the output folder isn't spec
 - `output`
 - `dist`
 - `build`
+- `public`
 
 If none are found, Stormkit uploads everything under the `Root Directory`.
 

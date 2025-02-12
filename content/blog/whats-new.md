@@ -5,6 +5,10 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## Feb 12th, 2025
+
+New public API endpoints to [manage environments](/docs/api/environments).
+
 ## Dec 26th, 2024
 
 Added `commit` patterns to [automatic deployments](/docs/deployments/auto-deployments).

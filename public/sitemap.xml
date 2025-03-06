@@ -175,6 +175,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.stormkit.io/features/image-optimization</loc>
+    <lastmod>2025-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.stormkit.io/docs/other/personal-access-token</loc>
     <lastmod>2024-05-13</lastmod>
     <changefreq>weekly</changefreq>

@@ -8,7 +8,10 @@ description: Simple, privacy-friendly, automatic setup and powerful analytics fo
 Stormkit's Analytics feature empowers users to gain valuable insights into their web applications.
 
 <div class="img-wrapper"> 
-  <img src="/assets/docs/features/analytics.png" alt="Web Analytics" />
+  <picture>
+    <source media="(max-width: 1200px)" srcset="/assets/docs/features/analytics.png?size=600" />
+    <img src="/assets/docs/features/analytics.png" alt="Web Analytics" />
+  </picture>
 </div>
 
 ## Enabling analytics

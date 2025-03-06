@@ -5,6 +5,10 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## Mar 6th, 2025
+
+Stormkit now offers framework-agnostic image optimization with on-the-fly resizing and smart cropping through simple URL parameters, enabling improved page load times and allowing up to 5 cached variants per image.
+
 ## Feb 12th, 2025
 
 New public API endpoints to [manage environments](/docs/api/environments).

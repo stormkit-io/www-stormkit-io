@@ -1,7 +1,6 @@
 ---
-title: "Framework Agnostic Image Optimization"
-description:
-"Improve your website performance with Stormkit's framework-agnostic image optimization. Resize, crop, and intelligently focus images using simple URL parameters. Easy implementation with built-in caching and security."
+title: Framework Agnostic Image Optimization
+description: Improve your website performance with Stormkit's framework-agnostic image optimization. Resize, crop, and intelligently focus images using simple URL parameters. Easy implementation with built-in caching and security.
 ---
 
 # Image Optimization for Stormkit

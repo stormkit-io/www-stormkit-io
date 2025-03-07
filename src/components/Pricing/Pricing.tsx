@@ -40,19 +40,6 @@ export default function Pricing() {
         >
           Simple, predictable pricing
         </Typography>
-        <Typography
-          variant="h3"
-          sx={{
-            mt: 1,
-            fontSize: { xs: 15, md: 18 },
-            textAlign: 'center',
-            opacity: 0.7,
-            maxWidth: 600,
-            m: 'auto',
-          }}
-        >
-          15 days free trial. No credit card required.
-        </Typography>
       </Box>
       <Box
         id="pricing"

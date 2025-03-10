@@ -18,7 +18,7 @@ type Mode = 'cloud' | 'self-hosted'
 type Edition = 'premium' | ''
 
 export default function Pricing() {
-  const [mode, setMode] = useState<Mode>('cloud')
+  const [mode, setMode] = useState<Mode>('self-hosted')
   const [edition, setEdition] = useState<Edition>('')
   const [tier, setTier] = useState<SubscriptionTier>('100')
   const [seats, setSeats] = useState<number>(1)
@@ -45,7 +45,7 @@ export default function Pricing() {
         id="pricing"
         sx={{
           p: { xs: 2, md: 4 },
-          mt: { xs: 8, md: 12 },
+          mt: 4,
           mx: 'auto',
           width: '100%',
           bgcolor: 'rgba(0,0,0,0.3)',

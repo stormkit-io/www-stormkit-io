@@ -1,9 +1,7 @@
 import Box from '@mui/material/Box'
-import X from '@mui/icons-material/X'
-import LinkedIn from '@mui/icons-material/LinkedIn'
-import YouTube from '@mui/icons-material/YouTube'
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
+import Icon from '~/components/Icon'
 import StormkitLogoCircle from '~/assets/logos/stormkit-logo-circle.svg'
 import DiscordLogo from '~/assets/images/discord.svg'
 
@@ -57,19 +55,21 @@ const links: Array<{ name: string; links: LinkProps[] }> = [
         path: 'https://x.com/stormkitio',
         text: 'X',
         external: true,
-        icon: <X sx={{ mr: 1, fill: 'rgb(29, 155, 240)' }} />,
+        icon: <Icon name="X" sx={{ mr: 1, fill: 'rgb(29, 155, 240)' }} />,
       },
       {
         path: 'https://www.linkedin.com/company/stormkit',
         text: 'LinkedIn',
         external: true,
-        icon: <LinkedIn sx={{ mr: 1, fill: 'rgb(29, 155, 240)' }} />,
+        icon: (
+          <Icon name="LinkedIn" sx={{ mr: 1, fill: 'rgb(29, 155, 240)' }} />
+        ),
       },
       {
         path: 'https://www.youtube.com/@stormkit491',
         text: 'YouTube',
         external: true,
-        icon: <YouTube sx={{ mr: 1, fill: 'rgb(255 0 0)' }} />,
+        icon: <Icon name="YouTube" sx={{ mr: 1, fill: 'rgb(255 0 0)' }} />,
       },
       {
         path: 'https://discord.com/invite/6yQWhyY',
@@ -124,7 +124,7 @@ export default function Footer({ maxWidth = lastWidth }: Props) {
             />
           </Link>
           <Typography variant="body2">
-            {new Date().getFullYear()} Stormkit, Inc. ©
+            {new Date().getFullYear()} Stormkit OÜ ©
           </Typography>
         </Box>
         <Box sx={{ flex: 1, ml: { xs: 0, md: 16 }, py: 4 }}>

@@ -92,6 +92,35 @@ export default createTheme({
         { props: { color: 'error' }, style: { color: red[600] } },
       ],
     },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+          color: grey[100],
+          '&:hover': {
+            color: grey[100],
+          },
+          '&.Mui-disabled': {
+            color: grey[100],
+            opacity: '0.25',
+          },
+        },
+      },
+      variants: [
+        {
+          props: { variant: 'text', color: 'info' },
+          style: { color: grey[100] },
+        },
+        {
+          props: { variant: 'outlined', color: 'primary' },
+          style: {
+            color: grey[100],
+            border: `1px solid ${grey[100]}`,
+            '&:hover': { border: `1px solid ${grey[500]}` },
+          },
+        },
+      ],
+    },
   },
   palette: {
     mode: 'dark',
@@ -113,6 +142,7 @@ export default createTheme({
       paper: '#262558',
     },
     info: {
+      dark: '#7272f1',
       main: grey[900],
       contrastText: grey[100],
     },
@@ -129,7 +159,7 @@ export default createTheme({
       sm: 384,
       md: 576,
       lg: 1024,
-      xl: 1368,
+      xl: 1200,
     },
   },
 })

@@ -1,33 +1,24 @@
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import BrowserIcon from '@mui/icons-material/GitHub'
-import CodeIcon from '@mui/icons-material/Code'
-import LockIcon from '@mui/icons-material/Lock'
+import Icon from '~/components/Icon'
 
 interface Props {
   children: React.ReactNode
-  icon?: 'code' | 'browser'
   url?: string
-  minHeight?: number
+  actionSlot?: React.ReactNode
 }
 
-export default function Browser({
-  children,
-  icon,
-  url,
-  minHeight = 160,
-}: Props) {
+export default function Browser({ children, url, actionSlot }: Props) {
   return (
     <Box>
       <Box
         sx={{
-          height: 36,
           bgcolor: 'rgba(0,200,200,0.1)',
           borderTopRightRadius: 4,
           borderTopLeftRadius: 4,
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'space-between',
+          justifyContent: 'center',
           px: 2,
         }}
       >
@@ -51,29 +42,37 @@ export default function Browser({
             flexGrow: 1,
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'flex-end',
+            justifyContent: 'center',
           }}
         >
-          {icon === 'code' && <CodeIcon sx={{ width: 16 }} />}
-          {icon === 'browser' && <BrowserIcon sx={{ width: 16 }} />}
           {url && (
-            <>
-              <LockIcon sx={{ mr: 1, color: 'green', width: 16 }} />
+            <Box
+              sx={{
+                py: 0.5,
+                px: 2,
+                m: 1,
+                width: '100%',
+                backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                display: 'flex',
+                alignItems: 'center',
+                borderRadius: 3,
+              }}
+            >
+              <Icon name="Lock" sx={{ mr: 1, color: 'green', width: 16 }} />
               <Typography component="span" sx={{ fontSize: 12 }}>
                 {url}
               </Typography>
-            </>
+            </Box>
           )}
+          {actionSlot}
         </Box>
       </Box>
       <Box
         sx={{
           fontFamily: 'monospace',
           bgcolor: 'black',
-          p: 2,
           borderBottomLeftRadius: 2,
           borderBottomRightRadius: 2,
-          minHeight,
         }}
       >
         {children}

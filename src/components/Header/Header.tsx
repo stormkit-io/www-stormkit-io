@@ -3,10 +3,7 @@ import React, { useState } from 'react'
 import IconButton from '@mui/material/IconButton'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
-import Menu from '@mui/icons-material/Menu'
-import Close from '@mui/icons-material/Close'
-import GitHub from '@mui/icons-material/GitHub'
-import LinkedIn from '@mui/icons-material/LinkedIn'
+import Icon from '~/components/Icon'
 import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
 import DiscordLogo from '~/assets/images/discord.svg'
 import DocSearch from './DocSearch'
@@ -31,7 +28,7 @@ const links: LinkProps[] = [
     path: 'https://github.com/stormkit-io',
     text: (
       <>
-        <GitHub sx={{ mr: 0 }} />
+        <Icon name="GitHub" sx={{ mr: 0 }} />
         <Box
           component="span"
           sx={{ display: { xs: 'inline', md: 'none' }, ml: { xs: 1, md: 0 } }}
@@ -46,7 +43,7 @@ const links: LinkProps[] = [
     path: 'https://www.linkedin.com/company/stormkit',
     text: (
       <>
-        <LinkedIn sx={{ mr: 0, fill: 'rgb(29, 155, 240)' }} />
+        <Icon name="LinkedIn" sx={{ mr: 0, fill: 'rgb(29, 155, 240)' }} />
         <Box
           component="span"
           sx={{ display: { xs: 'inline', md: 'none' }, ml: { xs: 1, md: 0 } }}
@@ -114,7 +111,7 @@ export default function Header({ search = [] }: Props) {
             sx={{ display: { md: 'none' } }}
             onClick={() => setIsMenuOpen(true)}
           >
-            <Menu />
+            <Icon name="Menu" />
           </IconButton>
         </Box>
         <Box
@@ -154,7 +151,7 @@ export default function Header({ search = [] }: Props) {
                 setIsMenuOpen(false)
               }}
             >
-              <Close />
+              <Icon name="Close" />
             </IconButton>
           </Box>
           {search.length ? <DocSearch /> : ''}

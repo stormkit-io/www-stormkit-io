@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react'
-import SearchIcon from '@mui/icons-material/Search'
 import TextField from '@mui/material/TextField'
 import Box from '@mui/material/Box'
 import Chip from '@mui/material/Chip'
-import CMDKey from '@mui/icons-material/KeyboardCommandKey'
 import { grey } from '@mui/material/colors'
+import Icon from '~/components/Icon'
 import DocSearchModal from './DocSearchModal'
 
 export default function DocSearch() {
@@ -57,7 +56,7 @@ export default function DocSearch() {
             width: { xs: '100%', md: 'auto' },
           }}
           InputProps={{
-            startAdornment: <SearchIcon sx={{ mx: 1, fontSize: 14 }} />,
+            startAdornment: <Icon name="Search" sx={{ mx: 1, fontSize: 14 }} />,
             endAdornment: (
               <Chip
                 size="small"
@@ -66,7 +65,7 @@ export default function DocSearch() {
                     component="span"
                     sx={{ display: 'flex', alignItems: 'center' }}
                   >
-                    <CMDKey sx={{ fontSize: 12 }} /> + K
+                    <Icon name="KeyboardCommandKey" sx={{ fontSize: 12 }} /> + K
                   </Box>
                 }
               />

@@ -1,6 +1,6 @@
 ---
 title: 'Case Study: Elham - a Leading Learning Platform'
-description: Discover how Elham, a leading learning platform, reduced deployment times from 24 hours to 15 minutes, cut hosting costs, and scaled to handle millions of visitors per month with Stormkit’s self-hosted, compliant, and customizable frontend hosting solution.
+description: Discover how Elham, a leading learning platform, reduced deployment times from 24+ hours to 7 minutes, cut hosting costs, and scaled to handle millions of visitors per month with Stormkit’s self-hosted, compliant, and customizable frontend hosting solution.
 date: 2024-09-03
 ---
 
@@ -13,7 +13,7 @@ date: 2024-09-03
 
 ### Results
 
-- Reduced deployment time from 24 hours to 15 minutes
+- Reduced deployment time from 24+ hours to 7 minutes
 - Decreased hosting costs from four digits to three digits
 - Efficiently scales to handle millions of visitors per month
 - Full control over infrastructure with customized features
@@ -25,7 +25,7 @@ date: 2024-09-03
 
 ### The Challenge
 
-Before migrating to Stormkit, Elham was using a well-known alternative service provider. However, as their platform grew, they encountered significant bottlenecks, particularly in their deployment processes. The primary challenge was the concurrency limitation during deployments. With over 500 websites to manage, the deployment process could take up to 24 hours, severely impacting their ability to update content and roll out new features quickly.
+Before migrating to Stormkit, Elham was using a well-known alternative service provider. However, as their platform grew, they encountered significant bottlenecks, particularly in their deployment processes. The primary challenge was the concurrency limitation during deployments. With over 500 websites to manage, the deployment process could take up to 24+ hours, severely impacting their ability to update content and roll out new features quickly.
 
 Additionally, Elham faced regulatory concerns due to new regulations in Saudi Arabia. These regulations necessitated greater control over their infrastructure and data localization requirements, which their previous hosting provider could not fully support.
 
@@ -35,7 +35,7 @@ Finally, Elham was grappling with high hosting costs and a lack of control over 
 
 Elham made the decision to migrate all 500+ websites to Stormkit, seeking a solution that could address their pain points. Stormkit offered a powerful, self-hostable platform that was not only scalable and cost-effective but also customizable to meet the unique needs of Elham, including regulatory compliance.
 
-1. **Custom Features:** Stormkit developed custom features tailored to Elham's specific deployment requirements. This innovation reduced deployment times from 24 hours to just 15 minutes, allowing Elham to deploy updates swiftly across all their websites.
+1. **Custom Features:** Stormkit developed custom features tailored to Elham's specific deployment requirements. This innovation reduced deployment times from 24+ hours to just 7 minutes, allowing Elham to deploy updates swiftly across all their websites.
 2. **Regulatory Compliance:** Stormkit worked closely with Elham to ensure that their hosting infrastructure complied with the new regulations in Saudi Arabia. This included implementing data localization measures and providing Elham with full control over their infrastructure, ensuring that they could meet all regulatory requirements.
 3. **Cost Reduction:** By optimizing their infrastructure and utilizing Stormkit’s efficient hosting services, Elham was able to reduce their hosting costs significantly, dropping their monthly bill from four digits to three digits.
 4. **Scalability:** Stormkit’s platform efficiently scales to handle Elham’s high traffic volumes, managing millions of visitors each month without compromising on performance or reliability.

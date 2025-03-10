@@ -48,7 +48,7 @@ export default function Terms() {
         </Typography>
         <Typography>
           These Terms of Service ("Agreement") govern your use of the Stormkit
-          deployment and hosting service ("Service") provided by Stormkit, Inc.
+          deployment and hosting service ("Service") provided by Stormkit OÜ
           ("Company"). By using the Service, you agree to comply with and be
           bound by this Agreement.
         </Typography>{' '}

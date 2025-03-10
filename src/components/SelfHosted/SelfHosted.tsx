@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
 import Alert from '@mui/material/Alert'
 import AlertTitle from '@mui/material/AlertTitle'
-import Button from '@mui/lab/LoadingButton'
+import Button from '@mui/material/Button'
 import { grey } from '@mui/material/colors'
 
 export default function SelfHosted() {

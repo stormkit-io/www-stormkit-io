@@ -1,16 +1,18 @@
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
+import { grey } from '@mui/material/colors'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
 import Illustration from '~/components/Illustration'
-import FeaturePreview from '~/components/FeaturePreview'
 import Pricing from '~/components/Pricing'
 import MainMessage from '~/components/MainMessage'
+import Statistics from '~/components/Statistics'
 import SelfHosted from '~/components/SelfHosted'
+import Icon from '~/components/Icon'
 import { useScrollToHash } from '~/helpers/scroll'
 
-const MAX_WIDTH_MD = 600
+const MAX_WIDTH_MD = 800
 
 export default function Home() {
   useScrollToHash()
@@ -31,8 +33,9 @@ export default function Home() {
           flex: 1,
           m: 'auto',
           px: { xs: 2, md: 0 },
+          minHeight: '60vh',
         }}
-        maxWidth="lg"
+        maxWidth="xl"
       >
         <Typography
           variant="h1"
@@ -44,20 +47,23 @@ export default function Home() {
             textAlign: 'center',
           }}
         >
-          Scalable and Cost Effective Frontend Hosting
+          The Self-Hosted Platform
+          <br /> for Web Applications
         </Typography>
         <Typography
           variant="h2"
           sx={{
             mt: 2,
-            fontWeight: 300,
-            fontSize: { xs: 15, md: 18 },
-            maxWidth: MAX_WIDTH_MD,
+            fontSize: { xs: 15, md: 17 },
+            maxWidth: 700,
+            lineHeight: 1.75,
             textAlign: 'center',
+            color: grey[400],
           }}
         >
-          A fully-featured, powerful, and self-hostable platform for deploying
-          frontend applications. Take control over your infrastructure.
+          Stormkit is a hosting platform that streamlines CI/CD workflows,
+          enabling developers to quickly deploy and scale web applications
+          without complex configuration.
         </Typography>
         <Box
           sx={{
@@ -68,59 +74,69 @@ export default function Home() {
         >
           <Button
             variant="contained"
-            color="secondary"
+            color="primary"
             size="large"
             href="https://app.stormkit.io"
           >
-            Get started
+            Get started on cloud
+            <Icon name="ArrowForward" sx={{ mr: 0, ml: 1, fontSize: 16 }} />
+          </Button>
+
+          <Button
+            variant="contained"
+            color="secondary"
+            size="large"
+            href="/docs/welcome/self-hosting"
+            sx={{ ml: 2 }}
+          >
+            Start self-hosting
+            <Icon
+              name="ArrowForward"
+              sx={{ mr: 0, ml: 1, fontSize: 16, transform: 'rotate(-45deg)' }}
+            />
           </Button>
         </Box>
       </Box>
 
       <Box
-        maxWidth="lg"
+        id="feature-preview"
         sx={{
           width: '100%',
-          mx: 'auto',
-          mt: { xs: 8, md: 24 },
-        }}
-      >
-        <Illustration />
-      </Box>
-
-      <Box
-        maxWidth="lg"
-        sx={{
-          width: '100%',
-          mx: 'auto',
-          mt: { xs: 8, md: 24 },
-        }}
-      >
-        <FeaturePreview />
-      </Box>
-
-      <Box
-        maxWidth="lg"
-        id="self-hosted"
-        sx={{
-          width: '100%',
-          mx: 'auto',
-          mt: { xs: 8, md: 24 },
-        }}
-      >
-        <SelfHosted />
-      </Box>
-
-      <Box
-        maxWidth="lg"
-        id="pricing"
-        sx={{
-          width: '100%',
-          mx: 'auto',
+          bgcolor: 'page.container',
+          py: 8,
           mt: { xs: 8, md: 12 },
         }}
       >
-        <Pricing />
+        <Box maxWidth="xl" sx={{ mx: 'auto' }}>
+          <Illustration />
+        </Box>
+      </Box>
+
+      <Box
+        id="statistics"
+        maxWidth="lg"
+        sx={{
+          width: '100%',
+          py: 8,
+          mx: 'auto',
+        }}
+      >
+        <Box maxWidth="xl" sx={{ mx: 'auto' }}>
+          <Statistics />
+        </Box>
+      </Box>
+
+      <Box
+        id="pricing"
+        sx={{
+          width: '100%',
+          bgcolor: 'page.container',
+          py: 8,
+        }}
+      >
+        <Box maxWidth="lg" sx={{ mx: 'auto' }}>
+          <Pricing />
+        </Box>
       </Box>
 
       <Box

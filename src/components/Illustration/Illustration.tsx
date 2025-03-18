@@ -97,6 +97,7 @@ export default function Illustration() {
                   borderRadius: 2,
                   boxShadow: 20,
                   p: 2,
+                  transition: 'all 0.3s ease',
                   maxWidth: currentButton?.maxWidth || 400,
                   ':after': {
                     content: "''",

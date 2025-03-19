@@ -3,8 +3,8 @@ import Box from '@mui/material/Box'
 import Alert from '@mui/material/Alert'
 import Typography from '@mui/material/Typography'
 import TextField from '@mui/material/TextField'
-import Button from '@mui/material/Button'
 import { grey } from '@mui/material/colors'
+import Button from '~/components/Button'
 import Footer from '~/components/Footer'
 import Header from '~/components/Header'
 
@@ -101,9 +101,7 @@ export default function Contact() {
                     )
                   }
 
-                  setSuccess(false)
                   setLoading(true)
-                  setError('')
 
                   fetch('/api/enquiry', {
                     method: 'post',
@@ -116,12 +114,14 @@ export default function Contact() {
                       const data = await res.json()
 
                       if (data.ok) {
+                        setError('')
                         return setSuccess(true)
                       }
 
                       return Promise.reject()
                     })
                     .catch(() => {
+                      setSuccess(false)
                       setError(
                         'Something went wrong while submitting your enquiry. Please reach out to us at hello@stormkit.io'
                       )
@@ -153,6 +153,7 @@ export default function Contact() {
                   <TextField
                     multiline
                     fullWidth
+                    maxRows={5}
                     minRows={5}
                     value={desc}
                     onChange={(e) => {
@@ -169,6 +170,7 @@ export default function Contact() {
                 </Box>
                 <Box sx={{ mt: 4 }}>
                   <Button
+                    loading={loading}
                     variant="contained"
                     color="secondary"
                     type="submit"

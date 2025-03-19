@@ -5,8 +5,6 @@ import Link from '@mui/material/Link'
 import Icon from '~/components/Icon'
 import DiscordLogo from '~/assets/images/discord.svg'
 import DocSearch from './DocSearch'
-import HeaderDesktop from './HeaderDesktop'
-import HeaderMobile from './HeaderMobile'
 import MenuIconMobile from './MenuIconMobile'
 import MenuIconDesktop from './MenuIconDesktop'
 import LinksDesktop from './LinksDesktop'
@@ -85,10 +83,49 @@ const links: LinkProps[] = [
 ]
 
 export default function Header({ search = [] }: Props) {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
+
   return (
-    <Box>
-      <HeaderDesktop />
-      <HeaderMobile />
+    <Box
+      sx={{
+        display: { xs: 'block', lg: 'none' },
+        bgcolor: 'page.container',
+        boxShadow: 2,
+        px: { xs: 1, md: 0 },
+      }}
+    >
+      <Box
+        sx={{
+          m: 'auto',
+          py: 2,
+          px: { xs: 1, md: 4 },
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+      >
+        <MenuIconDesktop setIsMenuOpen={setIsMenuOpen} />
+        <Box
+          sx={{
+            flex: 1,
+            fontSize: 12.5,
+            display: { xs: isMenuOpen ? 'flex' : 'none', md: 'flex' },
+            alignItems: { xs: 'flex-start', md: 'center' },
+            flexDirection: { xs: 'column', md: 'row' },
+            position: { xs: 'fixed', md: 'static' },
+            left: { xs: 0, md: 'auto' },
+            right: { xs: 0, md: 'auto' },
+            top: { xs: 0, md: 'auto' },
+            bottom: { xs: 0, md: 'auto' },
+            bgcolor: { xs: 'black', md: 'transparent' },
+            zIndex: { xs: 10, md: 1 },
+          }}
+        >
+          <MenuIconMobile setIsMenuOpen={setIsMenuOpen} />
+          <LinksDesktop setIsMenuOpen={setIsMenuOpen} />
+          {search.length ? <DocSearch /> : false}
+        </Box>
+      </Box>
     </Box>
   )
 }

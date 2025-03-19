@@ -110,7 +110,7 @@ export default function Footer({ maxWidth = lastWidth }: Props) {
       >
         <Box
           sx={{
-            mt: 4,
+            mt: 3,
             display: 'flex',
             alignItems: 'center',
           }}

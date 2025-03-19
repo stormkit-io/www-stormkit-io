@@ -74,9 +74,8 @@ export default createTheme({
       styleOverrides: {
         root: {
           color: 'white',
-          border: `1px solid transparent`,
           '&.Mui-focused': {
-            border: `1px solid ${grey[500]}`,
+            borderColor: grey[500],
           },
         },
       },
@@ -109,7 +108,15 @@ export default createTheme({
       variants: [
         {
           props: { variant: 'text', color: 'info' },
-          style: { color: grey[100] },
+          style: {
+            color: grey[400],
+            transition: 'all 0.2s ease-in',
+            borderRadius: 10,
+            '&:hover': {
+              color: grey[100],
+              backgroundColor: 'rgba(255,255,255,0.1)',
+            },
+          },
         },
         {
           props: { variant: 'outlined', color: 'primary' },
@@ -117,6 +124,16 @@ export default createTheme({
             color: grey[100],
             border: `1px solid ${grey[100]}`,
             '&:hover': { border: `1px solid ${grey[500]}` },
+          },
+        },
+        {
+          props: { variant: 'outlined', color: 'info' },
+          style: {
+            color: grey[500],
+            borderRadius: 6,
+            transition: 'all 0.2s ease-in',
+            border: `1px solid ${grey[800]}`,
+            '&:hover': { backgroundColor: 'rgba(255, 255, 255, 0.1)' },
           },
         },
       ],

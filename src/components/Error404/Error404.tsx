@@ -34,7 +34,7 @@ export default function Home() {
           >
             4 oh 4
           </Typography>
-          <Typography variant="h4" color="info" sx={{ mt: 4 }}>
+          <Typography variant="h4" sx={{ mt: 4 }}>
             There is nothing under this link
           </Typography>
         </Box>

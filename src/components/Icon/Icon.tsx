@@ -30,7 +30,7 @@ const imports = {
 
 interface Props {
   name: keyof typeof imports
-  sx?: SxProps
+  sx?: SxProps & { fontSize?: number }
   fontSize?: 'small' | 'medium'
   color?: 'success' | 'error' | 'warning' | 'info'
 }
@@ -53,13 +53,16 @@ export default function Icon({ name, ...props }: Props) {
     console.warn(`Icon "${name}" not found`)
   }
 
+  let width = Number.isFinite(props.sx?.fontSize) ? props.sx?.fontSize : 24
+  let height = Number.isFinite(props.sx?.fontSize) ? props.sx?.fontSize : 24
+
   return (
     <Box
       component="span"
       sx={{
         display: 'inline-block',
-        width: 24,
-        height: 24,
+        width,
+        height,
         background: 'rgba(0,0,0,0.3)',
         borderRadius: '50%',
         ...props.sx,

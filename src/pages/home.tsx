@@ -8,7 +8,6 @@ import Illustration from '~/components/Illustration'
 import Pricing from '~/components/Pricing'
 import MainMessage from '~/components/MainMessage'
 import Statistics from '~/components/Statistics'
-import SelfHosted from '~/components/SelfHosted'
 import Icon from '~/components/Icon'
 import { useScrollToHash } from '~/helpers/scroll'
 

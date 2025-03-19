@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 import { readBody } from './_helpers'
 
 export default async function (req: http.IncomingMessage) {
-  const body = await readBody<{ email?: string; type?: string }>(req)
+  const body = await readBody<{ email?: string; desc?: string }>(req)
 
   if (!body.email) {
     return {
@@ -14,11 +14,11 @@ export default async function (req: http.IncomingMessage) {
     }
   }
 
-  if (!body.type) {
+  if (!body.desc) {
     return {
       status: 400,
       body: {
-        error: "'type' is a required field.",
+        error: "'desc' is a required field.",
       },
     }
   }
@@ -39,7 +39,7 @@ export default async function (req: http.IncomingMessage) {
             timestamp: new Date().toISOString(),
             fields: [
               { name: 'Email', value: body.email },
-              { name: 'Type', value: body.type },
+              { name: 'Description', value: body.desc },
             ],
           },
         ],

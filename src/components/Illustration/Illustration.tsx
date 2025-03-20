@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography'
 import Switch from '@mui/material/Switch'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import Browser from '~/components/Browser'
+import Tooltip from '~/components/Tooltip'
 import ScrollableButtons from './ScrollableButtons'
 import { features } from './features'
 
@@ -85,36 +86,18 @@ export default function Illustration() {
         >
           <Box sx={{ p: 2 }}>
             {currentButton && (
-              <Box
+              <Tooltip
                 sx={{
-                  display: { xs: 'none', xl: 'block' },
-                  position: 'absolute',
                   top: currentButton.pos?.y,
                   left: currentButton.pos?.x,
-                  backgroundColor: isDark ? 'white' : 'black',
-                  color: isDark ? 'black' : 'white',
-                  border: '1px solid black',
-                  borderRadius: 2,
-                  boxShadow: 20,
-                  p: 2,
-                  transition: 'all 0.3s ease',
                   maxWidth: currentButton?.maxWidth || 400,
-                  ':after': {
-                    content: "''",
-                    position: 'absolute',
-                    left: currentButton?.arrow?.left || '100%',
-                    top: currentButton?.arrow?.top || '50%',
-                    display: 'block',
-                    borderColor: isDark ? 'white' : 'black',
-                    backgroundColor: isDark ? 'white' : 'black',
-                    width: '14px',
-                    height: '14px',
-                    transform: 'translate(-50%, -50%) rotate(-45deg)',
-                  },
                 }}
+                arrowLeftPos={currentButton?.arrow?.left}
+                arrowTopPos={currentButton?.arrow?.top}
+                mode={isDark ? 'dark' : 'light'}
               >
                 <Typography>{currentButton.description}</Typography>
-              </Box>
+              </Tooltip>
             )}
             <picture>
               <Box

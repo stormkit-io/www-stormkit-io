@@ -3,13 +3,13 @@ import CircularProgress from '@mui/material/CircularProgress'
 
 interface ButtonEnhancedProps extends ButtonProps {
   loading?: boolean
+  target?: '_blank'
 }
 
 export default function ButtonEnhanced({
   loading,
   ...rest
 }: ButtonEnhancedProps) {
-  console.log('loading', loading)
   return (
     <Button {...rest}>
       {loading ? (

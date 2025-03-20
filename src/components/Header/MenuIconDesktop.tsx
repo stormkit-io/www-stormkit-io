@@ -4,13 +4,9 @@ import IconButton from '@mui/material/IconButton'
 import Icon from '~/components/Icon'
 import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
 
-interface Props {
-  setIsMenuOpen: (v: boolean) => void
-}
-
-export default function MobileMenuDesktop({ setIsMenuOpen }: Props) {
+export default function MobileMenuDesktop() {
   return (
-    <Box sx={{ display: 'flex', flex: { xs: 1, md: 0 } }}>
+    <Box sx={{ display: 'flex' }}>
       <Box sx={{ flex: 1 }}>
         <Link href="/" sx={{ display: 'block', width: 130, lineHeight: 1 }}>
           <Box
@@ -21,10 +17,7 @@ export default function MobileMenuDesktop({ setIsMenuOpen }: Props) {
           />
         </Link>
       </Box>
-      <IconButton
-        sx={{ display: { md: 'none' } }}
-        onClick={() => setIsMenuOpen(true)}
-      >
+      <IconButton sx={{ display: { md: 'none' } }}>
         <Icon name="Menu" />
       </IconButton>
     </Box>

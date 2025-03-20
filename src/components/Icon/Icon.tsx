@@ -13,6 +13,7 @@ const imports = {
   X: React.lazy(() => import('@mui/icons-material/X')),
   Lock: React.lazy(() => import('@mui/icons-material/Lock')),
   ChevronRight: React.lazy(() => import('@mui/icons-material/ChevronRight')),
+  Compare: React.lazy(() => import('@mui/icons-material/Compare')),
   KeyboardArrowDown: React.lazy(
     () => import('@mui/icons-material/KeyboardArrowDown')
   ),

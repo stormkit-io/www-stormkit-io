@@ -1,88 +1,13 @@
-import type { NavigationItem } from '~/components/DocsNav/DocsNav'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
+import IconButton from '@mui/material/IconButton'
+import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
 import Icon from '~/components/Icon'
-import DiscordLogo from '~/assets/images/discord.svg'
-import DocSearch from './DocSearch'
-import MenuIconMobile from './MenuIconMobile'
-import MenuIconDesktop from './MenuIconDesktop'
-import LinksDesktop from './LinksDesktop'
+import MenuIconMobile from './HeaderMenuMobile'
+import LinksMobile from './LinksMobile'
 
-interface Props {
-  search?: NavigationItem[]
-}
-
-interface LinkProps {
-  path: string
-  text: React.ReactNode
-  icon?: React.ReactNode
-  separator?: boolean
-}
-
-const links: LinkProps[] = [
-  { path: '/docs', text: 'docs' },
-  { path: '/blog', text: 'blog' },
-  { path: '/enterprise', text: 'Enterprise' },
-  { path: '/blog/whats-new', text: 'whats new?' },
-  { path: '/#pricing', text: 'pricing' },
-  // {
-  //   path: 'https://github.com/stormkit-io',
-  //   text: (
-  //     <>
-  //       <Icon name="GitHub" sx={{ mr: 0 }} />
-  //       <Box
-  //         component="span"
-  //         sx={{ display: { xs: 'inline', md: 'none' }, ml: { xs: 1, md: 0 } }}
-  //       >
-  //         GitHub
-  //       </Box>
-  //     </>
-  //   ),
-  //   separator: true,
-  // },
-  // {
-  //   path: 'https://www.linkedin.com/company/stormkit',
-  //   text: (
-  //     <>
-  //       <Icon name="LinkedIn" sx={{ mr: 0, fill: 'rgb(29, 155, 240)' }} />
-  //       <Box
-  //         component="span"
-  //         sx={{ display: { xs: 'inline', md: 'none' }, ml: { xs: 1, md: 0 } }}
-  //       >
-  //         LinkedIn
-  //       </Box>
-  //     </>
-  //   ),
-  // },
-  // {
-  //   path: 'https://discord.com/invite/6yQWhyY',
-  //   text: '',
-  //   icon: (
-  //     <>
-  //       <Box
-  //         component="img"
-  //         src={DiscordLogo}
-  //         alt={'Discord'}
-  //         sx={{ mr: { xs: 1, md: 0 }, display: 'inline-block', width: '23px' }}
-  //       />
-  //       <Box
-  //         component="span"
-  //         sx={{ display: { xs: 'inline', md: 'none' }, ml: { xs: 0.5, md: 0 } }}
-  //       >
-  //         Discord
-  //       </Box>
-  //     </>
-  //   ),
-  // },
-  // {
-  //   path: 'https://app.stormkit.io',
-  //   text: 'login',
-  //   separator: true,
-  // },
-]
-
-export default function Header({ search = [] }: Props) {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 
   return (
@@ -91,39 +16,52 @@ export default function Header({ search = [] }: Props) {
         display: { xs: 'block', lg: 'none' },
         bgcolor: 'page.container',
         boxShadow: 2,
-        px: { xs: 1, md: 0 },
+        px: 1,
       }}
     >
       <Box
         sx={{
           m: 'auto',
           py: 2,
-          px: { xs: 1, md: 4 },
+          px: 1,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
         }}
       >
-        <MenuIconDesktop setIsMenuOpen={setIsMenuOpen} />
+        <Link href="/" sx={{ display: 'block', width: 130 }}>
+          <Box
+            component="img"
+            src={StormkitLogoText}
+            alt="Stormkit Logo"
+            width="100%"
+          />
+        </Link>
+        <IconButton
+          onClick={() => setIsMenuOpen(true)}
+          sx={{ display: isMenuOpen ? 'none' : 'inline-block' }}
+        >
+          <Icon name="Menu" />
+        </IconButton>
         <Box
           sx={{
             flex: 1,
             fontSize: 12.5,
-            display: { xs: isMenuOpen ? 'flex' : 'none', md: 'flex' },
-            alignItems: { xs: 'flex-start', md: 'center' },
-            flexDirection: { xs: 'column', md: 'row' },
-            position: { xs: 'fixed', md: 'static' },
-            left: { xs: 0, md: 'auto' },
-            right: { xs: 0, md: 'auto' },
-            top: { xs: 0, md: 'auto' },
-            bottom: { xs: 0, md: 'auto' },
-            bgcolor: { xs: 'black', md: 'transparent' },
-            zIndex: { xs: 10, md: 1 },
+            display: isMenuOpen ? 'flex' : 'none',
+            alignItems: 'flex-start',
+            flexDirection: 'column',
+            position: 'fixed',
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0,
+            bgcolor: 'black',
+            zIndex: 10,
+            pt: '1.5px',
           }}
         >
           <MenuIconMobile setIsMenuOpen={setIsMenuOpen} />
-          <LinksDesktop setIsMenuOpen={setIsMenuOpen} />
-          {search.length ? <DocSearch /> : false}
+          <LinksMobile />
         </Box>
       </Box>
     </Box>

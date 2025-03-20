@@ -72,10 +72,14 @@ export default function Home() {
           }}
         >
           <Button
-            variant="contained"
+            variant="text"
             color="primary"
             size="large"
             href="https://app.stormkit.io"
+            sx={{
+              display: { xs: 'none', md: 'inline-block' },
+              mr: { xs: 0, md: 2 },
+            }}
           >
             Get started on cloud
             <Icon name="ArrowForward" sx={{ mr: 0, ml: 1, fontSize: 16 }} />
@@ -86,7 +90,6 @@ export default function Home() {
             color="secondary"
             size="large"
             href="/docs/welcome/self-hosting"
-            sx={{ ml: 2 }}
           >
             Start self-hosting
             <Icon

@@ -16,6 +16,8 @@ const blog = import.meta.glob('/content/blog/*.md', {
 const routes: Prerender[] = [
   { route: '/' },
   { route: '/404' },
+  { route: '/contact' },
+  { route: '/enterprise' },
   { route: '/vs-vercel' },
   { route: '/vs-netlify' },
   {

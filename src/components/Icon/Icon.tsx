@@ -9,6 +9,7 @@ const imports = {
   GitHub: React.lazy(() => import('@mui/icons-material/GitHub')),
   Close: React.lazy(() => import('@mui/icons-material/Close')),
   Check: React.lazy(() => import('@mui/icons-material/Check')),
+  CheckCircle: React.lazy(() => import('@mui/icons-material/CheckCircle')),
   Search: React.lazy(() => import('@mui/icons-material/Search')),
   X: React.lazy(() => import('@mui/icons-material/X')),
   Lock: React.lazy(() => import('@mui/icons-material/Lock')),

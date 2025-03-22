@@ -16,6 +16,7 @@ const routes: Route[] = [
   { path: '/vs-vercel', import: () => import('~/pages/vs/vercel') },
   { path: '/vs-netlify', import: () => import('~/pages/vs/netlify') },
   { path: '/contact', import: () => import('~/pages/contact') },
+  { path: '/enterprise', import: () => import('~/pages/enterprise') },
   { path: '/policies/terms', import: () => import('~/pages/policies/terms') },
   {
     path: '/policies/privacy',

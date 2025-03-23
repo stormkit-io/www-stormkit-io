@@ -77,7 +77,7 @@ export default function Home() {
             size="large"
             href="https://app.stormkit.io"
             sx={{
-              display: { xs: 'none', md: 'inline-block' },
+              display: { xs: 'none', md: 'inline-flex' },
               mr: { xs: 0, md: 2 },
             }}
           >

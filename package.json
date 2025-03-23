@@ -19,7 +19,7 @@
     "build:api": "rm -rf .stormkit/api && tsx vite.config.api.ts"
   },
   "dependencies": {
-    "@mui/icons-material": "^6.4.7",
+    "@mui/icons-material": "^6.4.8",
     "@mui/material": "^6.4.7",
     "@mui/utils": "^6.4.6",
     "minisearch": "^6.3.0",

@@ -75,6 +75,7 @@ async function createServer() {
       // If an error is caught, let Vite fix the stack trace so it maps back to
       // your actual source code.
       if (e instanceof Error) {
+        console.log(e)
         vite.ssrFixStacktrace(e)
       }
 

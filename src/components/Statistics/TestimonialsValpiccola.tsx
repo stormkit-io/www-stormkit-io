@@ -46,7 +46,7 @@ export default function TestimonialsValpiccola() {
       <Box>
         <Typography sx={{ mb: 2 }}>
           As a boutique tour guide service showcasing Italy's hidden treasures,
-          Valpiccola utilizes Stormkit to host their SQLite-powered booking
+          Valpiccola utilizes Stormkit to host their SQLite-powered tour
           platform, delivering a seamless visitor experience while maintaining a
           lightweight technical footprint.
         </Typography>

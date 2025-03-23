@@ -2,6 +2,8 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import Icon from '~/components/Icon'
+import TestimonialsElham from './TestimonialsElham'
+import TestimonialsValpiccola from './TestimonialsValpiccola'
 
 const numbers = [
   { number: '500m+', description: 'Requests served across all applications' },
@@ -63,8 +65,8 @@ export default function Statistics() {
         </Typography>
         <Typography>
           <Button
-            variant="text"
-            color="secondary"
+            variant="outlined"
+            color="info"
             href="/blog/case-study-elham"
             sx={{ mt: 2, color: '#a492ff', fontSize: 16 }}
           >
@@ -72,6 +74,17 @@ export default function Statistics() {
             <Icon name="ArrowForward" sx={{ fontSize: 12, ml: 1 }} />
           </Button>
         </Typography>
+      </Box>
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+          gap: 2,
+          mt: 8,
+        }}
+      >
+        <TestimonialsElham />
+        <TestimonialsValpiccola />
       </Box>
     </>
   )

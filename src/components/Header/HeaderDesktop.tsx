@@ -1,17 +1,10 @@
-import type { NavigationItem } from '~/components/DocsNav/DocsNav'
-import React, { useState } from 'react'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Icon from '~/components/Icon'
-import DocSearch from './DocSearch'
 import MenuIconDesktop from './MenuIconDesktop'
 import LinksDesktop from './LinksDesktop'
 
-interface Props {
-  search?: NavigationItem[]
-}
-
-export default function Header({ search = [] }: Props) {
+export default function Header() {
   return (
     <Box
       sx={{
@@ -46,7 +39,6 @@ export default function Header({ search = [] }: Props) {
           }}
         >
           <LinksDesktop />
-          {search.length ? <DocSearch /> : false}
           <Box
             sx={{
               display: 'flex',
@@ -61,15 +53,25 @@ export default function Header({ search = [] }: Props) {
               rel="noreferrer noopener"
               target="_blank"
               sx={{
-                display: { xs: 'none', md: 'inline-flex' },
+                display: { xs: 'none', lg: 'inline-flex' },
                 mr: 2,
               }}
             >
               <Icon name="GitHub" sx={{ mr: 1 }} />
-              GitHub
+              <Box
+                component="span"
+                sx={{ display: { xs: 'none', xl: 'inline' } }}
+              >
+                GitHub
+              </Box>
               <Icon
                 name="ArrowForward"
-                sx={{ ml: 1, transform: 'rotate(-45deg)', fontSize: 16 }}
+                sx={{
+                  ml: { xs: 0, xl: 1 },
+                  transform: 'rotate(-45deg)',
+                  fontSize: 16,
+                  display: { xs: 'none', xl: 'inline-block' },
+                }}
               />
             </Button>
             <Button
@@ -85,7 +87,7 @@ export default function Header({ search = [] }: Props) {
               color="info"
               href="https://app.stormkit.io"
             >
-              Cloud Login
+              Login
               <Icon
                 name="ArrowForward"
                 sx={{ ml: 1, fontSize: 16, transform: 'rotate(-45deg)' }}

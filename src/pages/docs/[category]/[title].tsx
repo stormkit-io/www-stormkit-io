@@ -34,7 +34,7 @@ export default function DocTitle() {
       }}
       className={params.category?.toLowerCase() || 'welcome'}
     >
-      <Header search={navigation} />
+      <Header />
       <Box sx={{ flex: 1, visibility: loading ? 'visible' : 'hidden' }}>
         <LinearProgress />
       </Box>

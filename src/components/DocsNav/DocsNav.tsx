@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
+import DocSearch from './DocSearch'
 import Icon from '~/components/Icon'
 
 export interface NavigationItem {
@@ -38,11 +39,14 @@ export default function DocsNav({ items, currentCategory = 'welcome' }: Props) {
     <Box
       sx={{
         bgcolor: 'page.container',
-        py: 4,
+        py: 2,
         minWidth: 300,
         minHeight: '90vh',
       }}
     >
+      <Box sx={{ mb: 4, px: 4 }}>
+        <DocSearch />
+      </Box>
       {categories.map((category) => (
         <Box key={category}>
           <Typography

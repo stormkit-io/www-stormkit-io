@@ -52,7 +52,7 @@ export default function DocSearch() {
           onClick={() => setFocused(true)}
           sx={{
             userSelect: 'none',
-            minWidth: '400px',
+            minWidth: '300px',
             width: { xs: '100%', md: 'auto' },
           }}
           InputProps={{

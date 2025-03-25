@@ -37,20 +37,14 @@ export default function TestimonialsElham() {
           </Link>
         </Typography>
         <Box sx={{ mt: 1 }}>
-          <Chip
-            label="Enterprise"
-            color="secondary"
-            size="small"
-            sx={{ mr: 1 }}
-          />
-          <Chip
-            label="Education"
-            color="secondary"
-            size="small"
-            sx={{ mr: 1 }}
-          />
-          <Chip label="SaaS" color="success" size="small" sx={{ mr: 1 }} />
-          <Chip label="High Traffic" color="success" size="small" />
+          {['Enterprise', 'Education', 'SaaS', 'High Traffic'].map((i) => (
+            <Chip
+              key={i}
+              label={i}
+              size="small"
+              sx={{ mr: 1, color: 'white' }}
+            />
+          ))}
         </Box>
       </CardHeader>
       <Box>

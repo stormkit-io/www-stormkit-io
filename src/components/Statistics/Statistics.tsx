@@ -44,16 +44,13 @@ export default function Statistics() {
             <Typography
               variant="h2"
               component="div"
-              sx={{
-                background: 'linear-gradient(45deg, #ff416c, #a492ff)',
-                backgroundClip: 'text',
-                fontWeight: 'bold',
-                WebkitTextFillColor: 'transparent',
-              }}
+              sx={{ color: 'primary.contrastText' }}
             >
               {number}
             </Typography>
-            <Typography>{description}</Typography>
+            <Typography sx={{ color: 'text.secondary' }}>
+              {description}
+            </Typography>
           </Box>
         ))}
       </Box>
@@ -65,10 +62,10 @@ export default function Statistics() {
         </Typography>
         <Typography>
           <Button
-            variant="outlined"
-            color="info"
+            variant="contained"
+            color="secondary"
             href="/blog/case-study-elham"
-            sx={{ mt: 2, color: '#a492ff', fontSize: 16 }}
+            sx={{ mt: 2, fontSize: 16 }}
           >
             Case study: Leading learning platform
             <Icon name="ArrowForward" sx={{ fontSize: 12, ml: 1 }} />

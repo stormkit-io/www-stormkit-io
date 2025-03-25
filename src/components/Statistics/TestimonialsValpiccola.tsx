@@ -38,9 +38,14 @@ export default function TestimonialsValpiccola() {
           </Link>
         </Typography>
         <Box sx={{ mt: 1 }}>
-          <Chip label="SME" color="secondary" size="small" sx={{ mr: 1 }} />
-          <Chip label="Tourism" color="secondary" size="small" sx={{ mr: 1 }} />
-          <Chip label="SaaS" color="success" size="small" />
+          {['SME', 'Tourism', 'SaaS'].map((i) => (
+            <Chip
+              key={i}
+              label={i}
+              size="small"
+              sx={{ mr: 1, color: 'white' }}
+            />
+          ))}
         </Box>
       </CardHeader>
       <Box>

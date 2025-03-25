@@ -27,13 +27,6 @@ const links: LinkProps[] = [
     maxWidth: 500,
     children: [
       {
-        title: 'Comparisons',
-        links: [
-          { path: '/vs-vercel', text: 'vs Vercel', icon: 'Compare' },
-          { path: '/vs-netlify', text: 'vs Netlify', icon: 'Compare' },
-        ],
-      },
-      {
         title: 'Company',
         links: [
           {
@@ -58,15 +51,6 @@ const links: LinkProps[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    path: '/#social-media',
-    text: 'Social media',
-    id: 'social-media',
-    maxWidth: 300,
-    position: 'center',
-    children: [
       {
         title: 'Follow us',
         links: [
@@ -105,6 +89,13 @@ const links: LinkProps[] = [
               />
             ),
           },
+        ],
+      },
+      {
+        title: 'Comparisons',
+        links: [
+          { path: '/vs-vercel', text: 'vs Vercel', icon: 'Compare' },
+          { path: '/vs-netlify', text: 'vs Netlify', icon: 'Compare' },
         ],
       },
     ],

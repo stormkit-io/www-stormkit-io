@@ -57,7 +57,9 @@ export default function Header() {
             bottom: 0,
             bgcolor: 'black',
             zIndex: 10,
+            overflowY: 'auto',
             pt: '1.5px',
+            pb: 2,
           }}
         >
           <MenuIconMobile setIsMenuOpen={setIsMenuOpen} />

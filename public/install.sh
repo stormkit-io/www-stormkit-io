@@ -167,30 +167,9 @@ setup_base_env_variables() {
   # TODO: Update passwords
 }
 
-# Setup the Hosting Service. It comes with the API bundled, therefore we need authentication
-# information as well.
+# Setup the environment variable for the Hosting Service.
 setup_hosting_env_variables() {
-  single_select "Which provider are you going to use for authentication?" "GitHub GitLab Bitbucket"
-
-  if [ "$SELECTED_PROVIDER" = "GitHub" ]; then
-    echo
-    echo "Check https://github.com/stormkit-io/bin for more information on these variables"
-  fi
-
-  echo
-
   update_env_var "STORMKIT_DOMAIN" "Enter the top-level domain (e.g. example.org)"
-
-  if [ "$SELECTED_PROVIDER" = "GitHub" ]; then
-    update_env_var "GITHUB_APP_ID" "Enter GitHub App ID (e.g. 97401)"
-    update_env_var "GITHUB_CLIENT_ID" "Enter GitHub Client ID (e.g. Iv2...)"
-    update_env_var "GITHUB_APP_NAME" "Enter GitHub App name" "(e.g. github.com/settings/apps/my-stormkit-app => my-stormkit-app)"
-    update_env_var "GITHUB_SECRET" "Enter GitHub App secret"
-    update_env_var "GITHUB_PRIV_KEY" "Enter GitHub app private key"
-  else
-    echo "Provider not supported yet for auto installation."
-    exit 1
-  fi
 }
 
 # Path to the profile file (e.g., ~/.profile)

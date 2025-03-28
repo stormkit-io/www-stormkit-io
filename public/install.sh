@@ -263,7 +263,7 @@ fi
 
 echo ""
 printf "${GREEN}Congratulations, Stormkit is installed on your computer!\n${NC}"
-printf "You can now access your Stormkit dashboard at ${GREEN}https://stormkit.${DOMAIN}${NC}"
+printf "Wait a few seconds and you can access your Stormkit dashboard at ${GREEN}https://stormkit.${DOMAIN}${NC}"
 echo ""
 
 if [ "$DOCKER_MODE" = "Compose" ]; then

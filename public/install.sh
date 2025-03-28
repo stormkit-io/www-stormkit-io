@@ -82,15 +82,18 @@ PURPLE="\033[0;35m"
 GRAY="\033[1;30m"
 NC="\033[0m"
 
+LAST_VAR=""
+
 # Function to prompt for an environment variable and update the .env file
 update_env_var() {
   var_name=$1
   prompt_message=$2
   prompt_desc=$3
+  default_value=$4
 
   # Prompt for the value of the variable
   if [ -n "$prompt_desc" ]; then
-    printf "${PURPLE}%s ${NC}${GRAY}%s: ${NC}" "$prompt_message" "$prompt_desc"
+    printf "${PURPLE}%s ${NC}\n${GRAY}%s: ${NC}" "$prompt_message" "$prompt_desc"
   else
     printf "${PURPLE}%s: ${NC}" "$prompt_message"
   fi
@@ -100,6 +103,13 @@ update_env_var() {
   # Check if .env file exists, if not, create it
   if [ ! -f .env ]; then
     touch .env
+  fi
+
+  if [ -n "$default_value" ]; then
+    if [ -z "$var_value" ]; then
+      var_value=$default_value
+      printf "$var_name not provided, using default value: ${GREEN}%s${NC}\n" "$default_value"
+    fi
   fi
 
   # Check if the variable already exists in the .env file
@@ -117,6 +127,8 @@ update_env_var() {
 
   # Remove the swap file (if any)
   rm -rf .env~
+
+  LAST_VAR=$var_value
 }
 
 SELECTED_PROVIDER=""
@@ -167,9 +179,14 @@ setup_base_env_variables() {
   # TODO: Update passwords
 }
 
+DOMAIN=""
+
 # Setup the environment variable for the Hosting Service.
 setup_hosting_env_variables() {
-  update_env_var "STORMKIT_DOMAIN" "Enter the top-level domain (e.g. example.org)"
+  IP4=$(curl -s -4 ifconfig.me)
+  DEFAULT_DOMAIN="$IP4.sslip.io"
+  update_env_var "STORMKIT_DOMAIN" "Enter the top-level domain (e.g. example.org)" "Leave empty if you don't have a domain" $DEFAULT_DOMAIN
+  DOMAIN=$LAST_VAR
 }
 
 # Path to the profile file (e.g., ~/.profile)
@@ -246,7 +263,8 @@ else
 fi
 
 echo ""
-printf "${GREEN}Congratulations, Stormkit is installed on your computer!${NC}"
+printf "${GREEN}Congratulations, Stormkit is installed on your computer!\n${NC}"
+printf "You can now access your Stormkit dashboard at ${GREEN}${DOMAIN}${NC}"
 echo ""
 
 if [ "$DOCKER_MODE" = "Compose" ]; then

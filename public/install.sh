@@ -108,7 +108,6 @@ update_env_var() {
   if [ -n "$default_value" ]; then
     if [ -z "$var_value" ]; then
       var_value=$default_value
-      printf "$var_name not provided, using default value: ${GREEN}%s${NC}\n" "$default_value"
     fi
   fi
 
@@ -264,7 +263,7 @@ fi
 
 echo ""
 printf "${GREEN}Congratulations, Stormkit is installed on your computer!\n${NC}"
-printf "You can now access your Stormkit dashboard at ${GREEN}${DOMAIN}${NC}"
+printf "You can now access your Stormkit dashboard at ${GREEN}https://stormkit.${DOMAIN}${NC}"
 echo ""
 
 if [ "$DOCKER_MODE" = "Compose" ]; then

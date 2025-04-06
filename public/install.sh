@@ -182,7 +182,7 @@ DOMAIN=""
 
 # Setup the environment variable for the Hosting Service.
 setup_hosting_env_variables() {
-  IP4=$(curl -s -4 ifconfig.me)
+  IP4=$(curl -s -4 ifconfig.me | tr '.' '-')
   DEFAULT_DOMAIN="$IP4.sslip.io"
   update_env_var "STORMKIT_DOMAIN" "Enter the top-level domain (e.g. example.org)" "Leave empty if you don't have a domain" $DEFAULT_DOMAIN
   DOMAIN=$LAST_VAR

@@ -5,6 +5,10 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## Apr 7th, 2025
+
+Introducing the **Auth Wall** feature: Restrict access to your deployments with user authentication, protecting previews or all endpoints, including custom domains. Manage authorized users easily from the dashboard. Learn more in the [Auth Wall documentation](/docs/features/auth-wall).
+
 ## Mar 6th, 2025
 
 Stormkit now offers framework-agnostic image optimization with on-the-fly resizing and smart cropping through simple URL parameters, enabling improved page load times and allowing up to 5 cached variants per image.

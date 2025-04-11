@@ -66,7 +66,7 @@ const links: Array<{ name: string; links: LinkProps[] }> = [
         ),
       },
       {
-        path: 'https://www.youtube.com/@stormkit491',
+        path: 'https://www.youtube.com/@stormkit-io',
         text: 'YouTube',
         external: true,
         icon: <Icon name="YouTube" sx={{ mr: 1, fill: 'rgb(255 0 0)' }} />,

@@ -61,7 +61,7 @@ const links: LinkProps[] = [
             fill: 'rgb(29, 155, 240)',
           },
           {
-            path: 'https://www.youtube.com/@stormkit491',
+            path: 'https://www.youtube.com/@stormkit-io',
             text: 'YouTube',
             icon: 'YouTube',
             fill: 'rgb(255 0 0)',

@@ -13,6 +13,7 @@ type RouteExtended = RouteProps & {
 
 const routes: Route[] = [
   { path: '/', import: () => import('~/pages/home') },
+  { path: '/about-us', import: () => import('~/pages/about-us') },
   { path: '/vs-vercel', import: () => import('~/pages/vs/vercel') },
   { path: '/vs-netlify', import: () => import('~/pages/vs/netlify') },
   { path: '/contact', import: () => import('~/pages/contact') },

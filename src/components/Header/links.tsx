@@ -30,6 +30,10 @@ const links: LinkProps[] = [
         title: 'Company',
         links: [
           {
+            path: '/about-us',
+            text: 'About us',
+          },
+          {
             path: '/blog',
             text: 'Blog',
             subtext: 'Latest developments and announcements',

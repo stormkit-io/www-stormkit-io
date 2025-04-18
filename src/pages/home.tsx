@@ -29,6 +29,9 @@ export default function Home() {
       <Header />
       <Box
         sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
           flex: 1,
           m: 'auto',
           px: { xs: 2, md: 0 },
@@ -39,7 +42,6 @@ export default function Home() {
         <Typography
           variant="h1"
           sx={{
-            mt: { xs: 8, md: 12 },
             fontWeight: 600,
             fontSize: { xs: 24, md: 48 },
             maxWidth: MAX_WIDTH_MD,

@@ -18,6 +18,7 @@ const routes: Prerender[] = [
   { route: '/404' },
   { route: '/contact' },
   { route: '/enterprise' },
+  { route: '/about-us' },
   { route: '/vs-vercel' },
   { route: '/vs-netlify' },
   {

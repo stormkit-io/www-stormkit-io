@@ -248,11 +248,12 @@ export default function Netlify() {
         </Subtitle>
         <Typography component="ul" sx={{ mt: 2 }}>
           <Typography component="li">
-            Stormkit offers free trial for cloud customers and free tier for
-            self-hosted users. In both cases, the pricing is flexible and
-            becomes more flexible with the ability to self-host. This can lead
-            to more predictable costs, especially for larger applications or
-            enterprises that want to avoid paying for excess resources. You can{' '}
+            Stormkit's Cloud offering starts from 20 USD per month, whereas
+            self-hosted users can start with a free tier. In both cases, the
+            pricing is flexible and becomes more flexible with the ability to
+            self-host. This can lead to more predictable costs, especially for
+            larger applications or enterprises that want to avoid paying for
+            excess resources. You can{' '}
             <Link href="/#pricing">check our pricing here.</Link>
           </Typography>
           <Typography component="li" sx={{ my: 2 }}>

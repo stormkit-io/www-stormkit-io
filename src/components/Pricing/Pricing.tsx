@@ -152,7 +152,7 @@ export default function Pricing() {
           sx={{ mt: 5 }}
           href="https://app.stormkit.io"
         >
-          Start your free trial
+          Get started now
         </Button>
       </Box>
     </>

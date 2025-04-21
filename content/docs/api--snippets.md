@@ -33,6 +33,12 @@ curl -X POST \
      -d '{ "snippets": [{ "title": "Snippet title", "content":  "Hello World", "enabled":  true, "prepend":  false, "location": "head", "rules": { "hosts": ["example.org", "*.dev"], "path": "/my-path" } }] }'
 ```
 
+| Response | Definition                                           |
+| -------- | ---------------------------------------------------- |
+| 201      | Snippet was created successfully.                    |
+| 400      | Snippet is invalid. Check your parameters.           |
+| 409      | Snippet content is duplicate within the environment. |
+
 </details>
 
 <details>
@@ -119,6 +125,12 @@ curl -X PUT \
      'https://api.stormkit.io/v1/snippets' \
      -d '{ "snippet": { "id": 1501, "title": "New title", "content":  "Hello World", "enabled":  true, "prepend":  false, "location": "head", "rules": { "hosts": ["example.org", "*.dev"], "path": "/my-path" } } }'
 ```
+
+| Response | Definition                                           |
+| -------- | ---------------------------------------------------- |
+| 200      | Snippet was updated successfully.                    |
+| 400      | Snippet is invalid. Check your parameters.           |
+| 409      | Snippet content is duplicate within the environment. |
 
 </details>
 

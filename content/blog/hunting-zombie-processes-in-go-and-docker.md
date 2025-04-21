@@ -26,7 +26,7 @@ Looking at server metrics, I noticed memory usage spiking before crashes. A quic
 The culprit was in our Go code. I used `os.Process.Kill` to terminate the processes, but it wasn’t killing child processes spawned by npm (e.g., `npm run start` spawns `next start`). This left orphaned processes accumulating. Here’s a simplified version of the original code:
 
 ```go
-func stopProcess(cmd \*exec.Cmd) error {
+func stopProcess(cmd *exec.Cmd) error {
   if cmd.Process != nil {
     return cmd.Process.Kill()
   }
@@ -50,7 +50,7 @@ import (
   "syscall"
 )
 
-func startProcess() (\*exec.Cmd, error) {
+func startProcess() (*exec.Cmd, error) {
   cmd := exec.Command("npm", "run" "start")
   cmd.SysProcAttr = &syscall.SysProcAttr{Setpgid: true} // Assign PGID
 
@@ -61,7 +61,7 @@ func startProcess() (\*exec.Cmd, error) {
   return cmd, nil
 }
 
-func stopProcess(cmd \*exec.Cmd) error {
+func stopProcess(cmd *exec.Cmd) error {
   if cmd.Process == nil {
     return nil
   }
@@ -77,11 +77,11 @@ func stopProcess(cmd \*exec.Cmd) error {
 }
 ```
 
-This worked locally: killing the parent also terminated the children. I deployed an alpha version to our remote server, expecting victory. But `ps aux` showed `&lt;defunct&gt;` next to the processes — zombie processes! 🧠
+This worked locally: killing the parent also terminated the children. I deployed an alpha version to our remote server, expecting victory. But `ps aux` showed `<defunct>` next to the processes — zombie processes! 🧠
 
 ## Zombie processes 101
 
-In Linux, a zombie process occurs when a child process terminates, but its parent doesn’t collect its exit status (via wait or waitpid). The process stays in the process table, marked `&lt;defunct&gt;`. Zombies are harmless in small numbers but can exhaust the process table when accumulates, preventing new processes from starting.
+In Linux, a zombie process occurs when a child process terminates, but its parent doesn’t collect its exit status (via wait or waitpid). The process stays in the process table, marked `<defunct>`. Zombies are harmless in small numbers but can exhaust the process table when accumulates, preventing new processes from starting.
 
 Locally, my Go binary was reaping processes fine. Remotely, zombies persisted. The key difference? The remote server ran Stormkit in a Docker container.
 

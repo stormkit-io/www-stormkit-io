@@ -21,6 +21,7 @@ const routes: Prerender[] = [
   { route: '/about-us' },
   { route: '/vs-vercel' },
   { route: '/vs-netlify' },
+  { route: '/tutorials/how-to-deploy-your-self-hosted-strapi-instance' },
   {
     route: '/policies/terms',
     title: 'Terms of Service',

@@ -93,6 +93,7 @@ export function withContent(
     setIsClientSide(true)
 
     fetchData({
+      slug: params.slug || '',
       title: params.title || options?.defaultTitle || '',
       category: params.category || options?.defaultCategory || '',
     })

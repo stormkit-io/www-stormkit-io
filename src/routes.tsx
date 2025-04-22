@@ -33,6 +33,11 @@ const routes: Route[] = [
     path: '/blog/:title',
     import: () => import('~/pages/blog/[title]'),
   },
+  { path: '/tutorials', import: () => import('~/pages/tutorials') },
+  {
+    path: '/tutorials/:slug',
+    import: () => import('~/pages/tutorials/[slug]'),
+  },
   {
     path: '*',
     import: () => import('~/pages/404'),

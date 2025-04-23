@@ -104,8 +104,25 @@ const links: LinkProps[] = [
       },
     ],
   },
-  { path: '/enterprise', text: 'Enterprise' },
+  {
+    path: '/tutorials',
+    text: 'Tutorials',
+    maxWidth: 400,
+    children: [
+      {
+        title: 'Deployment guides',
+        links: [
+          {
+            text: 'Deploying Strapi CMS on Self-Hosted Stormkit',
+            path: '/tutorials/how-to-deploy-your-self-hosted-strapi-instance',
+          },
+        ],
+      },
+    ],
+  },
   { path: '/docs', text: 'Docs' },
+
+  { path: '/enterprise', text: 'Enterprise' },
   { path: '/#pricing', text: 'Pricing' },
 ]
 

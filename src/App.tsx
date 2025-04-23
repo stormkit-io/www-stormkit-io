@@ -14,18 +14,11 @@ export default function App({ routes }: Props) {
       <CssBaseline />
       <ThemeProvider theme={theme}>
         <Box sx={{ bgcolor: 'background.default' }}>
-          <Box
-            sx={{
-              maxWidth: '1560px',
-              margin: '0 auto',
-            }}
-          >
-            <Routes>
-              {routes.map((route) => (
-                <Route key={route.path} {...route}></Route>
-              ))}
-            </Routes>
-          </Box>
+          <Routes>
+            {routes.map((route) => (
+              <Route key={route.path} {...route}></Route>
+            ))}
+          </Routes>
         </Box>
       </ThemeProvider>
     </StyledEngineProvider>

@@ -38,7 +38,6 @@ export default function DocsNav({ items, currentCategory = 'welcome' }: Props) {
   return (
     <Box
       sx={{
-        bgcolor: 'page.container',
         py: 2,
         minWidth: 300,
         minHeight: '90vh',

@@ -106,6 +106,7 @@ export default function Footer({ maxWidth = lastWidth }: Props) {
           flexDirection: { xs: 'column', md: 'row' },
           alignItems: 'flex-start',
           justifyContent: 'space-between',
+          maxWidth: '1560px',
         }}
       >
         <Box

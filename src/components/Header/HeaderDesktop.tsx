@@ -25,6 +25,8 @@ export default function Header() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
+          maxWidth: '1560px',
+          margin: '0 auto',
         }}
       >
         <MenuIconDesktop />

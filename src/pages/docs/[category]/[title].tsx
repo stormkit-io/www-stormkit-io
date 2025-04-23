@@ -40,13 +40,13 @@ export default function DocTitle() {
       </Box>
       <ImageOverlay content={content} navigation={navigation} />
       <Box
-        maxWidth="none"
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
           mx: 'auto',
           flexGrow: 1,
           width: '100%',
+          maxWidth: '1560px',
         }}
       >
         <DocsNav items={navigation} currentCategory={params.category} />

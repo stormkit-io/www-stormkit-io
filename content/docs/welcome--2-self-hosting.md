@@ -67,5 +67,6 @@ By default, Stormkit runs deployments on the same machine where the `Workerserve
 <section>
 
 - [Install Stormkit on Ubuntu Server and deploy a Next.js app](https://youtu.be/bLw0r3VKLrg)
+- [How to Self-Host Stormkit on Hetzner Cloud](https://www.stormkit.io/tutorials/how-to-self-host-stormkit-on-hetzner-cloud)
 
 </section>

@@ -11,7 +11,7 @@ export const fetchData: FetchDataFunc = async () => {
     head: {
       title: 'What makes Stormkit a great Vercel alternative?',
       description:
-        'Stormkit is a fully-featured, powerful, and self-hostable alternative to Vercel.',
+        'Stormkit is a fully-featured, powerful, and self-hostable alternative to Vercel.Discover Stormkit, a self-hostable Vercel alternative with powerful features like deployment previews, custom configurations, and transparent pricing for your web applications.',
     },
     context: {},
   }

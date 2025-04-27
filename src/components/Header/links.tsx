@@ -118,7 +118,7 @@ const links: LinkProps[] = [
           },
           {
             text: 'Remix',
-            path: '/tutorials/how-to-deploy-remix-app-with-stormkit',
+            path: '/tutorials/how-to-deploy-your-self-hosted-remix-app',
           },
         ],
       },

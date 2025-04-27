@@ -65,7 +65,7 @@ export default function LinksDesktop() {
               <Box
                 sx={{
                   display: 'grid',
-                  gap: 6,
+                  gap: 4,
                   gridTemplateColumns: `repeat(auto-fit, minmax(200px, 1fr))`,
                 }}
               >

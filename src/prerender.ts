@@ -23,6 +23,7 @@ const routes: Prerender[] = [
   { route: '/vs-netlify' },
   { route: '/tutorials/how-to-deploy-your-self-hosted-strapi-instance' },
   { route: '/tutorials/how-to-self-host-stormkit-on-hetzner-cloud' },
+  { route: '/tutorials/how-to-deploy-your-self-hosted-remix-app' },
   {
     route: '/policies/terms',
     title: 'Terms of Service',

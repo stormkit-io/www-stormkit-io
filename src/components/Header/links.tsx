@@ -113,11 +113,20 @@ const links: LinkProps[] = [
         title: 'Deployment guides',
         links: [
           {
-            text: 'Deploying Strapi CMS on Self-Hosted Stormkit',
+            text: 'Strapi CMS',
             path: '/tutorials/how-to-deploy-your-self-hosted-strapi-instance',
           },
           {
-            text: 'Host Stormkit on Hetzner Cloud',
+            text: 'Remix',
+            path: '/tutorials/how-to-deploy-remix-app-with-stormkit',
+          },
+        ],
+      },
+      {
+        title: 'Self-Hosting',
+        links: [
+          {
+            text: 'Hetzner Cloud',
             path: '/tutorials/how-to-self-host-stormkit-on-hetzner-cloud',
           },
         ],

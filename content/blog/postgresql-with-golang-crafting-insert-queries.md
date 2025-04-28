@@ -1,5 +1,5 @@
 ---
-title: PostgreSQL with Golang Crafting Insert Queries with Text/Templates
+title: Using Text/Templates in Golang To Build SQL Queries
 description: Stormkit's approach of eschewing ORM and query builders in favor of raw SQL queries using text/templates.
 date: 2024-01-21
 ---

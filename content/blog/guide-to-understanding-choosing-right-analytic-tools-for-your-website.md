@@ -1,5 +1,5 @@
 ---
-title: A Guide to Understanding and Choosing the Right Analytic Tools for Your Website
+title: Guide to Choosing the Best Analytics Tools for Your Website
 date: 2024-01-24
 description: This post explores the diverse landscape of web analytics tools, delving into alternatives like GoatCounter, Plausible, Umami, PostHog and Stormkit. Highlighting their unique features and emphasizing the growing importance of self hosted solutions.
 ---

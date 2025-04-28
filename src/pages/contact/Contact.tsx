@@ -39,7 +39,7 @@ export default function Contact() {
           }}
         >
           <Typography
-            variant="h2"
+            variant="h1"
             sx={{
               fontWeight: 'bold',
               my: 4,

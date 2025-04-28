@@ -70,7 +70,7 @@ export default function Enterprise() {
           }}
         >
           <Typography
-            variant="h2"
+            variant="h1"
             sx={{
               fontWeight: 'bold',
               my: 4,

@@ -26,9 +26,10 @@ export const fetchData: FetchDataFunc = async ({ slug }: Params) => {
     })
   })
 
-  const returnValue = {
+  const returnValue: { head: SEO; context: any } = {
     head: {
       title: 'Tutorials',
+      type: 'article',
       description: 'Learn how to use Stormkit',
     },
     context: {
@@ -43,6 +44,7 @@ export const fetchData: FetchDataFunc = async ({ slug }: Params) => {
     returnValue.head = {
       title: tutorial.title,
       description: tutorial.description,
+      type: 'article',
     }
 
     returnValue.context.content =

@@ -21,6 +21,7 @@ const defaultSEO: SEO = {
   title: 'Self-Hosted Vercel and Netlify Alternative',
   description:
     'Stormkit is a self-hostable, full-featured alternative to Vercel and Netlify, offering powerful features such as deployment previews, multiple environments, and seamless integration with Git.',
+  type: 'website',
   domain: {
     name: 'Stormkit.io',
     url: 'https://www.stormkit.io',
@@ -67,6 +68,7 @@ export const render: RenderFunction = async (url, seo) => {
       `<meta name="viewport" content="width=device-width, initial-scale=1" />`,
       `<meta name="description" content="${tags.description}" />`,
       `<meta property="og:title" content="${tags.title}" />`,
+      `<meta property="og:type" content="${tags.type}" />`,
       `<meta property="og:url" content="${tags.domain?.url}" />`,
       `<meta property="og:description" content="${tags.description}" />`,
       `<meta property="og:image" content="${tags.domain?.url}/stormkit-og-image.png" />`,

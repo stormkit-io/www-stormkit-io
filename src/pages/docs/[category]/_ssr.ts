@@ -54,6 +54,7 @@ export const fetchData: FetchDataFunc = async ({
     head: {
       title: attrs.title,
       description: attrs.description,
+      type: 'article',
     },
     context: {
       content: article,

@@ -5,6 +5,15 @@ declare interface SEO {
   // The description tag. Used in `description` and `og:description` tags.
   description?: string
 
+  // The type of the document
+  type?:
+    | 'website'
+    | 'article'
+    | 'profile'
+    | 'video.movie'
+    | 'video.episode'
+    | 'video.other'
+
   domain?: {
     // The domain name. This is used to prefix the title tag.
     name?: string

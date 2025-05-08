@@ -121,6 +121,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.stormkit.io/docs/deployments/zip-file-deployments</loc>
+    <lastmod>2025-05-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.stormkit.io/docs/features/analytics</loc>
     <lastmod>2024-09-05</lastmod>
     <changefreq>weekly</changefreq>

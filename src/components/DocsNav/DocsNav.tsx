@@ -26,7 +26,14 @@ interface Props {
   currentCategory?: string
 }
 
-const categories = ['Welcome', 'Deployments', 'Features', 'Other', 'Api']
+const categories = [
+  'Welcome',
+  'Self-hosting',
+  'Deployments',
+  'Features',
+  'Other',
+  'Api',
+]
 
 const isActiveCategory = (a: string, b: string) => {
   return a.toLowerCase() === b.toLowerCase()

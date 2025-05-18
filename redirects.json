@@ -11,6 +11,10 @@
     "status": 302
   },
   {
+    "from": "/docs/welcome/self-hosting",
+    "to": "/docs/self-hosting/getting-started"
+  },
+  {
     "from": "/docs/features/trigger-functions",
     "to": "/docs/features/periodic-triggers",
     "status": 302

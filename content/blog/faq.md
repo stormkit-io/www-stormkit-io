@@ -7,7 +7,7 @@ date: 2023-08-17
 <details>
 <summary>How Stormkit is different than Heroku?</summary>
 
-Stormkit stands out in its capability to host static websites, single-page applications (SPAs), and serverless functions. Its optimization for performance ensures a smooth journey for JavaScript developers. The platform offers a range of features, including dynamic injection of frontend code, instant rollbacks, feature flags, customizable CDN storage, and trigger functions.
+Stormkit stands out in its capability to host static websites, single-page applications (SPAs), and serverless functions. Its optimization for performance ensures a smooth journey for JavaScript developers. The platform offers a range of features, including dynamic injection of frontend code, instant rollbacks, customizable CDN storage, and trigger functions.
 
 Conversely, Heroku provides a broader application platform that accommodates diverse application types, including web apps, APIs, and beyond. It enables developers to deploy applications constructed with a variety of programming languages and frameworks.
 

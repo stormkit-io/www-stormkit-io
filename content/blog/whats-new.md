@@ -5,6 +5,10 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## May 20th, 2025
+
+The feature flags have been deprecated and removed from Stormkit. You can make use of Snippets instead.
+
 ## May 8th, 2025
 
 Stormkit now supports deploying applications directly from [zip files](/docs/deployments/zip-file-deployments), simplifying the deployment process.
@@ -172,7 +176,7 @@ Recently we announced support for API endpoints for client-side applications. No
 
 ## December 15th, 2022
 
-Announcing [feature flags](/docs/features/feature-flags): inject them into your client-side application and control them through the UI. Instant updates, no need for deployments.
+Announcing feature flags (deprecated and removed): inject them into your client-side application and control them through the UI. Instant updates, no need for deployments.
 
 ## October 19th, 2022
 

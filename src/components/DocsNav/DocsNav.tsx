@@ -33,6 +33,7 @@ const categories = [
   'Features',
   'Other',
   'Api',
+  'Migrations',
 ]
 
 const isActiveCategory = (a: string, b: string) => {

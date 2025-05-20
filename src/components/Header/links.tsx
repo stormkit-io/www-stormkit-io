@@ -102,6 +102,16 @@ const links: LinkProps[] = [
           { path: '/vs-netlify', text: 'vs Netlify', icon: 'Compare' },
         ],
       },
+      {
+        title: 'Migration guides',
+        links: [
+          {
+            path: '/docs/migrations/vercel',
+            text: 'Vercel',
+            icon: 'Compare',
+          },
+        ],
+      },
     ],
   },
   {

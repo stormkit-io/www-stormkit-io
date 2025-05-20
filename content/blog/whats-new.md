@@ -7,7 +7,9 @@ Follow the latest developments on Stormkit.
 
 ## May 20th, 2025
 
-The feature flags have been deprecated and removed from Stormkit. You can make use of Snippets instead.
+- The feature flags have been deprecated and removed from Stormkit. You can make use of Snippets
+  instead.
+- We lowered the prices for Self-Hosted seats. The base subscription is now $20.00 per month / per user instead of $39.00.
 
 ## May 8th, 2025
 

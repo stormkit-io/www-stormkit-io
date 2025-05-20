@@ -302,7 +302,8 @@ export default function Vercel() {
         </Typography>
         <Subtitle id="whats-next">What's Next?</Subtitle>
         <Typography sx={{ mt: 2 }}>
-          Check our <Link href="/docs/welcome/self-hosting">documentation</Link>{' '}
+          Check our{' '}
+          <Link href="/docs/self-hosting/getting-started">documentation</Link>{' '}
           to get started with self-hosting.
         </Typography>
       </Box>

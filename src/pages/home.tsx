@@ -91,7 +91,7 @@ export default function Home() {
             variant="contained"
             color="secondary"
             size="large"
-            href="/docs/welcome/self-hosting"
+            href="/docs/self-hosting/getting-started"
           >
             Start self-hosting
             <Icon

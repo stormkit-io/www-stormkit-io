@@ -17,6 +17,6 @@ Stormkit integrates perfectly with your git flow. After your application is set,
 
 <section>
 
-If you're planning to self-host Stormkit, visit our [Self Hosting](/docs/welcome/self-hosting) section.
+If you're planning to self-host Stormkit, visit our [Self Hosting](/docs/self-hosting/getting-started) section.
 
 </section>

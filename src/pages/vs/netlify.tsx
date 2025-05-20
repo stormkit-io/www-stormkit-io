@@ -136,7 +136,7 @@ export default function Netlify() {
         <Typography component="ul" sx={{ my: 2 }}>
           <Typography component="li">
             Stormkit offers the flexibility to either{' '}
-            <Link href="/docs/welcome/self-hosting">
+            <Link href="/docs/self-hosting/getting-started">
               self-host your applications
             </Link>{' '}
             or use its managed cloud service. For users or companies that
@@ -318,7 +318,8 @@ export default function Netlify() {
         </Typography>
         <Subtitle id="whats-next">What's Next?</Subtitle>
         <Typography sx={{ mt: 2 }}>
-          Check our <Link href="/docs/welcome/self-hosting">documentation</Link>{' '}
+          Check our{' '}
+          <Link href="/docs/self-hosting/getting-started">documentation</Link>{' '}
           to get started with self-hosting.
         </Typography>
       </Box>

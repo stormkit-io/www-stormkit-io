@@ -124,6 +124,9 @@ export default function DocsNav({ items, currentCategory = 'welcome' }: Props) {
                     },
                   }}
                 >
+                  <Box component="span" sx={{ mr: 1 }}>
+                    &#183;
+                  </Box>{' '}
                   {item.title}
                 </Link>
               ))}

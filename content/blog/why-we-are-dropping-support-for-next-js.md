@@ -9,7 +9,7 @@ search: true
 
 **Update 28 Aug, 2024** <br />
 We recently announced our self-hosted edition which supports full features of Next.js
-out-of-the-box. Check our [self-hosted](/docs/welcome/self-hosting) guide for more information.
+out-of-the-box. Check our [self-hosted](/docs/self-hosting/getting-started) guide for more information.
 
 </section>
 

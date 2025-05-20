@@ -43,21 +43,6 @@ During the installation process, you will be prompted to choose between Docker C
 If you plan to deploy Stormkit on a single machine, we recommend using Docker Compose for its simplicity and ease of use.
 For more advanced scenarios that may require scalability or clustering, we suggest opting for Docker Swarm or another container orchestration tool.
 
-## Authentication
-
-<section id="authentication">
-
-In order to Authenticate with Stormkit, you need to configure at least one of the following authentication methods:
-
-- GitHub
-- GitLab
-- BitBucket
-
-Create an oAuth application with one of these providers and provide the required environment variables documented
-in the [docker-compose.yaml](https://github.com/stormkit-io/bin/blob/main/docker-compose.yaml) file.
-
-</section>
-
 ## Configuring GitHub Actions for Stormkit Deployments
 
 By default, Stormkit runs deployments on the same machine where the `Workerserver` service is hosted. If you require better performance or more control over your Continuous Integration (CI) process, consider configuring GitHub Actions. For detailed instructions on how to set this up, refer to our [stormkit-io/runner](https://github.com/stormkit-io/runner) repository.

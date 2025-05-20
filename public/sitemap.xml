@@ -49,8 +49,14 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.stormkit.io/docs/self-hosting/welcome</loc>
+    <loc>https://www.stormkit.io/docs/self-hosting/getting-started</loc>
     <lastmod>2025-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.stormkit.io/docs/self-hosting/authentication</loc>
+    <lastmod>2025-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

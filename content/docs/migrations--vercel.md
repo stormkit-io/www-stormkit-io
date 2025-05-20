@@ -50,3 +50,7 @@ All features that are working locally should be working on Stormkit as well:
 - [Incremental Static Regeneration (ISR)](https://nextjs.org/docs/app/building-your-application/data-fetching/incremental-static-regeneration) <br />
 - [Support for after](https://nextjs.org/blog/next-15-rc#executing-code-after-a-response-with-nextafter-experimental) <br />
 - [Composable Caching](https://nextjs.org/blog/composable-caching) (`'use cache'`) <br/>
+
+## Runtimes supported
+
+Next.js has two runtimes: Edge and Node.js. When using Stormkit, you should use the Node.js runtime.

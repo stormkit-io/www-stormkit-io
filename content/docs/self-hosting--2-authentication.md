@@ -29,7 +29,7 @@ To enable authentication with one of these providers, you need to create an oAut
 
 Visit the developer portal of your chosen provider and create an oAuth application:
 
-- [GitHub Developer Settings](https://github.com/settings/developers)
+- [GitHub Developer Settings](https://github.com/settings/apps)
 - [GitLab Applications](https://gitlab.com/-/profile/applications)
 - [BitBucket App Management](https://bitbucket.org/account/settings/app-passwords/)
 

@@ -79,6 +79,10 @@ body {
   letter-spacing: normal;
 }
 
+#blog-content strong {
+  color: #cbc2b4;
+}
+
 #blog-content h1 {
   margin-top: 0;
 }

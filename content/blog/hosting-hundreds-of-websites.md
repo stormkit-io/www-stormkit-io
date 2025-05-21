@@ -1,5 +1,5 @@
 ---
-title: Hosting hundreds of Websites - A Technical Deep Dive
+title: Hosting 300+ Websites - A Technical Deep Dive
 description: Discover how Stormkit enables hosting over 300 websites on a lean infrastructure, with insights into setup, costs, reliability, and management.
 date: 2025-05-21
 ---

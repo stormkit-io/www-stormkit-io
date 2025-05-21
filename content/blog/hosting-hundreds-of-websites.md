@@ -50,7 +50,7 @@ One of the most impressive aspects of this setup is its cost efficiency. Here’
 
 - **Alibaba Cloud Resources:** 4 servers, 1 database, 1 Redis instance, 1 NLB and around 300GB file storage cost approximately **$1000/month** with subscriptions.
 - **Deployments:** GitHub Actions is included in the client’s paid tier, so there’s no additional cost for CI/CD.
-- **Stormkit Services:** $500/month for infrastructure setup, service updates, monitoring, feature development, and direct Slack support.
+- **Stormkit Services:** $500/month for infrastructure setup, service updates, monitoring, feature development, enterprise features and direct Slack support.
 
 **Total Monthly Cost:** Around **$1500**.  
 **Cost Per Website:** Roughly **$5 per site**—a fraction of traditional hosting costs.

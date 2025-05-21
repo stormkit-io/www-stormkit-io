@@ -1,5 +1,5 @@
 ---
-title: Hosting 300+ Websites - A Technical Deep Dive
+title: Hosting hundreds of Websites - A Technical Deep Dive
 description: Discover how Stormkit enables hosting over 300 websites on a lean infrastructure, with insights into setup, costs, reliability, and management.
 date: 2025-05-21
 ---
@@ -68,3 +68,9 @@ When hosting hundreds of websites, uptime is non-negotiable. Here’s how this s
 This setup demonstrates that hosting 300+ websites doesn’t require a sprawling infrastructure or a massive budget. With the right tools, a lean team can manage a large-scale operation efficiently.
 
 Whether you’re managing a handful of sites or hundreds, this approach proves that scalability and cost-efficiency can go hand in hand.
+
+## Need Help with Your Infrastructure?
+
+If you’re looking to optimize your infrastructure or streamline your deployment process, Stormkit can help. Our platform supports deployments for JavaScript (frontend and backend), Go, and Rust applications, offering unparalleled flexibility and control.
+
+Contact us today to learn how Stormkit can transform your hosting and deployment workflows. [Get in touch with us](https://www.stormkit.io/enterprise) for more details.

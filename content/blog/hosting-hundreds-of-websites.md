@@ -46,14 +46,16 @@ Since the client primarily serves regional customers, global distribution wasn�
 
 ## Cost Breakdown
 
-One of the most impressive aspects of this setup is its cost efficiency. Here’s how the numbers stack up:
+Here’s how the numbers stack up:
 
 - **Alibaba Cloud Resources:** 4 servers, 1 database, 1 Redis instance, 1 NLB and around 300GB file storage cost approximately **$1000/month** with subscriptions.
 - **Deployments:** GitHub Actions is included in the client’s paid tier, so there’s no additional cost for CI/CD.
 - **Stormkit Services:** $500/month for infrastructure setup, service updates, monitoring, feature development, enterprise features and direct Slack support.
 
 **Total Monthly Cost:** Around **$1500**.  
-**Cost Per Website:** Roughly **$5 per site**—a fraction of traditional hosting costs.
+**Cost Per Website:** Roughly **$5 per site**.
+
+It's important to note that these prices are mostly cloud provider dependent and can be further optimized by selecting alternative providers, leveraging reserved instances, or using spot instances where applicable.
 
 ## Reliability and Downtime
 

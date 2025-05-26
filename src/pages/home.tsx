@@ -32,6 +32,7 @@ export default function Home() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
+          alignItems: 'center',
           flex: 1,
           m: 'auto',
           px: { xs: 2, md: 0 },
@@ -48,8 +49,7 @@ export default function Home() {
             textAlign: 'center',
           }}
         >
-          The Self-Hosted Platform
-          <br /> for Web Applications
+          Deploy, Scale, and Own Your Web Apps. No Vendor Lock-In.
         </Typography>
         <Typography
           variant="h2"
@@ -62,9 +62,9 @@ export default function Home() {
             color: grey[400],
           }}
         >
-          Stormkit is a hosting platform that streamlines CI/CD workflows,
-          enabling developers to quickly deploy and scale web applications
-          without complex configuration.
+          Stormkit gives development teams full control, faster CI/CD, and up to
+          47% lower infrastructure costs, all on your own terms. From
+          side-projects, to Enterprise scale.
         </Typography>
         <Box
           sx={{
@@ -83,7 +83,7 @@ export default function Home() {
               mr: { xs: 0, md: 2 },
             }}
           >
-            Get started on cloud
+            Launch in 5 minutes
             <Icon name="ArrowForward" sx={{ mr: 0, ml: 1, fontSize: 16 }} />
           </Button>
 
@@ -93,7 +93,7 @@ export default function Home() {
             size="large"
             href="/docs/self-hosting/getting-started"
           >
-            Start self-hosting
+            Try Self-Hosted CI/CD
             <Icon
               name="ArrowForward"
               sx={{ mr: 0, ml: 1, fontSize: 16, transform: 'rotate(-45deg)' }}

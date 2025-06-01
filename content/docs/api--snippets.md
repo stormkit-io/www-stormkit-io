@@ -53,6 +53,7 @@ Return all snippets of an environment.
 interface QueryString {
   afterId?: string
   hosts?: string
+  title?: string
 }
 
 interface Response {
@@ -93,6 +94,8 @@ curl -X GET \
 ```
 
 To filter snippets by hosts, you can use the `hosts` querystring parameter. Multiple hosts should be separated by comma (`,`).
+
+To filter snippets by title, use the `title` querystring parameter. Ensure the querystring is properly encoded.
 
 To paginate results, you can specify the `afterId` querystring parameter. This value is returned in the first `GET` request.
 

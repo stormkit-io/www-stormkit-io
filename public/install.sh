@@ -84,6 +84,27 @@ NC="\033[0m"
 
 LAST_VAR=""
 
+update_env_var_in_env_file() {
+  var_name=$1
+  var_value=$2
+
+  # Check if the variable already exists in the .env file
+  if grep -q "^$var_name=" .env; then
+    # Update the existing variable
+    if [ "$IS_MAC" = "1" ]; then
+      sed -i '' "s/^$var_name=.*/$var_name=$var_value/" .env
+    else
+      sed -i~ "/^$var_name=/s/=.*/=\"$var_value\"/" .env
+    fi
+  else
+    # Append the new variable to the .env file
+    echo "$var_name=$var_value" >> .env
+  fi
+
+  # Remove the swap file (if any)
+  rm -rf .env~
+}
+
 # Function to prompt for an environment variable and update the .env file
 update_env_var() {
   var_name=$1
@@ -111,21 +132,7 @@ update_env_var() {
     fi
   fi
 
-  # Check if the variable already exists in the .env file
-  if grep -q "^$var_name=" .env; then
-    # Update the existing variable
-    if [ "$IS_MAC" = "1" ]; then
-      sed -i '' "s/^$var_name=.*/$var_name=$var_value/" .env
-    else
-      sed -i~ "/^$var_name=/s/=.*/=\"$var_value\"/" .env
-    fi
-  else
-    # Append the new variable to the .env file
-    echo "$var_name=$var_value" >> .env
-  fi
-
-  # Remove the swap file (if any)
-  rm -rf .env~
+  update_env_var_in_env_file $var_name "$var_value"
 
   LAST_VAR=$var_value
 }
@@ -175,29 +182,8 @@ setup_base_env_variables() {
   # Download the example .env file
   curl -o ".env" "https://raw.githubusercontent.com/stormkit-io/bin/main/.env.example" --silent
 
-  # Create an array of arrays for environment variables
-  env_keys=(
-    "POSTGRES_PASSWORD"
-    "STORMKIT_APP_SECRET"
-  )
-
-  env_vals=(
-    "$(openssl rand -base64 12 | tr -dc 'a-zA-Z0-9' | head -c24)"
-    "$(openssl rand -base64 48 | tr -dc 'a-zA-Z0-9' | head -c32)"
-  )
-
-  for i in "${!env_keys[@]}"; do
-    key="${env_keys[$i]}"
-    value="${env_vals[$i]}"
-
-    echo "$key=$value"
-
-    if [ "$IS_MAC" = "1" ]; then
-      sed -i '' "s/^$key=.*/$key=$value/" .env
-    else
-      sed -i~ "/^$key=/s/=.*/=\"$value\"/" .env
-    fi
-  done
+  update_env_var_in_env_file POSTGRES_PASSWORD "$(openssl rand -base64 12 | tr -dc 'a-zA-Z0-9' | head -c24)"
+  update_env_var_in_env_file STORMKIT_APP_SECRET "$(openssl rand -base64 48 | tr -dc 'a-zA-Z0-9' | head -c32)"
 }
 
 DOMAIN=""

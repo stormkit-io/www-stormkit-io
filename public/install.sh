@@ -175,7 +175,29 @@ setup_base_env_variables() {
   # Download the example .env file
   curl -o ".env" "https://raw.githubusercontent.com/stormkit-io/bin/main/.env.example" --silent
 
-  # TODO: Update passwords
+  # Create an array of arrays for environment variables
+  env_keys=(
+    "POSTGRES_PASSWORD"
+    "STORMKIT_APP_SECRET"
+  )
+
+  env_vals=(
+    "$(openssl rand -base64 12 | tr -dc 'a-zA-Z0-9' | head -c24)"
+    "$(openssl rand -base64 48 | tr -dc 'a-zA-Z0-9' | head -c32)"
+  )
+
+  for i in "${!env_keys[@]}"; do
+    key="${env_keys[$i]}"
+    value="${env_vals[$i]}"
+
+    echo "$key=$value"
+
+    if [ "$IS_MAC" = "1" ]; then
+      sed -i '' "s/^$key=.*/$key=$value/" .env
+    else
+      sed -i~ "/^$key=/s/=.*/=\"$value\"/" .env
+    fi
+  done
 }
 
 DOMAIN=""

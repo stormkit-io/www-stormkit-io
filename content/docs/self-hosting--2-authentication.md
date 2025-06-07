@@ -36,7 +36,7 @@ To enable GitHub authentication, you need to create a **GitHub App** (not an oAu
 #### Step 1: Create a GitHub App
 
 1. Go to [GitHub Developer Settings](https://github.com/settings/apps)
-2. Click **"New GitHub App"**
+2. Click **New GitHub App**
 3. Fill in the required fields:
    - **GitHub App name**: Choose a unique name for your app
    - **Homepage URL**: Your Stormkit instance URL (e.g., `https://api.your-stormkit-domain.com`)
@@ -53,12 +53,12 @@ To enable GitHub authentication, you need to create a **GitHub App** (not an oAu
    - **Repository:Contents**: Read
    - **Repository:Pull requests**: Read and Write
    - **Account:Email addresses**: Read
-6. Click **"Create GitHub App"**
+6. Click **Create GitHub App**
 
 #### Step 2: Generate Private Key
 
-1. After creating the app, scroll down to **"Private keys"** section
-2. Click **"Generate a private key"**
+1. After creating the app, scroll down to **Private keys** section
+2. Click **Generate a private key**
 3. Download the `.pem` file
 
 #### Step 3: Configure Environment Variables

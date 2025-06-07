@@ -271,7 +271,27 @@ fi
 
 echo ""
 printf "${GREEN}Congratulations, Stormkit is installed on your computer!\n${NC}"
-printf "Wait a few seconds and you can access your Stormkit dashboard at ${GREEN}https://stormkit.${DOMAIN}${NC}"
+
+# Function to wait for the URL to return HTTP 200
+wait_for_url() {
+  url=$1
+  echo "Waiting for $url to return HTTP 200..."
+
+  while true; do
+    status_code=$(curl -s -o /dev/null -w "%{http_code}" "$url")
+    if [ "$status_code" -eq 200 ]; then
+      echo "URL ${GREEN}$url${NC} is now accessible (HTTP 200)."
+      break
+    else
+      echo "URL $url is not accessible yet (HTTP $status_code). Retrying in 5 seconds..."
+      sleep 5
+    fi
+  done
+}
+
+# Wait for the Stormkit dashboard URL to return HTTP 200
+wait_for_url "https://stormkit.${DOMAIN}"
+
 echo ""
 
 if [ "$DOCKER_MODE" = "Compose" ]; then

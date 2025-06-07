@@ -121,4 +121,14 @@ For the environment variables to take effect, make sure to restart Stormkit. For
 docker compose down workerserver hosting && docker compose up workerserver hosting -d
 ```
 
+<div class="blog-alert">
+
+Note: If you are providing environment variables using the `~/.profile` method, make sure to source that file before restarting the server.
+
+```bash
+source ~/.profile
+```
+
+</div>
+
 </section>

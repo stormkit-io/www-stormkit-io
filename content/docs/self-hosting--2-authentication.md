@@ -67,7 +67,7 @@ Add the following variables to your environment configuration. If you used the `
 
 ```bash
 # The GitHub App name you chose during creation
-GITHUB_ACCOUNT=your-app-name
+GITHUB_APP_NAME=your-app-name
 
 # Found under the General tab of your GitHub App page
 GITHUB_APP_ID=123456

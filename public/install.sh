@@ -94,7 +94,15 @@ update_env_var_in_env_file() {
     if [ "$IS_MAC" = "1" ]; then
       sed -i '' "s/^$var_name=.*/$var_name=$var_value/" .env
     else
-      sed -i~ "/^$var_name=/s/=.*/=\"$var_value\"/" .env
+      if [ "$var_value" = "''" ]; then
+        # If the value is empty, remove the variable
+        sed -i~ "/^$var_name=/d" .env
+      else
+        # Update the variable with the new value
+        # Use sed to replace the line with the new value
+        # The ~ suffix creates a backup file
+        sed -i~ "/^$var_name=/s/=.*/=\"$var_value\"/" .env
+      fi
     fi
   else
     # Append the new variable to the .env file
@@ -182,8 +190,8 @@ setup_base_env_variables() {
   # Download the example .env file
   curl -o ".env" "https://raw.githubusercontent.com/stormkit-io/bin/main/.env.example" --silent
 
-  update_env_var_in_env_file POSTGRES_PASSWORD "$(openssl rand -base64 12 | tr -dc 'a-zA-Z0-9' | head -c24)"
-  update_env_var_in_env_file STORMKIT_APP_SECRET "$(openssl rand -base64 48 | tr -dc 'a-zA-Z0-9' | head -c32)"
+  update_env_var_in_env_file POSTGRES_PASSWORD $(openssl rand -base64 12 | tr -dc 'a-zA-Z0-9' | head -c24)
+  update_env_var_in_env_file STORMKIT_APP_SECRET $(openssl rand -base64 48 | tr -dc 'a-zA-Z0-9' | head -c32)
 }
 
 DOMAIN=""

@@ -73,4 +73,4 @@ All files under the `.stormkit/public` (or the configured output folder) will be
 
 ## Example
 
-Check out and build our [React Monorepo Template](https://github.com/stormkit-io/monorepo-template-react) to see an example of the `.stormkit` subfolder.
+Check out and build our [React Starter Template](https://github.com/stormkit-io/monorepo-template-react) to see an example of the `.stormkit` subfolder.

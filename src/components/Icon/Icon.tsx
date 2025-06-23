@@ -3,32 +3,8 @@ import Box from '@mui/material/Box'
 import { SxProps } from '@mui/material'
 
 const imports = {
-  Menu: React.lazy(() => import('@mui/icons-material/Menu')),
-  LinkedIn: React.lazy(() => import('@mui/icons-material/LinkedIn')),
-  YouTube: React.lazy(() => import('@mui/icons-material/YouTube')),
-  GitHub: React.lazy(() => import('@mui/icons-material/GitHub')),
-  Close: React.lazy(() => import('@mui/icons-material/Close')),
-  Check: React.lazy(() => import('@mui/icons-material/Check')),
-  CheckCircle: React.lazy(() => import('@mui/icons-material/CheckCircle')),
-  Search: React.lazy(() => import('@mui/icons-material/Search')),
-  X: React.lazy(() => import('@mui/icons-material/X')),
-  Lock: React.lazy(() => import('@mui/icons-material/Lock')),
-  ChevronRight: React.lazy(() => import('@mui/icons-material/ChevronRight')),
   Compare: React.lazy(() => import('@mui/icons-material/Compare')),
   Report: React.lazy(() => import('@mui/icons-material/Report')),
-  KeyboardArrowDown: React.lazy(
-    () => import('@mui/icons-material/KeyboardArrowDown')
-  ),
-  KeyboardCommandKey: React.lazy(
-    () => import('@mui/icons-material/KeyboardCommandKey')
-  ),
-  ArrowBackIosNew: React.lazy(
-    () => import('@mui/icons-material/ArrowBackIosNew')
-  ),
-  ArrowForwardIos: React.lazy(
-    () => import('@mui/icons-material/ArrowForwardIos')
-  ),
-  ArrowForward: React.lazy(() => import('@mui/icons-material/ArrowForward')),
 }
 
 interface Props {

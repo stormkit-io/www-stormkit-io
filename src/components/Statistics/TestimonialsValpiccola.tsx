@@ -4,9 +4,9 @@ import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
+import CheckIcon from '@mui/icons-material/Check'
 import Link from '@mui/material/Link'
 import Chip from '@mui/material/Chip'
-import Icon from '~/components/Icon'
 import Card from '~/components/Card'
 import CardHeader from '~/components/CardHeader'
 
@@ -62,7 +62,7 @@ export default function TestimonialsValpiccola() {
           ].map((i) => (
             <ListItem key={i}>
               <ListItemIcon>
-                <Icon name="Check" color="success" sx={{ mr: 0 }} />
+                <CheckIcon color="success" sx={{ mr: 0 }} />
               </ListItemIcon>
               <ListItemText>{i}</ListItemText>
             </ListItem>

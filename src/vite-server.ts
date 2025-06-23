@@ -120,8 +120,15 @@ async function generateStaticPages() {
     './src/prerender'
   )) as { default: Prerender[] }
 
-  const { render } = (await vite.ssrLoadModule('./src/entry-server')) as {
-    render: RenderFunction
+  let render: RenderFunction
+
+  try {
+    const imported = await vite.ssrLoadModule('./src/entry-server')
+    render = imported.render as RenderFunction
+  } catch (e) {
+    throw new Error(
+      "Failed to load the render function from 'entry-server'. " + e
+    )
   }
 
   const dist = path.join(path.dirname(__dirname), '.stormkit/public')

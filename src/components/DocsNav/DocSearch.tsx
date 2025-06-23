@@ -3,7 +3,8 @@ import TextField from '@mui/material/TextField'
 import Box from '@mui/material/Box'
 import Chip from '@mui/material/Chip'
 import { grey } from '@mui/material/colors'
-import Icon from '~/components/Icon'
+import SearchIcon from '@mui/icons-material/Search'
+import KeyboardCommandKeyIcon from '@mui/icons-material/KeyboardCommandKey'
 import DocSearchModal from './DocSearchModal'
 
 export default function DocSearch() {
@@ -56,7 +57,7 @@ export default function DocSearch() {
             width: { xs: '100%', md: 'auto' },
           }}
           InputProps={{
-            startAdornment: <Icon name="Search" sx={{ mx: 1, fontSize: 14 }} />,
+            startAdornment: <SearchIcon sx={{ mx: 1, fontSize: 14 }} />,
             endAdornment: (
               <Chip
                 size="small"
@@ -65,7 +66,7 @@ export default function DocSearch() {
                     component="span"
                     sx={{ display: 'flex', alignItems: 'center' }}
                   >
-                    <Icon name="KeyboardCommandKey" sx={{ fontSize: 12 }} /> + K
+                    <KeyboardCommandKeyIcon sx={{ fontSize: 12 }} /> + K
                   </Box>
                 }
               />

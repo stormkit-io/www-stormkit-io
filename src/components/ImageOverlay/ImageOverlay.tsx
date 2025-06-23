@@ -3,7 +3,7 @@ import Box from '@mui/material/Box'
 import Dialog from '@mui/material/Dialog'
 import DialogTitle from '@mui/material/DialogTitle'
 import IconButton from '@mui/material/IconButton'
-import Icon from '~/components/Icon'
+import CloseIcon from '@mui/icons-material/Close'
 import { NavigationItem } from '../DocsNav/DocsNav'
 
 interface Props {
@@ -50,7 +50,7 @@ export default function ImageOverlay({ content, navigation }: Props) {
             setHovered(undefined)
           }}
         >
-          <Icon name="Close" />
+          <CloseIcon />
         </IconButton>
       </DialogTitle>
       <Box

@@ -1,8 +1,8 @@
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 import IconButton from '@mui/material/IconButton'
+import CloseIcon from '@mui/icons-material/Close'
 import { grey } from '@mui/material/colors'
-import Icon from '~/components/Icon'
 import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
 
 interface Props {
@@ -33,7 +33,7 @@ export default function HeaderMenuMobile({ setIsMenuOpen }: Props) {
           setIsMenuOpen(false)
         }}
       >
-        <Icon name="Close" />
+        <CloseIcon />
       </IconButton>
     </Box>
   )

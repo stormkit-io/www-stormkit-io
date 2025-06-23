@@ -3,10 +3,10 @@ import Box from '@mui/material/Box'
 import Alert from '@mui/material/Alert'
 import Typography from '@mui/material/Typography'
 import { grey } from '@mui/material/colors'
+import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 import ContactForm from '~/components/ContactForm'
 import Footer from '~/components/Footer'
 import Header from '~/components/Header'
-import Icon from '~/components/Icon'
 
 export const fetchData: FetchDataFunc = async () => {
   return {
@@ -114,8 +114,7 @@ export default function Enterprise() {
                           alignItems: 'center',
                         }}
                       >
-                        <Icon
-                          name="CheckCircle"
+                        <CheckCircleIcon
                           sx={{ mr: 1, fontSize: 16, fill: '#78193B' }}
                         />
                         {b.title}

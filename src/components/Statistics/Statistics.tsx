@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
-import Icon from '~/components/Icon'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import TestimonialsElham from './TestimonialsElham'
 import TestimonialsValpiccola from './TestimonialsValpiccola'
 
@@ -68,7 +68,7 @@ export default function Statistics() {
             sx={{ mt: 2, fontSize: 16 }}
           >
             Case study: Leading learning platform
-            <Icon name="ArrowForward" sx={{ fontSize: 12, ml: 1 }} />
+            <ArrowForwardIcon sx={{ fontSize: 12, ml: 1 }} />
           </Button>
         </Typography>
       </Box>

@@ -1,9 +1,9 @@
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
+import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
-import Icon from '~/components/Icon'
 import { withContent } from '~/helpers/markdown'
 import { fetchData } from './_ssr'
 import { dateFormat } from '~/helpers/date'
@@ -94,7 +94,7 @@ export default function BlogContent() {
                   },
                 }}
               >
-                Read more <Icon name="ChevronRight" />
+                Read more <ChevronRightIcon />
               </Link>
             </Box>
           </Box>

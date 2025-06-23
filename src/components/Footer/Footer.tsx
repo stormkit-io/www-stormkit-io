@@ -1,7 +1,9 @@
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
-import Icon from '~/components/Icon'
+import XIcon from '@mui/icons-material/X'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import YouTubeIcon from '@mui/icons-material/YouTube'
 import StormkitLogoCircle from '~/assets/logos/stormkit-logo-circle.svg'
 import DiscordLogo from '~/assets/images/discord.svg'
 
@@ -55,21 +57,19 @@ const links: Array<{ name: string; links: LinkProps[] }> = [
         path: 'https://x.com/stormkitio',
         text: 'X',
         external: true,
-        icon: <Icon name="X" sx={{ mr: 1, fill: 'rgb(29, 155, 240)' }} />,
+        icon: <XIcon sx={{ mr: 1, fill: 'rgb(29, 155, 240)' }} />,
       },
       {
         path: 'https://www.linkedin.com/company/stormkit',
         text: 'LinkedIn',
         external: true,
-        icon: (
-          <Icon name="LinkedIn" sx={{ mr: 1, fill: 'rgb(29, 155, 240)' }} />
-        ),
+        icon: <LinkedInIcon sx={{ mr: 1, fill: 'rgb(29, 155, 240)' }} />,
       },
       {
         path: 'https://www.youtube.com/@stormkit-io',
         text: 'YouTube',
         external: true,
-        icon: <Icon name="YouTube" sx={{ mr: 1, fill: 'rgb(255 0 0)' }} />,
+        icon: <YouTubeIcon sx={{ mr: 1, fill: 'rgb(255 0 0)' }} />,
       },
       {
         path: 'https://discord.com/invite/6yQWhyY',

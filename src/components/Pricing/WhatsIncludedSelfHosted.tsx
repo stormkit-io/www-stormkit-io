@@ -1,14 +1,15 @@
 import React from 'react'
-import Icon from '~/components/Icon'
+import CloseIcon from '@mui/icons-material/Close'
+import CheckIcon from '@mui/icons-material/Check'
 
 type shTierFn = (t?: number, e?: 'premium' | '') => React.ReactNode
 
 const render = (v: string, enabled: boolean) => (
   <>
     {enabled ? (
-      <Icon name="Check" color="success" sx={{ mr: 2, ml: 0 }} />
+      <CheckIcon color="success" sx={{ mr: 2, ml: 0 }} />
     ) : (
-      <Icon name="Close" color="error" sx={{ mr: 2, ml: 0 }} />
+      <CloseIcon color="error" sx={{ mr: 2, ml: 0 }} />
     )}
     {v}
   </>

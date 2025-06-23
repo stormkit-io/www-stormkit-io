@@ -2,13 +2,14 @@ import { useMemo, useState } from 'react'
 import Minisearch from 'minisearch'
 import Chip from '@mui/material/Chip'
 import LinearProgress from '@mui/material/LinearProgress'
+import SearchIcon from '@mui/icons-material/Search'
 import Typography from '@mui/material/Typography'
 import Modal from '@mui/material/Modal'
 import Link from '@mui/material/Link'
 import { grey, purple } from '@mui/material/colors'
 import TextField from '@mui/material/TextField'
 import Box from '@mui/material/Box'
-import Icon from '~/components/Icon'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 import { withContent } from '~/helpers/markdown'
 import { fetchData } from '~/pages/blog/_ssr'
 import data from '../../search-docs.json'
@@ -85,7 +86,7 @@ function SearchRow({ title, subtitle, match, path, onClick }: SearchRowProps) {
         color: 'white',
       }}
     >
-      <Icon name="ArrowForwardIos" sx={{ mr: 2, fontSize: 12 }} />
+      <ArrowForwardIosIcon sx={{ mr: 2, fontSize: 12 }} />
       <Link
         href={path}
         sx={{
@@ -149,7 +150,7 @@ export default function DocSearchModal({ onClose }: Props) {
           autoFocus
           fullWidth
           InputProps={{
-            startAdornment: <Icon name="Search" sx={{ mx: 1, fontSize: 14 }} />,
+            startAdornment: <SearchIcon sx={{ mx: 1, fontSize: 14 }} />,
             endAdornment: <Chip label="esc" />,
             sx: {
               fontSize: 14,

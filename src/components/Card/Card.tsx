@@ -4,7 +4,7 @@ import Alert from '@mui/material/Alert'
 import AlertTitle from '@mui/material/AlertTitle'
 import Box from '@mui/material/Box'
 import LinearProgress from '@mui/material/LinearProgress'
-import Icon from '../Icon'
+import ReportIcon from '@mui/icons-material/Report'
 import CardHeader from '../CardHeader'
 import CardFooter from '../CardFooter'
 import CardRow from '../CardRow'
@@ -126,7 +126,7 @@ function Card({
         {!loading && info && (
           <Alert
             color="info"
-            icon={<Icon name="Report" />}
+            icon={<ReportIcon />}
             sx={{
               mb: footer ? p : 0,
               px: p,

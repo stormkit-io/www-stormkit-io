@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import { useState } from 'react'
 import Button from '~/components/Button'
 import Icon from '~/components/Icon'
@@ -43,7 +44,7 @@ export default function LinksDesktop() {
               {link.text}
             </Typography>
             {link.children && (
-              <Icon name="ChevronRight" sx={{ transform: 'rotate(90deg)' }} />
+              <ChevronRightIcon sx={{ transform: 'rotate(90deg)' }} />
             )}
           </Button>
           {link.children && (

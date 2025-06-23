@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
-import Icon from '~/components/Icon'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import MenuIconDesktop from './MenuIconDesktop'
 import LinksDesktop from './LinksDesktop'
 
@@ -59,15 +60,14 @@ export default function Header() {
                 mr: 2,
               }}
             >
-              <Icon name="GitHub" sx={{ mr: 1 }} />
+              <GitHubIcon sx={{ mr: 1 }} />
               <Box
                 component="span"
                 sx={{ display: { xs: 'none', xl: 'inline' } }}
               >
                 GitHub
               </Box>
-              <Icon
-                name="ArrowForward"
+              <ArrowForwardIcon
                 sx={{
                   ml: { xs: 0, xl: 1 },
                   transform: 'rotate(-45deg)',
@@ -90,8 +90,7 @@ export default function Header() {
               href="https://app.stormkit.io"
             >
               Login
-              <Icon
-                name="ArrowForward"
+              <ArrowForwardIcon
                 sx={{ ml: 1, fontSize: 16, transform: 'rotate(-45deg)' }}
               />
             </Button>

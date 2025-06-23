@@ -4,7 +4,8 @@ import { useState } from 'react'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
-import Icon from '~/components/Icon'
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 
 interface Props {
   buttons: FeatureProps[]
@@ -82,7 +83,7 @@ export default function ScrollableButtons({
           '&:hover': { bgcolor: 'background.paper' },
         }}
       >
-        <Icon name="ArrowBackIosNew" fontSize="small" />
+        <ArrowBackIosNewIcon fontSize="small" />
       </IconButton>
 
       {/* Scrollable container */}
@@ -140,7 +141,7 @@ export default function ScrollableButtons({
           '&:hover': { bgcolor: 'background.paper' },
         }}
       >
-        <Icon name="ArrowForwardIos" fontSize="small" />
+        <ArrowForwardIosIcon fontSize="small" />
       </IconButton>
     </Box>
   )

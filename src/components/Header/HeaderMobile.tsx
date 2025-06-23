@@ -2,8 +2,8 @@ import { useState } from 'react'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 import IconButton from '@mui/material/IconButton'
+import MenuIcon from '@mui/icons-material/Menu'
 import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
-import Icon from '~/components/Icon'
 import MenuIconMobile from './HeaderMenuMobile'
 import LinksMobile from './LinksMobile'
 
@@ -41,7 +41,7 @@ export default function Header() {
           onClick={() => setIsMenuOpen(true)}
           sx={{ display: isMenuOpen ? 'none' : 'inline-block' }}
         >
-          <Icon name="Menu" />
+          <MenuIcon />
         </IconButton>
         <Box
           sx={{

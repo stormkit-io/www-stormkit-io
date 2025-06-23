@@ -1,4 +1,8 @@
 import Box from '@mui/material/Box'
+import XIcon from '@mui/icons-material/X'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import YouTubeIcon from '@mui/icons-material/YouTube'
+import CompareIcon from '@mui/icons-material/Compare'
 import DiscordLogo from '~/assets/images/discord.svg'
 
 interface Section {
@@ -60,19 +64,19 @@ const links: LinkProps[] = [
         links: [
           {
             path: 'https://www.linkedin.com/company/stormkit',
-            icon: 'LinkedIn',
+            icon: <LinkedInIcon />,
             text: 'LinkedIn',
             fill: 'rgb(29, 155, 240)',
           },
           {
             path: 'https://www.youtube.com/@stormkit-io',
             text: 'YouTube',
-            icon: 'YouTube',
+            icon: <YouTubeIcon />,
             fill: 'rgb(255 0 0)',
           },
           {
             path: 'https://x.com/stormkitio',
-            icon: 'X',
+            icon: <XIcon />,
             text: 'X',
             fill: 'white',
           },
@@ -98,8 +102,8 @@ const links: LinkProps[] = [
       {
         title: 'Comparisons',
         links: [
-          { path: '/vs-vercel', text: 'vs Vercel', icon: 'Compare' },
-          { path: '/vs-netlify', text: 'vs Netlify', icon: 'Compare' },
+          { path: '/vs-vercel', text: 'vs Vercel', icon: <CompareIcon /> },
+          { path: '/vs-netlify', text: 'vs Netlify', icon: <CompareIcon /> },
         ],
       },
       {
@@ -108,7 +112,7 @@ const links: LinkProps[] = [
           {
             path: '/docs/migrations/vercel',
             text: 'Vercel',
-            icon: 'Compare',
+            icon: <CompareIcon />,
           },
         ],
       },

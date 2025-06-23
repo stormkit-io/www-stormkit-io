@@ -1,7 +1,8 @@
-import { useState } from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import { grey } from '@mui/material/colors'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import Button from '~/components/Button'
 import Icon from '~/components/Icon'
 import links from './links'
@@ -137,10 +138,9 @@ export default function LinksMobile() {
               mr: 2,
             }}
           >
-            <Icon name="GitHub" sx={{ mr: 1, fontSize: 14 }} />
+            <GitHubIcon sx={{ mr: 1, fontSize: 14 }} />
             GitHub
-            <Icon
-              name="ArrowForward"
+            <ArrowForwardIcon
               sx={{ ml: 1, transform: 'rotate(-45deg)', fontSize: 14 }}
             />
           </Button>
@@ -158,8 +158,7 @@ export default function LinksMobile() {
             href="https://app.stormkit.io"
           >
             Login
-            <Icon
-              name="ArrowForward"
+            <ArrowForwardIcon
               sx={{ ml: 1, fontSize: 14, transform: 'rotate(-45deg)' }}
             />
           </Button>

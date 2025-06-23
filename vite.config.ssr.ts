@@ -1,5 +1,4 @@
 import path from 'node:path'
-import fs from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
@@ -12,14 +11,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  ssr: {
-    noExternal: fs
-      .readdirSync(path.join(__dirname, 'node_modules'), {
-        withFileTypes: true,
-      })
-      .filter((dirent) => dirent.isDirectory() && !dirent.name.startsWith('.'))
-      .map((dirent) => new RegExp(dirent.name)),
-  },
   resolve: {
     alias: [
       {

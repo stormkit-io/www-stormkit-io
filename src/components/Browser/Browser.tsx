@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import Icon from '~/components/Icon'
+import LockIcon from '@mui/icons-material/Lock'
 
 interface Props {
   children: React.ReactNode
@@ -58,7 +58,7 @@ export default function Browser({ children, url, actionSlot }: Props) {
                 borderRadius: 3,
               }}
             >
-              <Icon name="Lock" sx={{ mr: 1, color: 'green', width: 16 }} />
+              <LockIcon sx={{ mr: 1, color: 'green', width: 16 }} />
               <Typography component="span" sx={{ fontSize: 12 }}>
                 {url}
               </Typography>

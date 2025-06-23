@@ -35,10 +35,11 @@ export const fetchTutorial = (slug: string): Promise<Tutorial> => {
   return fetch(req)
     .then((res) => res.json())
     .then(({ data }) => {
-      if (data.length === 0) {
+      if (data?.length === 0) {
         throw new Error('Tutorial not found')
       }
-      return data[0]
+
+      return data?.[0]
     })
 }
 

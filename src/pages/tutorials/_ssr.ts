@@ -1,11 +1,6 @@
 import type { NavigationItem } from '~/components/DocsNav/DocsNav'
 import { fetchTutorials, fetchTutorial } from '~/strapi'
 
-const files = import.meta.glob('/content/blog/*.md', {
-  query: '?raw',
-  import: 'default',
-})
-
 interface Params {
   slug?: string
 }
@@ -15,7 +10,7 @@ export const fetchData: FetchDataFunc = async ({ slug }: Params) => {
 
   const tutorials = await fetchTutorials()
 
-  tutorials.forEach((tutorial) => {
+  tutorials?.forEach((tutorial) => {
     navigation.push({
       path: tutorial.slug,
       title: tutorial.title,
@@ -42,13 +37,13 @@ export const fetchData: FetchDataFunc = async ({ slug }: Params) => {
     const tutorial = await fetchTutorial(slug)
 
     returnValue.head = {
-      title: tutorial.title,
-      description: tutorial.description,
+      title: tutorial?.title || 'Tutorial not found',
+      description: tutorial?.description || 'Tutorial not found',
       type: 'article',
     }
 
     returnValue.context.content =
-      tutorial.blocks.find((block) => block.__component === 'shared.rich-text')
+      tutorial?.blocks.find((block) => block.__component === 'shared.rich-text')
         ?.body || ''
   }
 

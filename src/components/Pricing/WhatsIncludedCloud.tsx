@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from '~/components/Icon'
+import CheckIcon from '@mui/icons-material/Check'
 import { SubscriptionTier } from './SliderCloud'
 
 type cloudTierFn = (t?: SubscriptionTier) => React.ReactNode
@@ -25,7 +25,7 @@ const limits: Record<SubscriptionTier, { fns: string; bandwidth: string }> = {
 
 const render = (v: string) => (
   <>
-    <Icon name="Check" color="success" sx={{ mr: 2, ml: 0 }} />
+    <CheckIcon color="success" sx={{ mr: 2, ml: 0 }} />
     {v}
   </>
 )

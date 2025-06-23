@@ -2,13 +2,13 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import { grey } from '@mui/material/colors'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
 import Illustration from '~/components/Illustration'
 import Pricing from '~/components/Pricing'
 import MainMessage from '~/components/MainMessage'
 import Statistics from '~/components/Statistics'
-import Icon from '~/components/Icon'
 import { useScrollToHash } from '~/helpers/scroll'
 
 const MAX_WIDTH_MD = 800
@@ -84,7 +84,7 @@ export default function Home() {
             }}
           >
             Launch in 5 minutes
-            <Icon name="ArrowForward" sx={{ mr: 0, ml: 1, fontSize: 16 }} />
+            <ArrowForwardIcon sx={{ mr: 0, ml: 1, fontSize: 16 }} />
           </Button>
 
           <Button
@@ -94,8 +94,7 @@ export default function Home() {
             href="/docs/self-hosting/getting-started"
           >
             Try Self-Hosted CI/CD
-            <Icon
-              name="ArrowForward"
+            <ArrowForwardIcon
               sx={{ mr: 0, ml: 1, fontSize: 16, transform: 'rotate(-45deg)' }}
             />
           </Button>

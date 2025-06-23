@@ -2,8 +2,8 @@ import { useState } from 'react'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import DocSearch from './DocSearch'
-import Icon from '~/components/Icon'
 
 export interface NavigationItem {
   path: string
@@ -81,8 +81,7 @@ export default function DocsNav({ items, currentCategory = 'welcome' }: Props) {
             }}
           >
             {category}
-            <Icon
-              name="KeyboardArrowDown"
+            <KeyboardArrowDownIcon
               fontSize="small"
               sx={{
                 transform: isActiveCategory(activeCategory, category)

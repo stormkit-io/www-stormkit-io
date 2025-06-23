@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 import IconButton from '@mui/material/IconButton'
-import Icon from '~/components/Icon'
+import MenuIcon from '@mui/icons-material/Menu'
 import StormkitLogoText from '~/assets/logos/stormkit-logo-text-h--white.svg'
 
 export default function MobileMenuDesktop() {
@@ -18,7 +18,7 @@ export default function MobileMenuDesktop() {
         </Link>
       </Box>
       <IconButton sx={{ display: { md: 'none' } }}>
-        <Icon name="Menu" />
+        <MenuIcon />
       </IconButton>
     </Box>
   )

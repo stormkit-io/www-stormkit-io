@@ -5,6 +5,8 @@ import YouTubeIcon from '@mui/icons-material/YouTube'
 import CompareIcon from '@mui/icons-material/Compare'
 import DiscordLogo from '~/assets/images/discord.svg'
 
+const iconSx = { fontSize: 16, mr: 2 }
+
 interface Section {
   title: string
   links: LinkProps[]
@@ -64,19 +66,19 @@ const links: LinkProps[] = [
         links: [
           {
             path: 'https://www.linkedin.com/company/stormkit',
-            icon: <LinkedInIcon />,
+            icon: <LinkedInIcon sx={iconSx} />,
             text: 'LinkedIn',
             fill: 'rgb(29, 155, 240)',
           },
           {
             path: 'https://www.youtube.com/@stormkit-io',
             text: 'YouTube',
-            icon: <YouTubeIcon />,
+            icon: <YouTubeIcon sx={iconSx} />,
             fill: 'rgb(255 0 0)',
           },
           {
             path: 'https://x.com/stormkitio',
-            icon: <XIcon />,
+            icon: <XIcon sx={iconSx} />,
             text: 'X',
             fill: 'white',
           },
@@ -102,8 +104,16 @@ const links: LinkProps[] = [
       {
         title: 'Comparisons',
         links: [
-          { path: '/vs-vercel', text: 'vs Vercel', icon: <CompareIcon /> },
-          { path: '/vs-netlify', text: 'vs Netlify', icon: <CompareIcon /> },
+          {
+            path: '/vs-vercel',
+            text: 'vs Vercel',
+            icon: <CompareIcon sx={iconSx} />,
+          },
+          {
+            path: '/vs-netlify',
+            text: 'vs Netlify',
+            icon: <CompareIcon sx={iconSx} />,
+          },
         ],
       },
       {
@@ -112,7 +122,7 @@ const links: LinkProps[] = [
           {
             path: '/docs/migrations/vercel',
             text: 'Vercel',
-            icon: <CompareIcon />,
+            icon: <CompareIcon sx={iconSx} />,
           },
         ],
       },

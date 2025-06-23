@@ -3,7 +3,6 @@ import Typography from '@mui/material/Typography'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import { useState } from 'react'
 import Button from '~/components/Button'
-import Icon from '~/components/Icon'
 import Tooltip from '~/components/Tooltip'
 import links from './links'
 
@@ -101,15 +100,7 @@ export default function LinksDesktop() {
                           color: 'white',
                         }}
                       >
-                        {typeof btn.icon === 'string' ? (
-                          <Icon
-                            // @ts-ignore
-                            name={btn.icon}
-                            sx={{ fontSize: 16, mr: 2 }}
-                          />
-                        ) : (
-                          btn.icon
-                        )}
+                        {btn.icon}
                         {btn.text}
                       </Button>
                     ))}

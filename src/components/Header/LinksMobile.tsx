@@ -4,7 +4,6 @@ import { grey } from '@mui/material/colors'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import Button from '~/components/Button'
-import Icon from '~/components/Icon'
 import links from './links'
 
 export default function LinksMobile() {
@@ -91,15 +90,7 @@ export default function LinksMobile() {
                         color: 'white',
                       }}
                     >
-                      {typeof btn.icon === 'string' ? (
-                        <Icon
-                          // @ts-ignore
-                          name={btn.icon}
-                          sx={{ fontSize: 16, mr: 2 }}
-                        />
-                      ) : (
-                        btn.icon
-                      )}
+                      {btn.icon}
                       {btn.text}
                     </Button>
                   ))}

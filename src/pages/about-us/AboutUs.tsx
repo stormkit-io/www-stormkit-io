@@ -2,7 +2,6 @@ import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
-import { useScrollToHash } from '~/helpers/scroll'
 
 export const fetchData: FetchDataFunc = async () => {
   return {
@@ -16,8 +15,6 @@ export const fetchData: FetchDataFunc = async () => {
 }
 
 export default function AboutUs() {
-  useScrollToHash()
-
   return (
     <Box
       sx={{

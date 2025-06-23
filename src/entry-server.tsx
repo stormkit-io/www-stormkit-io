@@ -1,5 +1,6 @@
-import { StaticRouter } from 'react-router-dom/server'
+import { StaticRouter } from 'react-router-dom'
 import { renderToString } from 'react-dom/server'
+import createEmotionServer from '@emotion/server/create-instance'
 import fs from 'node:fs'
 import path from 'node:path'
 import http from 'node:http'
@@ -8,6 +9,7 @@ import serverless from '@stormkit/serverless'
 import createRoutes from './routes'
 import Context from './context'
 import App from './App'
+import createEmotionCache from './emotion-cache'
 
 interface RenderReturn {
   status: number
@@ -38,6 +40,10 @@ const defaultSEO: SEO = {
 }
 
 export const render: RenderFunction = async (url, seo) => {
+  const cache = createEmotionCache()
+  const { extractCriticalToChunks, constructStyleTagsFromChunks } =
+    createEmotionServer(cache)
+
   const { routes, head, context } = await createRoutes(url)
 
   const tags = {
@@ -49,19 +55,25 @@ export const render: RenderFunction = async (url, seo) => {
   // Prefix the title with the domain.name property.
   tags.title = tags.title + ` - Stormkit`
 
+  const content =
+    renderToString(
+      <Context.Provider value={context}>
+        <StaticRouter location={url}>
+          <App routes={routes} cache={cache} />
+        </StaticRouter>
+      </Context.Provider>
+    ) +
+    (context
+      ? `<script>window.CONTEXT = ${JSON.stringify(context)}</script>`
+      : '')
+
+  // Grab the CSS from emotion
+  const emotionChunks = extractCriticalToChunks(content)
+  const emotionCss = constructStyleTagsFromChunks(emotionChunks)
+
   return {
     status: 200,
-    content:
-      renderToString(
-        <Context.Provider value={context}>
-          <StaticRouter location={url}>
-            <App routes={routes} />
-          </StaticRouter>
-        </Context.Provider>
-      ) +
-      (context
-        ? `<script>window.CONTEXT = ${JSON.stringify(context)}</script>`
-        : ''),
+    content,
     head: [
       `<title>${tags.title}</title>`,
       `<meta charset="utf-8" />`,
@@ -90,6 +102,7 @@ export const render: RenderFunction = async (url, seo) => {
       `<link rel="apple-touch-icon" href="/stormkit-logo.png"/>`,
       `<link rel="icon" type="image/svg+xml" href="/stormkit-logo.png" />`,
       `<link href="/src/index.css" rel="stylesheet" />`,
+      emotionCss,
     ]
       .join('\n')
       .trim(),

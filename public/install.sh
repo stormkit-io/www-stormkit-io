@@ -200,6 +200,7 @@ DOMAIN=""
 setup_domain() {
   IP4=$(curl -s -4 ifconfig.me | tr '.' '-')
   DOMAIN="$IP4.sslip.io"
+  update_env_var_in_env_file STORMKIT_DOMAIN $DOMAIN
 }
 
 # Path to the profile file (e.g., ~/.profile)

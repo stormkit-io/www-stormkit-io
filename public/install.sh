@@ -197,11 +197,9 @@ setup_base_env_variables() {
 DOMAIN=""
 
 # Setup the environment variable for the Hosting Service.
-setup_hosting_env_variables() {
+setup_domain() {
   IP4=$(curl -s -4 ifconfig.me | tr '.' '-')
-  DEFAULT_DOMAIN="$IP4.sslip.io"
-  update_env_var "STORMKIT_DOMAIN" "Enter the top-level domain (e.g. example.org)" "Leave empty if you don't have a domain" $DEFAULT_DOMAIN
-  DOMAIN=$LAST_VAR
+  DOMAIN="$IP4.sslip.io"
 }
 
 # Path to the profile file (e.g., ~/.profile)
@@ -242,15 +240,16 @@ move_env_variables_to_profile() {
   rm -rf .env .env~ "$PROFILE_FILE"~
 }
 
-echo
-printf "We need to prepare the ${BLUE}environment variables${NC} before proceeding\n"
-echo "Please reply the following questions"
-echo
+# echo
+# printf "We need to prepare the ${BLUE}environment variables${NC} before proceeding\n"
+# echo "Please reply the following questions"
+# echo
 
-single_select "Which docker mode are you going to use?" "Swarm Compose" "Use Swarm for managing a network, compose for a single machine"
-echo
+# single_select "Which docker mode are you going to use?" "Swarm Compose" "Use Swarm for managing a network, compose for a single machine"
+# echo
 
-DOCKER_MODE=$SELECTED_PROVIDER
+# DOCKER_MODE=$SELECTED_PROVIDER
+DOCKER_MODE="Compose"
 
 # For now keep this file here - we need to improve the docker swarm setup
 # Download the docker-compose.yaml file
@@ -259,12 +258,12 @@ curl -o "docker-compose.yaml" "https://raw.githubusercontent.com/stormkit-io/bin
 setup_base_env_variables
 
 if [ "$DOCKER_MODE" = "Compose" ]; then
-  setup_hosting_env_variables
+  setup_domain
   move_env_variables_to_profile
 
   docker compose up -d
 else
-  setup_hosting_env_variables
+  setup_domain
   move_env_variables_to_profile
 
   # Leave Docker Swarm if initialized

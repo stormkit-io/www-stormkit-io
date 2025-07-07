@@ -1,17 +1,35 @@
-import Box from '@mui/material/Box'
+import Box, { BoxProps } from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
-import { grey } from '@mui/material/colors'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
 import Illustration from '~/components/Illustration'
 import Pricing from '~/components/Pricing'
-import MainMessage from '~/components/MainMessage'
-import Statistics from '~/components/Statistics'
 import { useScrollToHash } from '~/helpers/scroll'
+import Deepbase from '~/assets/logos/third-party/deepbase.svg'
+import Workflow from './_components/Workflow'
+import Hero from './_components/Hero'
+import Enterprise from './_components/Enterprise'
+import DeployNow from './_components/DeployNow'
+import FAQ from './_components/FAQ'
 
-const MAX_WIDTH_MD = 800
+const Section = ({ maxWidth = 'xl', sx, children, id }: BoxProps) => {
+  return (
+    <Box
+      id={id}
+      maxWidth={maxWidth}
+      sx={{
+        mx: 'auto',
+        width: '100%',
+        mb: { xs: 10, md: 25 },
+        zIndex: 1,
+        position: 'relative',
+        ...sx,
+      }}
+    >
+      {children}
+    </Box>
+  )
+}
 
 export default function Home() {
   useScrollToHash()
@@ -33,126 +51,95 @@ export default function Home() {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
+          width: '100%',
           flex: 1,
-          m: 'auto',
+          mx: 'auto',
+          minHeight: 'calc(100vh - 104px)', // 104 is the header height
           px: { xs: 2, md: 0 },
-          minHeight: '60vh',
+          zIndex: 2,
+          opacity: 0,
+          animation: 'fadeInUp 1s ease-out 0.25s forwards',
         }}
         maxWidth="xl"
       >
-        <Typography
-          variant="h1"
-          sx={{
-            fontWeight: 600,
-            fontSize: { xs: 24, md: 48 },
-            maxWidth: MAX_WIDTH_MD,
-            textAlign: 'center',
-          }}
-        >
-          Deploy, Scale, and Own Your Web Apps. No Vendor Lock-In.
-        </Typography>
-        <Typography
-          variant="h2"
-          sx={{
-            mt: 2,
-            fontSize: { xs: 15, md: 17 },
-            maxWidth: 700,
-            lineHeight: 1.75,
-            textAlign: 'center',
-            color: grey[400],
-          }}
-        >
-          Stormkit gives development teams full control, faster CI/CD, and up to
-          47% lower infrastructure costs, all on your own terms. From
-          side-projects, to Enterprise scale.
-        </Typography>
-        <Box
-          sx={{
-            maxWidth: MAX_WIDTH_MD,
-            textAlign: 'center',
-            mt: { xs: 8, md: 4 },
-          }}
-        >
-          <Button
-            variant="text"
-            color="primary"
-            size="large"
-            href="https://app.stormkit.io"
-            sx={{
-              display: { xs: 'none', md: 'inline-flex' },
-              mr: { xs: 0, md: 2 },
-            }}
+        <Hero />
+        <Box sx={{ textAlign: 'center' }}>
+          <Typography
+            variant="h4"
+            color="text.secondary"
+            sx={{ mt: { xs: 10, md: 25 }, fontSize: 16 }}
           >
-            Launch in 5 minutes
-            <ArrowForwardIcon sx={{ mr: 0, ml: 1, fontSize: 16 }} />
-          </Button>
-
-          <Button
-            variant="contained"
-            color="secondary"
-            size="large"
-            href="/docs/self-hosting/getting-started"
-          >
-            Try Self-Hosted CI/CD
-            <ArrowForwardIcon
-              sx={{ mr: 0, ml: 1, fontSize: 16, transform: 'rotate(-45deg)' }}
+            Trusted by enterprises and teams
+          </Typography>
+          <Box sx={{ mt: 4, display: 'flex', alignItems: 'center' }}>
+            <Box
+              component="img"
+              alt="Elham"
+              src="https://cdn.prod.website-files.com/64996137a1e0a71956ea90eb/64997d15979306f7e737a767_logo.png"
+              sx={{ mr: 4, width: 80 }}
             />
-          </Button>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                bgcolor: 'rgba(255, 255, 255, 0.67)',
+                p: 1,
+                borderRadius: 2,
+                mr: 4,
+              }}
+            >
+              <Box
+                component="img"
+                src={Deepbase}
+                alt="Deepbase"
+                sx={{ width: 100 }}
+              />
+            </Box>
+            <Box
+              component="a"
+              href="https://www.valpiccola.com"
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                color: 'white',
+                textDecoration: 'none',
+              }}
+              rel="noreferrer noopener"
+            >
+              <Box
+                component="img"
+                alt="Valpiccola"
+                src="https://www.valpiccola.com/logo-small.png"
+                sx={{ mr: 1, height: 32 }}
+              />
+              <Typography sx={{ fontWeight: 600 }}>Valpiccola</Typography>
+            </Box>
+          </Box>
         </Box>
       </Box>
+      <Section id="feature-preview">
+        <Illustration />
+      </Section>
 
-      <Box
-        id="feature-preview"
-        sx={{
-          width: '100%',
-          bgcolor: 'page.container',
-          py: 8,
-          mt: { xs: 8, md: 12 },
-        }}
-      >
-        <Box maxWidth="xl" sx={{ mx: 'auto' }}>
-          <Illustration />
-        </Box>
-      </Box>
+      <Section id="workflow">
+        <Workflow />
+      </Section>
 
-      <Box
-        id="statistics"
-        maxWidth="lg"
-        sx={{
-          width: '100%',
-          py: 8,
-          mx: 'auto',
-        }}
-      >
-        <Box maxWidth="xl" sx={{ mx: 'auto' }}>
-          <Statistics />
-        </Box>
-      </Box>
+      <Section id="enterprise">
+        <Enterprise />
+      </Section>
 
-      <Box
-        id="pricing"
-        sx={{
-          width: '100%',
-          bgcolor: 'page.container',
-          py: 8,
-        }}
-      >
-        <Box maxWidth="lg" sx={{ mx: 'auto' }}>
-          <Pricing />
-        </Box>
-      </Box>
+      <Section id="deploy-now">
+        <DeployNow />
+      </Section>
 
-      <Box
-        maxWidth="lg"
-        sx={{
-          width: '100%',
-          mx: 'auto',
-          mt: { xs: 3, md: 8 },
-          mb: { xs: 6, md: 24 },
-        }}
-      >
-        <MainMessage />
-      </Box>
+      <Section id="pricing">
+        <Pricing />
+      </Section>
+
+      <Section id="faq">
+        <FAQ />
+      </Section>
       <Footer maxWidth="lg" />
     </Box>
   )

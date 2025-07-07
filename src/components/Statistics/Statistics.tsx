@@ -1,7 +1,5 @@
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import TestimonialsElham from './TestimonialsElham'
 import TestimonialsValpiccola from './TestimonialsValpiccola'
 
@@ -53,24 +51,6 @@ export default function Statistics() {
             </Typography>
           </Box>
         ))}
-      </Box>
-      <Box sx={{ maxWidth: 660, mt: 8, mx: 'auto', textAlign: 'center' }}>
-        <Typography sx={{ fontSize: 24, mb: 2 }}>
-          “Stormkit reduced our deployment time for 500 websites from 24+ hours
-          to just 7 minutes, while cutting our infrastructure costs by 60% for
-          our team of 10 developers.”
-        </Typography>
-        <Typography>
-          <Button
-            variant="contained"
-            color="secondary"
-            href="/blog/case-study-elham"
-            sx={{ mt: 2, fontSize: 16 }}
-          >
-            Case study: Leading learning platform
-            <ArrowForwardIcon sx={{ fontSize: 12, ml: 1 }} />
-          </Button>
-        </Typography>
       </Box>
       <Box
         sx={{

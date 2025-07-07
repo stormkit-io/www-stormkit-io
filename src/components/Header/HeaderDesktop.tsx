@@ -1,20 +1,30 @@
+import { useContext } from 'react'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
+import Context from '~/context'
 import MenuIconDesktop from './MenuIconDesktop'
 import LinksDesktop from './LinksDesktop'
 
 export default function Header() {
+  const { isHomePage } = useContext(Context)
+  const headerBgColor = '#17172b'
+
   return (
     <Box
+      maxWidth={isHomePage ? 'xl' : 'auto'}
       sx={{
+        mt: isHomePage ? 4 : 0,
+        mx: 'auto',
+        borderRadius: isHomePage ? 10 : 0,
         display: {
           xs: 'none',
           lg: 'block',
         },
-        bgcolor: 'page.container',
+        bgcolor: isHomePage ? headerBgColor : 'page.container',
         boxShadow: 2,
+        border: '1px solid rgb(20, 6, 48)',
         px: { xs: 1, md: 0 },
       }}
     >

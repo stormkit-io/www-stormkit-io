@@ -25,7 +25,8 @@ body {
   margin: 0;
   box-sizing: border-box;
   max-width: 100vw;
-  overflow-x: hidden;
+  min-height: 100vh;
+  overflow-x: visible;
   font-display: block;
   font-family: Roboto, Helvetica;
   -webkit-font-smoothing: antialiased;
@@ -40,20 +41,20 @@ body {
   box-sizing: inherit;
 }
 
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.animated-svg-path {
-  animation: animateDash 5s linear forwards infinite;
-  stroke: rgba(0, 0, 0, 0.75);
-}
-
-@keyframes animateDash {
+@keyframes rotate {
   to {
-    stroke-dashoffset: 0;
+    transform: rotate(360deg);
   }
 }
 

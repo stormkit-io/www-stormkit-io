@@ -26,7 +26,7 @@ export default function Pricing() {
   const isCloud = useMemo(() => mode === 'cloud', [mode])
 
   return (
-    <>
+    <Box>
       <Box>
         <Typography
           variant="h2"
@@ -119,29 +119,27 @@ export default function Pricing() {
           />
         </Divider>
         <Box sx={{ display: 'flex', mt: 6 }}>
-          <Grid
-            container
-            sx={{ width: '100%', textAlign: 'left' }}
-            rowSpacing={{ xs: 2 }}
+          <Box
+            sx={{
+              width: '100%',
+              textAlign: 'left',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              gap: 2,
+            }}
           >
             {(isCloud ? whatsIncludedCloud : whatsIncludedSelfHosted).map(
               (feature: any, index) => (
-                <Grid
-                  key={index}
-                  item
-                  xs={12}
-                  md={4}
-                  sx={{ display: 'flex', alignItems: 'center' }}
-                >
+                <Box key={index} sx={{ display: 'flex', alignItems: 'center' }}>
                   <Typography
                     className="fa-solid fa-square-check"
                     sx={{ color: 'success.main', mr: 1 }}
                   />
                   {isCloud ? feature(tier) : feature(seats, edition)}
-                </Grid>
+                </Box>
               )
             )}
-          </Grid>
+          </Box>
         </Box>
       </Box>
       <Box sx={{ textAlign: 'center' }}>
@@ -155,6 +153,6 @@ export default function Pricing() {
           Get started now
         </Button>
       </Box>
-    </>
+    </Box>
   )
 }

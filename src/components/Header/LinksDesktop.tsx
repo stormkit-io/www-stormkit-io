@@ -59,7 +59,7 @@ export default function LinksDesktop() {
               sx={{
                 minWidth: link.maxWidth || 600,
                 mt: 4,
-                backgroundColor: 'black',
+                backgroundColor: '#17172b',
               }}
             >
               <Box

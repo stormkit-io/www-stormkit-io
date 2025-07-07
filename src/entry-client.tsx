@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, RouteProps, useLocation } from 'react-router-dom'
 import createRoutes from './routes'
 import App from './App'
 import Context from './context'
@@ -25,17 +25,26 @@ const mount = (children: React.ReactNode) => {
 
 const cache = createEmotionCache()
 
+const MyApp = ({ routes }: { routes: RouteProps[] }) => {
+  const context = window.CONTEXT
+  const location = useLocation()
+  const isHomePage = location.pathname === '/'
+
+  return (
+    <Context.Provider value={{ ...context, isHomePage }}>
+      <App routes={routes} cache={cache} />
+    </Context.Provider>
+  )
+}
+
 ;(async () => {
   const { routes } = await createRoutes(window.location.pathname)
-  const context = window.CONTEXT
 
   mount(
     <React.StrictMode>
-      <Context.Provider value={context}>
-        <BrowserRouter>
-          <App routes={routes} cache={cache} />
-        </BrowserRouter>
-      </Context.Provider>
+      <BrowserRouter>
+        <MyApp routes={routes} />
+      </BrowserRouter>
     </React.StrictMode>
   )
 })()

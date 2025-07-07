@@ -6,14 +6,22 @@ interface Props {
   children: React.ReactNode
   url?: string
   actionSlot?: React.ReactNode
+  actionBarBgColor?: string
+  pageBgColor?: string
 }
 
-export default function Browser({ children, url, actionSlot }: Props) {
+export default function Browser({
+  children,
+  url,
+  actionSlot,
+  actionBarBgColor = 'rgba(0,200,200,0.1)',
+  pageBgColor = 'black',
+}: Props) {
   return (
     <Box>
       <Box
         sx={{
-          bgcolor: 'rgba(0,200,200,0.1)',
+          bgcolor: actionBarBgColor,
           borderTopRightRadius: 4,
           borderTopLeftRadius: 4,
           display: 'flex',
@@ -70,9 +78,9 @@ export default function Browser({ children, url, actionSlot }: Props) {
       <Box
         sx={{
           fontFamily: 'monospace',
-          bgcolor: 'black',
-          borderBottomLeftRadius: 2,
-          borderBottomRightRadius: 2,
+          bgcolor: pageBgColor,
+          borderBottomLeftRadius: 4,
+          borderBottomRightRadius: 4,
         }}
       >
         {children}

@@ -155,7 +155,7 @@ export default createTheme({
       secondary: '#999999',
     },
     background: {
-      default: '#0F092B',
+      default: 'transparent',
       paper: '#262558',
     },
     info: {

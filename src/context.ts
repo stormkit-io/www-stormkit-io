@@ -4,6 +4,7 @@ import { createContext } from 'react'
 interface Context {
   content?: string
   navigation?: NavigationItem[]
+  isHomePage?: boolean
 }
 
 export default createContext<Context>({})

@@ -157,7 +157,7 @@ const links: LinkProps[] = [
       },
     ],
   },
-  { path: '/docs', text: 'Docs' },
+  { path: '/docs/welcome/getting-started', text: 'Docs' },
 
   { path: '/enterprise', text: 'Enterprise' },
   { path: '/#pricing', text: 'Pricing' },

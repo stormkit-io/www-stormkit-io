@@ -39,7 +39,7 @@ const links: Array<{ name: string; links: LinkProps[] }> = [
   {
     name: 'resources',
     links: [
-      { path: '/docs', text: 'Docs' },
+      { path: '/docs/welcome/getting-started', text: 'Docs' },
       { path: '/blog', text: 'Blog' },
       { path: '/blog/whats-new', text: "What's new?" },
       { path: '/docs/welcome/contributing', text: 'Contribute' },

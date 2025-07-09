@@ -36,7 +36,7 @@ const routes: Prerender[] = [
   },
 
   // Prerender docs
-  { route: '/docs' },
+  { route: '/docs/welcome/getting-started' },
   ...Object.keys(docs).map((file) => ({
     route: file
       .replace('/content', '')

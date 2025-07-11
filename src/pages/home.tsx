@@ -52,7 +52,7 @@ export default function Home() {
           width: '100%',
           flex: 1,
           mx: 'auto',
-          minHeight: 'calc(100vh - 104px)', // 104 is the header height
+          minHeight: { xs: '57vh', md: 'calc(100vh - 104px)' }, // 104 is the header height
           px: { xs: 2, md: 0 },
           zIndex: 2,
           opacity: 0,

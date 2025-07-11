@@ -3,6 +3,7 @@ import Button from '@mui/material/Button'
 import { grey } from '@mui/material/colors'
 import Typography from '@mui/material/Typography'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
+import Deepbase from '~/assets/logos/third-party/deepbase.svg'
 import Browser from '~/components/Browser'
 import { features } from './features'
 
@@ -21,6 +22,66 @@ export default function Illustration() {
         mx: { xs: 2, md: 0 },
       }}
     >
+      <Box maxWidth="xl" sx={{ textAlign: 'center', mx: 'auto', px: 2, mb: 4 }}>
+        <Typography
+          variant="h4"
+          color="text.secondary"
+          sx={{ mt: { xs: 10, md: 25 }, fontSize: 16 }}
+        >
+          Trusted by enterprises and teams
+        </Typography>
+        <Box
+          sx={{
+            mt: 4,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <Box
+            component="img"
+            alt="Elham"
+            src="https://cdn.prod.website-files.com/64996137a1e0a71956ea90eb/64997d15979306f7e737a767_logo.png"
+            sx={{ mr: 4, width: 80 }}
+          />
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              bgcolor: 'rgba(255, 255, 255, 0.67)',
+              p: 1,
+              borderRadius: 2,
+              mr: 4,
+            }}
+          >
+            <Box
+              component="img"
+              src={Deepbase}
+              alt="Deepbase"
+              sx={{ width: 100 }}
+            />
+          </Box>
+          <Box
+            component="a"
+            href="https://www.valpiccola.com"
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              color: 'white',
+              textDecoration: 'none',
+            }}
+            rel="noreferrer noopener"
+          >
+            <Box
+              component="img"
+              alt="Valpiccola"
+              src="https://www.valpiccola.com/logo-small.png"
+              sx={{ mr: 1, height: 32 }}
+            />
+            <Typography sx={{ fontWeight: 600 }}>Valpiccola</Typography>
+          </Box>
+        </Box>
+      </Box>
       <Box
         sx={{
           border: `1px solid ${grey[900]}`,

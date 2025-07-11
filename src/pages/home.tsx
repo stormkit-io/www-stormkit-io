@@ -1,11 +1,9 @@
 import Box, { BoxProps } from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
 import Illustration from '~/components/Illustration'
 import Pricing from '~/components/Pricing'
 import { useScrollToHash } from '~/helpers/scroll'
-import Deepbase from '~/assets/logos/third-party/deepbase.svg'
 import Workflow from './_components/Workflow'
 import Hero from './_components/Hero'
 import Enterprise from './_components/Enterprise'
@@ -63,60 +61,8 @@ export default function Home() {
         maxWidth="xl"
       >
         <Hero />
-        <Box sx={{ textAlign: 'center' }}>
-          <Typography
-            variant="h4"
-            color="text.secondary"
-            sx={{ mt: { xs: 10, md: 25 }, fontSize: 16 }}
-          >
-            Trusted by enterprises and teams
-          </Typography>
-          <Box sx={{ mt: 4, display: 'flex', alignItems: 'center' }}>
-            <Box
-              component="img"
-              alt="Elham"
-              src="https://cdn.prod.website-files.com/64996137a1e0a71956ea90eb/64997d15979306f7e737a767_logo.png"
-              sx={{ mr: 4, width: 80 }}
-            />
-            <Box
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                bgcolor: 'rgba(255, 255, 255, 0.67)',
-                p: 1,
-                borderRadius: 2,
-                mr: 4,
-              }}
-            >
-              <Box
-                component="img"
-                src={Deepbase}
-                alt="Deepbase"
-                sx={{ width: 100 }}
-              />
-            </Box>
-            <Box
-              component="a"
-              href="https://www.valpiccola.com"
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                color: 'white',
-                textDecoration: 'none',
-              }}
-              rel="noreferrer noopener"
-            >
-              <Box
-                component="img"
-                alt="Valpiccola"
-                src="https://www.valpiccola.com/logo-small.png"
-                sx={{ mr: 1, height: 32 }}
-              />
-              <Typography sx={{ fontWeight: 600 }}>Valpiccola</Typography>
-            </Box>
-          </Box>
-        </Box>
       </Box>
+
       <Section id="feature-preview">
         <Illustration />
       </Section>

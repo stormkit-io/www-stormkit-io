@@ -67,6 +67,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.stormkit.io/docs/self-hosting/custom-images</loc>
+    <lastmod>2025-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.stormkit.io/docs/welcome/contributing</loc>
     <lastmod>2024-09-24</lastmod>
     <changefreq>weekly</changefreq>

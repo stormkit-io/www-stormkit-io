@@ -71,22 +71,24 @@ export const render: RenderFunction = async (url, seo) => {
   const emotionChunks = extractCriticalToChunks(content)
   const emotionCss = constructStyleTagsFromChunks(emotionChunks)
 
+  const title = tags.title.replace(/^["']|["']$/g, '')
+
   return {
     status: 200,
     content,
     head: [
-      `<title>${tags.title}</title>`,
+      `<title>${title}</title>`,
       `<meta charset="utf-8" />`,
       `<meta name="viewport" content="width=device-width, initial-scale=1" />`,
       `<meta name="description" content="${tags.description}" />`,
-      `<meta property="og:title" content="${tags.title}" />`,
+      `<meta property="og:title" content="${title}" />`,
       `<meta property="og:type" content="${tags.type}" />`,
       `<meta property="og:url" content="${tags.domain?.url}" />`,
       `<meta property="og:description" content="${tags.description}" />`,
       `<meta property="og:image" content="${tags.domain?.url}/stormkit-og-image.png" />`,
       `<meta name="twitter:card" content="${tags.twitter!.card}" />`,
       `<meta name="twitter:creator" content="${tags.twitter!.creator}" />`,
-      `<meta name="twitter:title" content="${tags.title}" />`,
+      `<meta name="twitter:title" content="${title}" />`,
       `<meta name="twitter:description" content="${tags.description}" />`,
       `<meta name="twitter:image:content_type" content="${tags.twitter.imageContentType}"/>`,
       `<meta name="twitter:image:title" content="${

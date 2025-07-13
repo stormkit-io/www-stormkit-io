@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 import Typography from '@mui/material/Typography'
@@ -42,6 +42,10 @@ const isActiveCategory = (a: string, b: string) => {
 
 export default function DocsNav({ items, currentCategory = 'welcome' }: Props) {
   const [activeCategory, setActiveCategory] = useState(currentCategory)
+
+  useEffect(() => {
+    setActiveCategory(currentCategory)
+  }, [currentCategory])
 
   return (
     <Box

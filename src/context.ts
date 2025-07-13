@@ -5,6 +5,7 @@ interface Context {
   content?: string
   navigation?: NavigationItem[]
   isHomePage?: boolean
+  url?: string
 }
 
 export default createContext<Context>({})

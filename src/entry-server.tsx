@@ -57,8 +57,8 @@ export const render: RenderFunction = async (url, seo) => {
 
   const content =
     renderToString(
-      <Context.Provider value={{ ...context, isHomePage: url === '/' }}>
-        <StaticRouter location={url}>
+      <Context.Provider value={{ ...context, url, isHomePage: url === '/' }}>
+        <StaticRouter location={{ pathname: url }}>
           <App routes={routes} cache={cache} />
         </StaticRouter>
       </Context.Provider>

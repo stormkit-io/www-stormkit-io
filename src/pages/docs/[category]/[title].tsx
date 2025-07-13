@@ -1,6 +1,8 @@
+import { useContext } from 'react'
 import { useParams } from 'react-router'
 import LinearProgress from '@mui/material/LinearProgress'
 import Box from '@mui/material/Box'
+import { purple, grey } from '@mui/material/colors'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
 import DocsNav from '~/components/DocsNav'
@@ -8,16 +10,19 @@ import ImageOverlay from '~/components/ImageOverlay'
 import Error404 from '~/components/Error404'
 import { withContent } from '~/helpers/markdown'
 import { fetchData } from './_ssr'
-import { purple, grey } from '@mui/material/colors'
+import Context from '~/context'
 
 // Required for SSR
 export { fetchData } from './_ssr'
 
 export default function DocTitle() {
   const params = useParams()
+  const { url } = useContext(Context)
+  const category = params.category || url?.split?.('/')?.[2] || ''
+  const title = params.title || url?.split?.('/')?.[3] || ''
   const { content, navigation, loading } = withContent(fetchData, {
-    defaultCategory: 'welcome',
-    defaultTitle: 'getting-started',
+    defaultCategory: category,
+    defaultTitle: title,
   })
 
   if (!content.__html && !loading) {
@@ -49,7 +54,7 @@ export default function DocTitle() {
           maxWidth: '1560px',
         }}
       >
-        <DocsNav items={navigation} currentCategory={params.category} />
+        <DocsNav items={navigation} currentCategory={category} />
         <Box
           sx={{
             display: 'flex',

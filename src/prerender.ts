@@ -25,6 +25,10 @@ const routes: Prerender[] = [
   { route: '/tutorials/how-to-self-host-stormkit-on-hetzner-cloud' },
   { route: '/tutorials/how-to-deploy-your-self-hosted-remix-app' },
   {
+    route:
+      '/tutorials/how-to-run-automated-e2-e-tests-with-stormkit-and-browserless',
+  },
+  {
     route: '/policies/terms',
     title: 'Terms of Service',
     description: 'Read terms of service before using Stormkit',

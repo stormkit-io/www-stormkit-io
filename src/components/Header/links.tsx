@@ -153,6 +153,10 @@ const links: LinkProps[] = [
             text: 'Hetzner Cloud',
             path: '/tutorials/how-to-self-host-stormkit-on-hetzner-cloud',
           },
+          {
+            text: 'Run Automated E2E Tests',
+            path: '/tutorials/how-to-run-automated-e2-e-tests-with-stormkit-and-browserless',
+          },
         ],
       },
     ],

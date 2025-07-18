@@ -5,6 +5,10 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## July 18th, 2025
+
+You can now sort runtime logs ascending or descending.
+
 ## May 20th, 2025
 
 - The feature flags have been deprecated and removed from Stormkit. You can make use of Snippets

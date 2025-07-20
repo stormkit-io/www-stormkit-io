@@ -52,6 +52,7 @@ To enable GitHub authentication, you need to create a **GitHub App** (not an oAu
    - **Repository:Commit statuses**: Read and Write
    - **Repository:Contents**: Read
    - **Repository:Pull requests**: Read and Write
+   - **Repository:Webhooks**: Read
    - **Account:Email addresses**: Read
 6. Click **Create GitHub App**
 

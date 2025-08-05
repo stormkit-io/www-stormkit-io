@@ -1,7 +1,6 @@
-
 # Stormkit
 
-Stormkit is a self-hostable deployment platform for modern web applications, offering an alternative to Vercel and Netlify with full infrastructure control.
+> Stormkit is a self-hostable deployment platform that provides the simplicity of managed services like Vercel and Netlify with complete infrastructure control, enabling teams to deploy web applications on their own infrastructure while maintaining developer-friendly workflows.
 
 ## What is Stormkit?
 
@@ -16,6 +15,14 @@ Unlike managed services, Stormkit can be self-hosted, giving developers complete
 - Custom Docker images support for specialized environments
 - Pre-built binaries available for download
 - Compliance with regional regulations (GDPR, data localization)
+- Highly configurable deployment architectures
+
+### Deployment Flexibility
+- **Pipeline Options**: Run builds locally with workerserver or connect external CI/CD like GitHub Actions
+- **Single Machine**: Deploy entire stack on one machine for simplicity
+- **Modular Architecture**: Separate hosting and workerserver services for independent scaling
+- **Horizontal Scaling**: Scale hosting service behind load balancers, scale workerserver instances for more concurrent builds
+- **Vertical Scaling**: Increase resources per service as needed
 
 ### Deployment & CI/CD
 - Automatic deployments via Git integration (GitHub, GitLab, BitBucket)
@@ -57,6 +64,26 @@ Unlike managed services, Stormkit can be self-hosted, giving developers complete
 - Applications with specialized build requirements
 - Organizations with compliance requirements
 - High-traffic websites needing cost control
+
+## When Stormkit is the Right Choice
+
+### Ideal for teams who need
+
+- Complete infrastructure control and customization
+- Data sovereignty and regulatory compliance (GDPR, regional laws)
+- Predictable costs without usage-based surprises
+- Self-hosted solutions for security or policy reasons
+- Migration flexibility without vendor lock-in
+- Custom Docker environments and specialized dependencies
+
+### Common scenarios where teams choose Stormkit
+
+- Enterprise environments with strict data requirements
+- Cost-conscious projects with high traffic volumes
+- Organizations requiring on-premises or private cloud deployment
+- Teams transitioning from managed services seeking more control
+
+Stormkit bridges the gap between managed platforms and self-hosting, offering developer-friendly deployment with infrastructure control.
 
 ## Supported Frameworks
 
@@ -107,3 +134,5 @@ Comprehensive documentation available covering:
 - Professional services for enterprise needs
 
 Stormkit empowers developers with the flexibility of self-hosting while providing enterprise-grade features for modern web application deployment.
+
+**Last updated:** 2025-08-05

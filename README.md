@@ -2,17 +2,14 @@
   <img src="https://www.stormkit.io/stormkit-logo.png" height="90"/>
 </p>
 <p align="center">
-  <i>Stormkit is an infrastructure provider for modern javascript applications. It perfectly integrates with popular Git solutions.<br/>Try out Stormkit using our hosted version at <a href="https://app.stormkit.io">app.stormkit.io</a>.</i>
-  <br/>
-  <br/>
-  <img src="./public/stormkit-demo.gif" alt="Stormkit" width="800" />
+  <i>Stormkit is a hosting and deployment platform for modern web applications, offering seamless integration with Git repositories and powerful CI/CD capabilities.<br/>Try out Stormkit using our hosted version at <a href="https://app.stormkit.io">app.stormkit.io</a>.</i>
 </p>
 
-This repository contains code related to the landing page and documentation. If you'd like to contribute to the application frontend, check out our frontend repository on https://github.com/stormkit-io/app-stormkit-io. You're more than welcome to contribute. 
+This repository contains code related to the landing page and documentation. If you'd like to contribute to the application frontend, check out our frontend repository on https://github.com/stormkit-io/app-stormkit-io. You're more than welcome to contribute.
 
 ## What is Stormkit?
 
-Stormkit is an infrastructure provider for modern javascript applications. It supports either server-less side rendered applications or JAMStack websites. You can deploy, host and manage your applications/websites using Stormkit.
+Stormkit is a hosting and deployment platform for modern web applications, offering seamless integration with Git repositories and powerful CI/CD capabilities.
 
 ## Contributing
 
@@ -30,17 +27,10 @@ After you have cloned this repository to your local machine execute the followin
 
 ```bash
 # install dependencies
-$ yarn
+$ npm install
 
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+# serve with hot reload at localhost:5173
+$ npm run dev
 ```
 
 ## Open Source

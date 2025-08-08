@@ -175,13 +175,22 @@ body {
   word-wrap: break-word;
 }
 
+#blog-content .blog-tip,
 #blog-content .blog-alert {
-  background-color: rgb(255, 0, 248, 0.25);
   border: 1px solid black;
   border-radius: 0.25rem;
-  padding: 0.25rem;
+  padding: 1rem;
 }
 
+#blog-content .blog-alert {
+  background-color: rgba(255, 121, 251, 0.25);
+}
+
+#blog-content .blog-tip {
+  background-color: rgba(58, 212, 242, 0.45);
+}
+
+#blog-content .blog-tip p,
 #blog-content .blog-alert p {
   margin: 0;
   margin-left: 0.5rem;

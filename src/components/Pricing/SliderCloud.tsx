@@ -84,6 +84,7 @@ export default function PricingSlider({ tier = '100', onTierChange }: Props) {
           width: isFirstValue || isLastValue ? 'calc(100% - 10px)' : '100%',
         }}
         color="secondary"
+        className="plausible-event-name=Price+Cloud"
         value={value}
         min={1}
         step={100}

@@ -147,6 +147,7 @@ export default function LinksMobile() {
             variant="outlined"
             color="info"
             href="https://app.stormkit.io"
+            className="plausible-event-name=Cloud"
           >
             Login
             <ArrowForwardIcon

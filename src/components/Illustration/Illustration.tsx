@@ -129,6 +129,7 @@ export default function Illustration() {
             variant="contained"
             color="secondary"
             href="/blog/case-study-elham"
+            className="plausible-event-name=Case+Study"
             sx={{ mt: 2, fontSize: 16 }}
           >
             Case study: Leading learning platform

@@ -57,6 +57,7 @@ export default function Hero() {
         curl -sSL https://www.stormkit.io/install.sh | sh
         <IconButton
           sx={{ ml: 1 }}
+          className="plausible-event-name=Install+Script"
           onClick={(e) => {
             e.preventDefault()
 
@@ -86,12 +87,13 @@ export default function Hero() {
           color="primary"
           size="large"
           href="https://app.stormkit.io"
+          className="plausible-event-name=Cloud"
           sx={{
             display: { xs: 'none', md: 'inline-flex' },
             mr: { xs: 0, md: 2 },
           }}
         >
-          Launch in 5 minutes
+          Get started in Cloud
           <ArrowForwardIcon sx={{ mr: 0, ml: 1, fontSize: 16 }} />
         </Button>
 
@@ -100,8 +102,9 @@ export default function Hero() {
           color="secondary"
           size="large"
           href="/docs/self-hosting/getting-started"
+          className="plausible-event-name=Self-Hosted"
         >
-          Try Self-Hosted CI/CD
+          Try Self-Hosted
           <ArrowForwardIcon
             sx={{ mr: 0, ml: 1, fontSize: 16, transform: 'rotate(-45deg)' }}
           />

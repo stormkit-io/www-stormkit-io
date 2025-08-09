@@ -98,6 +98,7 @@ export default function Header() {
               variant="outlined"
               color="info"
               href="https://app.stormkit.io"
+              className="plausible-event-name=Cloud"
             >
               Login
               <ArrowForwardIcon

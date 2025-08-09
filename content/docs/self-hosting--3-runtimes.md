@@ -1,5 +1,5 @@
 ---
-title: 'Runtime Management for Self-Hosted Stormkit'
+title: Runtime Management
 description: Learn how to manage programming language runtimes, package managers, and development tools in your self-hosted Stormkit instance using the Admin Dashboard and mise runtime manager.
 ---
 

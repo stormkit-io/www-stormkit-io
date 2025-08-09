@@ -46,6 +46,9 @@ export default function Terms() {
         >
           Terms of Service
         </Typography>
+        <Typography sx={{ opacity: 0.7, mb: 4 }}>
+          Effective date: 2023-05-20
+        </Typography>
         <Typography>
           These Terms of Service ("Agreement") govern your use of the Stormkit
           deployment and hosting service ("Service") provided by Stormkit OÜ
@@ -116,41 +119,85 @@ export default function Terms() {
             5.2 Failure to pay the fees may result in suspension or termination
             of your account.
           </Typography>
+          <Typography>
+            5.3 All fees are non-refundable unless explicitly stated otherwise
+            or required by applicable law.
+          </Typography>
         </Typography>{' '}
+        <Subtitle>Service Availability</Subtitle>
+        <Typography component="div">
+          <Typography>
+            6.1 While we strive to maintain high availability, we do not
+            guarantee uninterrupted access to the Service.
+          </Typography>
+          <Typography>
+            6.2 Scheduled maintenance and unforeseen outages may temporarily
+            affect service availability.
+          </Typography>
+        </Typography>
         <Subtitle>Limitation of Liability</Subtitle>
         <Typography component="div">
           <Typography>
-            6.1 The Service is provided on an "as is" and "as available" basis.
+            7.1 The Service is provided on an "as is" and "as available" basis.
           </Typography>
           <Typography>
-            6.2 We shall not be liable for any direct, indirect, incidental,
+            7.2 We shall not be liable for any direct, indirect, incidental,
             consequential, or exemplary damages arising out of the use or
             inability to use the Service.
+          </Typography>
+        </Typography>
+        <Subtitle>Data Retention</Subtitle>
+        <Typography component="div">
+          <Typography>
+            8.1 Upon termination of your account, we may retain your data for a
+            reasonable period to allow for account recovery.
+          </Typography>
+          <Typography>
+            8.2 After this period, your data may be permanently deleted from our
+            systems.
           </Typography>
         </Typography>
         <Subtitle>Termination</Subtitle>
         <Typography component="div">
           <Typography>
-            7.1 Either party may terminate this Agreement at any time for any
+            9.1 Either party may terminate this Agreement at any time for any
             reason by providing notice to the other party.
           </Typography>
           <Typography>
-            7.2 Upon termination, you must cease all use of the Service and
+            9.2 Upon termination, you must cease all use of the Service and
             remove your applications from our servers.
+          </Typography>
+        </Typography>
+        <Subtitle>Governing Law and Dispute Resolution</Subtitle>
+        <Typography component="div">
+          <Typography>
+            10.1 This Agreement shall be governed by and construed in accordance
+            with the laws of Estonia.
+          </Typography>
+          <Typography>
+            10.2 Any disputes arising from this Agreement shall be resolved
+            through binding arbitration or in the courts of Estonia.
+          </Typography>
+        </Typography>
+        <Subtitle>Contact Information</Subtitle>
+        <Typography component="div">
+          <Typography>
+            11.1 For questions regarding these Terms of Service, please contact
+            us at hello@stormkit.io.
           </Typography>
         </Typography>
         <Subtitle>Changes to the Agreement</Subtitle>
         <Typography component="div">
           <Typography>
-            8.1 We reserve the right to modify or update this Agreement at any
+            12.1 We reserve the right to modify or update this Agreement at any
             time.
           </Typography>
           <Typography>
-            8.2 You are responsible for reviewing the most current version of
+            12.2 You are responsible for reviewing the most current version of
             the Agreement.{' '}
           </Typography>
           <Typography>
-            8.3 Continued use of the Service after any modifications to the
+            12.3 Continued use of the Service after any modifications to the
             Agreement constitutes acceptance of the updated terms.
           </Typography>
         </Typography>

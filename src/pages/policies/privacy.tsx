@@ -90,6 +90,16 @@ export default function Terms() {
           settings, but this may affect certain features or functionality of our
           website.
         </Typography>{' '}
+        <Subtitle>Anonymous User Behavior Tracking</Subtitle>
+        <Typography component="div">
+          We may collect and analyze anonymous user behavior data to understand
+          how users interact with our services, identify usage patterns, and
+          improve our platform's performance and user experience. This data is
+          aggregated and anonymized, meaning it cannot be used to identify
+          individual users. The information collected may include page views,
+          click patterns, feature usage, and general navigation behavior within
+          our application.
+        </Typography>{' '}
         <Subtitle>External Links</Subtitle>
         <Typography component="div">
           Our website may contain links to third-party websites. We have no

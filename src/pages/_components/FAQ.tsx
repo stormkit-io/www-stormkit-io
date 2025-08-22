@@ -3,6 +3,7 @@ import Box from '@mui/material/Box'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import StyledBox from '~/components/StyledBox'
 import Typography from '@mui/material/Typography'
+import { track } from '~/helpers/event'
 
 const faq = [
   {
@@ -81,7 +82,10 @@ export default function FAQ() {
               backgroundColor: 'rgba(0, 0, 0, 0.04)',
             },
           }}
-          onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
+          onClick={() => {
+            setOpenIndex(openIndex === index ? -1 : index)
+            track('FAQ click', { index })
+          }}
         >
           <Box
             tabIndex={0}

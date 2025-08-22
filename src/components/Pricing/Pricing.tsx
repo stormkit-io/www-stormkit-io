@@ -149,7 +149,7 @@ export default function Pricing() {
           size="large"
           sx={{ mt: 5 }}
           href="https://app.stormkit.io"
-          className="plausible-event-name=Cloud"
+          data-umami-event="Cloud login"
         >
           Get started now
         </Button>

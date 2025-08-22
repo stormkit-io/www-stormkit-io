@@ -84,12 +84,14 @@ export default function FAQ() {
           }}
           onClick={() => {
             setOpenIndex(openIndex === index ? -1 : index)
-            track('FAQ click', { index })
           }}
         >
           <Box
             tabIndex={0}
-            onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
+            onClick={() => {
+              setOpenIndex(openIndex === index ? -1 : index)
+              track('FAQ click', { index })
+            }}
           >
             <Box sx={{ display: 'flex' }}>
               <Box sx={{ flex: 1 }}>{f.question}</Box>

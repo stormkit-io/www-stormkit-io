@@ -3,12 +3,15 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Slider from '@mui/material/Slider'
 import { grey } from '@mui/material/colors'
+import { track } from '~/helpers/event'
 
 interface Props {
   seats?: number
   edition?: 'premium' | ''
   onSeatChange?: (v: number) => void
 }
+
+let tracked = false
 
 export default function PricingSlider({ seats = 1, edition }: Props) {
   const [value, setValue] = useState<number>(seats)
@@ -42,6 +45,11 @@ export default function PricingSlider({ seats = 1, edition }: Props) {
   const handleChange = (_: Event, newValue: number | number[]) => {
     if (typeof newValue === 'number') {
       setValue(newValue)
+
+      if (!tracked) {
+        track('Pricing: Self-Hosted', { value: newValue })
+        tracked = true
+      }
     }
   }
 
@@ -84,7 +92,6 @@ export default function PricingSlider({ seats = 1, edition }: Props) {
           width: isFirstValue ? 'calc(100% - 10px)' : '100%',
         }}
         color="secondary"
-        data-umami-event="Self-hosted pricing"
         value={value}
         min={1}
         step={1}

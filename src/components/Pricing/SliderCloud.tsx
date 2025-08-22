@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Slider from '@mui/material/Slider'
+import { track } from '~/helpers/event'
 
 type AllowedValues = 1 | 101 | 201 | 301
 
@@ -34,6 +35,8 @@ function valueLabelFormat(value: number) {
   return labelMap[value]
 }
 
+let tracked = false
+
 export default function PricingSlider({ tier = '100', onTierChange }: Props) {
   const [value, setValue] = useState<AllowedValues>(
     (tier ? Number(labelMapInverse[tier]) : 1) as AllowedValues
@@ -43,6 +46,11 @@ export default function PricingSlider({ tier = '100', onTierChange }: Props) {
     if (typeof newValue === 'number') {
       setValue(newValue as AllowedValues)
       onTierChange?.(labelMap[newValue as AllowedValues])
+
+      if (!tracked) {
+        track('Pricing: Cloud', { value: newValue })
+        tracked = true
+      }
     }
   }
 
@@ -84,7 +92,6 @@ export default function PricingSlider({ tier = '100', onTierChange }: Props) {
           width: isFirstValue || isLastValue ? 'calc(100% - 10px)' : '100%',
         }}
         color="secondary"
-        data-umami-event="Cloud pricing"
         value={value}
         min={1}
         step={100}

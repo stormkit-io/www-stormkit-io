@@ -65,6 +65,7 @@ export default function Header() {
               href="https://github.com/stormkit-io"
               rel="noreferrer noopener"
               target="_blank"
+              data-umami-event="GitHub"
               sx={{
                 display: { xs: 'none', lg: 'inline-flex' },
                 mr: 2,

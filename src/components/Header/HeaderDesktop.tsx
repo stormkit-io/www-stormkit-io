@@ -101,7 +101,7 @@ export default function Header() {
               href="https://app.stormkit.io"
               data-umami-event="Cloud login"
             >
-              Login
+              Cloud Login
               <ArrowForwardIcon
                 sx={{ ml: 1, fontSize: 16, transform: 'rotate(-45deg)' }}
               />

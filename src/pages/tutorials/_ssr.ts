@@ -1,51 +1,57 @@
 import type { NavigationItem } from '~/components/DocsNav/DocsNav'
-import { fetchTutorials, fetchTutorial } from '~/strapi'
+import { parseAttributes, findFileBySlug, Attributes } from '~/helpers/markdown'
+
+const files = import.meta.glob('/content/tutorials/**/*.md', {
+  query: '?raw',
+  import: 'default',
+})
 
 interface Params {
   slug?: string
 }
 
 export const fetchData: FetchDataFunc = async ({ slug }: Params) => {
+  let foundFile: Attributes | undefined
+  let articleContent: string | undefined
   const navigation: NavigationItem[] = []
 
-  const tutorials = await fetchTutorials()
+  for (const file of Object.keys(files)) {
+    const content = (await files[file]()) as string
+    const tutorial = parseAttributes(content)
+    const fileName = file.replace('/content/tutorials/', '').replace('.md', '')
 
-  tutorials?.forEach((tutorial) => {
-    navigation.push({
-      path: tutorial.slug,
-      title: tutorial.title,
-      subtitle: tutorial.subtitle,
-      description: tutorial.description,
-      date: tutorial.publishedAt,
-      active: slug === tutorial.slug,
-    })
-  })
-
-  const returnValue: { head: SEO; context: any } = {
-    head: {
-      title: 'Tutorials',
-      type: 'article',
-      description: 'Learn how to use Stormkit',
-    },
-    context: {
-      content: {},
-      navigation,
-    },
-  }
-
-  if (slug) {
-    const tutorial = await fetchTutorial(slug)
-
-    returnValue.head = {
-      title: tutorial?.title || 'Tutorial not found',
-      description: tutorial?.description || 'Tutorial not found',
-      type: 'article',
+    if (slug === fileName) {
+      foundFile = tutorial
+      articleContent = content
     }
 
-    returnValue.context.content =
-      tutorial?.blocks.find((block) => block.__component === 'shared.rich-text')
-        ?.body || ''
+    navigation.push({
+      path: fileName,
+      title: tutorial.title!,
+      subtitle: tutorial.subtitle,
+      description: tutorial.description,
+      date: tutorial.date,
+      active: slug === fileName,
+    })
   }
 
-  return returnValue
+  if (!articleContent) {
+    articleContent = 'Tutorial is not found.'
+  }
+
+  const index = articleContent.indexOf('---', 2)
+  const article = index > -1 ? articleContent.slice(index + 4) : articleContent
+
+  return {
+    head: {
+      title: foundFile?.title || 'Tutorial is not found',
+      description: foundFile?.description || 'Tutorial is not found',
+      date: foundFile?.date || Date.now().toString(),
+      type: 'article',
+    },
+    context: {
+      navigation,
+      content: article,
+    },
+  }
 }

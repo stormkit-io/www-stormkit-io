@@ -38,8 +38,5 @@ export default defineConfig({
     },
     outDir: '.stormkit/public',
   },
-  define: {
-    'process.env.STRAPI_API_KEY': JSON.stringify(process.env.STRAPI_API_KEY),
-  },
   plugins: [react({ jsxImportSource: '@emotion/react' })],
 })

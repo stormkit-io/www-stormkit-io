@@ -125,28 +125,3 @@ export function withContent(
 
   return { content: markdownContent, navigation: nav, loading }
 }
-
-export const findFileBySlug = (
-  files: Record<string, () => Promise<unknown>>,
-  slug?: string
-) => {
-  if (!slug) {
-    return undefined
-  }
-
-  const slugLower = slug.toLowerCase()
-
-  for (const file of Object.keys(files)) {
-    const fileName = file
-      .replace('/content/tutorials/', '')
-      .replace('/content/docs/', '')
-      .replace('/content/blog/', '')
-      .replace('.md', '')
-
-    if (fileName === slug) {
-      return file
-    }
-  }
-
-  return undefined
-}

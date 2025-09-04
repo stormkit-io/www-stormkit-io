@@ -1,6 +1,7 @@
 ---
-title: Setting up Stormkit with Cloudflare Tunnel - Complete Local Development Guide
+title: Setting up Stormkit with Cloudflare Tunnel
 description: Learn how to set up Stormkit with Cloudflare Tunnel for local development with HTTPS, custom domains, and wildcard subdomain support.
+subtitle: A complete guide for turning your local environment into a deployment and hosting platform
 date: 2025-09-03
 ---
 

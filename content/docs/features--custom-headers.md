@@ -6,25 +6,26 @@ keywords: custom headers
 
 # Custom Headers
 
-To enable Stormkit to add custom headers to served files, follow these steps:
+By default, Stormkit looks for a `_headers` file in your repository root. If you need to use a different location, you can specify it by navigating to **Environment > Config > Headers > File Location** in your Stormkit dashboard.
 
-- Introduce a file containing rules into your code base.
-- Include the file name in the build parameters.
+To enable custom headers for your served files:
+
+1. Create a `_headers` file in your repository root (or specify a custom location in your Stormkit dashboard)
+2. Define your header rules using the format described below
 
 Check out our [YouTube](https://www.youtube.com/watch?v=0-JE_MoXP68) video to see it in action.
 
-**Note: Custom headers are not applied to responses from functions.**
+**Note: Custom headers are not applied to responses from serverless functions.**
 
-Header rules are structured in multi-line blocks. Each block begins with a URL or URL pattern specifying where the rule's headers should take effect. Following this, a list of header names and their corresponding values is indented on the subsequent line.
+Header rules are structured in multi-line blocks. Each block begins with a URL or URL pattern that specifies where the rule's headers should take effect. Following this, header names and their corresponding values are listed on indented lines.
 
 ```
+# Apply X-Message to all requests
 /*
-  # This will be applied all file types
   X-Message: Hello World!
 
-  # These will be applied only for Javascript files
+# Apply following headers to .js files only
 /*.js
-  # Allow CORS for JS files.
   Access-Control-Allow-Origin: *
   Access-Control-Allow-Headers: *
   Access-Control-Allow-Methods: *
@@ -33,5 +34,5 @@ Header rules are structured in multi-line blocks. Each block begins with a URL o
 You can always review the deployment manifest to understand how Stormkit builds your code. This allows you to easily see which headers are applied to which files.
 
 <div class="img-wrapper">
-    <img src="/assets/blog/manifest.gif" alt="Deployment manifest will show details" />
+    <img src="/assets/blog/manifest.gif" alt="Deployment manifest showing header details" />
 </div>

@@ -1,5 +1,5 @@
 import type { NavigationItem } from '~/components/DocsNav/DocsNav'
-import { parseAttributes, findFileBySlug, Attributes } from '~/helpers/markdown'
+import { parseAttributes, Attributes } from '~/helpers/markdown'
 
 const files = import.meta.glob('/content/tutorials/**/*.md', {
   query: '?raw',

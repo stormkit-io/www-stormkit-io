@@ -157,6 +157,10 @@ const links: LinkProps[] = [
             text: 'Run Automated E2E Tests',
             path: '/tutorials/how-to-run-automated-e2-e-tests-with-stormkit-and-browserless',
           },
+          {
+            text: 'Local Development Guide',
+            path: '/tutorials/setting-up-stormkit-with-cloudflare-tunnels',
+          },
         ],
       },
     ],

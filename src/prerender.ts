@@ -24,6 +24,7 @@ const routes: Prerender[] = [
   { route: '/tutorials/how-to-deploy-your-self-hosted-strapi-instance' },
   { route: '/tutorials/how-to-self-host-stormkit-on-hetzner-cloud' },
   { route: '/tutorials/how-to-deploy-your-self-hosted-remix-app' },
+  { route: '/tutorials/setting-up-stormkit-with-cloudflare-tunnels' },
   {
     route:
       '/tutorials/how-to-run-automated-e2-e-tests-with-stormkit-and-browserless',

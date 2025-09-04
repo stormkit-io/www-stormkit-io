@@ -19,7 +19,7 @@ Check out our [YouTube](https://www.youtube.com/watch?v=0-JE_MoXP68) video to se
 
 Header rules are structured in multi-line blocks. Each block begins with a URL or URL pattern that specifies where the rule's headers should take effect. Following this, header names and their corresponding values are listed on indented lines.
 
-```
+```yaml
 # Apply X-Message to all requests
 /*
   X-Message: Hello World!

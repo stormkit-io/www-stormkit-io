@@ -31,8 +31,19 @@ Header rules are structured in multi-line blocks. Each block begins with a URL o
   Access-Control-Allow-Methods: *
 ```
 
-You can always review the deployment manifest to understand how Stormkit builds your code. This allows you to easily see which headers are applied to which files.
+You can review the deployment manifest to understand how Stormkit builds your code. This allows you to easily see which headers are applied to which files.
 
 <div class="img-wrapper">
     <img src="/assets/blog/manifest.gif" alt="Deployment manifest showing header details" />
 </div>
+
+## Environment level custom headers
+
+You can specify the same rules at an environment level. To do so:
+
+1. Go to **Environment Config** > **Headers**
+1. Switch **Overwrite headers**
+1. Specify the rules from the Headers Editor and
+1. Click save.
+
+These rules will be applied to **all** of your deployments and take effect instantly. There is no need for a deployment.

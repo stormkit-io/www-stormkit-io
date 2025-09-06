@@ -18,6 +18,36 @@ To enable users to define outbound webhooks upon deployment completion, follow t
 
 </section>
 
+## Events
+
+<section>
+
+1.  After each successful deployment
+
+    The webhook will be triggered after every successful deployment of
+    your application. A successful deployment means that your code has
+    been built and deployed without any errors. This event cycle
+    occurs before status checks are run.
+
+2.  After each failed deployment
+
+    The webhook will be triggered after every failed deployment. This
+    event cycle occurs before status checks are run.
+
+3.  After a deployment is published
+
+    The webhook will be triggered after a deployment is published.
+    This event cycle occurs after status checks are run.
+
+4.  After a cache purge
+    Cache is purged after the following events:
+
+    - A deployment is published
+    - Any operation to snippets
+    - The environment configuration is updated
+
+</section>
+
 ## Special variables for payload
 
 <section>

@@ -5,6 +5,11 @@ description: Discover the latest changes and improvements to Stormkit. Stay up-t
 
 Follow the latest developments on Stormkit.
 
+## September 6th, 2025
+
+- New event cycle for outbound webhooks: On Cache Purge
+- Environment level custom headers can be set from the Build Configuration page
+
 ## July 18th, 2025
 
 You can now sort runtime logs ascending or descending.

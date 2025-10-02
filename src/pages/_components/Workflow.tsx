@@ -63,7 +63,16 @@ export default function Workflow() {
           <Typography variant="subtitle2" color="text.secondary">
             Link your repository to get started with automated deployments
           </Typography>
-          <StyledBox sx={{ textAlign: 'center', userSelect: 'none' }}>
+          <StyledBox
+            sx={{
+              textAlign: 'center',
+              userSelect: 'none',
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              gap: { xs: 2, sm: 2, md: 1 },
+            }}
+          >
             {buttons.map((b) => (
               <Button
                 key={b.text}
@@ -71,8 +80,8 @@ export default function Workflow() {
                 size="small"
                 href="https://www.stormkit.io/docs/self-hosting/authentication"
                 sx={{
-                  mr: 2,
                   border: '1px solid rgba(255, 255, 255, 0.15)',
+                  minWidth: { xs: '45%', sm: 'auto' },
                 }}
               >
                 <Box
@@ -201,9 +210,9 @@ export default function Workflow() {
               url="mywebsite.com"
               pageBgColor="linear-gradient(135deg, rgba(61, 60, 64, 0.3) 0%, #0c0c1f 100%)"
             >
-              <Box sx={{ p: 4, textAlign: 'center', fontSize: '14px' }}>
+              <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, textAlign: 'center', fontSize: { xs: '12px', sm: '13px', md: '14px' } }}>
                 Deployed with 💜 by Stormkit
-                <Box sx={{ mt: 4 }}>
+                <Box sx={{ mt: { xs: 2, md: 4 } }}>
                   <Box component="ul" sx={{ listStyle: 'none', p: 0, m: 0 }}>
                     {[
                       'Unique URLs for each deployment',
@@ -219,15 +228,20 @@ export default function Workflow() {
                           display: 'flex',
                           alignItems: 'center',
                           mb: 1,
-                          p: 1,
+                          p: { xs: 0.75, sm: 1 },
                           borderRadius: 4,
+                          fontSize: { xs: '11px', sm: '12px', md: '14px' },
+                          minWidth: 0,
+                          wordBreak: 'break-word',
                         }}
                       >
                         <CheckIcon
-                          sx={{ fontSize: 12, mr: 2 }}
+                          sx={{ fontSize: { xs: 10, sm: 11, md: 12 }, mr: { xs: 1, sm: 1.5, md: 2 }, flexShrink: 0 }}
                           color="success"
                         />
-                        {item}
+                        <Box component="span" sx={{ minWidth: 0, flex: 1 }}>
+                          {item}
+                        </Box>
                       </Box>
                     ))}
                   </Box>

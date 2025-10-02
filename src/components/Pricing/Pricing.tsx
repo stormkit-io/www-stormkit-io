@@ -26,8 +26,8 @@ export default function Pricing() {
   const isCloud = useMemo(() => mode === 'cloud', [mode])
 
   return (
-    <Box>
-      <Box>
+    <Box sx={{ maxWidth: '100%', overflow: 'hidden' }}>
+      <Box sx={{ px: 2 }}>
         <Typography
           variant="h2"
           sx={{
@@ -46,10 +46,12 @@ export default function Pricing() {
         sx={{
           p: { xs: 2, md: 4 },
           mt: 4,
-          mx: 'auto',
-          width: '100%',
+          mx: { xs: 2, md: 'auto' },
+          width: { xs: 'calc(100% - 32px)', md: '100%' },
+          maxWidth: '100%',
           bgcolor: 'rgba(0,0,0,0.3)',
           boxShadow: 12,
+          overflow: 'hidden',
         }}
       >
         <Box
@@ -58,8 +60,11 @@ export default function Pricing() {
             textAlign: 'center',
             position: 'relative',
             display: { xs: 'flex', md: 'block' },
-            flexDirection: { xs: isCloud ? 'row' : 'row-reverse', md: 'unset' },
-            justifyContent: { xs: 'space-between', md: 'unset' },
+            flexDirection: { xs: 'column', md: 'unset' },
+            justifyContent: { xs: 'flex-start', md: 'unset' },
+            alignItems: { xs: 'flex-start', md: 'unset' },
+            flexWrap: 'wrap',
+            gap: { xs: 2, md: 0 },
           }}
         >
           <Box
@@ -71,6 +76,8 @@ export default function Pricing() {
               right: 0,
               display: isCloud ? 'none' : 'flex',
               alignItems: 'center',
+              width: { xs: '100%', md: 'auto' },
+              justifyContent: { xs: 'flex-start', md: 'flex-end' },
             }}
           >
             <FormControlLabel
@@ -95,6 +102,7 @@ export default function Pricing() {
               if (newMode) setMode(newMode as Mode)
             }}
             aria-label="Platform"
+            sx={{ mx: { xs: 0, md: 'auto' }, alignSelf: { xs: 'flex-start', md: 'center' } }}
           >
             <ToggleButton value="cloud" sx={{ cursor: 'pointer' }}>
               Cloud
@@ -104,45 +112,60 @@ export default function Pricing() {
             </ToggleButton>
           </ToggleButtonGroup>
         </Box>
-        {isCloud ? (
-          <SliderCloud onTierChange={(t) => setTier(t)} />
-        ) : (
-          <SliderSelfHosted
-            onSeatChange={(t) => setSeats(t)}
-            edition={edition}
-          />
-        )}
+        <Box sx={{ maxWidth: '100%', overflow: 'hidden' }}>
+          {isCloud ? (
+            <SliderCloud onTierChange={(t) => setTier(t)} />
+          ) : (
+            <SliderSelfHosted
+              onSeatChange={(t) => setSeats(t)}
+              edition={edition}
+            />
+          )}
+        </Box>
         <Divider sx={{ mt: 4 }}>
           <Chip
             label="What's included?"
             sx={{ textTransform: 'uppercase', fontWeight: 'bold' }}
           />
         </Divider>
-        <Box sx={{ display: 'flex', mt: 6 }}>
+        <Box sx={{ display: 'flex', mt: 6, maxWidth: '100%', overflow: 'hidden' }}>
           <Box
             sx={{
               width: '100%',
               textAlign: 'left',
               display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
+              gridTemplateColumns: {
+                xs: '1fr',
+                md: 'repeat(3, 1fr)',
+              },
               gap: 2,
             }}
           >
             {(isCloud ? whatsIncludedCloud : whatsIncludedSelfHosted).map(
               (feature: any, index) => (
-                <Box key={index} sx={{ display: 'flex', alignItems: 'center' }}>
+                <Box
+                  key={index}
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    wordBreak: 'break-word',
+                    minWidth: 0,
+                  }}
+                >
                   <Typography
                     className="fa-solid fa-square-check"
-                    sx={{ color: 'success.main', mr: 1 }}
+                    sx={{ color: 'success.main', mr: 1, flexShrink: 0 }}
                   />
-                  {isCloud ? feature(tier) : feature(seats, edition)}
+                  <Box sx={{ minWidth: 0, flex: 1 }}>
+                    {isCloud ? feature(tier) : feature(seats, edition)}
+                  </Box>
                 </Box>
               )
             )}
           </Box>
         </Box>
       </Box>
-      <Box sx={{ textAlign: 'center' }}>
+      <Box sx={{ textAlign: 'center', px: 2 }}>
         <Button
           variant="contained"
           color="secondary"

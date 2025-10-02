@@ -32,6 +32,7 @@ export default function BlogContent() {
           flexGrow: 1,
           width: '100%',
           pt: 4,
+          px: { xs: 2, md: 0 },
         }}
       >
         {navigation?.map((nav) => (
@@ -39,7 +40,7 @@ export default function BlogContent() {
             key={nav.path}
             sx={{
               p: { xs: 2, lg: 4 },
-              mx: 'auto',
+              mx: { xs: 0, md: 'auto' },
               mb: 4,
               bgcolor: 'rgba(0,0,0,0.25)',
             }}

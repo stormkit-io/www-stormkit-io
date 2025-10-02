@@ -20,9 +20,11 @@ export default function Illustration() {
         margin: '0 auto',
         flexDirection: 'column',
         mx: { xs: 2, md: 0 },
+        maxWidth: '100%',
+        overflow: 'hidden',
       }}
     >
-      <Box maxWidth="xl" sx={{ textAlign: 'center', mx: 'auto', px: 2, mb: 4 }}>
+      <Box maxWidth="xl" sx={{ textAlign: 'center', mx: 'auto', px: 2, mb: 4, width: '100%' }}>
         <Typography
           variant="h4"
           color="text.secondary"
@@ -36,13 +38,15 @@ export default function Illustration() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            flexWrap: 'wrap',
+            gap: 2,
           }}
         >
           <Box
             component="img"
             alt="Elham"
             src="https://cdn.prod.website-files.com/64996137a1e0a71956ea90eb/64997d15979306f7e737a767_logo.png"
-            sx={{ mr: 4, width: 80 }}
+            sx={{ width: { xs: 60, sm: 80 }, maxWidth: '100%' }}
           />
           <Box
             sx={{
@@ -51,14 +55,13 @@ export default function Illustration() {
               bgcolor: 'rgba(255, 255, 255, 0.67)',
               p: 1,
               borderRadius: 2,
-              mr: 4,
             }}
           >
             <Box
               component="img"
               src={Deepbase}
               alt="Deepbase"
-              sx={{ width: 100 }}
+              sx={{ width: { xs: 80, sm: 100 }, maxWidth: '100%' }}
             />
           </Box>
           <Box
@@ -76,7 +79,7 @@ export default function Illustration() {
               component="img"
               alt="Valpiccola"
               src="https://www.valpiccola.com/logo-small.png"
-              sx={{ mr: 1, height: 32 }}
+              sx={{ mr: 1, height: 32, maxWidth: '100%' }}
             />
             <Typography sx={{ fontWeight: 600 }}>Valpiccola</Typography>
           </Box>
@@ -90,10 +93,12 @@ export default function Illustration() {
           position: 'relative',
           boxShadow:
             '0 0 20px 5px rgba(72, 80, 201, 0.4), 0 0 40px 20px rgba(72, 80, 201, 0.2)',
+          maxWidth: '100%',
+          width: '100%',
         }}
       >
         <Browser url="app.stormkit.io">
-          <Box sx={{ p: 2 }}>
+          <Box sx={{ p: 2, maxWidth: '100%', overflow: 'hidden' }}>
             <picture>
               <Box
                 component="source"
@@ -104,6 +109,8 @@ export default function Illustration() {
                 component="img"
                 sx={{
                   width: '100%',
+                  maxWidth: '100%',
+                  height: 'auto',
                   display: 'block',
                   m: 0,
                   p: 0,
@@ -116,7 +123,7 @@ export default function Illustration() {
           </Box>
         </Browser>
       </Box>
-      <Box sx={{ maxWidth: 660, mt: 8, mx: 'auto', textAlign: 'center' }}>
+      <Box sx={{ maxWidth: 660, mt: 8, mx: 'auto', textAlign: 'center', px: 2, width: '100%' }}>
         <Typography sx={{ fontSize: { xs: 16, md: 24 }, mb: 2 }}>
           "Stormkit helped us cut deployment times from 24+ hours to 7 minutes,
           while cutting our infrastructure costs by 60%."

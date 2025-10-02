@@ -50,6 +50,8 @@ export default function Enterprise() {
         flexDirection: 'column',
         bgcolor: 'background.default',
         color: 'primary.contrastText',
+        maxWidth: '100%',
+        overflow: 'hidden',
       }}
     >
       <Header />
@@ -59,6 +61,10 @@ export default function Enterprise() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
+          px: { xs: 2, sm: 3, md: 4 },
+          py: { xs: 4, md: 6 },
+          maxWidth: '100%',
+          overflow: 'hidden',
         }}
       >
         <Box
@@ -67,72 +73,154 @@ export default function Enterprise() {
             maxWidth: 960,
             textAlign: 'center',
             width: '100%',
+            minWidth: 0,
           }}
         >
           <Typography
             variant="h1"
             sx={{
               fontWeight: 'bold',
-              my: 4,
-              fontSize: { xs: 28, md: 32 },
+              my: { xs: 2, md: 4 },
+              fontSize: { xs: 24, sm: 28, md: 32 },
+              px: { xs: 1, sm: 2 },
+              wordBreak: 'break-word',
             }}
           >
             Enterprise-grade Solutions for Modern Teams
           </Typography>
-          <Box>
+          <Box sx={{ maxWidth: '100%', overflow: 'hidden' }}>
             <Box
               sx={{
                 display: 'grid',
-                gridTemplateColumns: { md: 'repeat(2, minmax(0, 1fr))' },
+                gridTemplateColumns: { xs: '1fr', md: 'repeat(2, minmax(0, 1fr))' },
                 border: '1px solid rgba(0, 0, 0, 0.3)',
                 backgroundColor: 'rgba(0,0,0,0.3)',
                 borderRadius: 2,
-                p: { xs: 1, lg: 4 },
+                p: { xs: 2, sm: 3, lg: 4 },
                 mb: 4,
+                gap: { xs: 2, md: 0 },
+                maxWidth: '100%',
+                overflow: 'hidden',
               }}
             >
-              <Box sx={{ textAlign: 'left', p: { xs: 2, lg: 4 } }}>
-                <Typography variant="h5" sx={{ mb: 2 }}>
+              <Box 
+                sx={{ 
+                  textAlign: 'left', 
+                  p: { xs: 1, sm: 2, lg: 4 },
+                  minWidth: 0,
+                  maxWidth: '100%',
+                  overflow: 'hidden',
+                }}
+              >
+                <Typography 
+                  variant="h5" 
+                  sx={{ 
+                    mb: 2,
+                    fontSize: { xs: 18, sm: 20, md: 24 },
+                    wordBreak: 'break-word',
+                  }}
+                >
                   <Box component="span" sx={{ fontWeight: 'bold' }}>
                     Transform your development workflow with our enterprise
                     platform
                   </Box>
                 </Typography>
-                <Typography sx={{ color: grey[400], mb: 2 }}>
+                <Typography 
+                  sx={{ 
+                    color: grey[400], 
+                    mb: 2,
+                    fontSize: { xs: 14, sm: 15, md: 16 },
+                    wordBreak: 'break-word',
+                  }}
+                >
                   We will create a customized plan for your organization,
                   addressing your unique challenges and helping you achieve your
                   business goals.
                 </Typography>
                 {benefits.map((b) => (
-                  <Box key={b.title} sx={{ mb: 2 }}>
-                    <Typography variant="h6" sx={{ mb: 2 }}>
+                  <Box 
+                    key={b.title} 
+                    sx={{ 
+                      mb: { xs: 3, md: 2 },
+                      minWidth: 0,
+                      maxWidth: '100%',
+                    }}
+                  >
+                    <Typography 
+                      variant="h6" 
+                      sx={{ 
+                        mb: 1,
+                        fontSize: { xs: 16, sm: 18, md: 20 },
+                      }}
+                    >
                       <Box
                         component="span"
                         sx={{
                           fontWeight: 'bold',
                           display: 'flex',
                           alignItems: 'center',
+                          wordBreak: 'break-word',
                         }}
                       >
                         <CheckCircleIcon
-                          sx={{ mr: 1, fontSize: 16, fill: '#78193B' }}
+                          sx={{ 
+                            mr: 1, 
+                            fontSize: { xs: 14, md: 16 }, 
+                            fill: '#78193B',
+                            flexShrink: 0,
+                          }}
                         />
-                        {b.title}
+                        <Box component="span" sx={{ minWidth: 0 }}>
+                          {b.title}
+                        </Box>
                       </Box>
                     </Typography>
-                    <Typography sx={{ color: grey[400] }}>{b.desc}</Typography>
+                    <Typography 
+                      sx={{ 
+                        color: grey[400],
+                        fontSize: { xs: 13, sm: 14, md: 15 },
+                        wordBreak: 'break-word',
+                        lineHeight: 1.6,
+                      }}
+                    >
+                      {b.desc}
+                    </Typography>
                   </Box>
                 ))}
               </Box>
-              <ContactForm setError={setError} setSuccess={setSuccess} />
+              <Box
+                sx={{
+                  minWidth: 0,
+                  maxWidth: '100%',
+                  overflow: 'hidden',
+                }}
+              >
+                <ContactForm setError={setError} setSuccess={setSuccess} />
+              </Box>
             </Box>
             {error && (
-              <Alert variant="filled" color="error" sx={{ mb: 4 }}>
+              <Alert 
+                variant="filled" 
+                color="error" 
+                sx={{ 
+                  mb: 4,
+                  mx: { xs: 1, sm: 0 },
+                  wordBreak: 'break-word',
+                }}
+              >
                 {error}
               </Alert>
             )}
             {success && (
-              <Alert variant="filled" color="success" sx={{ mb: 4 }}>
+              <Alert 
+                variant="filled" 
+                color="success" 
+                sx={{ 
+                  mb: 4,
+                  mx: { xs: 1, sm: 0 },
+                  wordBreak: 'break-word',
+                }}
+              >
                 Your contact request has been forwarded. You will be contacted
                 soon on the provided email.
               </Alert>

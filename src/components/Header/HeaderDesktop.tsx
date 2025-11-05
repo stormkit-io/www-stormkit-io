@@ -62,7 +62,7 @@ export default function Header() {
             <Button
               variant="outlined"
               color="info"
-              href="https://github.com/stormkit-io"
+              href="https://github.com/stormkit-io/stormkit-io"
               rel="noreferrer noopener"
               target="_blank"
               data-umami-event="GitHub"

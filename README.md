@@ -1,3 +1,6 @@
+NOTE: This repository has been merged into [https://github.com/stormkit-io/stormkit-io](https://github.com/stormkit-io/stormkit-io) and is now archived.
+
+
 <p align="center">
   <img src="https://www.stormkit.io/stormkit-logo.png" height="90"/>
 </p>
